@@ -1,7 +1,7 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class CourseBuilder extends \OxygenTutorElements{
+class CourseBuilder extends \OxygenTutorElements {
 
 	function name() {
 		return 'Course Builder';

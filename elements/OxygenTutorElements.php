@@ -1,5 +1,9 @@
 <?php
 
+if (class_exists('OxygenTutorElements')){
+	return;
+}
+
 class OxygenTutorElements extends OxyEl {
 
 	function init() {

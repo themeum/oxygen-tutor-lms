@@ -14,8 +14,16 @@ Text Domain: oxygen-tutor-lms
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
-/**
- * Defined the tutor main file
- */
 define('OTLMS_VERSION', '1.0.0');
 define('OTLMS_FILE', __FILE__);
+define('OTLMS_PATH', plugin_dir_path(OTLMS_FILE));
+define('OTLMS_URL', plugin_dir_url(OTLMS_FILE));
+
+if ( ! class_exists('OxygenTutorLMS')){
+	include_once OTLMS_PATH.'OxygenTutorLMS.php';
+}
+
+add_action('plugins_loaded', 'oxygen_tutor_lms_init');
+function oxygen_tutor_lms_init(){
+	OxygenTutorLMS::instance();
+}
