@@ -76,9 +76,10 @@ class CourseBuilder extends \OxygenTutorElements {
 			 */
 
 
-			die(otlms_get_template('login'));
+			echo otlms_get_template('login');
 
-/*
+
+			/*
 			if ($wp_query->is_single && ! empty($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] === $this->course_post_type){
 				$student_must_login_to_view_course = tutor_utils()->get_option('student_must_login_to_view_course');
 				if ($student_must_login_to_view_course){
@@ -109,8 +110,9 @@ class CourseBuilder extends \OxygenTutorElements {
 				}
 				return $template;
 			}
-
 			*/
+
+
 			/**
 			 * End Tutor Template
 			 */
@@ -138,8 +140,8 @@ class CourseBuilder extends \OxygenTutorElements {
 
 
 
-	function button_place() {
-		return "tutor::single";
+	public function tutor_button_place() {
+		return "single";
 	}
 
 }

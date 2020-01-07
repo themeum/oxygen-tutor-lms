@@ -24,10 +24,16 @@ class OxygenTutorElements extends OxyEl {
 
 	function controls() {
 
-
 		//Les.Son.Compo.Nents
+	}
 
+	public function button_place() {
+		$btn_place = $this->tutor_button_place();
 
+		if ($btn_place){
+			return "tutor::".$btn_place;
+		}
+		return "";
 	}
 
 }
