@@ -69,7 +69,6 @@ class CourseBuilder extends \OxygenTutorElements {
 
 		} else {
 
-
 			global $post;
 			setup_postdata($post);
 
@@ -124,13 +123,7 @@ class CourseBuilder extends \OxygenTutorElements {
 				<?php do_action('tutor_course/single/after/wrap'); ?>
 				<?php
 
-
-
-
 			}
-
-
-
 
 		}
 

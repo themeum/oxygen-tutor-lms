@@ -46,37 +46,37 @@ final class OxygenTutorLMS{
 
 	public function load_files(){
 		include_once OTLMS_PATH.'elements/OxygenTutorElements.php';
+		include_once OTLMS_PATH.'elements/CourseBuilder.php';
 
 		/**
 		 * Automatic include elements
 		 */
+		/*
 		$elements = glob(OTLMS_PATH."elements/*.php");
 		foreach ($elements as $element) {
 			include_once $element;
-		}
+		}*/
 	}
 
 	public function register_add_plus_section() {
-		\CT_Toolbar::oxygen_add_plus_accordion_section("tutor",__("Tutor LMS", 'tutor'));
+		\CT_Toolbar::oxygen_add_plus_accordion_section("tutor",__("Tutor LMS", 'oxygen-tutor-lms'));
 	}
 
 	public function register_add_plus_subsections() { ?>
 
-		<h2><?php _e("Single Course", 'tutor');?></h2>
+		<h2><?php _e("Single Course", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_single"); ?>
 
-		<h2><?php _e("Archive & Product List", 'tutor');?></h2>
+		<h2><?php _e("Archive & Course List", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_archive"); ?>
 
-		<h2><?php _e("Tutor Pages", 'tutor');?></h2>
+		<h2><?php _e("Tutor Pages", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_pages"); ?>
 
-		<h2><?php _e("Other Elements", 'tutor');?></h2>
+		<h2><?php _e("Other Elements", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_other"); ?>
 
 	<?php }
-
-
 
 
 }
