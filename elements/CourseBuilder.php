@@ -51,17 +51,17 @@ class CourseBuilder extends \OxygenTutorElements {
 
 			?>
 
-			<div id="tutor-course-<?php the_ID(); ?>" <?php tutor_container_classes(); ?>>
+            <div id="tutor-course-<?php the_ID(); ?>" <?php tutor_container_classes(); ?>>
 
 				<?php do_action('tutor_course/single/before/wrap'); ?>
 
-				<div class='oxy-course-wrapper-inner oxy-inner-content'>
+                <div class='oxy-course-wrapper-inner oxy-inner-content'>
 					<?php echo do_shortcode($content); ?>
-				</div>
+                </div>
 
 				<?php do_action('tutor_course/single/after/wrap'); ?>
 
-			</div>
+            </div>
 
 			<?php
 
@@ -69,13 +69,17 @@ class CourseBuilder extends \OxygenTutorElements {
 
 		} else {
 
-			global $post;
-			setup_postdata($post);
-
 
 			global $wp_query;
+			/**
+			 * Start Tutor Template
+			 */
 
-			if ($wp_query->is_single && ! empty($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] === $course_post_type){
+
+			die(otlms_get_template('login'));
+
+/*
+			if ($wp_query->is_single && ! empty($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] === $this->course_post_type){
 				$student_must_login_to_view_course = tutor_utils()->get_option('student_must_login_to_view_course');
 				if ($student_must_login_to_view_course){
 					if ( ! is_user_logged_in() ) {
@@ -84,46 +88,34 @@ class CourseBuilder extends \OxygenTutorElements {
 				}
 
 				wp_reset_query();
-
-
-				?>
-
-
-
-				<?php do_action('tutor_course/single/before/wrap'); ?>
-
-				<div <?php tutor_post_class('tutor-full-width-course-top tutor-course-top-info tutor-page-wrap'); ?>>
-					<div class="tutor-container">
-						<div class="tutor-row">
-							<div class="tutor-col-8 tutor-col-md-100">
-								<?php do_action('tutor_course/single/before/inner-wrap'); ?>
-								<?php tutor_course_lead_info(); ?>
-								<?php tutor_course_content(); ?>
-								<?php tutor_course_benefits_html(); ?>
-								<?php tutor_course_topics(); ?>
-								<?php tutor_course_instructors_html(); ?>
-								<?php tutor_course_target_reviews_html(); ?>
-								<?php do_action('tutor_course/single/after/inner-wrap'); ?>
-							</div> <!-- .tutor-col-8 -->
-
-							<div class="tutor-col-4">
-								<div class="tutor-single-course-sidebar">
-									<?php do_action('tutor_course/single/before/sidebar'); ?>
-									<?php tutor_course_enroll_box(); ?>
-									<?php tutor_course_requirements_html(); ?>
-									<?php tutor_course_tags_html(); ?>
-									<?php tutor_course_target_audience_html(); ?>
-									<?php do_action('tutor_course/single/after/sidebar'); ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<?php do_action('tutor_course/single/after/wrap'); ?>
-				<?php
-
+				if (empty( $wp_query->query_vars['course_subpage'])) {
+					$template = tutor_get_template( 'single-course' );
+					if ( is_user_logged_in() ) {
+						if ( tutor_utils()->is_enrolled() ) {
+							$template = tutor_get_template( 'single-course-enrolled' );
+						}
+					}
+				}else{
+					//If Course Subpage Exists
+					if ( is_user_logged_in() ) {
+						$course_subpage = $wp_query->query_vars['course_subpage'];
+						$template = tutor_get_template_path( 'single-course-enrolled-' . $course_subpage );
+						if ( ! file_exists( $template ) ) {
+							$template = tutor_get_template( 'single-course-enrolled-subpage' );
+						}
+					}else{
+						$template = tutor_get_template('login');
+					}
+				}
+				return $template;
 			}
+
+			*/
+			/**
+			 * End Tutor Template
+			 */
+
+
 
 		}
 

@@ -45,6 +45,7 @@ final class OxygenTutorLMS{
 	}
 
 	public function load_files(){
+		include_once OTLMS_PATH.'functions.php';
 		include_once OTLMS_PATH.'elements/OxygenTutorElements.php';
 		include_once OTLMS_PATH.'elements/CourseBuilder.php';
 
