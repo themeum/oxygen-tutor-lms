@@ -48,6 +48,7 @@ final class OxygenTutorLMS{
 		include_once OTLMS_PATH.'functions.php';
 		include_once OTLMS_PATH.'elements/OxygenTutorElements.php';
 		include_once OTLMS_PATH.'elements/CourseBuilder.php';
+		include_once OTLMS_PATH.'elements/SingleLesson.php';
 
 		/**
 		 * Automatic include elements
@@ -66,9 +67,14 @@ final class OxygenTutorLMS{
 	public function register_add_plus_subsections() { ?>
 
 		<h2><?php _e("Single Course", 'oxygen-tutor-lms');?></h2>
-		<?php do_action("oxygen_add_plus_tutor_single"); ?>
+		<?php do_action("oxygen_add_plus_tutor_single_course"); ?>
 
-		<h2><?php _e("Archive & Course List", 'oxygen-tutor-lms');?></h2>
+
+        <h2><?php _e("Single Lesson", 'oxygen-tutor-lms');?></h2>
+		<?php do_action("oxygen_add_plus_tutor_single_lesson"); ?>
+
+
+        <h2><?php _e("Archive & Course List", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_archive"); ?>
 
 		<h2><?php _e("Tutor Pages", 'oxygen-tutor-lms');?></h2>

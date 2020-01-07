@@ -13,7 +13,6 @@ class CourseBuilder extends \OxygenTutorElements {
 
 		$course_post_type = tutor()->course_post_type;
 
-
 		// add body class
 		add_filter('body_class', array($this, "tutor_body_class"));
 		/*
@@ -114,11 +113,7 @@ class CourseBuilder extends \OxygenTutorElements {
 			/**
 			 * End Tutor Template
 			 */
-
-
-
 		}
-
 
 		wp_reset_query();
 
@@ -139,7 +134,7 @@ class CourseBuilder extends \OxygenTutorElements {
 
 
 	public function tutor_button_place() {
-		return "single";
+		return "single_course";
 	}
 
 }
