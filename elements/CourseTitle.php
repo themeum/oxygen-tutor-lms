@@ -12,7 +12,7 @@ class CourseTitle extends \OxygenTutorElements {
     }
 
     function tutor_button_place() {
-        return "single";
+        return "single_course";
     }
 
     /* function icon() {
