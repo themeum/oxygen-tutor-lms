@@ -1,10 +1,10 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class CourseBuilder extends \OxygenTutorElements {
+class SingleCourse extends \OxygenTutorElements {
 
 	function name() {
-		return 'Course Builder';
+		return 'Single Course';
 	}
 
 
@@ -134,10 +134,10 @@ class CourseBuilder extends \OxygenTutorElements {
 
 
 	public function tutor_button_place() {
-		return "single_course";
+		return "single_template";
 	}
 
 }
 
 
-new CourseBuilder();
+new SingleCourse();
