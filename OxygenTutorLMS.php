@@ -48,6 +48,7 @@ final class OxygenTutorLMS{
 		include_once OTLMS_PATH.'functions.php';
 		include_once OTLMS_PATH.'elements/OxygenTutorElements.php';
 		include_once OTLMS_PATH.'elements/CourseBuilder.php';
+		include_once OTLMS_PATH.'elements/CourseTitle.php';
 
 		/**
 		 * Automatic include elements
