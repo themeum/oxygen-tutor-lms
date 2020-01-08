@@ -14,7 +14,7 @@ if ( !$disable_course_author){ ?>
             </div>
             <div class="tutor-single-course-author-name">
                 <span><?php _e('by', 'tutor'); ?></span>
-                <a href="<?php echo tutils()->profile_url($post->post_author); ?>"><?php echo get_author_name($post->post_author); ?></a>
+                <a href="<?php echo tutils()->profile_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name', $post->post_author); ?></a>
             </div>
         </li>
     </ul>
