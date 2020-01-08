@@ -1,10 +1,10 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class SingleQuiz extends \OxygenTutorElements {
+class SingleAssignment extends \OxygenTutorElements {
 
 	function name() {
-		return 'Single Quiz';
+		return 'Single Assignments';
 	}
 
 
@@ -42,9 +42,9 @@ class SingleQuiz extends \OxygenTutorElements {
 			 * Start Tutor Template
 			 */
 
-			if ($wp_query->is_single && ! empty($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] === 'tutor_quiz'){
+			if ($wp_query->is_single && ! empty($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] === 'tutor_assignments'){
 				if (is_user_logged_in()){
-					$template = otlms_get_template( 'single-quiz' );
+					$template = otlms_get_template( 'single-assignment' );
 				}else{
 					$template = otlms_get_template('login');
 				}
@@ -81,4 +81,4 @@ class SingleQuiz extends \OxygenTutorElements {
 }
 
 
-new SingleQuiz();
+new SingleAssignment();

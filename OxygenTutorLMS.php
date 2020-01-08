@@ -45,11 +45,19 @@ final class OxygenTutorLMS{
 	}
 
 	public function load_files(){
+		/**
+		 * Single Template
+		 */
 		include_once OTLMS_PATH.'functions.php';
 		include_once OTLMS_PATH.'elements/OxygenTutorElements.php';
 		include_once OTLMS_PATH.'elements/SingleCourse.php';
 		include_once OTLMS_PATH.'elements/SingleLesson.php';
 		include_once OTLMS_PATH.'elements/SingleQuiz.php';
+		include_once OTLMS_PATH.'elements/SingleAssignment.php';
+
+		/**
+		 * Single Course Elements
+		 */
 		include_once OTLMS_PATH.'elements/CourseTitle.php';
 
 		/**
