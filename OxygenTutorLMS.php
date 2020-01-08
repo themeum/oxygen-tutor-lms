@@ -59,6 +59,7 @@ final class OxygenTutorLMS{
 		 * Archive Courses
 		 */
 		include_once OTLMS_PATH.'elements/ArchiveCourse.php';
+		include_once OTLMS_PATH.'elements/CoursesList.php';
 
 		/**
 		 * Single Course Elements
