@@ -20,10 +20,6 @@ class CourseTitle extends \OxygenTutorElements {
     } */
 
     function render($options, $defaults, $content) {
-        // how does this magically work even with these lines commented out:
-        // global $post;
-        // setup_postdata($post->ID);
-
         the_title();
     }
 

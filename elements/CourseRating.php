@@ -21,7 +21,6 @@ class CourseRating extends \OxygenTutorElements {
 
     function render($options, $defaults, $content) {
         include_once otlms_get_template('course/rating');
-        return;
     }
 
 

@@ -56,6 +56,11 @@ final class OxygenTutorLMS{
 		include_once OTLMS_PATH.'elements/SingleAssignment.php';
 
 		/**
+		 * Archive Courses
+		 */
+		include_once OTLMS_PATH.'elements/ArchiveCourse.php';
+
+		/**
 		 * Single Course Elements
 		 */
 		include_once OTLMS_PATH.'elements/CourseTitle.php';
