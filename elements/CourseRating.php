@@ -7,10 +7,6 @@ class CourseRating extends \OxygenTutorElements {
         return 'Course Rating';
     }
 
-    function tag() {
-        return $this->headingTagChoices();
-    }
-
     function tutor_button_place() {
         return "single_course";
     }
@@ -25,7 +21,7 @@ class CourseRating extends \OxygenTutorElements {
 
 
     function class_names() {
-        return array('course_title', 'entry-title', 'oxy-tutor-element');
+        return array('tutor-course-rating', 'oxy-tutor-element');
     }
 
 

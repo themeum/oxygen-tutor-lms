@@ -1,10 +1,10 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class CourseAuthor extends \OxygenTutorElements {
+class CourseLevel extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Author';
+        return 'Course Level';
     }
 
     function tutor_button_place() {
@@ -16,12 +16,12 @@ class CourseAuthor extends \OxygenTutorElements {
     } */
 
     function render($options, $defaults, $content) {
-        include_once otlms_get_template('course/author');
+        include_once otlms_get_template('course/level');
     }
 
 
     function class_names() {
-        return array('tutor-course-author', 'oxy-tutor-element');
+        return array('tutor-course-level', 'oxy-tutor-element');
     }
 
 
@@ -31,4 +31,4 @@ class CourseAuthor extends \OxygenTutorElements {
 
 }
 
-new CourseAuthor();
+new CourseLevel();
