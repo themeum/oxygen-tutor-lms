@@ -1,10 +1,10 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class ArchiveCourse extends \OxygenTutorElements {
+class ArchiveCourseCategories extends \OxygenTutorElements {
 
 	function name() {
-		return 'Archive Courses';
+		return 'Archive Categories';
 	}
 
 	function render($options, $defaults, $content) {
@@ -44,4 +44,4 @@ class ArchiveCourse extends \OxygenTutorElements {
 }
 
 
-new ArchiveCourse();
+new ArchiveCourseCategories();
