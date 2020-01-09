@@ -1,6 +1,4 @@
-<?php 
-if ( ! defined( 'ABSPATH' ) )
-exit;
+<?php
 
 global $post;
 $disable_course_author = get_tutor_option('disable_course_author');
