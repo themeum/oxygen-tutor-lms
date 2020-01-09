@@ -46,6 +46,7 @@ class SingleLesson extends \OxygenTutorElements {
 			}
 			wp_reset_postdata();
 
+			$template = apply_filters('tutor_lesson_template', $template);
 			include_once apply_filters('otlms_lesson_template', $template);
 		}
 

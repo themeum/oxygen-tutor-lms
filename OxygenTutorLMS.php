@@ -30,11 +30,9 @@ final class OxygenTutorLMS{
 		}
 
 		add_filter('tutor_lms_should_template_override', '__return_false');
-
-		//die('HelloOxygen');
+		add_filter('tutor_get_template_path', array($this, 'tutor_get_template_path'), 99, 2);
 
 		$this->load_files();
-
 
 		// Register +Add Tutor section
 		add_action('oxygen_add_plus_sections', array($this, 'register_add_plus_section'));
@@ -109,5 +107,12 @@ final class OxygenTutorLMS{
 
 	<?php }
 
+
+	public function tutor_get_template_path($template_location, $template){
+	    if ($template === 'single-preview-lesson'){
+		    $template_location = otlms_get_template( 'single-preview-lesson' );
+	    }
+        return $template_location;
+    }
 
 }
