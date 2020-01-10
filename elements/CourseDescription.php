@@ -16,8 +16,10 @@ class CourseDescription extends \OxygenTutorElements {
     } */
 
     function render($options, $defaults, $content) {
-        //tutor_course_content();
-        echo "tutor description";
+        global $post;
+        echo get_the_content(null, false, $post);
+        /* tutor_course_content();
+        echo "tutor description"; */
     }
 
 

@@ -16,7 +16,7 @@ class CourseInstructors extends \OxygenTutorElements {
     } */
 
     function render($options, $defaults, $content) {
-        tutor_course_target_reviews_html();
+        tutor_course_instructors_html();
     }
 
 
