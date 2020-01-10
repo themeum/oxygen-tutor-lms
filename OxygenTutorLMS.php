@@ -40,6 +40,9 @@ final class OxygenTutorLMS{
 		// Register +Add Tutor subsections
 		// oxygen_add_plus_{$id}_section_content
 		add_action('oxygen_add_plus_tutor_section_content', array($this, 'register_add_plus_subsections'));
+
+		//Supporting public profile as author archive page
+		add_action( 'pre_get_posts', array($this, 'public_profile_mark_archive'), 1 );
 	}
 
 	public function load_files(){
@@ -52,6 +55,7 @@ final class OxygenTutorLMS{
 		include_once OTLMS_PATH.'elements/SingleLesson.php';
 		include_once OTLMS_PATH.'elements/SingleQuiz.php';
 		include_once OTLMS_PATH.'elements/SingleAssignment.php';
+		include_once OTLMS_PATH.'elements/PublicProfile.php';
 
 		/**
 		 * Archive Courses
@@ -126,5 +130,47 @@ final class OxygenTutorLMS{
 	    }
         return $template_location;
     }
+
+	public function student_public_profile($template){
+		global $wp_query;
+
+		//die($template);
+        //echo '<pre>';
+        //print_r($wp_query);
+
+		if ( ! empty($wp_query->query['tutor_student_username'])){
+		    $wp_query->is_author = true;
+			//$template = otlms_get_template( 'student-public-profile' );
+		}
+
+		return $template;
+	}
+
+
+	/**
+	 * @param $query
+	 *
+	 * @return mixed
+     *
+     * Marking Public profile Template as archive page
+     *
+     * @since v.1.0.0
+	 */
+	public function public_profile_mark_archive($query){
+		global $wp_query;
+
+		if ( ! is_admin() && ! empty($wp_query->query['tutor_student_username'])) {
+		    $author_name = sanitize_text_field($wp_query->query['tutor_student_username']);
+
+			$query->is_archive           = true;
+			$query->is_home              = false;
+			$query->query['author_name'] = $author_name;
+			$query->is_author            = true;
+			$query->set( 'author_name', $author_name );
+			$query->set( 'is_author', true );
+		}
+
+	    return $query;
+	}
 
 }
