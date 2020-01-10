@@ -75,6 +75,14 @@ final class OxygenTutorLMS{
 		include_once OTLMS_PATH.'elements/CourseStatus.php';
 		include_once OTLMS_PATH.'elements/CourseAbout.php';
 		include_once OTLMS_PATH.'elements/CourseDescription.php';
+		include_once OTLMS_PATH.'elements/CourseCurriculum.php';
+		include_once OTLMS_PATH.'elements/CourseRequirements.php';
+		include_once OTLMS_PATH.'elements/CourseTargetAudience.php';
+		include_once OTLMS_PATH.'elements/CourseMaterial.php';
+		include_once OTLMS_PATH.'elements/CourseThumbnail.php';
+		include_once OTLMS_PATH.'elements/CourseEnrolmentBox.php';
+		include_once OTLMS_PATH.'elements/CourseInstructors.php';
+		include_once OTLMS_PATH.'elements/CourseReviews.php';
 
 		/**
 		 * Automatic include elements

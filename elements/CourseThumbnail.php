@@ -1,10 +1,10 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class CourseDescription extends \OxygenTutorElements {
+class CourseThumbnail extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Description';
+        return 'Course Thumbnail';
     }
 
     function tutor_button_place() {
@@ -16,13 +16,16 @@ class CourseDescription extends \OxygenTutorElements {
     } */
 
     function render($options, $defaults, $content) {
-        //tutor_course_content();
-        echo "tutor description";
+        if(tutils()->has_video_in_single()){
+			tutor_course_video();
+		} else{
+			get_tutor_course_thumbnail();
+		}
     }
 
 
     function class_names() {
-        return array('tutor-course-description', 'oxy-tutor-element');
+        return array('tutor-course-thumbnail', 'oxy-tutor-element');
     }
 
 
@@ -32,4 +35,4 @@ class CourseDescription extends \OxygenTutorElements {
 
 }
 
-new CourseDescription();
+new CourseThumbnail();

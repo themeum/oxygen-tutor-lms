@@ -1,10 +1,10 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class CourseDescription extends \OxygenTutorElements {
+class CourseRequirements extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Description';
+        return 'Course Requirements';
     }
 
     function tutor_button_place() {
@@ -16,13 +16,12 @@ class CourseDescription extends \OxygenTutorElements {
     } */
 
     function render($options, $defaults, $content) {
-        //tutor_course_content();
-        echo "tutor description";
+        tutor_course_requirements_html();
     }
 
 
     function class_names() {
-        return array('tutor-course-description', 'oxy-tutor-element');
+        return array('tutor-course-requirements', 'oxy-tutor-element');
     }
 
 
@@ -32,4 +31,4 @@ class CourseDescription extends \OxygenTutorElements {
 
 }
 
-new CourseDescription();
+new CourseRequirements();
