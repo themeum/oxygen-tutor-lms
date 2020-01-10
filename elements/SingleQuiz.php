@@ -7,7 +7,6 @@ class SingleQuiz extends \OxygenTutorElements {
 		return 'Single Quiz';
 	}
 
-
 	function render($options, $defaults, $content) {
 		global $wp_query;
 		/**
@@ -27,14 +26,6 @@ class SingleQuiz extends \OxygenTutorElements {
 		 * End Tutor Template
 		 */
 	}
-
-
-	public function tutor_body_class($classes) {
-		$classes[] = 'tutor';
-		return $classes;
-	}
-
-
 
 	public function tutor_button_place() {
 		return "single_template";

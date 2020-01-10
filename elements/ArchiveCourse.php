@@ -28,12 +28,6 @@ class ArchiveCourse extends \OxygenTutorElements {
 		 */
 	}
 
-	public function tutor_body_class($classes) {
-		$classes[] = 'tutor';
-		$classes[] = 'courses-archive';
-		return $classes;
-	}
-
 	public function tutor_button_place() {
 		return "archive";
 	}
