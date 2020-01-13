@@ -91,6 +91,8 @@ final class OxygenTutorLMS{
 		/**
 		 * TutorLMS Pages
 		 */
+		include_once OTLMS_PATH.'elements/PageStudentRegistration.php';
+		include_once OTLMS_PATH.'elements/PageInstructorRegistration.php';
 		include_once OTLMS_PATH.'elements/PageDashboard.php';
 
 
