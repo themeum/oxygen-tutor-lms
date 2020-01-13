@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseTotalEnrolled extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Total Enrolled';
+        return 'Total Enrolled';
     }
 
     function tutor_button_place() {

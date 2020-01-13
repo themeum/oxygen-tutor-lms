@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseLastUpdate extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Last Update';
+        return 'Last Update';
     }
 
     function tutor_button_place() {

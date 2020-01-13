@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseTargetAudience extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Target Audience';
+        return 'Target Audience';
     }
 
     function tutor_button_place() {

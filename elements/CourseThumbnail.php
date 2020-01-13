@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseThumbnail extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Thumbnail';
+        return 'Thumbnail';
     }
 
     function tutor_button_place() {

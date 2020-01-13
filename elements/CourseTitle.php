@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseTitle extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Title';
+        return 'Title';
     }
 
     function tag() {
