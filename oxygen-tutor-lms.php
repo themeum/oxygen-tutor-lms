@@ -4,7 +4,7 @@ Plugin Name: Oxygen Tutor LMS
 Plugin URI: https://www.themeum.com/product/tutor-lms/
 Description: Oxygen Builder Integration - Tutor LMS plugin let's you to design your courses, lesson page by Oxygen Builder.
 Author: Themeum
-Version: 1.0.0
+Version: 1.0.0-alpha
 Author URI: http://themeum.com
 Requires at least: 4.5
 Tested up to: 5.3
@@ -14,7 +14,7 @@ Text Domain: oxygen-tutor-lms
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
-define('OTLMS_VERSION', '1.0.0');
+define('OTLMS_VERSION', '1.0.0-alpha');
 define('OTLMS_FILE', __FILE__);
 define('OTLMS_PATH', plugin_dir_path(OTLMS_FILE));
 define('OTLMS_URL', plugin_dir_url(OTLMS_FILE));

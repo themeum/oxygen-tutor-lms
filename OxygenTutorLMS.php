@@ -89,6 +89,13 @@ final class OxygenTutorLMS{
 		include_once OTLMS_PATH.'elements/CourseReviews.php';
 
 		/**
+		 * TutorLMS Pages
+		 */
+		include_once OTLMS_PATH.'elements/PageDashboard.php';
+
+
+
+		/**
 		 * Automatic include elements
 		 */
 		/*
@@ -113,13 +120,8 @@ final class OxygenTutorLMS{
         <h2><?php _e("Archive & Course List", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_archive"); ?>
 
-        <!--
-		<h2><?php /*_e("Tutor Pages", 'oxygen-tutor-lms');*/?></h2>
-		<?php /*do_action("oxygen_add_plus_tutor_pages"); */?>
-        -->
-
-		<h2><?php _e("Other Elements", 'oxygen-tutor-lms');?></h2>
-		<?php do_action("oxygen_add_plus_tutor_other"); ?>
+        <h2><?php _e("TutorLMS Pages", 'oxygen-tutor-lms');?></h2>
+		<?php do_action("oxygen_add_plus_tutor_pages"); ?>
 
 	<?php }
 
