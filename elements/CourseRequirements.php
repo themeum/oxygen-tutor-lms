@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseRequirements extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Requirements';
+        return 'Requirements';
     }
 
     function tutor_button_place() {

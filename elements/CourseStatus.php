@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseStatus extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Status';
+        return 'Status';
     }
 
     function tutor_button_place() {

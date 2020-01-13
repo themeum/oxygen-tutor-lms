@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseDuration extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Duration';
+        return 'Duration';
     }
 
     function tutor_button_place() {

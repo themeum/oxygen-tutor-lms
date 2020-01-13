@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseReviews extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Reviews';
+        return 'Reviews';
     }
 
     function tutor_button_place() {

@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseEnrolmentBox extends \OxygenTutorElements {
 
 	function name() {
-        return 'Course Enrolment Box';
+        return 'Enrolment Box';
     }
 
     function tutor_button_place() {
