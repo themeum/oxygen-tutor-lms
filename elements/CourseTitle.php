@@ -4,60 +4,60 @@ namespace Oxygen\TutorElements;
 class CourseTitle extends \OxygenTutorElements {
 
 	function name() {
-        return 'Title';
-    }
+		return 'Title';
+	}
 
-    function tag() {
-        return $this->headingTagChoices();
-    }
+	function tag() {
+		return $this->headingTagChoices();
+	}
 
-    function tutor_button_place() {
-        return "single_course";
-    }
+	function tutor_button_place() {
+		return "single_course";
+	}
 
-    /* function icon() {
-        return plugin_dir_url(__FILE__) . 'assets/'.basename(__FILE__, '.php').'.svg';
-    } */
+	function icon() {
+		return plugin_dir_url(OTLMS_FILE) . 'assets/icons/'.basename(__FILE__, '.php').'.svg';
+	}
 
-    function render($options, $defaults, $content) {
-        the_title();
-    }
-
-
-    function class_names() {
-        return array('tutor-course-title', 'oxy-tutor-element');
-    }
+	function render($options, $defaults, $content) {
+		the_title();
+	}
 
 
-    function controls() {
+	function class_names() {
+		return array('tutor-course-title', 'oxy-tutor-element');
+	}
 
-        $this->addStyleControl(
-            array(
-                "property" => 'font-family',
-            )
-        );
 
-        $this->addStyleControl(
-            array(
-                "property" => 'color',
-            )
-        );
+	function controls() {
 
-        $this->addStyleControl(
-            array(
-                "property" => 'font-size',
-            )
-        );
+		$this->addStyleControl(
+			array(
+				"property" => 'font-family',
+			)
+		);
 
-        $this->addStyleControl(
-            array(
-                "property" => 'font-weight',
-            )
-        );
+		$this->addStyleControl(
+			array(
+				"property" => 'color',
+			)
+		);
 
-        $this->addTagControl();
+		$this->addStyleControl(
+			array(
+				"property" => 'font-size',
+			)
+		);
 
-    }
+		$this->addStyleControl(
+			array(
+				"property" => 'font-weight',
+			)
+		);
+
+		$this->addTagControl();
+
+	}
 
 }
 
