@@ -23,7 +23,6 @@ class CourseTitle extends \OxygenTutorElements {
 		the_title();
 	}
 
-
 	function class_names() {
 		return array('tutor-course-title', 'oxy-tutor-element');
 	}
