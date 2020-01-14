@@ -7,6 +7,9 @@ class SingleCourse extends \OxygenTutorElements {
 		return 'Single Course';
 	}
 
+	function icon() {
+		return plugin_dir_url(OTLMS_FILE) . 'assets/icons/'.basename(__FILE__, '.php').'.svg';
+	}
 
 	function render($options, $defaults, $content) {
 		$course_post_type = tutor()->course_post_type;

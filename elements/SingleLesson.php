@@ -7,6 +7,9 @@ class SingleLesson extends \OxygenTutorElements {
 		return 'Single Lesson';
 	}
 
+	function icon() {
+		return plugin_dir_url(OTLMS_FILE) . 'assets/icons/'.basename(__FILE__, '.php').'.svg';
+	}
 
 	function render($options, $defaults, $content) {
 		global $wp_query;

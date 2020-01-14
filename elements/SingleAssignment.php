@@ -7,6 +7,9 @@ class SingleAssignment extends \OxygenTutorElements {
 		return 'Single Assignments';
 	}
 
+	function icon() {
+		return plugin_dir_url(OTLMS_FILE) . 'assets/icons/'.basename(__FILE__, '.php').'.svg';
+	}
 
 	function render($options, $defaults, $content) {
 		global $wp_query;
