@@ -27,6 +27,22 @@ class CourseRating extends \OxygenTutorElements {
 
     function controls() {
 
+        $this->addStyleControl(
+			array(
+                "name" => __('Stars Size'),
+                "selector" => ".tutor-single-course-rating .tutor-star-rating-group",
+                "property" => 'font-size',
+            )
+        );
+        
+        $this->addStyleControl(
+			array(
+                "name" => __('Stars Color'),
+                "selector" => ".tutor-single-course-rating .tutor-star-rating-group",
+                "property" => 'color',
+            )
+        );
+        
     }
 
 }

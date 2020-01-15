@@ -6,6 +6,8 @@ if (class_exists('OxygenTutorElements')){
 
 class OxygenTutorElements extends OxyEl {
 
+	protected $params;
+
 	function init() {
 
 		$this->El->useAJAXControls();
