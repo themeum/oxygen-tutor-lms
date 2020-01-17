@@ -27,7 +27,6 @@ class CourseTitle extends \OxygenTutorElements {
 		return array('tutor-course-title', 'oxy-tutor-element');
 	}
 
-
 	function controls() {
 
 		$this->addStyleControl(
@@ -55,9 +54,7 @@ class CourseTitle extends \OxygenTutorElements {
 		);
 
 		$this->addTagControl();
-
 	}
-
 }
 
 new CourseTitle();

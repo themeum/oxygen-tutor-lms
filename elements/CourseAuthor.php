@@ -19,47 +19,44 @@ class CourseAuthor extends \OxygenTutorElements {
         include_once otlms_get_template('course/author');
     }
 
-
     function class_names() {
         return array('tutor-course-author', 'oxy-tutor-element');
     }
 
-
     function controls() {
+
         //section image
+        $img_selector = ".tutor-single-course-meta ul li .tutor-single-course-avatar span";
         $image_section = $this->addControlSection("image", __("Image"), "assets/icon.png", $this);
 		$image_section->addStyleControls(
 			array(
 				array(
                 	"name" => __('Height'),
-                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+                	"selector" => $img_selector,
 					"property" => 'height',
 				),
 				array(
                 	"name" => __('Width'),
-                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+                	"selector" => $img_selector,
 					"property" => 'width',
 				),
 				array(
                 	"name" => __('Font Size'),
-                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+                	"selector" => $img_selector,
 					"property" => 'font-size',
 				),
 				array(
                 	"name" => __('Line Height'),
-                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+                	"selector" => $img_selector,
 					"property" => 'line-height',
-				),
-				array(
-                	"name" => __('Background'),
-                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
-					"property" => 'background-color',
-				),
+				)
 			)
         );
+
         //section lable and name
-        $this->typographySection('Label', '.tutor-single-course-author-meta .tutor-single-course-author-name span');
-        $this->typographySection('Name', '.tutor-single-course-author-meta .tutor-single-course-author-name a');
+        $author_selector = ".tutor-single-course-author-meta .tutor-single-course-author-name";
+        $this->typographySection('Label', $author_selector.' span');
+        $this->typographySection('Name', $author_selector.' a');
     }
 
 }

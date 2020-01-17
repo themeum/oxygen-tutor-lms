@@ -19,18 +19,15 @@ class CourseLevel extends \OxygenTutorElements {
         include_once otlms_get_template('course/level');
     }
 
-
     function class_names() {
         return array('tutor-course-level', 'oxy-tutor-element');
     }
 
-
     function controls() {
-        //section lable and name
-        $this->typographySection('Label', '.tutor-single-course-meta ul li.tutor-course-level strong');
-        $this->typographySection('Value', '.tutor-single-course-meta ul li.tutor-course-level');
+        $typography_selector = ".tutor-single-course-meta ul li.tutor-course-level";
+        $this->typographySection('Label', $typography_selector.' strong');
+        $this->typographySection('Value', $typography_selector);
     }
-
 }
 
 new CourseLevel();

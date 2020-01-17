@@ -24,7 +24,9 @@ class CourseCategories extends \OxygenTutorElements {
     }
 
     function controls() {
-
+        $typography_selector = ".tutor-single-course-meta .tutor-single-course-meta-categories";
+        $this->typographySection('Label', $typography_selector.' span');
+        $this->typographySection('Value', $typography_selector.' a');
     }
 
 }

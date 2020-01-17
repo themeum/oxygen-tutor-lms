@@ -4,7 +4,7 @@
         $course_categories = get_tutor_course_categories();
         if(is_array($course_categories) && count($course_categories)){
             ?>
-            <li>
+            <li class="tutor-single-course-meta-categories">
                 <span><?php esc_html_e('Categories', 'tutor') ?></span>
                 <?php
                 foreach ($course_categories as $course_category){

@@ -19,14 +19,14 @@ class CourseAbout extends \OxygenTutorElements {
         include_once otlms_get_template('course/about');
     }
 
-
     function class_names() {
         return array('tutor-course-about', 'oxy-tutor-element');
     }
 
-
     function controls() {
-
+        $typography_selector = ".tutor-course-summery";
+        $this->typographySection('Heading', $typography_selector.' .tutor-segment-title');
+        $this->typographySection('Paragraph', $typography_selector);
     }
 
 }
