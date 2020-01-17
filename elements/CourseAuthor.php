@@ -26,7 +26,40 @@ class CourseAuthor extends \OxygenTutorElements {
 
 
     function controls() {
-
+        //section image
+        $image_section = $this->addControlSection("image", __("Image"), "assets/icon.png", $this);
+		$image_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Height'),
+                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+					"property" => 'height',
+				),
+				array(
+                	"name" => __('Width'),
+                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+					"property" => 'width',
+				),
+				array(
+                	"name" => __('Font Size'),
+                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+					"property" => 'font-size',
+				),
+				array(
+                	"name" => __('Line Height'),
+                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+					"property" => 'line-height',
+				),
+				array(
+                	"name" => __('Background'),
+                	"selector" => ".tutor-single-course-meta ul li .tutor-single-course-avatar span",
+					"property" => 'background-color',
+				),
+			)
+        );
+        //section lable and name
+        $this->typographySection('Label', '.tutor-single-course-author-meta .tutor-single-course-author-name span');
+        $this->typographySection('Name', '.tutor-single-course-author-meta .tutor-single-course-author-name a');
     }
 
 }

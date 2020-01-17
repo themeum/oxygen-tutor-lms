@@ -26,7 +26,9 @@ class CourseLevel extends \OxygenTutorElements {
 
 
     function controls() {
-
+        //section lable and name
+        $this->typographySection('Label', '.tutor-single-course-meta ul li.tutor-course-level strong');
+        $this->typographySection('Value', '.tutor-single-course-meta ul li.tutor-course-level');
     }
 
 }
