@@ -23,11 +23,9 @@ class CourseDescription extends \OxygenTutorElements {
 		tutor_course_content();
 	}
 
-
 	function class_names() {
 		return array('tutor-course-description', 'oxy-tutor-element');
 	}
-
 
 	function controls() {
 		$typography_selector = ".tutor-course-content-wrap";
