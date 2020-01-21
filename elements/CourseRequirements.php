@@ -19,11 +19,9 @@ class CourseRequirements extends \OxygenTutorElements {
         tutor_course_requirements_html();
     }
 
-
     function class_names() {
         return array('tutor-course-requirements', 'oxy-tutor-element');
     }
-
 
     function controls() {
         $selector = ".tutor-course-requirements-wrap";
@@ -35,17 +33,18 @@ class CourseRequirements extends \OxygenTutorElements {
         $content_icon->addStyleControls(
 			array(
 				array(
-                	"name" => __('Font Size'),
+                	"name" => __('Size'),
                 	"selector" => $items_selector.' li:before',
 					"property" => 'font-size',
                 ),
 				array(
-                	"name" => __('Font Color'),
+                	"name" => __('Color'),
                 	"selector" => $items_selector.' li:before',
 					"property" => 'color',
 				)
 			)
         );
+        
         $content_section->typographySection('Typography', $items_selector, $this);
         //spacing
         $content_spacing = $content_section->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
