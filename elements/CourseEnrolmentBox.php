@@ -28,7 +28,6 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         return array('tutor-course-enrolment-box', 'oxy-tutor-element');
     }
 
-
     function controls() {
 
         /* Price */

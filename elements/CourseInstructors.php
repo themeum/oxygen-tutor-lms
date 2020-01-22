@@ -16,19 +16,47 @@ class CourseInstructors extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_instructors_html();
+        echo "<div class='tutor-course-instructors'>";
+            tutor_course_instructors_html();
+        echo "</div>";
     }
-
-
-    function class_names() {
-        return array('tutor-course-instructors', 'oxy-tutor-element');
-    }
-
 
     function controls() {
+        $selector = ".tutor-course-instructors";
+        /* Title */
+        $this->typographySection( __("Title"), $selector.' .tutor-segment-title', $this);
 
+       /* Author */
+       $author_section = $this->addControlSection("author", __("Author"), "assets/icon.png", $this);
+       $img_selector = $selector." .instructor-avatar span";
+       $img_section = $author_section->addControlSection("author_image", __("Image"), "assets/icon.png", $this);
+       $img_section->addStyleControls(
+           array(
+               array(
+                   "name" => __('Height'),
+                   "selector" => $img_selector,
+                   "property" => 'height',
+               ),
+               array(
+                   "name" => __('Width'),
+                   "selector" => $img_selector,
+                   "property" => 'width',
+               ),
+               array(
+                   "name" => __('Font Size'),
+                   "selector" => $img_selector,
+                   "property" => 'font-size',
+               ),
+               array(
+                   "name" => __('Line Height'),
+                   "selector" => $img_selector,
+                   "property" => 'line-height',
+               )
+           )
+       );
+       $name_selector = $selector." .instructor-name a";
+       $author_section->typographySection(__("Name"), $name_selector, $this);
     }
-
 }
 
 new CourseInstructors();

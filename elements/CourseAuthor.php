@@ -24,7 +24,6 @@ class CourseAuthor extends \OxygenTutorElements {
     }
 
     function controls() {
-
         //section image
         $img_selector = ".tutor-single-course-meta ul li .tutor-single-course-avatar span";
         $image_section = $this->addControlSection("image", __("Image"), "assets/icon.png", $this);
