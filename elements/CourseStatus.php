@@ -24,15 +24,30 @@ class CourseStatus extends \OxygenTutorElements {
         }
     }
 
-    function class_names() {
-        return array('tutor-course-status', 'oxy-tutor-element');
-    }
-
-
     function controls() {
+        $selector = '.tutor-course-status';
+        $this->typographySection('Label', $selector.' .tutor-segment-title');
 
+        $this->addStyleControls(
+			array(
+				array(
+                	"name" => __('Color'),
+                	"selector" => $selector.' .tutor-progress-bar',
+					"property" => 'background-color',
+				),
+				array(
+                	"name" => __('Fill Color'),
+                	"selector" => $selector.' .tutor-progress-filled',
+					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Pointer Color'),
+                	"selector" => $selector.' .tutor-progress-filled:after',
+					"property" => 'border-color',
+				)
+			)
+        );
     }
-
 }
 
 new CourseStatus();

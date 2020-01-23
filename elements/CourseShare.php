@@ -43,8 +43,8 @@ class CourseShare extends \OxygenTutorElements {
         ));
 
         $this->typographySection('Label', $typography_selector.' span');
-        $this->typographySection('Icons', $typography_selector.' .tutor-social-share-wrap button');
-        $this->typographySection('Icons Hover', $typography_selector.' .tutor-social-share-wrap button:hover');
+        $this->typographySection('Original Icons', $typography_selector.' .tutor-social-share-wrap button');
+        $this->typographySection('Hovered Icons', $typography_selector.' .tutor-social-share-wrap button:hover');
     }
 
 }
