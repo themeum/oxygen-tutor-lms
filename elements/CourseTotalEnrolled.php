@@ -16,17 +16,18 @@ class CourseTotalEnrolled extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        include_once otlms_get_template('course/total-enrolled');
-    }
-
-    function class_names() {
-        return array('tutor-course-total-enrolled', 'oxy-tutor-element');
+        $disable_total_enrolled = get_tutor_option('disable_course_total_enrolled');
+        if(!$disable_total_enrolled) {
+            $markup = '';
+            $markup .= "<div class='tutor-single-course-meta-total-enroll'>";
+            $markup .= (int) tutor_utils()->count_enrolled_users_by_course();
+            $markup .= "</div>";
+            echo $markup;
+        }
     }
 
     function controls() {
-        $typography_selector = ".tutor-single-course-meta .tutor-single-course-meta-total-enroll";
-        $this->typographySection('Label', $typography_selector.' span');
-        $this->typographySection('Value', $typography_selector);
+        $this->typographySection('Typography', '.tutor-single-course-meta-total-enroll');
     }
 
 }

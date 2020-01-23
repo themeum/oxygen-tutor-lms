@@ -16,17 +16,19 @@ class CourseDuration extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        include_once otlms_get_template('course/duration');
-    }
-
-    function class_names() {
-        return array('tutor-course-duration', 'oxy-tutor-element');
+        $course_duration = get_tutor_course_duration_context();
+        $disable_course_duration = get_tutor_option('disable_course_duration');
+        if( !empty($course_duration) && !$disable_course_duration) {
+            $markup = '';
+            $markup .= "<div class='tutor-single-course-meta-duration'>";
+            $markup .= $course_duration;
+            $markup .= "</div>";
+            echo $markup;
+        }
     }
 
     function controls() {
-        $typography_selector = ".tutor-single-course-meta .tutor-single-course-meta-duration";
-        $this->typographySection('Label', $typography_selector.' span');
-        $this->typographySection('Value', $typography_selector);
+        $this->typographySection('Typography', '.tutor-single-course-meta-duration');
     }
 
 }

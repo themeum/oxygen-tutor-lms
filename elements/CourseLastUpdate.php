@@ -16,18 +16,18 @@ class CourseLastUpdate extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        include_once otlms_get_template('course/last-update');
+        $disable_update_date = get_tutor_option('disable_course_update_date');
+        if(!$disable_update_date) {
+            $markup = '';
+            $markup .= "<div class='tutor-single-course-meta-last-update'>";
+            $markup .= esc_html(get_the_modified_date());
+            $markup .= "</div>";
+            echo $markup;
+        }
     }
-
-    function class_names() {
-        return array('tutor-course-last-update', 'oxy-tutor-element');
-    }
-
 
     function controls() {
-        $typography_selector = ".tutor-single-course-meta .tutor-single-course-meta-last-update";
-        $this->typographySection('Label', $typography_selector.' span');
-        $this->typographySection('Value', $typography_selector);
+        $this->typographySection('Typography', '.tutor-single-course-meta-last-update');
     }
 
 }

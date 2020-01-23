@@ -16,17 +16,23 @@ class CourseCategories extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        include_once otlms_get_template('course/categories');
-    }
-
-    function class_names() {
-        return array('tutor-course-categories', 'oxy-tutor-element');
+        $course_categories = get_tutor_course_categories();
+        if(is_array($course_categories) && count($course_categories)) {
+            $markup = '';
+            $markup .= "<div class='tutor-single-course-meta-categories'>";
+                foreach ($course_categories as $course_category) {
+                    $category_name = $course_category->name;
+                    $category_link = get_term_link($course_category->term_id);
+                    $markup .= " <a href='$category_link'>$category_name</a>";
+                }
+            $markup .= "</div>";
+            echo $markup;
+        }
     }
 
     function controls() {
-        $typography_selector = ".tutor-single-course-meta .tutor-single-course-meta-categories";
-        $this->typographySection('Label', $typography_selector.' span');
-        $this->typographySection('Value', $typography_selector.' a');
+        $typography_selector = ".tutor-single-course-meta-categories";
+        $this->typographySection('Typography', $typography_selector.' a');
     }
 
 }
