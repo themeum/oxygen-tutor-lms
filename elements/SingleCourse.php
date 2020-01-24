@@ -187,6 +187,15 @@ class SingleCourse extends \OxygenTutorElements {
             __("Items Paddings"),
             $benefits_item_selector.' li'
 		);
+		$benefits_content_spacing->addStyleControls(
+			array(
+				array(
+                	"name" => __('Line Height'),
+                	"selector" => $benefits_item_selector.' li',
+					"property" => 'line-height',
+                )
+			)
+        );
 		
 		/* Course Curriculum */
 		$course_curriculum = $this->addControlSection("curriculum", __("Curriculum"), "assets/icon.png", $this);
@@ -227,7 +236,6 @@ class SingleCourse extends \OxygenTutorElements {
             __("Lesson Title Paddings"),
             '.tutor-course-lesson'
 		);
-		
 
 		/* Course instructors */
 		$course_instructors = $this->addControlSection("instructors", __("Instructors"), "assets/icon.png", $this);
@@ -261,16 +269,16 @@ class SingleCourse extends \OxygenTutorElements {
         $instructors_name_selector = $instructors_selector." .instructor-name a";
         $course_instructors->typographySection(__("Name"), $instructors_name_selector, $this);
         $info_selector = $instructors_selector." .single-instructor-bottom";
-        $rating_section = $course_instructors->addControlSection("rating", __("Rating"), "assets/icon.png", $this);
+        $instructors_rating_section = $course_instructors->addControlSection("instructors_rating", __("Rating"), "assets/icon.png", $this);
         $star_selector = $info_selector." .tutor-star-rating-group";
-        $rating_section->addStyleControl(
+        $instructors_rating_section->addStyleControl(
 			array(
                 "name" => __('Stars Size'),
                 "selector" => $star_selector,
                 "property" => 'font-size',
             )
         );
-        $rating_section->addStyleControl(
+        $instructors_rating_section->addStyleControl(
 			array(
                 "name" => __('Stars Color'),
                 "selector" => $star_selector,
@@ -278,10 +286,10 @@ class SingleCourse extends \OxygenTutorElements {
             )
         );
         $course_instructors->typographySection(
-            __("Label"), 
+            __("Label"),
             $info_selector.' .rating-digits,'.
             $info_selector.' .courses,'.
-            $info_selector.' .students', 
+            $info_selector.' .students',
             $this
         );
         $course_instructors->typographySection(
@@ -289,6 +297,44 @@ class SingleCourse extends \OxygenTutorElements {
             $info_selector.' .rating-total-meta,'.
             $info_selector.' .tutor-text-mute', 
             $this
+		);
+		
+		/* Course requirements */
+		$course_requirements = $this->addControlSection("requirements", __("Requirements"), "assets/icon.png", $this);
+		$requirements_selector = $selector." .tutor-course-requirements-wrap";
+		$requirements_item_selector = $requirements_selector." .tutor-course-requirements-items";
+        $course_requirements->typographySection('Title', $benefits_selector.' .course-requirements-title h4', $this);
+        $requirements_content_icon = $course_benefits->addControlSection("requirements_content_icon", __("Content Icon"), "assets/icon.png", $this);
+		$requirements_content_icon->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $requirements_item_selector.' li:before',
+					"property" => 'font-size',
+                ),
+				array(
+                	"name" => __('Color'),
+                	"selector" => $requirements_item_selector.' li:before',
+					"property" => 'color',
+				)
+			)
+        );
+		$course_requirements->typographySection(__('Content Typography'), $requirements_item_selector, $this);
+		$requirements_content_spacing = $course_requirements->addControlSection("requirements_content_spacing", __("Spacing"), "assets/icon.png", $this);
+        $requirements_content_spacing->addPreset(
+            "padding",
+            "requirements_content_item_padding",
+            __("Items Paddings"),
+            $requirements_item_selector.' li'
+		);
+		$requirements_content_spacing->addStyleControls(
+			array(
+				array(
+                	"name" => __('Line Height'),
+                	"selector" => $requirements_item_selector.' li',
+					"property" => 'line-height',
+                )
+			)
         );
     }
 }

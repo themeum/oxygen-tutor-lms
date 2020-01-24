@@ -1,10 +1,10 @@
 <?php
 namespace Oxygen\TutorElements;
 
-class CourseMaterial extends \OxygenTutorElements {
+class CourseBenefits extends \OxygenTutorElements {
 
 	function name() {
-        return 'Material';
+        return 'Benefits';
     }
 
     function tutor_button_place() {
@@ -16,17 +16,16 @@ class CourseMaterial extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_material_includes_html();
+        tutor_course_benefits_html();
     }
 
     function controls() {
-        $selector = ".tutor-course-material-includes-wrap";
-        $items_selector = $selector." .tutor-course-target-audience-items";
-
-        $this->typographySection('Title', $selector.' h4.tutor-segment-title');
+        $selector = ".tutor-course-benefits-wrap";
+		$items_selector = $selector." .tutor-course-benefits-items";
+        $this->typographySection('Title', $selector.' .course-benefits-title h4', $this);
         $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-        $content_icon = $content_section->addControlSection("icon", __("Icon"), "assets/icon.png", $this);
-        $content_icon->addStyleControls(
+        $content_icon = $content_section->addControlSection("content_icon", __("Icon"), "assets/icon.png", $this);
+		$content_icon->addStyleControls(
 			array(
 				array(
                 	"name" => __('Size'),
@@ -40,16 +39,15 @@ class CourseMaterial extends \OxygenTutorElements {
 				)
 			)
         );
-        $content_section->typographySection('Typography', $items_selector, $this);
-        //spacing
-        $content_spacing = $content_section->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
+		$content_section->typographySection(__('Typography'), $items_selector, $this);
+		$content_spacing = $content_section->addControlSection("content_spacing", __("Spacing"), "assets/icon.png", $this);
         $content_spacing->addPreset(
             "padding",
-            "item_padding",
-            __("Item Paddings"),
+            "content_item_padding",
+            __("Items Paddings"),
             $items_selector.' li'
-        );
-        $content_spacing->addStyleControls(
+		);
+		$content_spacing->addStyleControls(
 			array(
 				array(
                 	"name" => __('Line Height'),
@@ -61,4 +59,4 @@ class CourseMaterial extends \OxygenTutorElements {
     }
 }
 
-new CourseMaterial();
+new CourseBenefits();

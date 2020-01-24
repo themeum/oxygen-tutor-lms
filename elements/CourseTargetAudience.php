@@ -19,12 +19,6 @@ class CourseTargetAudience extends \OxygenTutorElements {
         tutor_course_target_audience_html();
     }
 
-
-    function class_names() {
-        return array('tutor-course-target-audience', 'oxy-tutor-element');
-    }
-
-
     function controls() {
         $selector = ".tutor-course-target-audience-wrap";
         $items_selector = $selector." .tutor-course-target-audience-items";
@@ -55,8 +49,16 @@ class CourseTargetAudience extends \OxygenTutorElements {
             __("Item Paddings"),
             $items_selector.' li'
         );
+        $content_spacing->addStyleControls(
+			array(
+				array(
+                	"name" => __('Line Height'),
+                	"selector" => $items_selector.' li',
+					"property" => 'line-height',
+                )
+			)
+        );
     }
-
 }
 
 new CourseTargetAudience();
