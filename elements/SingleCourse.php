@@ -440,6 +440,16 @@ class SingleCourse extends \OxygenTutorElements {
                     "name" => 'Hover Background Color',
                     "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
                     "property" => 'background-color',
+				),
+				array(
+                    "name" => 'Border Color',
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'border-color',
+                ),
+                array(
+                    "name" => 'Hover Border Color',
+                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
+                    "property" => 'border-color',
                 ),
                 array(
                     "name" => 'Border Radius',
@@ -470,6 +480,16 @@ class SingleCourse extends \OxygenTutorElements {
                     "name" => 'Hover Background Color',
                     "selector" => $enroll_btn_selector.':hover',
                     "property" => 'background-color',
+				),
+				array(
+                    "name" => 'Border Color',
+                    "selector" => $enroll_btn_selector,
+                    "property" => 'border-color',
+                ),
+                array(
+                    "name" => 'Hover Border Color',
+                    "selector" => $enroll_btn_selector.':hover',
+                    "property" => 'border-color',
                 ),
                 array(
                     "name" => 'Border Radius',

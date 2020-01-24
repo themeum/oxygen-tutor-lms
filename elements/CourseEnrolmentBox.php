@@ -36,8 +36,9 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
 
         /* Add to Cart Button */
         $add_to_cart_btn = $this->addControlSection("add_to_cart_btn", __("Add to Cart Button"), "assets/icon.png", $this);
-        $add_to_cart_btn_selector = '.tutor-course-purchase-box button, .tutor-course-purchase-box edd-add-to-cart';
-
+        $add_to_cart_btn_selector1 = $price_selector.' .tutor-course-purchase-box button';
+        $add_to_cart_btn_selector2 = $price_selector.' .tutor-course-purchase-box edd-add-to-cart';
+        $add_to_cart_btn_selector = $add_to_cart_btn_selector1.', '.$add_to_cart_btn_selector2;
         $add_to_cart_btn->addPreset(
             "padding",
             "button_padding",
@@ -47,14 +48,24 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         $add_to_cart_btn->addStyleControls(
             array(
                 array(
-                    "name" => 'Button Background Color',
+                    "name" => 'Background Color',
                     "selector" => $add_to_cart_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Button Hover Background Color',
-                    "selector" => $add_to_cart_btn_selector.':hover',
+                    "name" => 'Hover Background Color',
+                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
                     "property" => 'background-color',
+                ),
+                array(
+                    "name" => 'Border Color',
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'border-color',
+                ),
+                array(
+                    "name" => 'Hover Border Color',
+                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
+                    "property" => 'border-color',
                 ),
                 array(
                     "name" => 'Border Radius',
@@ -81,14 +92,24 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         $enroll_btn->addStyleControls(
             array(
                 array(
-                    "name" => 'Button Background Color',
+                    "name" => 'Background Color',
                     "selector" => $enroll_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Button Hover Background Color',
+                    "name" => 'Hover Background Color',
                     "selector" => $enroll_btn_selector.':hover',
                     "property" => 'background-color',
+                ),
+                array(
+                    "name" => 'Border Color',
+                    "selector" => $enroll_btn_selector,
+                    "property" => 'border-color',
+                ),
+                array(
+                    "name" => 'Hover Border Color',
+                    "selector" => $enroll_btn_selector.':hover',
+                    "property" => 'border-color',
                 ),
                 array(
                     "name" => 'Border Radius',
