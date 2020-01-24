@@ -23,7 +23,7 @@ class CourseTargetAudience extends \OxygenTutorElements {
         $selector = ".tutor-course-target-audience-wrap";
         $items_selector = $selector." .tutor-course-target-audience-items";
 
-        $this->typographySection('Title', $selector.' h4.tutor-segment-title');
+        $this->typographySection('Title', $selector.' > h4.tutor-segment-title');
         $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
         $content_icon = $content_section->addControlSection("icon", __("Icon"), "assets/icon.png", $this);
         $content_icon->addStyleControls(

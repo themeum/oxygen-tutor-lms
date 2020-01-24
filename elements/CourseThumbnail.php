@@ -27,9 +27,7 @@ class CourseThumbnail extends \OxygenTutorElements {
 
     function controls() {
         $selector = ".tutor-course-thumbnail";
-        /*
-         * Original Thumbnail
-         */
+        /* Original Thumbnail */
 		$original_thumb = $this->addControlSection("tutor_origianl_thumb", __("Original Thumbnails"), "assets/icon.png", $this);
 		$original_thumb->addStyleControls(
             array(
@@ -74,9 +72,7 @@ class CourseThumbnail extends \OxygenTutorElements {
             $selector
         );
 
-        /**
-         * Hovered Thumbnail
-         */
+        /** Hovered Thumbnail */
 		$hover_thumb = $this->addControlSection("tutor_hover_thumb", __("Hovered Thumbnails"), "assets/icon.png", $this);
 		$hover_thumb->addStyleControls(
             array(
@@ -114,7 +110,6 @@ class CourseThumbnail extends \OxygenTutorElements {
             $selector.":hover"
         );
     }
-
 }
 
 new CourseThumbnail();
