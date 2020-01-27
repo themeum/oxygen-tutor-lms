@@ -46,7 +46,7 @@ class CourseTargetAudience extends \OxygenTutorElements {
         $content_spacing->addPreset(
             "padding",
             "item_padding",
-            __("Item Paddings"),
+            __("Item Padding"),
             $items_selector.' li'
         );
         $content_spacing->addStyleControls(

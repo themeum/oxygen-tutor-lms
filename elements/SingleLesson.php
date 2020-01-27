@@ -19,15 +19,12 @@ class SingleLesson extends \OxygenTutorElements {
 		/**
 		 * Start Tutor Template
 		 */
-
 		$template = '';
-
 
 		if ($wp_query->is_single && ! empty($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type'] === $lesson_post_type){
 			$page_id = get_the_ID();
 
 			do_action('tutor_lesson_load_before', $template);
-
 			setup_postdata($page_id);
 
 			if (is_user_logged_in()){
@@ -52,7 +49,6 @@ class SingleLesson extends \OxygenTutorElements {
 			$template = apply_filters('tutor_lesson_template', $template);
 			include_once apply_filters('otlms_lesson_template', $template);
 		}
-
 		/**
 		 * End Tutor Template
 		 */
@@ -62,6 +58,130 @@ class SingleLesson extends \OxygenTutorElements {
 		return "single_template";
 	}
 
+	function controls() {
+		$selector = '.tutor-single-lesson-wrap';
+		/* Sidebar */
+		$sidebar = $this->addControlSection("sidebar", __("Sidebar"), "assets/icon.png", $this);
+		$tabs_selector = $selector." .tutor-tabs-btn-group";
+		$sidebar->typographySection('Tabs Typography', $tabs_selector.' a span', $this);
+		$tab_icon_section = $sidebar->addControlSection("tabs-icon", __("Tabs Icon"), "assets/icon.png", $this);
+		$tab_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $tabs_selector.' a i',
+					"property" => 'font-size',
+                ),
+				array(
+                	"name" => __('Color'),
+                	"selector" => $tabs_selector.' a i',
+					"property" => 'color',
+				)
+			)
+		);
+		$topic_selector = $selector.' .tutor-topics-title h3';
+		$sidebar->typographySection('Topic Typography', $topic_selector, $this);
+		$topic_icon_section = $sidebar->addControlSection("topic-icon", __("Topic Icon"), "assets/icon.png", $this);
+		$topic_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Color'),
+                	"selector" => $topic_selector.' span',
+					"property" => 'color',
+                ),
+				array(
+                	"name" => __('Background'),
+                	"selector" => $topic_selector.' span',
+					"property" => 'background-color',
+				)
+			)
+		);
+		$topic_toggle_icon_selector = $selector.' .tutor-single-lesson-topic-toggle i';
+		$topic_toggle_icon_section = $sidebar->addControlSection("topic-toggle-icon", __("Topic Toogle Icon"), "assets/icon.png", $this);
+		$topic_toggle_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $topic_toggle_icon_selector,
+					"property" => 'font-size',
+                ),
+				array(
+                	"name" => __('Color'),
+                	"selector" => $topic_toggle_icon_selector,
+					"property" => 'color',
+				)
+			)
+		);
+		$topic_spacing = $sidebar->addControlSection("topic-spacing", __("Topic Spacing"), "assets/icon.png", $this);
+        $topic_spacing->addPreset(
+            "padding",
+            "topic_item_padding",
+            __("Padding"),
+            $topic_selector
+		);
+		
+		$lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items a';
+		$sidebar->typographySection('Lesson Typography', $lesson_selector.' span', $this);
+		$lesson_icon_section = $sidebar->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
+		$lesson_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $lesson_selector.' i:first-child',
+					"property" => 'font-size',
+                ),
+				array(
+                	"name" => __('Color'),
+                	"selector" => $lesson_selector.' i:first-child',
+					"property" => 'color',
+				)
+			)
+		);
+		$lesson_spacing = $sidebar->addControlSection("lesson-spacing", __("Lesson Spacing"), "assets/icon.png", $this);
+        $lesson_spacing->addPreset(
+            "padding",
+            "lesson_item_padding",
+            __("Padding"),
+            $lesson_selector
+		);
+		$sidebar_background = $sidebar->addControlSection("sidebar-background", __("Background"), "assets/icon.png", $this);
+		$sidebar_background->addStyleControls(
+			array(
+				array(
+					"name" => __('Tab Background'),
+					"selector" => $selector.' .tutor-tabs-btn-group a',
+					"property" => 'background-color',
+				),
+				array(
+					"name" => __('Tab Active Background'),
+					"selector" => $selector.' .tutor-tabs-btn-group a.active',
+					"property" => 'background-color',
+				),
+				array(
+					"name" => __('Lesson Background'),
+					"selector" => $selector.' .tutor-topics-in-single-lesson',
+					"property" => 'background-color',
+				),
+				array(
+					"name" => __('Q&A Background'),
+					"selector" => $selector.' .tutor-lesson-sidebar-tab-item',
+					"property" => 'background-color',
+				)
+			)
+		);
+
+		/* content */
+		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
+		$content->addStyleControls(
+			array(
+				array(
+                	"name" => __('Background'),
+                	"selector" => $selector,
+					"property" => 'background-color',
+                )
+			)
+		);
+	}
 }
 
 

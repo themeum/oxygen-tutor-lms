@@ -54,13 +54,13 @@ class CourseCurriculum extends \OxygenTutorElements {
         $space_section->addPreset(
             "padding",
             "topic_title_padding",
-            __("Topic Title Paddings"),
+            __("Topic Title Padding"),
             '.tutor-course-title'
         );
         $space_section->addPreset(
             "padding",
             "lesson_title_padding",
-            __("Lesson Title Paddings"),
+            __("Lesson Title Padding"),
             '.tutor-course-lesson'
         );
     }

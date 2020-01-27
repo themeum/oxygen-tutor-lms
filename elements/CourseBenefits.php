@@ -44,7 +44,7 @@ class CourseBenefits extends \OxygenTutorElements {
         $content_spacing->addPreset(
             "padding",
             "content_item_padding",
-            __("Items Paddings"),
+            __("Items Padding"),
             $items_selector.' li'
 		);
 		$content_spacing->addStyleControls(

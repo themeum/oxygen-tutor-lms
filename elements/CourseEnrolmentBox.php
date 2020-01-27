@@ -42,7 +42,7 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         $add_to_cart_btn->addPreset(
             "padding",
             "button_padding",
-            __("Button Paddings"),
+            __("Button Padding"),
             $add_to_cart_btn_selector
         );
         $add_to_cart_btn->addStyleControls(
@@ -86,7 +86,7 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         $enroll_btn->addPreset(
             "padding",
             "button_padding",
-            __("Button Paddings"),
+            __("Button Padding"),
             $enroll_btn_selector
         );
         $enroll_btn->addStyleControls(

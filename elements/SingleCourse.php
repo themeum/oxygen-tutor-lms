@@ -184,7 +184,7 @@ class SingleCourse extends \OxygenTutorElements {
         $benefits_content_spacing->addPreset(
             "padding",
             "benefits_content_item_padding",
-            __("Items Paddings"),
+            __("Items Padding"),
             $benefits_item_selector.' li'
 		);
 		$benefits_content_spacing->addStyleControls(
@@ -211,12 +211,12 @@ class SingleCourse extends \OxygenTutorElements {
 		$icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Font Size'),
+                	"name" => __('Size'),
                 	"selector" => $icon_selector,
 					"property" => 'font-size',
                 ),
 				array(
-                	"name" => __('Font Color'),
+                	"name" => __('Color'),
                 	"selector" => $icon_selector,
 					"property" => 'color',
 				)
@@ -227,13 +227,13 @@ class SingleCourse extends \OxygenTutorElements {
         $curriculum_space_section->addPreset(
             "padding",
             "topic_title_padding",
-            __("Topic Title Paddings"),
+            __("Topic Title Padding"),
             '.tutor-course-title'
         );
         $curriculum_space_section->addPreset(
             "padding",
             "lesson_title_padding",
-            __("Lesson Title Paddings"),
+            __("Lesson Title Padding"),
             '.tutor-course-lesson'
 		);
 
@@ -405,7 +405,7 @@ class SingleCourse extends \OxygenTutorElements {
         $materials_content_spacing->addPreset(
             "padding",
             "materials_content_item_padding",
-            __("Items Paddings"),
+            __("Items Padding"),
             $materials_item_selector.' li'
 		);
 		$materials_content_spacing->addStyleControls(
@@ -426,7 +426,7 @@ class SingleCourse extends \OxygenTutorElements {
         $add_to_cart_btn->addPreset(
             "padding",
             "button_padding",
-            __("Button Paddings"),
+            __("Button Padding"),
             $add_to_cart_btn_selector
         );
         $add_to_cart_btn->addStyleControls(
@@ -466,7 +466,7 @@ class SingleCourse extends \OxygenTutorElements {
         $enroll_btn->addPreset(
             "padding",
             "button_padding",
-            __("Button Paddings"),
+            __("Button Padding"),
             $enroll_btn_selector
         );
         $enroll_btn->addStyleControls(
@@ -525,7 +525,7 @@ class SingleCourse extends \OxygenTutorElements {
         $requirements_content_spacing->addPreset(
             "padding",
             "requirements_content_item_padding",
-            __("Items Paddings"),
+            __("Items Padding"),
             $requirements_item_selector.' li'
 		);
 		$requirements_content_spacing->addStyleControls(
@@ -563,7 +563,7 @@ class SingleCourse extends \OxygenTutorElements {
         $target_audience_content_spacing->addPreset(
             "padding",
             "target_audience_content_item_padding",
-            __("Items Paddings"),
+            __("Items Padding"),
             $target_audience_item_selector.' li'
 		);
 		$target_audience_content_spacing->addStyleControls(
