@@ -97,7 +97,7 @@ class SingleLesson extends \OxygenTutorElements {
 			)
 		);
 		$topic_toggle_icon_selector = $selector.' .tutor-single-lesson-topic-toggle i';
-		$topic_toggle_icon_section = $sidebar->addControlSection("topic-toggle-icon", __("Topic Toogle Icon"), "assets/icon.png", $this);
+		$topic_toggle_icon_section = $sidebar->addControlSection("topic-toggle-icon", __("Topic Toggle Icon"), "assets/icon.png", $this);
 		$topic_toggle_icon_section->addStyleControls(
 			array(
 				array(
@@ -170,9 +170,57 @@ class SingleLesson extends \OxygenTutorElements {
 			)
 		);
 
-		/* content */
+		/* Content bar */
 		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-		$content->addStyleControls(
+		$top_bar_selector = $selector.' .tutor-single-page-top-bar';
+		$content->typographySection('Topbar Home link', $top_bar_selector.' a', $this);
+		$content->typographySection('Topbar Title', $top_bar_selector.' .tutor-topbar-content-title-wrap', $this);
+		$content_top_bar = $content->addControlSection("content-top-bar", __("Topbar Color"), "assets/icon.png", $this);
+		$content_top_bar->addStyleControls(
+			array(
+				array(
+                	"name" => __('Background'),
+                	"selector" => $top_bar_selector,
+					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Toggle Bar'),
+                	"selector" => $top_bar_selector.' .tutor-lesson-sidebar-hide-bar',
+					"property" => 'background-color',
+                )
+			)
+		);
+		$content_top_bar_spacing = $content->addControlSection("topbar-spacing", __("Topbar Spacing"), "assets/icon.png", $this);
+        $content_top_bar_spacing->addPreset(
+            "padding",
+            "topbar_padding",
+            __("Padding"),
+            $top_bar_selector
+		);
+        $content_top_bar_spacing->addPreset(
+            "margin",
+            "topbar_margin",
+            __("Margin"),
+            $top_bar_selector
+		);
+
+		$content_area_selector = $selector.' .tutor-lesson-content-area';
+		$content_area_spacing = $content->addControlSection("content-area-spacing", __("Content Area Spacing"), "assets/icon.png", $this);
+        $content_area_spacing->addPreset(
+            "padding",
+            "content_area_padding",
+            __("Padding"),
+            $content_area_selector
+		);
+        $content_area_spacing->addPreset(
+            "margin",
+            "content_area_pmargin",
+            __("Margin"),
+            $content_area_selector
+		);
+		
+		$content_background = $content->addControlSection("content-background", __("Background"), "assets/icon.png", $this);
+		$content_background->addStyleControls(
 			array(
 				array(
                 	"name" => __('Background'),
@@ -181,6 +229,12 @@ class SingleLesson extends \OxygenTutorElements {
                 )
 			)
 		);
+
+		/* Pagination */
+		$pagination = $this->addControlSection("pagination", __("Pagination"), "assets/icon.png", $this);
+		$pagination_selector = $selector.' .tutor-next-previous-pagination-wrap';
+		$pagination->typographySection('Typography', $pagination_selector.' a', $this);
+		$pagination->typographySection('Typography Hover', $pagination_selector.' a:hover', $this);
 	}
 }
 
