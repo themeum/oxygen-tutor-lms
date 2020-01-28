@@ -188,32 +188,31 @@ class SingleQuiz extends \OxygenTutorElements {
 
 		$start_quiz_button = $content->addControlSection("start-quiz-button", __("Quiz Start Button"), "assets/icon.png", $this);
         $start_quiz_button_selector = '.tutor-quiz-body .tutor-button';
-        $start_quiz_button->addPreset(
-            "padding",
-            "button_padding",
-            __("Button Padding"),
-            $start_quiz_button_selector
-        );
         $start_quiz_button->addStyleControls(
             array(
+				array(
+                    "name" => 'Font Size',
+                    "selector" => $start_quiz_button_selector,
+                    "property" => 'font-size',
+                ),
+                array(
+                    "name" => 'Font Color',
+                    "selector" => $start_quiz_button_selector,
+                    "property" => 'color',
+                ),
+                array(
+                    "name" => 'Font Family',
+                    "selector" => $start_quiz_button_selector,
+                    "property" => 'font-family',
+                ),
                 array(
                     "name" => 'Background Color',
                     "selector" => $start_quiz_button_selector,
                     "property" => 'background-color',
                 ),
-                array(
-                    "name" => 'Hover Background Color',
-                    "selector" => $start_quiz_button_selector.':hover',
-                    "property" => 'background-color',
-				),
 				array(
                     "name" => 'Border Color',
                     "selector" => $start_quiz_button_selector,
-                    "property" => 'border-color',
-                ),
-                array(
-                    "name" => 'Hover Border Color',
-                    "selector" => $start_quiz_button_selector.':hover',
                     "property" => 'border-color',
                 ),
                 array(
@@ -221,8 +220,24 @@ class SingleQuiz extends \OxygenTutorElements {
                     "selector" => $start_quiz_button_selector,
                     "property" => 'border-radius',
                 ),
+                array(
+                    "name" => 'Hover Background Color',
+                    "selector" => $start_quiz_button_selector.':hover',
+                    "property" => 'background-color',
+				),
+                array(
+                    "name" => 'Hover Border Color',
+                    "selector" => $start_quiz_button_selector.':hover',
+                    "property" => 'border-color',
+                ),
             )
 		);
+		$start_quiz_button->addPreset(
+            "padding",
+            "button_padding",
+            __("Button Padding"),
+            $start_quiz_button_selector
+        );
 
 		$content_area_spacing = $content->addControlSection("content-area-spacing", __("Area Spacing"), "assets/icon.png", $this);
         $content_area_spacing->addPreset(

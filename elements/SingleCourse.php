@@ -423,32 +423,31 @@ class SingleCourse extends \OxygenTutorElements {
         $add_to_cart_btn_selector1 = $enrollment_box_selector.' .tutor-course-purchase-box button';
         $add_to_cart_btn_selector2 = $enrollment_box_selector.' .tutor-course-purchase-box edd-add-to-cart';
         $add_to_cart_btn_selector = $add_to_cart_btn_selector1.', '.$add_to_cart_btn_selector2;
-        $add_to_cart_btn->addPreset(
-            "padding",
-            "button_padding",
-            __("Button Padding"),
-            $add_to_cart_btn_selector
-        );
         $add_to_cart_btn->addStyleControls(
             array(
+				array(
+                    "name" => 'Font Size',
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'font-size',
+                ),
+                array(
+                    "name" => 'Font Color',
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'color',
+                ),
+                array(
+                    "name" => 'Font Family',
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'font-family',
+                ),
                 array(
                     "name" => 'Background Color',
                     "selector" => $add_to_cart_btn_selector,
                     "property" => 'background-color',
                 ),
-                array(
-                    "name" => 'Hover Background Color',
-                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
-                    "property" => 'background-color',
-				),
 				array(
                     "name" => 'Border Color',
                     "selector" => $add_to_cart_btn_selector,
-                    "property" => 'border-color',
-                ),
-                array(
-                    "name" => 'Hover Border Color',
-                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
                     "property" => 'border-color',
                 ),
                 array(
@@ -456,39 +455,53 @@ class SingleCourse extends \OxygenTutorElements {
                     "selector" => $add_to_cart_btn_selector,
                     "property" => 'border-radius',
                 ),
+                array(
+                    "name" => 'Hover Background Color',
+                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
+                    "property" => 'background-color',
+				),
+                array(
+                    "name" => 'Hover Border Color',
+                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
+                    "property" => 'border-color',
+                ),
             )
-        );
-		$course_enrollment_box->typographySection(__("Add to Cart Button Typography"), $add_to_cart_btn_selector, $this);
+		);
+		$add_to_cart_btn->addPreset(
+            "padding",
+            "add_to_cart_button_padding",
+            __("Button Padding"),
+            $add_to_cart_btn_selector
+		);
 		
 		/* Enroll button */
         $enroll_btn = $course_enrollment_box->addControlSection("enroll_button", __("Enroll Button"), "assets/icon.png", $this);
         $enroll_btn_selector = $enrollment_box_selector.' .tutor-btn-enroll';
-        $enroll_btn->addPreset(
-            "padding",
-            "button_padding",
-            __("Button Padding"),
-            $enroll_btn_selector
-        );
         $enroll_btn->addStyleControls(
             array(
+				array(
+                    "name" => 'Font Size',
+                    "selector" => $enroll_btn_selector,
+                    "property" => 'font-size',
+                ),
+                array(
+                    "name" => 'Font Color',
+                    "selector" => $enroll_btn_selector,
+                    "property" => 'color',
+                ),
+                array(
+                    "name" => 'Font Family',
+                    "selector" => $enroll_btn_selector,
+                    "property" => 'font-family',
+                ),
                 array(
                     "name" => 'Background Color',
                     "selector" => $enroll_btn_selector,
                     "property" => 'background-color',
                 ),
-                array(
-                    "name" => 'Hover Background Color',
-                    "selector" => $enroll_btn_selector.':hover',
-                    "property" => 'background-color',
-				),
 				array(
                     "name" => 'Border Color',
                     "selector" => $enroll_btn_selector,
-                    "property" => 'border-color',
-                ),
-                array(
-                    "name" => 'Hover Border Color',
-                    "selector" => $enroll_btn_selector.':hover',
                     "property" => 'border-color',
                 ),
                 array(
@@ -496,9 +509,24 @@ class SingleCourse extends \OxygenTutorElements {
                     "selector" => $enroll_btn_selector,
                     "property" => 'border-radius',
                 ),
+                array(
+                    "name" => 'Hover Background Color',
+                    "selector" => $enroll_btn_selector.':hover',
+                    "property" => 'background-color',
+				),
+                array(
+                    "name" => 'Hover Border Color',
+                    "selector" => $enroll_btn_selector.':hover',
+                    "property" => 'border-color',
+                ),
             )
         );
-        $course_enrollment_box->typographySection(__("Enroll Button Typography"), $enroll_btn_selector, $this);
+		$enroll_btn->addPreset(
+            "padding",
+            "enroll_button_padding",
+            __("Button Padding"),
+            $enroll_btn_selector
+		);
 		
 		/* Course requirements */
 		$course_requirements = $this->addControlSection("requirements", __("Requirements"), "assets/icon.png", $this);
