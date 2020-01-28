@@ -26,6 +26,7 @@ final class OxygenTutorLMS{
 
 	public function __construct() {
 		if ( ! function_exists('tutor_lms') || ! class_exists('OxygenElement') ||  ! class_exists('OxyEl')){
+		    $this->admin_notice();
 			return;
 		}
 
@@ -177,5 +178,30 @@ final class OxygenTutorLMS{
 
 	    return $query;
 	}
+
+
+	public function admin_notice(){
+	    if (defined('TUTOR_VERSION')){
+	        //Version Check
+            if (version_compare(TUTOR_VERSION, '1.5.2', '<'  )){
+	            add_action( 'admin_notices', array($this, 'notice_required_tutor') );
+            }
+        }else{
+	        //Required Tutor Message
+		    add_action( 'admin_notices', array($this, 'notice_required_tutor') );
+	    }
+    }
+
+
+	/**
+	 * Notice for tutor lms plugin required
+	 */
+    public function notice_required_tutor(){
+	    $class = 'notice notice-warning';
+	    $message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.1.5.2', 'oxygen-tutor-lms' );
+	    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+    }
+
+
 
 }
