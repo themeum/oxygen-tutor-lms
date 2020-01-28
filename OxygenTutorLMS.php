@@ -25,8 +25,9 @@ final class OxygenTutorLMS{
 	}
 
 	public function __construct() {
+
+		$this->admin_notice();
 		if ( ! function_exists('tutor_lms') || ! class_exists('OxygenElement') ||  ! class_exists('OxyEl')){
-		    $this->admin_notice();
 			return;
 		}
 
@@ -190,6 +191,12 @@ final class OxygenTutorLMS{
 	        //Required Tutor Message
 		    add_action( 'admin_notices', array($this, 'notice_required_tutor') );
 	    }
+
+	    if ( ! class_exists('OxyEl')){
+	        //Required Oxygen Plugin
+		    add_action( 'admin_notices', array($this, 'notice_required_oxygen') );
+	    }
+
     }
 
 
@@ -202,6 +209,11 @@ final class OxygenTutorLMS{
 	    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
     }
 
+    public function notice_required_oxygen(){
+	    $class = 'notice notice-warning';
+	    $message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated Oxygen Builder Plugin', 'oxygen-tutor-lms' );
+	    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+    }
 
 
 }
