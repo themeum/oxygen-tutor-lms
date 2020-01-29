@@ -138,8 +138,8 @@ class ArchiveCourse extends \OxygenTutorElements {
 					"property" 	=> 'font-size',
 				)
         	)
-        );
-
+		);
+		
 		$course_grid->typographySection(__("Course Title"), $loop_course_container.' .tutor-course-loop-title h2 a', $this);
 		$course_grid->typographySection(__("Meta Info"), $loop_course_container.' .tutor-course-loop-meta', $this);
 		$course_grid->typographySection(__("Author Label"), $loop_course_container.' .tutor-single-course-author-name span, '.$loop_course_container.' .tutor-course-lising-category span', $this);
@@ -150,9 +150,86 @@ class ArchiveCourse extends \OxygenTutorElements {
 		$course_grid->typographySection(__("Cart Button"), $loop_course_container_footer.' .tutor-loop-cart-btn-wrap a', $this);
 
 		$course_grid->boxShadowSection(__("Box Shadow"), $course_grid_selector, $this);
-        $course_grid->boxShadowSection(__("Hover Box Shadow"), $course_grid_selector.":hover", $this);
-	}
+		$course_grid->boxShadowSection(__("Hover Box Shadow"), $course_grid_selector.":hover", $this);
+		
+		/* Pagination */
+		$pagination_selector = $selector.' .tutor-pagination-wrap';
+        $pagination = $this->addControlSection("pagination", __("Pagination"), "assets/icon.png", $this);
+        $pagination_align = $pagination->addControl("buttons-list", "pagination_align", __("Items Align") );
+        
+		$pagination_align->setValue(array(
+			"left"		=> "Left",
+			"center" 	=> "Center", 
+			"right" 	=> "Right" 
+		));
+        
+		$pagination_align->setValueCSS(array(
+            "left" => "$pagination_selector {
+                text-align: left;
+            }",
+            "center" => "$pagination_selector {
+                text-align: center;
+            }",
+            "right" => "$pagination_selector {
+                text-align: right;
+            }"
+        ));
 
+        $pagination->addStyleControls(
+             array(
+                array(
+                    "selector" => $pagination_selector,
+                    "property" => 'font-size',
+                ),
+                array(
+                    "name" => __("Links Text Color"),
+                    "selector" => $pagination_selector." a",
+                    "property" => 'color',
+                ),
+                array(
+                    "name" => __("Links Background"),
+                    "selector" => $pagination_selector." a",
+                    "property" => 'background-color',
+                ),
+                //hover
+                array(
+                    "name" => __("Hover Text Color"),
+                    "selector" => $pagination_selector." a:hover",
+                    "property" => 'color',
+                ),
+                array(
+                    "name" => __("Hover Background"),
+                    "selector" => $pagination_selector." a:hover",
+                    "property" => 'background-color',
+                ),
+                //current
+                array(
+                    "name" => __("Current Text Color"),
+                    "selector" => $pagination_selector." span.current",
+                    "property" => 'color',
+                ),
+                array(
+                    "name" => __("Current Background"),
+                    "selector" => $pagination_selector." span.current",
+                    "property" => 'background-color',
+                ),
+            )
+		);
+		//border and box shadow
+		$pagination->borderSection(__("Border"), $pagination_selector.' a', $this);
+        $pagination->borderSection(__("Hover Border"), $pagination_selector." a:hover", $this);
+        $pagination->boxShadowSection(__("Box Shadow"), $pagination_selector.' a', $this);
+		$pagination->boxShadowSection(__("Hover Box Shadow"), $pagination_selector." a:hover", $this);
+
+		$pagination->borderSection(__("Current Border"), $pagination_selector.' span', $this);
+		$pagination->boxShadowSection(__("Current Box Shadow"), $pagination_selector." span", $this);
+		
+		//spacing
+		$pagination_items_selector = $pagination_selector.' a, '.$pagination_selector.' span';
+		$pagination_spacing = $pagination->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
+        $pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_items_selector);
+        $pagination_spacing->addPreset("padding", "pagination_item_padding", __("Padding"), $pagination_items_selector);
+	}
 }
 
 
