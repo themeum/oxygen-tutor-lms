@@ -35,11 +35,6 @@ class ArchiveCourse extends \OxygenTutorElements {
 
 	function controls() {
 		$selector = '.tutor-courses-wrap';
-		/* Layout */
-		$layout_section = $this->addControlSection("layout", __("Layout"), "assets/icon.png", $this);
-		$layout_section->addPreset("padding", "container_padding", __("Container Padding"), $selector);
-		$layout_section->addPreset("margin", "container_margin", __("Container Margin"), $selector);
-
 		/* Filter section */
 		$filter_selector = $selector.' .tutor-course-filter-wrap';
 		$this->typographySection(__("Results Count"), $filter_selector.' .tutor-course-archive-results-wrap', $this);
@@ -58,9 +53,9 @@ class ArchiveCourse extends \OxygenTutorElements {
 		$filter_section_spacing->addPreset("margin", "filter_margin", __("Margin"), $filter_selector);
 
 		/* Course grid */
-		$course_grid = $this->addControlSection("course_grid", __("Course Grid"), "assets/icon.png", $this);
 		$course_col_selector = $selector.' .tutor-course-col-3';
 		$course_grid_selector = $course_col_selector.' .tutor-course';
+		$course_grid = $this->addControlSection("course_grid", __("Course Grid"), "assets/icon.png", $this);
 
 		/* level bagde */
 		$level_badge = $course_grid->addControlSection("level_badge", __("Level Badge"), "assets/icon.png", $this);
@@ -156,8 +151,16 @@ class ArchiveCourse extends \OxygenTutorElements {
 		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .price, '.$loop_course_container_footer.' .price .woocommerce-Price-amount', $this);
 		$course_grid->typographySection(__("Cart Button"), $loop_course_container_footer.' .tutor-loop-cart-btn-wrap a', $this);
 
+		/* grid border and shadows */
+		$course_grid->borderSection(__("Border"), $course_grid_selector, $this);
+        $course_grid->borderSection(__("Hover Border"), $course_grid_selector.":hover", $this);
 		$course_grid->boxShadowSection(__("Box Shadow"), $course_grid_selector, $this);
 		$course_grid->boxShadowSection(__("Hover Box Shadow"), $course_grid_selector.":hover", $this);
+
+		/* grid spacing */
+		$grid_spacing = $course_grid->addControlSection("grid_spacing", __("Spacing"), "assets/icon.png", $this);
+		$grid_spacing->addPreset("padding", "grid_padding", __("Padding"), $course_grid_selector);
+		$grid_spacing->addPreset("margin", "grid_margin", __("Margin"), $course_grid_selector);
 		
 		/* Pagination */
 		$pagination_selector = $selector.' .tutor-pagination-wrap';

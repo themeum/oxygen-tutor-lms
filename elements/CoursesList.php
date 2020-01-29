@@ -63,7 +63,11 @@ class CoursesList extends \OxygenTutorElements {
 
 		wp_reset_query();
 		query_posts($a);
+
+		echo "<div class='tutor-wrap'>";
 		include_once tutor_get_template('shortcode.tutor-course');
+		echo "</div>";
+
 		wp_reset_query();
 	}
 
@@ -219,8 +223,16 @@ class CoursesList extends \OxygenTutorElements {
 		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .price, '.$loop_course_container_footer.' .price .woocommerce-Price-amount', $this);
 		$course_grid->typographySection(__("Cart Button"), $loop_course_container_footer.' .tutor-loop-cart-btn-wrap a', $this);
 
+		/* grid border and shadows */
+		$course_grid->borderSection(__("Border"), $course_grid_selector, $this);
+        $course_grid->borderSection(__("Hover Border"), $course_grid_selector.":hover", $this);
 		$course_grid->boxShadowSection(__("Box Shadow"), $course_grid_selector, $this);
 		$course_grid->boxShadowSection(__("Hover Box Shadow"), $course_grid_selector.":hover", $this);
+
+		/* grid spacing */
+		$grid_spacing = $course_grid->addControlSection("grid_spacing", __("Spacing"), "assets/icon.png", $this);
+		$grid_spacing->addPreset("padding", "grid_padding", __("Padding"), $course_grid_selector);
+		$grid_spacing->addPreset("margin", "grid_margin", __("Margin"), $course_grid_selector);
 	}
 }
 
