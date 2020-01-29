@@ -28,22 +28,20 @@ class CourseRating extends \OxygenTutorElements {
     function controls() {
         
         $star_selector = ".tutor-single-course-rating .tutor-star-rating-group";
-        $this->addStyleControl(
+        $this->addStyleControls(
 			array(
-                "name" => __('Stars Size'),
-                "selector" => $star_selector,
-                "property" => 'font-size',
-            )
-        );
-        
-        $this->addStyleControl(
-			array(
-                "name" => __('Stars Color'),
-                "selector" => $star_selector,
-                "property" => 'color',
-            )
-        );
-        
+				array(
+					"name" 		=> __('Stars Color'),
+					"selector" 	=> $star_selector,
+					"property" 	=> 'color',
+				),
+				array(
+					"name" 		=> __('Stars Size'),
+					"selector" 	=> $star_selector,
+					"property" 	=> 'font-size',
+				)
+			)
+		);
     }
 
 }
