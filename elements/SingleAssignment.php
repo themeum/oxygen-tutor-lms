@@ -243,165 +243,6 @@ class SingleAssignment extends \OxygenTutorElements {
             __("Padding"),
             $submit_form_input_selector
 		);
- 
-		$start_button = $content->addControlSection("start-button", __("Start Button"), "assets/icon.png", $this);
-        $start_button_selector = $content_area_selector.' .tutor-assignment-start-btn-wrap button';
-        $start_button->addStyleControls(
-            array(
-				array(
-                    "name" => 'Font Size',
-                    "selector" => $start_button_selector,
-                    "property" => 'font-size',
-                ),
-                array(
-                    "name" => 'Font Color',
-                    "selector" => $start_button_selector,
-                    "property" => 'color',
-                ),
-                array(
-                    "name" => 'Font Family',
-                    "selector" => $start_button_selector,
-                    "property" => 'font-family',
-                ),
-                array(
-                    "name" => 'Background Color',
-                    "selector" => $start_button_selector,
-                    "property" => 'background-color',
-                ),
-				array(
-                    "name" => 'Border Color',
-                    "selector" => $start_button_selector,
-                    "property" => 'border-color',
-                ),
-                array(
-                    "name" => 'Border Radius',
-                    "selector" => $start_button_selector,
-                    "property" => 'border-radius',
-                ),
-                array(
-                    "name" => 'Hover Background Color',
-                    "selector" => $start_button_selector.':hover',
-                    "property" => 'background-color',
-				),
-                array(
-                    "name" => 'Hover Border Color',
-                    "selector" => $start_button_selector.':hover',
-                    "property" => 'border-color',
-                ),
-            )
-		);
-		$start_button->addPreset(
-            "padding",
-            "start_button_padding",
-            __("Button Padding"),
-            $start_button_selector
-        );
-
-		$upload_button = $content->addControlSection("upload-button", __("Upload Button"), "assets/icon.png", $this);
-        $upload_button_selector = $submit_form_area_selector.' .tutor-assignment-attachment-upload-wrap .tutor-form-group label';
-        $upload_button->addStyleControls(
-            array(
-				array(
-                    "name" => 'Font Size',
-                    "selector" => $upload_button_selector,
-                    "property" => 'font-size',
-                ),
-                array(
-                    "name" => 'Font Color',
-                    "selector" => $upload_button_selector,
-                    "property" => 'color',
-                ),
-                array(
-                    "name" => 'Font Family',
-                    "selector" => $upload_button_selector,
-                    "property" => 'font-family',
-                ),
-                array(
-                    "name" => 'Background Color',
-                    "selector" => $upload_button_selector,
-                    "property" => 'background-color',
-                ),
-				array(
-                    "name" => 'Border Color',
-                    "selector" => $upload_button_selector,
-                    "property" => 'border-color',
-                ),
-                array(
-                    "name" => 'Border Radius',
-                    "selector" => $upload_button_selector,
-                    "property" => 'border-radius',
-                ),
-                array(
-                    "name" => 'Hover Background Color',
-                    "selector" => $upload_button_selector.':hover',
-                    "property" => 'background-color',
-				),
-                array(
-                    "name" => 'Hover Border Color',
-                    "selector" => $upload_button_selector.':hover',
-                    "property" => 'border-color',
-                ),
-            )
-		);
-		$upload_button->addPreset(
-            "padding",
-            "upload_button_padding",
-            __("Button Padding"),
-            $upload_button_selector
-        );
-
-		$submit_button = $content->addControlSection("submit-button", __("Submit Button"), "assets/icon.png", $this);
-        $submit_button_selector = $submit_form_area_selector.' .tutor-assignment-submit-btn-wrap button';
-        $submit_button->addStyleControls(
-            array(
-				array(
-                    "name" => 'Font Size',
-                    "selector" => $submit_button_selector,
-                    "property" => 'font-size',
-                ),
-                array(
-                    "name" => 'Font Color',
-                    "selector" => $submit_button_selector,
-                    "property" => 'color',
-                ),
-                array(
-                    "name" => 'Font Family',
-                    "selector" => $submit_button_selector,
-                    "property" => 'font-family',
-                ),
-                array(
-                    "name" => 'Background Color',
-                    "selector" => $submit_button_selector,
-                    "property" => 'background-color',
-                ),
-				array(
-                    "name" => 'Border Color',
-                    "selector" => $submit_button_selector,
-                    "property" => 'border-color',
-                ),
-                array(
-                    "name" => 'Border Radius',
-                    "selector" => $submit_button_selector,
-                    "property" => 'border-radius',
-                ),
-                array(
-                    "name" => 'Hover Background Color',
-                    "selector" => $submit_button_selector.':hover',
-                    "property" => 'background-color',
-				),
-                array(
-                    "name" => 'Hover Border Color',
-                    "selector" => $submit_button_selector.':hover',
-                    "property" => 'border-color',
-                ),
-            )
-		);
-		$submit_button->addPreset(
-            "padding",
-            "submit_button_padding",
-            __("Button Padding"),
-            $submit_button_selector
-        );
 
 		$content_area_spacing = $content->addControlSection("content-area-spacing", __("Area Spacing"), "assets/icon.png", $this);
         $content_area_spacing->addPreset(
@@ -427,6 +268,94 @@ class SingleAssignment extends \OxygenTutorElements {
                 )
 			)
 		);
+
+		/* Start Button */
+		$start_button = $this->addControlSection("start-button", __("Start Button"), "assets/icon.png", $this);
+        $start_button_selector = $content_area_selector.' .tutor-assignment-start-btn-wrap button';
+        $start_button->addPreset(
+            "padding",
+            "submit_padding",
+            __("Button Paddings"),
+            $start_button_selector
+        );
+        $start_button->addStyleControls(
+            array(
+                array(
+                    "name" => 'Background Color',
+                    "selector" => $start_button_selector,
+                    "property" => 'background-color',
+                ),
+                array(
+                    "name" => 'Background Hover Color',
+                    "selector" => $start_button_selector.":hover",
+                    "property" => 'background-color',
+                )
+            )
+        );
+        $start_button->typographySection(__("Typography"), $start_button_selector, $this);
+        $start_button->borderSection(__("Borders"), $start_button_selector, $this);
+        $start_button->borderSection(__("Hover Borders"), $start_button_selector.":hover", $this);
+        $start_button->boxShadowSection(__("Shadow"), $start_button_selector, $this);
+		$start_button->boxShadowSection(__("Hover Shadow"), $start_button_selector.":hover", $this);
+		
+
+		/* Upload button */
+		$upload_button = $this->addControlSection("upload-button", __("Upload Button"), "assets/icon.png", $this);
+        $upload_button_selector = $submit_form_area_selector.' .tutor-assignment-attachment-upload-wrap .tutor-form-group label';
+        $upload_button->addPreset(
+            "padding",
+            "submit_padding",
+            __("Button Paddings"),
+            $upload_button_selector
+        );
+        $upload_button->addStyleControls(
+            array(
+                array(
+                    "name" => 'Background Color',
+                    "selector" => $upload_button_selector,
+                    "property" => 'background-color',
+                ),
+                array(
+                    "name" => 'Background Hover Color',
+                    "selector" => $upload_button_selector.":hover",
+                    "property" => 'background-color',
+                )
+            )
+        );
+        $upload_button->typographySection(__("Typography"), $upload_button_selector, $this);
+        $upload_button->borderSection(__("Borders"), $upload_button_selector, $this);
+        $upload_button->borderSection(__("Hover Borders"), $upload_button_selector.":hover", $this);
+        $upload_button->boxShadowSection(__("Shadow"), $upload_button_selector, $this);
+		$upload_button->boxShadowSection(__("Hover Shadow"), $start_button_selector.":hover", $this);
+
+		/* Submit button */
+		$submit_button = $this->addControlSection("submit-button", __("Submit Button"), "assets/icon.png", $this);
+        $submit_button_selector = $submit_form_area_selector.' .tutor-assignment-submit-btn-wrap button';
+        $submit_button->addPreset(
+            "padding",
+            "submit_padding",
+            __("Button Paddings"),
+            $submit_button_selector
+        );
+        $submit_button->addStyleControls(
+            array(
+                array(
+                    "name" => 'Background Color',
+                    "selector" => $submit_button_selector,
+                    "property" => 'background-color',
+                ),
+                array(
+                    "name" => 'Background Hover Color',
+                    "selector" => $submit_button_selector.":hover",
+                    "property" => 'background-color',
+                )
+            )
+        );
+        $submit_button->typographySection(__("Typography"), $submit_button_selector, $this);
+        $submit_button->borderSection(__("Borders"), $submit_button_selector, $this);
+        $submit_button->borderSection(__("Hover Borders"), $submit_button_selector.":hover", $this);
+        $submit_button->boxShadowSection(__("Shadow"), $submit_button_selector, $this);
+		$submit_button->boxShadowSection(__("Hover Shadow"), $start_button_selector.":hover", $this);
 
 		/* Pagination */
 		$pagination = $this->addControlSection("pagination", __("Pagination"), "assets/icon.png", $this);
