@@ -31,7 +31,6 @@ final class OxygenTutorLMS{
 			return;
 		}
 
-		add_filter('tutor_lms_should_template_override', '__return_false');
 		add_filter('tutor_get_template_path', array($this, 'tutor_get_template_path'), 99, 2);
 
 		$this->load_files();
