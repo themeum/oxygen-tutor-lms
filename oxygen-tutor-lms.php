@@ -23,6 +23,12 @@ if ( ! class_exists('OxygenTutorLMS')){
 	include_once OTLMS_PATH.'OxygenTutorLMS.php';
 }
 
+/**
+ * Turn off template override from TutorLMS
+ */
+add_filter('tutor_lms_should_template_override', '__return_false');
+
+
 add_action('plugins_loaded', 'oxygen_tutor_lms_init');
 function oxygen_tutor_lms_init(){
 	OxygenTutorLMS::instance();
