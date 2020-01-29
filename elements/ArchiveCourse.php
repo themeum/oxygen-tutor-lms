@@ -38,15 +38,7 @@ class ArchiveCourse extends \OxygenTutorElements {
 		/* Layout */
 		$layout_section = $this->addControlSection("layout", __("Layout"), "assets/icon.png", $this);
 		$layout_section->addPreset("padding", "container_padding", __("Container Padding"), $selector);
-		$layout_section->addStyleControls(
-			array(
-				array(
-                	"name" => __('Background'),
-                	"selector" => $selector,
-					"property" => 'background-color',
-                )
-			)
-		);
+		$layout_section->addPreset("margin", "container_margin", __("Container Margin"), $selector);
 
 		/* Filter section */
 		$filter_selector = $selector.' .tutor-course-filter-wrap';
@@ -104,18 +96,33 @@ class ArchiveCourse extends \OxygenTutorElements {
 
 		/* wishlist icon */
 		$wishlist_icon = $course_grid->addControlSection("wishlist_icon", __("Wishlist Icon"), "assets/icon.png", $this);
-		$wishlist_icon_selector = $course_grid_selector." .tutor-course-loop-header-meta .tutor-course-wishlist a";
+		$wishlist_icon_selector = $course_grid_selector." .tutor-course-loop-header-meta .tutor-course-wishlist";
 		$wishlist_icon->addStyleControls(
 			array(
 				array(
-					"name" 		=> __('Color'),
-					"selector" 	=> $wishlist_icon_selector,
+					"name" 		=> __('Font Size'),
+					"selector" 	=> $wishlist_icon_selector.' a',
+					"property" 	=> 'font-size',
+				),
+				array(
+					"name" 		=> __('Font Color'),
+					"selector" 	=> $wishlist_icon_selector.' a',
 					"property" 	=> 'color',
 				),
 				array(
-					"name" 		=> __('Size'),
+					"name" 		=> __('Hover Font Color'),
+					"selector" 	=> $wishlist_icon_selector.' a:hover',
+					"property" 	=> 'color',
+				),
+				array(
+					"name" 		=> __('Background Color'),
 					"selector" 	=> $wishlist_icon_selector,
-					"property" 	=> 'font-size',
+					"property" 	=> 'background-color',
+				),
+				array(
+					"name" 		=> __('Hover Background Color'),
+					"selector" 	=> $wishlist_icon_selector.':hover',
+					"property" 	=> 'background-color',
 				)
 			)
 		);
@@ -143,7 +150,7 @@ class ArchiveCourse extends \OxygenTutorElements {
 		$course_grid->typographySection(__("Course Title"), $loop_course_container.' .tutor-course-loop-title h2 a', $this);
 		$course_grid->typographySection(__("Meta Info"), $loop_course_container.' .tutor-course-loop-meta', $this);
 		$course_grid->typographySection(__("Author Label"), $loop_course_container.' .tutor-single-course-author-name span, '.$loop_course_container.' .tutor-course-lising-category span', $this);
-		$course_grid->typographySection(__("Author Value"), $loop_course_container.' .tutor-single-course-author-name, '.$loop_course_container.' .tutor-course-lising-category', $this);
+		$course_grid->typographySection(__("Author Value"), $loop_course_container.' .tutor-single-course-author-name a, '.$loop_course_container.' .tutor-course-lising-category a', $this);
 		
 		$loop_course_container_footer = $course_grid_selector.' .tutor-loop-course-footer';
 		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .price, '.$loop_course_container_footer.' .price .woocommerce-Price-amount', $this);
@@ -227,8 +234,8 @@ class ArchiveCourse extends \OxygenTutorElements {
 		//spacing
 		$pagination_items_selector = $pagination_selector.' a, '.$pagination_selector.' span';
 		$pagination_spacing = $pagination->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
-        $pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_items_selector);
         $pagination_spacing->addPreset("padding", "pagination_item_padding", __("Padding"), $pagination_items_selector);
+        $pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_items_selector);
 	}
 }
 
