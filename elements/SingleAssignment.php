@@ -145,40 +145,42 @@ class SingleAssignment extends \OxygenTutorElements {
 			)
 		);
 
-		/* Content bar */
-		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-		$top_bar_selector = $selector.' .tutor-single-page-top-bar';
-		$content->typographySection('Topbar Home link', $top_bar_selector.' a', $this);
-		$content->typographySection('Topbar Title', $top_bar_selector.' .tutor-topbar-content-title-wrap', $this);
-		$content_top_bar = $content->addControlSection("content-top-bar", __("Topbar Color"), "assets/icon.png", $this);
-		$content_top_bar->addStyleControls(
+		/* Topbar */
+		$topbar_selector = $selector.' .tutor-single-page-top-bar';
+		$topbar = $this->addControlSection("topbar", __("Topbar"), "assets/icon.png", $this);
+		$topbar->typographySection('Home link', $topbar_selector.' a', $this);
+		$topbar->typographySection('Title', $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
+		$topbar_color = $topbar->addControlSection("content-top-bar", __("Color"), "assets/icon.png", $this);
+		$topbar_color->addStyleControls(
 			array(
 				array(
                 	"name" => __('Background'),
-                	"selector" => $top_bar_selector,
+                	"selector" => $topbar_selector,
 					"property" => 'background-color',
                 ),
 				array(
                 	"name" => __('Toggle Bar'),
-                	"selector" => $top_bar_selector.' .tutor-lesson-sidebar-hide-bar',
+                	"selector" => $topbar_selector.' .tutor-lesson-sidebar-hide-bar',
 					"property" => 'background-color',
                 )
 			)
 		);
-		$content_top_bar_spacing = $content->addControlSection("topbar-spacing", __("Topbar Spacing"), "assets/icon.png", $this);
-        $content_top_bar_spacing->addPreset(
+		$topbar_spacing = $topbar->addControlSection("topbar-spacing", __("Spacing"), "assets/icon.png", $this);
+        $topbar_spacing->addPreset(
             "padding",
             "topbar_padding",
             __("Padding"),
-            $top_bar_selector
+            $topbar_selector
 		);
-        $content_top_bar_spacing->addPreset(
+        $topbar_spacing->addPreset(
             "margin",
             "topbar_margin",
             __("Margin"),
-            $top_bar_selector
+            $topbar_selector
 		);
 
+		/* Content */
+		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
 		$content_area_selector = $selector.' .tutor-lesson-content-area';
 		$submit_form_area_selector = $selector.' .tutor-assignment-submit-form-wrap';
 		$content->typographySection('Assignment Title', $content_area_selector.' .tutor-assignment-title h2', $this);
@@ -429,8 +431,8 @@ class SingleAssignment extends \OxygenTutorElements {
 		/* Pagination */
 		$pagination = $this->addControlSection("pagination", __("Pagination"), "assets/icon.png", $this);
 		$pagination_selector = $selector.' .tutor-next-previous-pagination-wrap';
-		$pagination->typographySection('Typography', $pagination_selector.' a', $this);
-		$pagination->typographySection('Typography Hover', $pagination_selector.' a:hover', $this);
+		$pagination->typographySection(__('Typography'), $pagination_selector.' a', $this);
+		$pagination->typographySection(__('Hover Typography'), $pagination_selector.' a:hover', $this);
 	}
 }
 

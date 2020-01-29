@@ -48,10 +48,6 @@ class ArchiveCourseCategories extends \OxygenTutorElements {
         $sorting_select->boxShadowSection(__("Box Shadow"), $sorting_select_selector, $this);
         $sorting_select->boxShadowSection(__("Focus Box Shadow"), $sorting_select_selector.":focus", $this);
 
-		$filter_section_spacing = $this->addControlSection("filter_spacing", __("Filter Spacing"), "assets/icon.png", $this);
-		$filter_section_spacing->addPreset("padding", "filter_padding", __("Padding"), $filter_selector);
-		$filter_section_spacing->addPreset("margin", "filter_margin", __("Margin"), $filter_selector);
-
 		/* Course grid */
 		$course_col_selector = $selector.' .tutor-course-col-3';
 		$course_grid_selector = $course_col_selector.' .tutor-course';
@@ -234,11 +230,16 @@ class ArchiveCourseCategories extends \OxygenTutorElements {
 		$pagination->borderSection(__("Current Border"), $pagination_selector.' span', $this);
 		$pagination->boxShadowSection(__("Current Box Shadow"), $pagination_selector." span", $this);
 		
-		//spacing
+		//pagination spacing
 		$pagination_items_selector = $pagination_selector.' a, '.$pagination_selector.' span';
 		$pagination_spacing = $pagination->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
         $pagination_spacing->addPreset("padding", "pagination_item_padding", __("Padding"), $pagination_items_selector);
-        $pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_items_selector);
+		$pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_items_selector);
+		
+		//spacing
+		$filter_section_spacing = $this->addControlSection("filter_spacing", __("Spacing"), "assets/icon.png", $this);
+		$filter_section_spacing->addPreset("padding", "filter_padding", __("Filterbar Padding"), $filter_selector);
+		$filter_section_spacing->addPreset("margin", "filter_margin", __("Filterbar Margin"), $filter_selector);
 	}
 }
 

@@ -145,101 +145,79 @@ class SingleQuiz extends \OxygenTutorElements {
 			)
 		);
 
-		/* Content bar */
-		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-		$top_bar_selector = $selector.' .tutor-single-page-top-bar';
-		$content->typographySection('Topbar Home link', $top_bar_selector.' a', $this);
-		$content->typographySection('Topbar Title', $top_bar_selector.' .tutor-topbar-content-title-wrap', $this);
-		$content_top_bar = $content->addControlSection("content-top-bar", __("Topbar Color"), "assets/icon.png", $this);
-		$content_top_bar->addStyleControls(
+		/* Topbar */
+		$topbar_selector = $selector.' .tutor-single-page-top-bar';
+		$topbar = $this->addControlSection("topbar", __("Topbar"), "assets/icon.png", $this);
+		$topbar->typographySection('Home link', $topbar_selector.' a', $this);
+		$topbar->typographySection('Title', $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
+		$topbar_color = $topbar->addControlSection("content-top-bar", __("Color"), "assets/icon.png", $this);
+		$topbar_color->addStyleControls(
 			array(
 				array(
                 	"name" => __('Background'),
-                	"selector" => $top_bar_selector,
+                	"selector" => $topbar_selector,
 					"property" => 'background-color',
                 ),
 				array(
                 	"name" => __('Toggle Bar'),
-                	"selector" => $top_bar_selector.' .tutor-lesson-sidebar-hide-bar',
+                	"selector" => $topbar_selector.' .tutor-lesson-sidebar-hide-bar',
 					"property" => 'background-color',
                 )
 			)
 		);
-		$content_top_bar_spacing = $content->addControlSection("topbar-spacing", __("Topbar Spacing"), "assets/icon.png", $this);
-        $content_top_bar_spacing->addPreset(
+		$topbar_spacing = $topbar->addControlSection("topbar-spacing", __("Spacing"), "assets/icon.png", $this);
+        $topbar_spacing->addPreset(
             "padding",
             "topbar_padding",
             __("Padding"),
-            $top_bar_selector
+            $topbar_selector
 		);
-        $content_top_bar_spacing->addPreset(
+        $topbar_spacing->addPreset(
             "margin",
             "topbar_margin",
             __("Margin"),
-            $top_bar_selector
+            $topbar_selector
 		);
 
+		/* Content */
+		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
 		$content_area_selector = $selector.' .tutor-quiz-single-wrap';
 		$content->typographySection('Quiz Title', $content_area_selector.' .tutor-quiz-header h2', $this);
-		$content->typographySection('Quiz Course Label', $content_area_selector.' .tutor-quiz-header h5', $this);
-		$content->typographySection('Quiz Course Title', $content_area_selector.' .tutor-quiz-header h5 a', $this);
-		$content->typographySection('Quiz Meta Label', $content_area_selector.' .tutor-quiz-meta li strong', $this);
-		$content->typographySection('Quiz Meta Value', $content_area_selector.' .tutor-quiz-meta li', $this);
+		$content->typographySection('Course Label', $content_area_selector.' .tutor-quiz-header h5', $this);
+		$content->typographySection('Course Title', $content_area_selector.' .tutor-quiz-header h5 a', $this);
+		$content->typographySection('Meta Label', $content_area_selector.' .tutor-quiz-meta li strong', $this);
+		$content->typographySection('Meta Value', $content_area_selector.' .tutor-quiz-meta li', $this);
 
-		$start_quiz_button = $content->addControlSection("start-quiz-button", __("Quiz Start Button"), "assets/icon.png", $this);
+		/* Start Button */
+		$start_quiz_button = $this->addControlSection("start-quiz-button", __("Start Button"), "assets/icon.png", $this);
         $start_quiz_button_selector = '.tutor-quiz-body .tutor-button';
+        $start_quiz_button->addPreset(
+            "padding",
+            "submit_padding",
+            __("Button Paddings"),
+            $start_quiz_button_selector
+        );
         $start_quiz_button->addStyleControls(
             array(
-				array(
-                    "name" => 'Font Size',
-                    "selector" => $start_quiz_button_selector,
-                    "property" => 'font-size',
-                ),
-                array(
-                    "name" => 'Font Color',
-                    "selector" => $start_quiz_button_selector,
-                    "property" => 'color',
-                ),
-                array(
-                    "name" => 'Font Family',
-                    "selector" => $start_quiz_button_selector,
-                    "property" => 'font-family',
-                ),
                 array(
                     "name" => 'Background Color',
                     "selector" => $start_quiz_button_selector,
                     "property" => 'background-color',
                 ),
-				array(
-                    "name" => 'Border Color',
-                    "selector" => $start_quiz_button_selector,
-                    "property" => 'border-color',
-                ),
                 array(
-                    "name" => 'Border Radius',
-                    "selector" => $start_quiz_button_selector,
-                    "property" => 'border-radius',
-                ),
-                array(
-                    "name" => 'Hover Background Color',
-                    "selector" => $start_quiz_button_selector.':hover',
+                    "name" => 'Background Hover Color',
+                    "selector" => $start_quiz_button_selector.":hover",
                     "property" => 'background-color',
-				),
-                array(
-                    "name" => 'Hover Border Color',
-                    "selector" => $start_quiz_button_selector.':hover',
-                    "property" => 'border-color',
-                ),
+                )
             )
-		);
-		$start_quiz_button->addPreset(
-            "padding",
-            "button_padding",
-            __("Button Padding"),
-            $start_quiz_button_selector
         );
+        $start_quiz_button->typographySection(__("Typography"), $start_quiz_button_selector, $this);
+        $start_quiz_button->borderSection(__("Borders"), $start_quiz_button_selector, $this);
+        $start_quiz_button->borderSection(__("Hover Borders"), $start_quiz_button_selector.":hover", $this);
+        $start_quiz_button->boxShadowSection(__("Shadow"), $start_quiz_button_selector, $this);
+        $start_quiz_button->boxShadowSection(__("Hover Shadow"), $start_quiz_button_selector.":hover", $this);
 
-		$content_area_spacing = $content->addControlSection("content-area-spacing", __("Area Spacing"), "assets/icon.png", $this);
+		$content_area_spacing = $content->addControlSection("content-area-spacing", __("Spacing"), "assets/icon.png", $this);
         $content_area_spacing->addPreset(
             "padding",
             "content_area_padding",
@@ -267,8 +245,8 @@ class SingleQuiz extends \OxygenTutorElements {
 		/* Pagination */
 		$pagination = $this->addControlSection("pagination", __("Pagination"), "assets/icon.png", $this);
 		$pagination_selector = $selector.' .tutor-next-previous-pagination-wrap';
-		$pagination->typographySection('Typography', $pagination_selector.' a', $this);
-		$pagination->typographySection('Typography Hover', $pagination_selector.' a:hover', $this);
+		$pagination->typographySection(__('Typography'), $pagination_selector.' a', $this);
+		$pagination->typographySection(__('Hover Typography'), $pagination_selector.' a:hover', $this);
 	}
 
 }
