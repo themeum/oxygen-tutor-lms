@@ -19,14 +19,11 @@ class CourseRating extends \OxygenTutorElements {
         include_once otlms_get_template('course/rating');
     }
 
-
     function class_names() {
         return array('tutor-course-rating', 'oxy-tutor-element');
     }
 
-
     function controls() {
-        
         $star_selector = ".tutor-single-course-rating .tutor-star-rating-group";
         $this->addStyleControls(
 			array(
