@@ -28,10 +28,10 @@ class CourseShare extends \OxygenTutorElements {
     function controls() {
         $typography_selector = ".tutor-single-course-meta .tutor-social-share";
         $layout_section = $this->addControlSection("layout", __("Layout"), "assets/icon.png", $this);
-        $items_align = $layout_section->addControl("buttons-list", "items_align", __("Items Align") );
+        $items_align = $layout_section->addControl("buttons-list", "items_align", __("Items Align"));
         $items_align->setValue(array(
-            "left"		=> "Left",
-            "right"    => "Right" 
+            "left"		=> __("Left"),
+            "right"    => __("Right") 
         ));
         $items_align->setValueCSS( array(
             "left" => "$typography_selector {
@@ -42,9 +42,9 @@ class CourseShare extends \OxygenTutorElements {
             }"
         ));
 
-        $this->typographySection('Label', $typography_selector.' span');
-        $this->typographySection('Original Icons', $typography_selector.' .tutor-social-share-wrap button');
-        $this->typographySection('Hovered Icons', $typography_selector.' .tutor-social-share-wrap button:hover');
+        $this->typographySection(__('Label'), $typography_selector.' span');
+        $this->typographySection(__('Original Icons'), $typography_selector.' .tutor-social-share-wrap button');
+        $this->typographySection(__('Hovered Icons'), $typography_selector.' .tutor-social-share-wrap button:hover');
     }
 
 }

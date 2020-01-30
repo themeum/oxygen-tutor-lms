@@ -38,7 +38,7 @@ class SingleQuiz extends \OxygenTutorElements {
 		/* Sidebar */
 		$sidebar = $this->addControlSection("sidebar", __("Sidebar"), "assets/icon.png", $this);
 		$tabs_selector = $selector." .tutor-tabs-btn-group";
-		$sidebar->typographySection('Tabs Typography', $tabs_selector.' a span', $this);
+		$sidebar->typographySection(__('Tabs Typography'), $tabs_selector.' a span', $this);
 		$tab_icon_section = $sidebar->addControlSection("tabs-icon", __("Tabs Icon"), "assets/icon.png", $this);
 		$tab_icon_section->addStyleControls(
 			array(
@@ -55,7 +55,7 @@ class SingleQuiz extends \OxygenTutorElements {
 			)
 		);
 		$topic_selector = $selector.' .tutor-topics-title h3';
-		$sidebar->typographySection('Topic Typography', $topic_selector, $this);
+		$sidebar->typographySection(__('Topic Typography'), $topic_selector, $this);
 		$topic_icon_section = $sidebar->addControlSection("topic-icon", __("Topic Icon"), "assets/icon.png", $this);
 		$topic_icon_section->addStyleControls(
 			array(
@@ -96,7 +96,7 @@ class SingleQuiz extends \OxygenTutorElements {
 		);
 		
 		$lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items a';
-		$sidebar->typographySection('Lesson Typography', $lesson_selector.' span', $this);
+		$sidebar->typographySection(__('Lesson Typography'), $lesson_selector.' span', $this);
 		$lesson_icon_section = $sidebar->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$lesson_icon_section->addStyleControls(
 			array(
@@ -148,8 +148,8 @@ class SingleQuiz extends \OxygenTutorElements {
 		/* Topbar */
 		$topbar_selector = $selector.' .tutor-single-page-top-bar';
 		$topbar = $this->addControlSection("topbar", __("Topbar"), "assets/icon.png", $this);
-		$topbar->typographySection('Home link', $topbar_selector.' a', $this);
-		$topbar->typographySection('Title', $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
+		$topbar->typographySection(__('Home link'), $topbar_selector.' a', $this);
+		$topbar->typographySection(__('Title'), $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
 		$topbar_color = $topbar->addControlSection("content-top-bar", __("Color"), "assets/icon.png", $this);
 		$topbar_color->addStyleControls(
 			array(
@@ -182,11 +182,11 @@ class SingleQuiz extends \OxygenTutorElements {
 		/* Content */
 		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
 		$content_area_selector = $selector.' .tutor-quiz-single-wrap';
-		$content->typographySection('Quiz Title', $content_area_selector.' .tutor-quiz-header h2', $this);
-		$content->typographySection('Course Label', $content_area_selector.' .tutor-quiz-header h5', $this);
-		$content->typographySection('Course Title', $content_area_selector.' .tutor-quiz-header h5 a', $this);
-		$content->typographySection('Meta Label', $content_area_selector.' .tutor-quiz-meta li strong', $this);
-		$content->typographySection('Meta Value', $content_area_selector.' .tutor-quiz-meta li', $this);
+		$content->typographySection(__('Quiz Title'), $content_area_selector.' .tutor-quiz-header h2', $this);
+		$content->typographySection(__('Course Label'), $content_area_selector.' .tutor-quiz-header h5', $this);
+		$content->typographySection(__('Course Title'), $content_area_selector.' .tutor-quiz-header h5 a', $this);
+		$content->typographySection(__('Meta Label'), $content_area_selector.' .tutor-quiz-meta li strong', $this);
+		$content->typographySection(__('Meta Value'), $content_area_selector.' .tutor-quiz-meta li', $this);
 
 		/* Start Button */
 		$start_quiz_button = $this->addControlSection("start-quiz-button", __("Start Button"), "assets/icon.png", $this);
@@ -200,12 +200,12 @@ class SingleQuiz extends \OxygenTutorElements {
         $start_quiz_button->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $start_quiz_button_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
+                    "name" =>__('Hover Background Color'),
                     "selector" => $start_quiz_button_selector.":hover",
                     "property" => 'background-color',
                 )

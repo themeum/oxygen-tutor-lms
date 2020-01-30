@@ -23,7 +23,7 @@ class CourseRequirements extends \OxygenTutorElements {
         $selector = ".tutor-course-requirements-wrap";
         $items_selector = $selector." .tutor-course-requirements-items";
 
-        $this->typographySection('Title', $selector.' .course-requirements-title h4');
+        $this->typographySection(__('Title'), $selector.' .course-requirements-title h4');
         $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
         $content_icon = $content_section->addControlSection("icon", __("Icon"), "assets/icon.png", $this);
         $content_icon->addStyleControls(
@@ -41,7 +41,7 @@ class CourseRequirements extends \OxygenTutorElements {
 			)
         );
         
-        $content_section->typographySection('Typography', $items_selector, $this);
+        $content_section->typographySection(__('Typography'), $items_selector, $this);
         //spacing
         $content_spacing = $content_section->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
         $content_spacing->addPreset(

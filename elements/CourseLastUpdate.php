@@ -27,7 +27,7 @@ class CourseLastUpdate extends \OxygenTutorElements {
     }
 
     function controls() {
-        $this->typographySection('Typography', '.tutor-single-course-meta-last-update');
+        $this->typographySection(__('Typography'), '.tutor-single-course-meta-last-update');
     }
 
 }

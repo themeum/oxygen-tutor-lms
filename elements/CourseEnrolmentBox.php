@@ -32,7 +32,7 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
 
         /* Price */
         $price_selector = ".tutor-price-preview-box";
-        $this->typographySection('Price', $price_selector.' .price, '.$price_selector.' .price .woocommerce-Price-amount', $this);
+        $this->typographySection(__('Price'), $price_selector.' .price, '.$price_selector.' .price .woocommerce-Price-amount', $this);
 
         /* Add to Cart Button */
         $add_to_cart_btn = $this->addControlSection("add_to_cart_btn", __("Add to Cart Button"), "assets/icon.png", $this);
@@ -48,12 +48,12 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         $add_to_cart_btn->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $add_to_cart_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
+                    "name" => __('Hover Background Color'),
                     "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
                     "property" => 'background-color',
                 )
@@ -77,12 +77,12 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         $enroll_btn->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $enroll_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
+                    "name" => __('Hover Background Color'),
                     "selector" => $enroll_btn_selector.":hover",
                     "property" => 'background-color',
                 )

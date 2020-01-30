@@ -29,25 +29,16 @@ class CourseTitle extends \OxygenTutorElements {
 
 	function controls() {
 
-		$this->addStyleControl(
+		$this->addStyleControls(
 			array(
 				"property" => 'font-family',
-			)
-		);
-
-		$this->addStyleControl(
+			),
 			array(
 				"property" => 'color',
-			)
-		);
-
-		$this->addStyleControl(
+			),
 			array(
 				"property" => 'font-size',
-			)
-		);
-
-		$this->addStyleControl(
+			),
 			array(
 				"property" => 'font-weight',
 			)

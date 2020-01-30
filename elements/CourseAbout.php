@@ -25,8 +25,8 @@ class CourseAbout extends \OxygenTutorElements {
 
     function controls() {
         $typography_selector = ".tutor-course-summery";
-        $this->typographySection('Heading', $typography_selector.' .tutor-segment-title');
-        $this->typographySection('Paragraph', $typography_selector);
+        $this->typographySection(__('Heading'), $typography_selector.' .tutor-segment-title');
+        $this->typographySection(__('Paragraph'), $typography_selector);
     }
 
 }

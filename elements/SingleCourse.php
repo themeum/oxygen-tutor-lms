@@ -80,7 +80,7 @@ class SingleCourse extends \OxygenTutorElements {
 		);
 		
 		/* Course Title */
-		$this->typographySection('Title', $selector.' .tutor-course-header-h1', $this);
+		$this->typographySection(__('Title'), $selector.' .tutor-course-header-h1', $this);
 		
 		/* Course Author */
 		$course_author = $this->addControlSection("author", __("Author"), "assets/icon.png", $this);
@@ -111,14 +111,14 @@ class SingleCourse extends \OxygenTutorElements {
 				)
 			)
 		);
-        $course_author->typographySection('Label', $author_selector.' .tutor-single-course-author-name span', $this);
-		$course_author->typographySection('Name', $author_selector.' .tutor-single-course-author-name a', $this);
+        $course_author->typographySection(__('Label'), $author_selector.' .tutor-single-course-author-name span', $this);
+		$course_author->typographySection(__('Name'), $author_selector.' .tutor-single-course-author-name a', $this);
 		
 		/* Course Levels */
 		$course_level = $this->addControlSection("level", __("Level"), "assets/icon.png", $this);
 		$level_selector =  $selector." .tutor-single-course-meta ul li.tutor-course-level";
-        $course_level->typographySection('Label', $level_selector.' strong', $this);
-		$course_level->typographySection('Value', $level_selector, $this);
+        $course_level->typographySection(__('Label'), $level_selector.' strong', $this);
+		$course_level->typographySection(__('Value'), $level_selector, $this);
 		
 		/* Course Share */
 		$course_share = $this->addControlSection("share", __("Share"), "assets/icon.png", $this);
@@ -126,8 +126,8 @@ class SingleCourse extends \OxygenTutorElements {
         $share_layout = $course_share->addControlSection("layout", __("Layout"), "assets/icon.png", $this);
         $share_items_align = $share_layout->addControl("buttons-list", "items_align", __("Items Align") );
         $share_items_align->setValue(array(
-            "left"		=> "Left",
-            "right"    => "Right" 
+            "left"		=> __("Left"),
+            "right"    => __("Right") 
         ));
         $share_items_align->setValueCSS( array(
             "left" => "$share_selector {
@@ -144,26 +144,26 @@ class SingleCourse extends \OxygenTutorElements {
 		/* Course lead meta */
 		$course_lead_meta = $this->addControlSection("lead_meta", __("Lead Meta"), "assets/icon.png", $this);
 		$lead_meta_selector =  $selector." .tutor-single-course-meta ul li";
-        $course_lead_meta->typographySection('Label', $lead_meta_selector.' span', $this);
-		$course_lead_meta->typographySection('Value', $lead_meta_selector.', '.$lead_meta_selector.' a', $this);
+        $course_lead_meta->typographySection(__('Label'), $lead_meta_selector.' span', $this);
+		$course_lead_meta->typographySection(__('Value'), $lead_meta_selector.', '.$lead_meta_selector.' a', $this);
 
 		/* Course about */
 		$course_about = $this->addControlSection("about", __("About"), "assets/icon.png", $this);
 		$about_selector =  $selector." .tutor-course-summery";
-        $course_about->typographySection('Heading', $about_selector.' .tutor-segment-title', $this);
-		$course_about->typographySection('Paragraph', $about_selector, $this);
+        $course_about->typographySection(__('Heading'), $about_selector.' .tutor-segment-title', $this);
+		$course_about->typographySection(__('Paragraph'), $about_selector, $this);
 
 		/* Course description */
 		$course_description = $this->addControlSection("description", __("Description"), "assets/icon.png", $this);
 		$description_selector =  $selector." .tutor-course-content-wrap";
-        $course_description->typographySection('Heading', $description_selector.' .course-content-title h4', $this);
-		$course_description->typographySection('Paragraph', $description_selector.' .tutor-course-content-content', $this);
+        $course_description->typographySection(__('Heading'), $description_selector.' .course-content-title h4', $this);
+		$course_description->typographySection(__('Paragraph'), $description_selector.' .tutor-course-content-content', $this);
 		
 		/* Course benefits */
 		$course_benefits = $this->addControlSection("benefits", __("Benefits"), "assets/icon.png", $this);
 		$benefits_selector = $selector." .tutor-course-benefits-wrap";
 		$benefits_item_selector = $benefits_selector." .tutor-course-benefits-items";
-        $course_benefits->typographySection('Title', $benefits_selector.' .course-benefits-title h4', $this);
+        $course_benefits->typographySection(__('Title'), $benefits_selector.' .course-benefits-title h4', $this);
         $benefits_content_icon = $course_benefits->addControlSection("benefits_content_icon", __("Icon"), "assets/icon.png", $this);
 		$benefits_content_icon->addStyleControls(
 			array(
@@ -201,11 +201,11 @@ class SingleCourse extends \OxygenTutorElements {
 		$course_curriculum = $this->addControlSection("curriculum", __("Curriculum"), "assets/icon.png", $this);
 		$curriculum_selector = $selector." .tutor-course-topics-wrap";
 		$curriculum_topic_header = $curriculum_selector." .tutor-course-topics-header";
-        $course_curriculum->typographySection('Header Title', $curriculum_topic_header.' .tutor-segment-title', $this);
-        $course_curriculum->typographySection('Header Info', $curriculum_topic_header. ' .tutor-course-topics-header-right', $this);
+        $course_curriculum->typographySection(__('Header Title'), $curriculum_topic_header.' .tutor-segment-title', $this);
+        $course_curriculum->typographySection(__('Header Info'), $curriculum_topic_header. ' .tutor-course-topics-header-right', $this);
 
         $course_topic = $curriculum_selector." .tutor-course-topic";
-        $course_curriculum->typographySection('Topic Title', $course_topic.' .tutor-course-title h4', $this);
+        $course_curriculum->typographySection(__('Topic Title'), $course_topic.' .tutor-course-title h4', $this);
         $icon_selector = $course_topic. ' .tutor-course-lesson h5 i';
         $icon_section = $course_curriculum->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$icon_section->addStyleControls(
@@ -222,7 +222,7 @@ class SingleCourse extends \OxygenTutorElements {
 				)
 			)
         );
-        $course_curriculum->typographySection('Lesson Title', $course_topic. ' .tutor-course-lesson h5, .tutor-course-lesson h5 a', $this);
+        $course_curriculum->typographySection(__('Lesson Title'), $course_topic. ' .tutor-course-lesson h5, .tutor-course-lesson h5 a', $this);
         $curriculum_space_section = $course_curriculum->addControlSection("topic-spacing", __("Spacing"), "assets/icon.png", $this);
         $curriculum_space_section->addPreset(
             "padding",
@@ -298,7 +298,6 @@ class SingleCourse extends \OxygenTutorElements {
             $info_selector.' .tutor-text-mute', 
             $this
 		);
-
 
 		/* Course Reviews */
 		$review_selector = $selector." .tutor-course-reviews-wrap";
@@ -519,13 +518,13 @@ class SingleCourse extends \OxygenTutorElements {
             __("Box Shadow"),
             $thumb_selector.":hover"
 		);
-		$course_enrollment_box->typographySection('Price', $enrollment_box_selector.' .price, '.$enrollment_box_selector.' .price .woocommerce-Price-amount', $this);
+		$course_enrollment_box->typographySection(__('Price'), $enrollment_box_selector.' .price, '.$enrollment_box_selector.' .price .woocommerce-Price-amount', $this);
 		
 		/* Course materials */
 		$course_materials = $this->addControlSection("materials", __("Materials"), "assets/icon.png", $this);
 		$materials_selector = $selector." .tutor-course-material-includes-wrap";
 		$materials_item_selector = $materials_selector." .tutor-course-target-audience-items";
-        $course_materials->typographySection('Title', $materials_selector.' > h4.tutor-segment-title', $this);
+        $course_materials->typographySection(__('Title'), $materials_selector.' > h4.tutor-segment-title', $this);
         $materials_content_icon = $course_materials->addControlSection("materials_content_icon", __("Icon"), "assets/icon.png", $this);
 		$materials_content_icon->addStyleControls(
 			array(
@@ -573,12 +572,12 @@ class SingleCourse extends \OxygenTutorElements {
         $add_to_cart_btn->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $add_to_cart_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
+                    "name" =>__('Hover Background Color'),
                     "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
                     "property" => 'background-color',
                 )
@@ -602,12 +601,12 @@ class SingleCourse extends \OxygenTutorElements {
         $enroll_btn->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $enroll_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
+                    "name" => __('Hover Background Color'),
                     "selector" => $enroll_btn_selector.":hover",
                     "property" => 'background-color',
                 )

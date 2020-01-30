@@ -63,7 +63,7 @@ class SingleLesson extends \OxygenTutorElements {
 		/* Sidebar */
 		$sidebar = $this->addControlSection("sidebar", __("Sidebar"), "assets/icon.png", $this);
 		$tabs_selector = $selector." .tutor-tabs-btn-group";
-		$sidebar->typographySection('Tabs Typography', $tabs_selector.' a span', $this);
+		$sidebar->typographySection(__('Tabs Typography'), $tabs_selector.' a span', $this);
 		$tab_icon_section = $sidebar->addControlSection("tabs-icon", __("Tabs Icon"), "assets/icon.png", $this);
 		$tab_icon_section->addStyleControls(
 			array(
@@ -80,7 +80,7 @@ class SingleLesson extends \OxygenTutorElements {
 			)
 		);
 		$topic_selector = $selector.' .tutor-topics-title h3';
-		$sidebar->typographySection('Topic Typography', $topic_selector, $this);
+		$sidebar->typographySection(__('Topic Typography'), $topic_selector, $this);
 		$topic_icon_section = $sidebar->addControlSection("topic-icon", __("Topic Icon"), "assets/icon.png", $this);
 		$topic_icon_section->addStyleControls(
 			array(
@@ -121,7 +121,7 @@ class SingleLesson extends \OxygenTutorElements {
 		);
 		
 		$lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items a';
-		$sidebar->typographySection('Lesson Typography', $lesson_selector.' span', $this);
+		$sidebar->typographySection(__('Lesson Typography'), $lesson_selector.' span', $this);
 		$lesson_icon_section = $sidebar->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$lesson_icon_section->addStyleControls(
 			array(
@@ -173,8 +173,8 @@ class SingleLesson extends \OxygenTutorElements {
 		/* Topbar */
 		$topbar_selector = $selector.' .tutor-single-page-top-bar';
 		$topbar = $this->addControlSection("topbar", __("Topbar"), "assets/icon.png", $this);
-		$topbar->typographySection('Home link', $topbar_selector.' a', $this);
-		$topbar->typographySection('Title', $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
+		$topbar->typographySection(__('Home link'), $topbar_selector.' a', $this);
+		$topbar->typographySection(__('Title'), $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
 		$topbar_color = $topbar->addControlSection("content-top-bar", __("Color"), "assets/icon.png", $this);
 		$topbar_color->addStyleControls(
 			array(

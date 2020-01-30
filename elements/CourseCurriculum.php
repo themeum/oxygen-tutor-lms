@@ -26,12 +26,12 @@ class CourseCurriculum extends \OxygenTutorElements {
     function controls() {
         //Topic header
         $topic_header = ".tutor-course-topics-header";
-        $this->typographySection('Header Title', $topic_header.' .tutor-segment-title');
-        $this->typographySection('Header Info', $topic_header. ' .tutor-course-topics-header-right');
+        $this->typographySection(__('Header Title'), $topic_header.' .tutor-segment-title');
+        $this->typographySection(__('Header Info'), $topic_header. ' .tutor-course-topics-header-right');
 
         //Course Topics
         $course_topic = ".tutor-course-topic";
-        $this->typographySection('Topic Title', $course_topic.' .tutor-course-title h4');
+        $this->typographySection(__('Topic Title'), $course_topic.' .tutor-course-title h4');
         $icon_selector = $course_topic. ' .tutor-course-lesson h5 i';
         $icon_section = $this->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$icon_section->addStyleControls(
@@ -48,7 +48,7 @@ class CourseCurriculum extends \OxygenTutorElements {
 				)
 			)
         );
-        $this->typographySection('Lesson Title', $course_topic. ' .tutor-course-lesson h5, .tutor-course-lesson h5 a');
+        $this->typographySection(__('Lesson Title'), $course_topic. ' .tutor-course-lesson h5, .tutor-course-lesson h5 a');
         //spacing
         $space_section = $this->addControlSection("topic-spacing", __("Spacing"), "assets/icon.png", $this);
         $space_section->addPreset(
