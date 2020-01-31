@@ -64,20 +64,20 @@ class SingleCourse extends \OxygenTutorElements {
 		/* Course Rating */
 		$course_rating = $this->addControlSection("rating", __("Rating"), "assets/icon.png", $this);
 		$star_selector = $selector." .tutor-single-course-rating .tutor-star-rating-group";
-		$course_rating->addStyleControl(
-			array(
-                "name" => __('Stars Size'),
-                "selector" => $star_selector,
-                "property" => 'font-size',
+		$course_rating->addStyleControls(
+            array(
+                array(
+                    "name" => __('Stars Size'),
+                    "selector" => $star_selector,
+                    "property" => 'font-size',
+                ),
+                array(
+                    "name" => __('Stars Color'),
+                    "selector" => $star_selector,
+                    "property" => 'color',
+                )
             )
         );
-        $course_rating->addStyleControl(
-			array(
-                "name" => __('Stars Color'),
-                "selector" => $star_selector,
-                "property" => 'color',
-            )
-		);
 		
 		/* Course Title */
 		$this->typographySection(__('Title'), $selector.' .tutor-course-header-h1', $this);
@@ -271,20 +271,21 @@ class SingleCourse extends \OxygenTutorElements {
         $info_selector = $instructors_selector." .single-instructor-bottom";
         $instructors_rating_section = $course_instructors->addControlSection("instructors_rating", __("Rating"), "assets/icon.png", $this);
         $star_selector = $info_selector." .tutor-star-rating-group";
-        $instructors_rating_section->addStyleControl(
-			array(
-                "name" => __('Stars Size'),
-                "selector" => $star_selector,
-                "property" => 'font-size',
+        $instructors_rating_section->addStyleControls(
+            array(
+                array(
+                    "name" => __('Stars Size'),
+                    "selector" => $star_selector,
+                    "property" => 'font-size',
+                ),
+                array(
+                    "name" => __('Stars Color'),
+                    "selector" => $star_selector,
+                    "property" => 'color',
+                )
             )
         );
-        $instructors_rating_section->addStyleControl(
-			array(
-                "name" => __('Stars Color'),
-                "selector" => $star_selector,
-                "property" => 'color',
-            )
-        );
+
         $course_instructors->typographySection(
             __("Label"),
             $info_selector.' .rating-digits,'.
