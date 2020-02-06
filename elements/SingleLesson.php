@@ -64,6 +64,7 @@ class SingleLesson extends \OxygenTutorElements {
 		$sidebar = $this->addControlSection("sidebar", __("Sidebar"), "assets/icon.png", $this);
 		$tabs_selector = $selector." .tutor-tabs-btn-group";
 		$sidebar->typographySection(__('Tabs Typography'), $tabs_selector.' a span', $this);
+		$sidebar->typographySection(__('Actice Tabs Typography'), $tabs_selector.' a.active span', $this);
 		$tab_icon_section = $sidebar->addControlSection("tabs-icon", __("Tabs Icon"), "assets/icon.png", $this);
 		$tab_icon_section->addStyleControls(
 			array(
@@ -75,6 +76,21 @@ class SingleLesson extends \OxygenTutorElements {
 				array(
                 	"name" => __('Color'),
                 	"selector" => $tabs_selector.' a i',
+					"property" => 'color',
+				)
+			)
+		);
+		$tab_active_icon_section = $sidebar->addControlSection("active-tabs-icon", __("Active Tabs Icon"), "assets/icon.png", $this);
+		$tab_active_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $tabs_selector.' a.active i',
+					"property" => 'font-size',
+                ),
+				array(
+                	"name" => __('Color'),
+                	"selector" => $tabs_selector.' a.active i',
 					"property" => 'color',
 				)
 			)
@@ -121,18 +137,55 @@ class SingleLesson extends \OxygenTutorElements {
 		);
 		
 		$lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items a';
+		$active_lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items.active a';
 		$sidebar->typographySection(__('Lesson Typography'), $lesson_selector.' span', $this);
+		$sidebar->typographySection(__('Active Lesson Typography'), $active_lesson_selector.' span', $this);
 		$lesson_icon_section = $sidebar->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$lesson_icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
+                	"name" => __('Left Icon Color'),
                 	"selector" => $lesson_selector.' i:first-child',
+					"property" => 'color',
+				),
+				array(
+                	"name" => __('Left Icon Active Color'),
+                	"selector" => $active_lesson_selector.' i:first-child',
+					"property" => 'color',
+				),
+				array(
+                	"name" => __('Incomplete Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete',
+					"property" => 'border-color',
+				),
+				array(
+                	"name" => __('Complete Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
+					"property" => 'color',
+				),
+				array(
+                	"name" => __('Complete Background Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
+					"property" => 'background-color',
+				),
+				array(
+                	"name" => __('Complete Border Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
+					"property" => 'border-color',
+				)
+			)
+		);
+		$active_lesson_icon_section = $sidebar->addControlSection("active-lesson-icon", __("Active Lesson Icon"), "assets/icon.png", $this);
+		$active_lesson_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $active_lesson_selector.' i:first-child',
 					"property" => 'font-size',
                 ),
 				array(
                 	"name" => __('Color'),
-                	"selector" => $lesson_selector.' i:first-child',
+                	"selector" => $active_lesson_selector.' i:first-child',
 					"property" => 'color',
 				)
 			)
@@ -153,13 +206,18 @@ class SingleLesson extends \OxygenTutorElements {
 					"property" => 'background-color',
 				),
 				array(
-					"name" => __('Tab Active Background'),
+					"name" => __('Active Tab Background'),
 					"selector" => $selector.' .tutor-tabs-btn-group a.active',
 					"property" => 'background-color',
 				),
 				array(
 					"name" => __('Lesson Background'),
 					"selector" => $selector.' .tutor-topics-in-single-lesson',
+					"property" => 'background-color',
+				),
+				array(
+					"name" => __('Active Lesson Background'),
+					"selector" => $selector.' .tutor-topics-in-single-lesson .tutor-single-lesson-items.active',
 					"property" => 'background-color',
 				),
 				array(
