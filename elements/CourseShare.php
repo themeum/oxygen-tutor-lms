@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseShare extends \OxygenTutorElements {
 
 	function name() {
-        return 'Share';
+        return 'Social Share';
     }
 
     function tutor_button_place() {
