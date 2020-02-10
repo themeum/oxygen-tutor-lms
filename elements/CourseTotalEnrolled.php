@@ -27,7 +27,7 @@ class CourseTotalEnrolled extends \OxygenTutorElements {
     }
 
     function controls() {
-        $this->typographySection('Typography', '.tutor-single-course-meta-total-enroll');
+        $this->typographySection(__('Typography'), '.tutor-single-course-meta-total-enroll');
     }
 
 }

@@ -60,7 +60,7 @@ class ArchiveCourse extends \OxygenTutorElements {
 			array(
 				array(
 					"selector" => $level_badge_selector,
-					"property" => 'background-color',
+					"property" => 'font-family',
 				),
 				array(
 					"selector" => $level_badge_selector,
@@ -68,11 +68,15 @@ class ArchiveCourse extends \OxygenTutorElements {
 				),
 				array(
 					"selector" => $level_badge_selector,
-					"property" => 'font-family',
+					"property" => 'color',
 				),
 				array(
 					"selector" => $level_badge_selector,
 					"property" => 'line-height',
+				),
+				array(
+					"selector" => $level_badge_selector,
+					"property" => 'background-color',
 				),
 				array(
 					"selector" => $level_badge_selector,
@@ -164,9 +168,9 @@ class ArchiveCourse extends \OxygenTutorElements {
         $pagination_align = $pagination->addControl("buttons-list", "pagination_align", __("Items Align") );
         
 		$pagination_align->setValue(array(
-			"left"		=> "Left",
-			"center" 	=> "Center", 
-			"right" 	=> "Right" 
+			"left"		=> __("Left"),
+			"center" 	=> __("Center"), 
+			"right" 	=> __("Right")
 		));
         
 		$pagination_align->setValueCSS(array(
@@ -208,14 +212,14 @@ class ArchiveCourse extends \OxygenTutorElements {
                     "selector" => $pagination_selector." a:hover",
                     "property" => 'background-color',
                 ),
-                //current
+                //Active
                 array(
-                    "name" => __("Current Text Color"),
+                    "name" => __("Active Text Color"),
                     "selector" => $pagination_selector." span.current",
                     "property" => 'color',
                 ),
                 array(
-                    "name" => __("Current Background"),
+                    "name" => __("Active Background"),
                     "selector" => $pagination_selector." span.current",
                     "property" => 'background-color',
                 ),

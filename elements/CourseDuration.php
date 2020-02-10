@@ -28,7 +28,7 @@ class CourseDuration extends \OxygenTutorElements {
     }
 
     function controls() {
-        $this->typographySection('Typography', '.tutor-single-course-meta-duration');
+        $this->typographySection(__('Typography'), '.tutor-single-course-meta-duration');
     }
 
 }

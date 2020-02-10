@@ -24,32 +24,25 @@ class CourseTitle extends \OxygenTutorElements {
 	}
 
 	function class_names() {
-		return array('tutor-course-title', 'oxy-tutor-element');
+		return array('oxy-tutor-element', 'oxy-tutor-course-title');
 	}
 
 	function controls() {
 
-		$this->addStyleControl(
+		$this->addStyleControls(
 			array(
-				"property" => 'font-family',
-			)
-		);
-
-		$this->addStyleControl(
-			array(
-				"property" => 'color',
-			)
-		);
-
-		$this->addStyleControl(
-			array(
-				"property" => 'font-size',
-			)
-		);
-
-		$this->addStyleControl(
-			array(
-				"property" => 'font-weight',
+				array(
+					"property" => 'font-family',
+				),
+				array(
+					"property" => 'color',
+				),
+				array(
+					"property" => 'font-size',
+				),
+				array(
+					"property" => 'font-weight',
+				)
 			)
 		);
 

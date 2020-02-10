@@ -81,28 +81,28 @@ class CoursesList extends \OxygenTutorElements {
 		$courses_query->addOptionControl(
 			array(
 				"type" => 'textfield',
-				"name" => 'Include ID',
+				"name" => __('Include ID'),
 				"slug" => 'course_id',
 			)
 		);
 		$courses_query->addOptionControl(
 			array(
 				"type" => 'textfield',
-				"name" => 'Excludes IDS',
+				"name" => __('Excludes IDS'),
 				"slug" => 'exclude_ids',
 			)
 		);
 		$courses_query->addOptionControl(
 			array(
 				"type" => 'textfield',
-				"name" => 'Category IDS',
+				"name" => __('Category IDS'),
 				"slug" => 'category',
 			)
 		);
 		$courses_query->addOptionControl(
 			array(
 				"type" => 'dropdown',
-				"name" => 'Order By',
+				"name" => __('Order By'),
 				"slug" => 'orderby',
 			)
 		)->setValue(array('ID', 'title', 'rand', 'date', 'menu_order', 'post__in'));
@@ -110,7 +110,7 @@ class CoursesList extends \OxygenTutorElements {
 		$courses_query->addOptionControl(
 			array(
 				"type" => 'dropdown',
-				"name" => 'Order',
+				"name" => __('Order'),
 				"slug" => 'order',
 			)
 		)->setValue(array('DESC', 'ASC'));
@@ -118,7 +118,7 @@ class CoursesList extends \OxygenTutorElements {
 		$courses_query->addOptionControl(
 			array(
 				"type" => 'textfield',
-				"name" => 'Limit',
+				"name" => __('Limit'),
 				"slug" => 'limit',
 			)
 		);

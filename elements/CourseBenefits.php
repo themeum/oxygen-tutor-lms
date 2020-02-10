@@ -22,7 +22,7 @@ class CourseBenefits extends \OxygenTutorElements {
     function controls() {
         $selector = ".tutor-course-benefits-wrap";
 		$items_selector = $selector." .tutor-course-benefits-items";
-        $this->typographySection('Title', $selector.' .course-benefits-title h4', $this);
+        $this->typographySection(__('Title'), $selector.' .course-benefits-title h4', $this);
         $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
         $content_icon = $content_section->addControlSection("content_icon", __("Icon"), "assets/icon.png", $this);
 		$content_icon->addStyleControls(

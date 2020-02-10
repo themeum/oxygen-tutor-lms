@@ -63,18 +63,18 @@ class CourseInstructors extends \OxygenTutorElements {
 
         $rating_section = $info_section->addControlSection("rating", __("Rating"), "assets/icon.png", $this);
         $star_selector = $info_selector." .tutor-star-rating-group";
-        $rating_section->addStyleControl(
-			array(
-                "name" => __('Stars Size'),
-                "selector" => $star_selector,
-                "property" => 'font-size',
-            )
-        );
-        $rating_section->addStyleControl(
-			array(
-                "name" => __('Stars Color'),
-                "selector" => $star_selector,
-                "property" => 'color',
+        $rating_section->addStyleControls(
+            array(
+                array(
+                    "name" => __('Stars Size'),
+                    "selector" => $star_selector,
+                    "property" => 'font-size',
+                ),
+                array(
+                    "name" => __('Stars Color'),
+                    "selector" => $star_selector,
+                    "property" => 'color',
+                )
             )
         );
         $info_section->typographySection(

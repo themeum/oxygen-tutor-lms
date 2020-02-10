@@ -54,8 +54,8 @@ class CourseAuthor extends \OxygenTutorElements {
 
         //section lable and name
         $author_selector = ".tutor-single-course-author-meta .tutor-single-course-author-name";
-        $this->typographySection('Label', $author_selector.' span');
-        $this->typographySection('Name', $author_selector.' a');
+        $this->typographySection(__('Label'), $author_selector.' span');
+        $this->typographySection(__('Name'), $author_selector.' a');
     }
 
 }

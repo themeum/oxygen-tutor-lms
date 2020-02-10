@@ -38,7 +38,8 @@ class SingleAssignment extends \OxygenTutorElements {
 		/* Sidebar */
 		$sidebar = $this->addControlSection("sidebar", __("Sidebar"), "assets/icon.png", $this);
 		$tabs_selector = $selector." .tutor-tabs-btn-group";
-		$sidebar->typographySection('Tabs Typography', $tabs_selector.' a span', $this);
+		$sidebar->typographySection(__('Tabs Typography'), $tabs_selector.' a span', $this);
+		$sidebar->typographySection(__('Actice Tabs Typography'), $tabs_selector.' a.active span', $this);
 		$tab_icon_section = $sidebar->addControlSection("tabs-icon", __("Tabs Icon"), "assets/icon.png", $this);
 		$tab_icon_section->addStyleControls(
 			array(
@@ -54,8 +55,23 @@ class SingleAssignment extends \OxygenTutorElements {
 				)
 			)
 		);
+		$tab_active_icon_section = $sidebar->addControlSection("active-tabs-icon", __("Active Tabs Icon"), "assets/icon.png", $this);
+		$tab_active_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $tabs_selector.' a.active i',
+					"property" => 'font-size',
+                ),
+				array(
+                	"name" => __('Color'),
+                	"selector" => $tabs_selector.' a.active i',
+					"property" => 'color',
+				)
+			)
+		);
 		$topic_selector = $selector.' .tutor-topics-title h3';
-		$sidebar->typographySection('Topic Typography', $topic_selector, $this);
+		$sidebar->typographySection(__('Topic Typography'), $topic_selector, $this);
 		$topic_icon_section = $sidebar->addControlSection("topic-icon", __("Topic Icon"), "assets/icon.png", $this);
 		$topic_icon_section->addStyleControls(
 			array(
@@ -96,18 +112,55 @@ class SingleAssignment extends \OxygenTutorElements {
 		);
 		
 		$lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items a';
-		$sidebar->typographySection('Lesson Typography', $lesson_selector.' span', $this);
+		$active_lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items.active a';
+		$sidebar->typographySection(__('Lesson Typography'), $lesson_selector.' span', $this);
+		$sidebar->typographySection(__('Active Lesson Typography'), $active_lesson_selector.' span', $this);
 		$lesson_icon_section = $sidebar->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$lesson_icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
+                	"name" => __('Left Icon Color'),
                 	"selector" => $lesson_selector.' i:first-child',
+					"property" => 'color',
+				),
+				array(
+                	"name" => __('Left Icon Active Color'),
+                	"selector" => $active_lesson_selector.' i:first-child',
+					"property" => 'color',
+				),
+				array(
+                	"name" => __('Incomplete Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete',
+					"property" => 'border-color',
+				),
+				array(
+                	"name" => __('Complete Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
+					"property" => 'color',
+				),
+				array(
+                	"name" => __('Complete Background Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
+					"property" => 'background-color',
+				),
+				array(
+                	"name" => __('Complete Border Color'),
+                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
+					"property" => 'border-color',
+				)
+			)
+		);
+		$active_lesson_icon_section = $sidebar->addControlSection("active-lesson-icon", __("Active Lesson Icon"), "assets/icon.png", $this);
+		$active_lesson_icon_section->addStyleControls(
+			array(
+				array(
+                	"name" => __('Size'),
+                	"selector" => $active_lesson_selector.' i:first-child',
 					"property" => 'font-size',
                 ),
 				array(
                 	"name" => __('Color'),
-                	"selector" => $lesson_selector.' i:first-child',
+                	"selector" => $active_lesson_selector.' i:first-child',
 					"property" => 'color',
 				)
 			)
@@ -128,13 +181,18 @@ class SingleAssignment extends \OxygenTutorElements {
 					"property" => 'background-color',
 				),
 				array(
-					"name" => __('Tab Active Background'),
+					"name" => __('Active Tab Background'),
 					"selector" => $selector.' .tutor-tabs-btn-group a.active',
 					"property" => 'background-color',
 				),
 				array(
 					"name" => __('Lesson Background'),
 					"selector" => $selector.' .tutor-topics-in-single-lesson',
+					"property" => 'background-color',
+				),
+				array(
+					"name" => __('Active Lesson Background'),
+					"selector" => $selector.' .tutor-topics-in-single-lesson .tutor-single-lesson-items.active',
 					"property" => 'background-color',
 				),
 				array(
@@ -148,8 +206,8 @@ class SingleAssignment extends \OxygenTutorElements {
 		/* Topbar */
 		$topbar_selector = $selector.' .tutor-single-page-top-bar';
 		$topbar = $this->addControlSection("topbar", __("Topbar"), "assets/icon.png", $this);
-		$topbar->typographySection('Home link', $topbar_selector.' a', $this);
-		$topbar->typographySection('Title', $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
+		$topbar->typographySection(__('Home link'), $topbar_selector.' a', $this);
+		$topbar->typographySection(__('Title'), $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
 		$topbar_color = $topbar->addControlSection("content-top-bar", __("Color"), "assets/icon.png", $this);
 		$topbar_color->addStyleControls(
 			array(
@@ -183,55 +241,55 @@ class SingleAssignment extends \OxygenTutorElements {
 		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
 		$content_area_selector = $selector.' .tutor-lesson-content-area';
 		$submit_form_area_selector = $selector.' .tutor-assignment-submit-form-wrap';
-		$content->typographySection('Assignment Title', $content_area_selector.' .tutor-assignment-title h2', $this);
-		$content->typographySection('Assignment Info Label', $content_area_selector.' .tutor-assignment-information > ul > li', $this);
-		$content->typographySection('Assignment Info Value', $content_area_selector.' .tutor-assignment-information > ul > li > strong', $this);
-		$content->typographySection('Description Header', $content_area_selector.' .tutor-assignment-content h2', $this);
-		$content->typographySection('Description Content', $content_area_selector.' .tutor-assignment-content p', $this);
-		$content->typographySection('Submit Form Header', $submit_form_area_selector.' h2', $this);
-		$content->typographySection('Submit Form Label', $submit_form_area_selector.' .tutor-form-group p', $this);
+		$content->typographySection(__('Assignment Title'), $content_area_selector.' .tutor-assignment-title h2', $this);
+		$content->typographySection(__('Assignment Info Label'), $content_area_selector.' .tutor-assignment-information > ul > li', $this);
+		$content->typographySection(__('Assignment Info Value'), $content_area_selector.' .tutor-assignment-information > ul > li > strong', $this);
+		$content->typographySection(__('Description Header'), $content_area_selector.' .tutor-assignment-content h2', $this);
+		$content->typographySection(__('Description Content'), $content_area_selector.' .tutor-assignment-content p', $this);
+		$content->typographySection(__('Submit Form Header'), $submit_form_area_selector.' h2', $this);
+		$content->typographySection(__('Submit Form Label'), $submit_form_area_selector.' .tutor-form-group p', $this);
 
 		$submit_form_input = $content->addControlSection("submit-form-input", __("Submit Form Input"), "assets/icon.png", $this);
 		$submit_form_input_selector = $submit_form_area_selector.' .tutor-form-group textarea';
 		$submit_form_input->addStyleControls(
             array(
                 array(
-                    "name" => 'Font Size',
+                    "name" => __('Font Size'),
                     "selector" => $submit_form_input_selector,
                     "property" => 'font-size',
                 ),
                 array(
-                    "name" => 'Font Color',
+                    "name" => __('Font Color'),
                     "selector" => $submit_form_input_selector,
                     "property" => 'color',
                 ),
                 array(
-                    "name" => 'Font Family',
+                    "name" => __('Font Family'),
                     "selector" => $submit_form_input_selector,
                     "property" => 'font-family',
                 ),
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $submit_form_input_selector,
                     "property" => 'background-color',
                 ),
 				array(
-                    "name" => 'Border Color',
+                    "name" => __('Border Color'),
                     "selector" => $submit_form_input_selector,
                     "property" => 'border-color',
                 ),
                 array(
-                    "name" => 'Border Radius',
+                    "name" => __('Border Radius'),
                     "selector" => $submit_form_input_selector,
                     "property" => 'border-radius',
                 ),
                 array(
-                    "name" => 'Hover Background Color',
+                    "name" => __('Hover Background Color'),
                     "selector" => $submit_form_input_selector.':hover',
                     "property" => 'background-color',
 				),
                 array(
-                    "name" => 'Hover Border Color',
+                    "name" => __('Hover Border Color'),
                     "selector" => $submit_form_input_selector.':hover',
                     "property" => 'border-color',
                 ),
@@ -281,12 +339,12 @@ class SingleAssignment extends \OxygenTutorElements {
         $start_button->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $start_button_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
+                    "name" => __('Hover Background Color'),
                     "selector" => $start_button_selector.":hover",
                     "property" => 'background-color',
                 )
@@ -311,14 +369,14 @@ class SingleAssignment extends \OxygenTutorElements {
         $upload_button->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
-                    "selector" => $upload_button_selector,
-                    "property" => 'background-color',
+                    "name" 		=> __('Background Color'),
+                    "selector" 	=> $upload_button_selector,
+                    "property" 	=> 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
-                    "selector" => $upload_button_selector.":hover",
-                    "property" => 'background-color',
+                    "name" 		=>__('Hover Background Color'),
+                    "selector" 	=> $upload_button_selector.":hover",
+                    "property" 	=> 'background-color',
                 )
             )
         );
@@ -340,12 +398,12 @@ class SingleAssignment extends \OxygenTutorElements {
         $submit_button->addStyleControls(
             array(
                 array(
-                    "name" => 'Background Color',
+                    "name" => __('Background Color'),
                     "selector" => $submit_button_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => 'Background Hover Color',
+                    "name" => __('Hover Background Color'),
                     "selector" => $submit_button_selector.":hover",
                     "property" => 'background-color',
                 )

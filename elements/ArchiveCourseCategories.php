@@ -164,9 +164,9 @@ class ArchiveCourseCategories extends \OxygenTutorElements {
         $pagination_align = $pagination->addControl("buttons-list", "pagination_align", __("Items Align") );
         
 		$pagination_align->setValue(array(
-			"left"		=> "Left",
-			"center" 	=> "Center", 
-			"right" 	=> "Right" 
+			"left"		=> __("Left"),
+			"center" 	=> __("Center"), 
+			"right" 	=> __("Right" )
 		));
         
 		$pagination_align->setValueCSS(array(
