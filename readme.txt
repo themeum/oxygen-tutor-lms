@@ -13,8 +13,37 @@ Build E-Learning website by Oxygen Builder and Tutor LMS Integration plugin
 
 == Description ==
 
+This plugin integrates Tutor LMS with the popular Oxygen Page Builder plugin. It adds all the functionalities needed to create a complete WordPress LMS website using Oxygen Builder.
 
-Create Tutor LMS course page easily by Oxygen and Oxygen tutor lms integration
+To use this plugin, you must first have all the plugins installed and activated. The required plugins are:
+ * [Tutor LMS (Free/Pro)](https://wordpress.org/plugins/tutor/)
+ * Integration Plugin
+ * [Oxygen Builder](https://oxygenbuilder.com/)
+
+= What Oxygen Builder Brings to Tutor LMS =
+
+Oxygen builder is a very unique and robust page builder, and you can practically create your custom made theme for an LMS platform. Thus you don't have to rely on other third-party themes and make your website from the ground up exactly the way you want it.
+
+Oxygen Builder provides a plethora of features like the header builder, huge design library, and full responsiveness controls. Moreover, it also comes with a library of pre-made design sets that can be imported directly to create rich webpages. We believe with this integration activated, you can create an amazing platform for your instructors and students alike.
+
+= Oxygen Visual Editor =
+
+Like all other Oxygen enabled sites, installing Oxygen will strip out all the visuals of your old site. The visuals will now be controlled by Oxygen's templates. Therefore, your theme will basically be useless. You will have to create Oxygen templates to properly show your content in a usable layout.
+
+With this integration plugin enabled, you will see a brand new tab in the editor. This tab labeled "Tutor LMS" contains all the necessary elements needed to build a perfect LMS website. Whether you're a designer or a WordPress developer, it will suit all your needs.
+There are two ways of creating a course page, for example:
+
+ * Add a single course template
+ * Build your custom design using single course elements
+
+
+
+If you add the single course template, you'll be able to edit each of the elements. But you won't be able to change the layout of the course page itself. To do so, you'll need to create a custom course layout with all the necessary elements.
+
+If you're familiar with the Oxygen Builder plugin, creating a new custom layout with custom headers and footers should be a breeze. We've added all the necessary elements needed to create a full Tutor LMS website. We’ve broken down all of Tutor LMS into small elements that you can now use to create a customizable layout for all Tutor LMS pages like course page, quiz page, archive page, and so on.
+
+To read about every aspect of this plugin, please refer to our [documentation on the Oxygen Builder](https://www.themeum.com/docs/oxygen-builder-introduction/) integration plugin. You will find all the information on this plugin in our documentation website.
+
 
 == Installation ==
 
