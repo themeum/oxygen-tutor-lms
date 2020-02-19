@@ -53,6 +53,12 @@
 
 	tutor_course_archive_pagination();
 
+	/**
+	 * Required loggedin form popup support
+	 * @since v 1.0.1
+	 */
+	tutor_archive_course_add_to_cart();
+
 	do_action('tutor_course/archive/after_loop');
 	?>
 </div><!-- .wrap -->
