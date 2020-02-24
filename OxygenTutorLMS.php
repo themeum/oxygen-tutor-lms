@@ -6,17 +6,17 @@ if ( ! defined( 'ABSPATH' ) )
 final class OxygenTutorLMS{
 
 	/**
-	 * @var null 
+	 * @var null
 	 */
 	protected static $_instance = null;
 
 
 	/**
 	 * @return null|OxygenTutorLMS
-	 * 
+	 *
 	 * @since v.1.0.0
 	 */
-	
+
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {
 			self::$_instance = new self();
@@ -44,6 +44,8 @@ final class OxygenTutorLMS{
 
 		//Supporting public profile as author archive page
 		add_action( 'pre_get_posts', array($this, 'public_profile_mark_archive'), 1 );
+
+		add_action('template_redirect', array($this, 'logout_dashboard'), 99);
 	}
 
 	public function load_files(){
@@ -118,7 +120,7 @@ final class OxygenTutorLMS{
         <h2><?php _e("Single Template", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_single_template"); ?>
 
-		<h2><?php _e("Single Course", 'oxygen-tutor-lms');?></h2>
+        <h2><?php _e("Single Course", 'oxygen-tutor-lms');?></h2>
 		<?php do_action("oxygen_add_plus_tutor_single_course"); ?>
 
         <h2><?php _e("Archive & Course List", 'oxygen-tutor-lms');?></h2>
@@ -131,21 +133,21 @@ final class OxygenTutorLMS{
 
 
 	public function tutor_get_template_path($template_location, $template){
-	    if ($template === 'single-preview-lesson'){
-		    $template_location = otlms_get_template( 'single-preview-lesson' );
-	    }
-        return $template_location;
-    }
+		if ($template === 'single-preview-lesson'){
+			$template_location = otlms_get_template( 'single-preview-lesson' );
+		}
+		return $template_location;
+	}
 
 	public function student_public_profile($template){
 		global $wp_query;
 
 		//die($template);
-        //echo '<pre>';
-        //print_r($wp_query);
+		//echo '<pre>';
+		//print_r($wp_query);
 
 		if ( ! empty($wp_query->query['tutor_student_username'])){
-		    $wp_query->is_author = true;
+			$wp_query->is_author = true;
 			//$template = otlms_get_template( 'student-public-profile' );
 		}
 
@@ -157,16 +159,16 @@ final class OxygenTutorLMS{
 	 * @param $query
 	 *
 	 * @return mixed
-     *
-     * Marking Public profile Template as archive page
-     *
-     * @since v.1.0.0
+	 *
+	 * Marking Public profile Template as archive page
+	 *
+	 * @since v.1.0.0
 	 */
 	public function public_profile_mark_archive($query){
 		global $wp_query;
 
 		if ( ! is_admin() && ! empty($wp_query->query['tutor_student_username'])) {
-		    $author_name = sanitize_text_field($wp_query->query['tutor_student_username']);
+			$author_name = sanitize_text_field($wp_query->query['tutor_student_username']);
 
 			$query->is_archive           = true;
 			$query->is_home              = false;
@@ -176,43 +178,59 @@ final class OxygenTutorLMS{
 			$query->set( 'is_author', true );
 		}
 
-	    return $query;
+		return $query;
 	}
 
 
 	public function admin_notice(){
-	    if (defined('TUTOR_VERSION')){
-	        //Version Check
-            if (version_compare(TUTOR_VERSION, '1.5.2', '<'  )){
-	            add_action( 'admin_notices', array($this, 'notice_required_tutor') );
-            }
-        }else{
-	        //Required Tutor Message
-		    add_action( 'admin_notices', array($this, 'notice_required_tutor') );
-	    }
+		if (defined('TUTOR_VERSION')){
+			//Version Check
+			if (version_compare(TUTOR_VERSION, '1.5.2', '<'  )){
+				add_action( 'admin_notices', array($this, 'notice_required_tutor') );
+			}
+		}else{
+			//Required Tutor Message
+			add_action( 'admin_notices', array($this, 'notice_required_tutor') );
+		}
 
-	    if ( ! class_exists('OxyEl')){
-	        //Required Oxygen Plugin
-		    add_action( 'admin_notices', array($this, 'notice_required_oxygen') );
-	    }
+		if ( ! class_exists('OxyEl')){
+			//Required Oxygen Plugin
+			add_action( 'admin_notices', array($this, 'notice_required_oxygen') );
+		}
 
-    }
+	}
 
 
 	/**
 	 * Notice for tutor lms plugin required
 	 */
-    public function notice_required_tutor(){
-	    $class = 'notice notice-warning';
-	    $message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.1.5.2', 'oxygen-tutor-lms' );
-	    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
-    }
+	public function notice_required_tutor(){
+		$class = 'notice notice-warning';
+		$message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.1.5.2', 'oxygen-tutor-lms' );
+		printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+	}
 
-    public function notice_required_oxygen(){
-	    $class = 'notice notice-warning';
-	    $message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated Oxygen Builder Plugin', 'oxygen-tutor-lms' );
-	    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
-    }
+	public function notice_required_oxygen(){
+		$class = 'notice notice-warning';
+		$message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated Oxygen Builder Plugin', 'oxygen-tutor-lms' );
+		printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+	}
 
+
+	public function logout_dashboard(){
+		global $wp_query;
+
+		if (is_user_logged_in()){
+			if ( ! empty($wp_query->query_vars['tutor_dashboard_page']) && $wp_query->query_vars['tutor_dashboard_page'] === 'logout'){
+				$dashboard_slug = $wp_query->query_vars['pagename'];
+				$redirect = get_permalink( get_page_by_path( $dashboard_slug ) );
+
+				wp_logout();
+				wp_redirect($redirect);
+				die();
+			}
+		}
+
+	}
 
 }

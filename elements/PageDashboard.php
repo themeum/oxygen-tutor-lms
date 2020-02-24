@@ -17,9 +17,15 @@ class PageDashboard extends \OxygenTutorElements {
 		/**
 		 * Start Tutor Template
 		 */
+		global $wp_query;
 
-		$shortcode = new Shortcode();
-		echo $shortcode->tutor_dashboard();
+		ob_start();
+		if (is_user_logged_in()){
+			tutor_load_template( 'dashboard.index' );
+		}else{
+			tutor_load_template( 'global.login' );
+		}
+		echo apply_filters( 'tutor_dashboard/index', ob_get_clean() );
 
 		/**
 		 * End Tutor Template

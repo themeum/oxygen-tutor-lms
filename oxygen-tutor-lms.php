@@ -26,7 +26,14 @@ if ( ! class_exists('OxygenTutorLMS')){
 /**
  * Turn off template override from TutorLMS
  */
-add_filter('tutor_lms_should_template_override', '__return_false');
+
+if ( ! function_exists( 'is_plugin_active' ) ){
+	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+}
+
+if (is_plugin_active('oxygen/functions.php')){
+	add_filter('tutor_lms_should_template_override', '__return_false');
+}
 
 /**
  * Now fire the plugin

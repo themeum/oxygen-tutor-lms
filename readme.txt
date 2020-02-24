@@ -101,7 +101,7 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
-= 1.0.0 - 05 February, 2020 =
+= 1.0.0 - 10 February, 2020 =
 
 * Initial Release
 
