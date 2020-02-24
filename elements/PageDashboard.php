@@ -38,12 +38,82 @@ class PageDashboard extends \OxygenTutorElements {
 
 	function controls() {
 		$selector = '.tutor-dashboard';
-		$menu = $this->addControlSection("menu", __("Menu"), "assets/icon.png", $this);
+		$header_selector = $selector.' .tutor-dashboard-header';
 		$menu_selector = $selector.' .tutor-dashboard-permalinks';
 		$menu_item_selector = $menu_selector.' li a';
 		$menu_item_selector_hover = $menu_selector.' li a:hover';
 		$menu_item_selector_active = $menu_selector.' li.active a';
+
 		/* Menu item */
+		$header = $this->addControlSection("dashboard_header", __("Header"), "assets/icon.png", $this);
+		$img_selector = $header_selector.' .tutor-dashboard-header-avatar img';
+		$header_img = $header->addControlSection("dashboard_header_img", __("Image"), "assets/icon.png", $this);
+		$header_img->addStyleControls(
+			array(
+				array(
+                	"name" => __('Height'),
+                	"selector" => $img_selector,
+					"property" => 'height',
+				),
+				array(
+                	"name" => __('Width'),
+                	"selector" => $img_selector,
+					"property" => 'width',
+				)
+			)
+		);
+		$header->typographySection(__('Display Name'), $header_selector.' .tutor-dashboard-header-display-name h4', $this);
+
+		$header_stars = $header->addControlSection("dashboard_header_stars", __("Rating Stars"), "assets/icon.png", $this);
+        $stars_selector = $header_selector." .tutor-star-rating-group";
+        $header_stars->addStyleControls(
+            array(
+                array(
+                    "name" => __('Color'),
+                    "selector" => $stars_selector,
+                    "property" => 'color',
+                ),
+                array(
+                    "name" => __('Size'),
+                    "selector" => $stars_selector,
+                    "property" => 'font-size',
+                )
+            )
+		);
+
+		$header->typographySection(__('Rating Text'), $header_selector." .tutor-dashboard-header-ratings span", $this);
+
+		$new_course_btn = $this->addControlSection("new_course_btn", __("Header Button"), "assets/icon.png", $this);
+        $new_course_btn_selector = $header_selector.' .tutor-dashboard-header-button a';
+        $new_course_btn->addPreset(
+            "padding",
+            "submit_padding",
+            __("Button Paddings"),
+            $new_course_btn_selector
+        );
+        $new_course_btn->addStyleControls(
+            array(
+                array(
+                    "name" => __('Background Color'),
+                    "selector" => $new_course_btn_selector,
+                    "property" => 'background-color',
+                ),
+                array(
+                    "name" => __('Hover Background Color'),
+                    "selector" => $new_course_btn_selector.':hover',
+                    "property" => 'background-color',
+                )
+            )
+        );
+        $new_course_btn->typographySection(__("Typography"), $new_course_btn_selector, $this);
+        $new_course_btn->borderSection(__("Borders"), $new_course_btn_selector, $this);
+        $new_course_btn->borderSection(__("Hover Borders"), $new_course_btn_selector.":hover", $this);
+        $new_course_btn->boxShadowSection(__("Shadow"), $new_course_btn_selector, $this);
+        $new_course_btn->boxShadowSection(__("Hover Shadow"), $new_course_btn_selector.":hover", $this);
+
+
+		/* Menu item */
+		$menu = $this->addControlSection("menu", __("Menu"), "assets/icon.png", $this);
 		$menu_item = $menu->addControlSection("menu_item", __("Item"), "assets/icon.png", $this);
 		$menu_item->addStyleControls(
 			array(
