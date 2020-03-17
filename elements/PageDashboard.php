@@ -18,6 +18,11 @@ class PageDashboard extends \OxygenTutorElements {
 
 		global $wp_query;
 		$dashboard_page = tutor_utils()->array_get('tutor_dashboard_page', $wp_query->query_vars);
+
+		if($dashboard_page === 'create-course') {
+			return;
+		}
+		
 		$get_dashboard_config = tutils()->tutor_dashboard_permalinks();
 		$target_dashboard_page = tutils()->array_get($dashboard_page, $get_dashboard_config);
 		
