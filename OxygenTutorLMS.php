@@ -219,9 +219,9 @@ final class OxygenTutorLMS{
 
 	public function logout_dashboard(){
 		global $wp_query;
-
+		$dashboard_page = tutor_utils()->array_get('tutor_dashboard_page', $wp_query->query_vars);
 		if (is_user_logged_in()){
-			if ( ! empty($wp_query->query_vars['tutor_dashboard_page']) && $wp_query->query_vars['tutor_dashboard_page'] === 'logout'){
+			if ( $dashboard_page && $dashboard_page === 'logout'){
 				$dashboard_slug = $wp_query->query_vars['pagename'];
 				$redirect = get_permalink( get_page_by_path( $dashboard_slug ) );
 
@@ -230,7 +230,6 @@ final class OxygenTutorLMS{
 				die();
 			}
 		}
-
 	}
 
 }

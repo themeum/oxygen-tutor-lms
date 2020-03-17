@@ -1,8 +1,6 @@
 <?php
 namespace Oxygen\TutorElements;
 
-use TUTOR\Shortcode;
-
 class PageDashboard extends \OxygenTutorElements {
 
 	function name() {
@@ -17,14 +15,24 @@ class PageDashboard extends \OxygenTutorElements {
 		/**
 		 * Start Tutor Template
 		 */
-		global $wp_query;
 
-		ob_start();
-		if (is_user_logged_in()){
-			tutor_load_template( 'dashboard.index' );
-		}else{
-			tutor_load_template( 'global.login' );
+		global $wp_query;
+		$dashboard_page = tutor_utils()->array_get('tutor_dashboard_page', $wp_query->query_vars);
+		$get_dashboard_config = tutils()->tutor_dashboard_permalinks();
+		$target_dashboard_page = tutils()->array_get($dashboard_page, $get_dashboard_config);
+		
+		if (isset($target_dashboard_page['login_require']) && $target_dashboard_page['login_require'] === false){
+			$template = "template-part.{$dashboard_page}";
+		} else {
+			if (is_user_logged_in()){
+				$template = 'dashboard.index';
+			}else{
+				$template = 'global.login';
+			}
 		}
+		
+		ob_start();
+		tutor_load_template( $template );
 		echo apply_filters( 'tutor_dashboard/index', ob_get_clean() );
 
 		/**
