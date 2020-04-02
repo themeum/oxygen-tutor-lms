@@ -5,7 +5,7 @@ Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 4.5
 Tested up to: 5.3
 Requires PHP: 5.4.0
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,9 +16,9 @@ Build E-Learning website by Oxygen Builder and Tutor LMS Integration plugin
 This plugin integrates Tutor LMS with the popular Oxygen Page Builder plugin. It adds all the functionalities needed to create a complete WordPress LMS website using Oxygen Builder.
 
 To use this plugin, you must first have all the plugins installed and activated. The required plugins are:
- * [Tutor LMS (Free/Pro)](https://wordpress.org/plugins/tutor/)
- * Integration Plugin
- * [Oxygen Builder](https://oxygenbuilder.com/)
+ *[Tutor LMS (Free/Pro)](https://wordpress.org/plugins/tutor/)
+ *Integration Plugin
+ *[Oxygen Builder](https://oxygenbuilder.com/)
 
 = What Oxygen Builder Brings to Tutor LMS =
 
@@ -100,6 +100,17 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 1. How to build
 
 == Changelog ==
+
+= 1.0.2 - 02 April, 2020 =
+
+* Fix - Frontend course builder issue
+* Fix - Dashboard retrieve-password issue
+
+= 1.0.1 - 27 February, 2020 =
+
+* New: Dashboard headers added in shortcode/oxygen dashboard template
+* Fix: Dashboard page load and logout issue by Shortcode
+* Fix: Active links with page in the dashboard for shortcode/oxygen
 
 = 1.0.0 - 10 February, 2020 =
 
