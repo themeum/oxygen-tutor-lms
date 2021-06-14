@@ -27,17 +27,24 @@ class PageDashboard extends \OxygenTutorElements {
 		$target_dashboard_page = tutils()->array_get($dashboard_page, $get_dashboard_config);
 		
 		if (isset($target_dashboard_page['login_require']) && $target_dashboard_page['login_require'] === false){
-			$template = "template-part.{$dashboard_page}";
+			$template = "template-part.{$dashboard_page}".".php";
 		} else {
 			if (is_user_logged_in()){
-				$template = 'dashboard.index';
+				$template = 'dashboard.php';
 			}else{
-				$template = 'global.login';
+				$template = 'global/login.php';
 			}
 		}
 		
 		ob_start();
-		tutor_load_template( $template );
+		/**
+		 * Tutor template load function removed cause it had been called multiple times
+		 * & thus template was loading multiple times
+		 * to fix added include_once
+		 * @since version 1.0.3
+		 */
+		include_once( tutor()->path.'/templates/'. $template );
+		
 		echo apply_filters( 'tutor_dashboard/index', ob_get_clean() );
 
 		/**
