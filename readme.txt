@@ -103,7 +103,8 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 = 1.0.3 - 16 June, 2021 =
 
-* Fix - Dashboard page/subpage not working issue fixed
+* Fix - Dashboard not working issue
+* Fix - Dashboard sub pages link not working issue
 
 = 1.0.2 - 02 April, 2020 =
 
