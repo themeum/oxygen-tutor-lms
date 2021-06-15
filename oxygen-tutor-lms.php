@@ -36,7 +36,7 @@ if (is_plugin_active('oxygen/functions.php')){
 }
 
 /**
- * Load tutor text domain for translation
+ * Load oxygen-tutor-lms text domain for translation
  * 
  * @since version 1.0.3
  */
