@@ -36,6 +36,14 @@ if (is_plugin_active('oxygen/functions.php')){
 }
 
 /**
+ * Load tutor text domain for translation
+ * 
+ * @since version 1.0.3
+ */
+add_action( 'init', function() {
+	load_plugin_textdomain( 'oxygen-tutor-lms', false, basename( dirname( __FILE__ ) ) . '/languages' );
+});
+/**
  * Now fire the plugin
  * ekhon plugin-e agun lagiye den
  */
