@@ -1,11 +1,11 @@
 === Oxygen Tutor LMS ===
-Contributors: themeum, kawshar, mhshohel, jakirhasan, anik4e, delowardev, rejuancse, fahimmurshed, badsha_eee, faisalahmed29, joomcoder, sksaaju
+Contributors: Themeum
 Donate link: https://www.themeum.com
 Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
 Tested up to: 5.7.2
 Requires PHP: 7.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -100,6 +100,9 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 1. How to build
 
 == Changelog ==
+= 1.0.4 - 13 August, 2021 =
+
+* Fix - Forgot Password template not showing issue
 
 = 1.0.3 - 16 June, 2021 =
 
