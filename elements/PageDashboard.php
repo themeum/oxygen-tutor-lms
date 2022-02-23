@@ -27,7 +27,7 @@ class PageDashboard extends \OxygenTutorElements {
 		$target_dashboard_page = tutils()->array_get($dashboard_page, $get_dashboard_config);
 		
 		if (isset($target_dashboard_page['login_require']) && $target_dashboard_page['login_require'] === false){
-			$template = "template-part/{$dashboard_page}".".php";
+			$template = "template-part.{$dashboard_page}".".php";
 		} else {
 			if (is_user_logged_in()){
 				$template = 'dashboard.php';
@@ -35,6 +35,7 @@ class PageDashboard extends \OxygenTutorElements {
 				$template = 'global/login.php';
 			}
 		}
+		
 		ob_start();
 		/**
 		 * Tutor template load function removed cause it had been called multiple times

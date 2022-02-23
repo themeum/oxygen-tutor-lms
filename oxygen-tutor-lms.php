@@ -7,7 +7,7 @@ Author: Themeum
 Version: 1.0.4
 Author URI: http://themeum.com
 Requires at least: 5.3
-Tested up to: 5.7.2
+Tested up to: 5.9
 License: GPLv2 or later
 Text Domain: oxygen-tutor-lms
 */

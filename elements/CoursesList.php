@@ -65,7 +65,7 @@ class CoursesList extends \OxygenTutorElements {
 		query_posts($a);
 
 		echo "<div class='tutor-wrap'>";
-		include_once tutor_get_template('shortcode.tutor-course');
+		include_once OTLMS_PATH.'templates/shortcode/tutor-course.php';
 		echo "</div>";
 
 		wp_reset_query();

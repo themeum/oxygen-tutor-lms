@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template for displaying courses
  *
@@ -8,57 +9,34 @@
  * @url https://themeum.com
  *
  * @package TutorLMS/Templates
- * @version 1.4.3
+ * @version 1.5.8
  */
 
+get_header();
+
+$course_filter = (bool) tutor_utils()->get_option('course_archive_filter', false);
+$supported_filters = tutor_utils()->get_option('supported_course_filters', array());
+
+if ($course_filter && count($supported_filters)) {
 ?>
-
-<div class="<?php tutor_container_classes() ?>">
-	<?php
-	do_action('tutor_course/archive/before_loop');
-
-	if ( have_posts() ) :
-		/* Start the Loop */
-
-		tutor_course_loop_start();
-
-		while ( have_posts() ) : the_post();
-			/**
-			 * @hook tutor_course/archive/before_loop_course
-			 * @type action
-			 * Usage Idea, you may keep a loop within a wrap, such as bootstrap col
-			 */
-			do_action('tutor_course/archive/before_loop_course');
-
-			tutor_load_template('loop.course');
-
-			/**
-			 * @hook tutor_course/archive/after_loop_course
-			 * @type action
-			 * Usage Idea, If you start any div before course loop, you can end it here, such as </div>
-			 */
-			do_action('tutor_course/archive/after_loop_course');
-		endwhile;
-
-		tutor_course_loop_end();
-
-	else :
-
-		/**
-		 * No course found
-		 */
-		tutor_load_template('course-none');
-
-	endif;
-
-	tutor_course_archive_pagination();
-
-	/**
-	 * Required loggedin form popup support
-	 * @since v 1.0.1
-	 */
-	tutor_archive_course_add_to_cart();
-
-	do_action('tutor_course/archive/after_loop');
+	<div class="tutor-course-filter-wrapper">
+		<div class="tutor-course-filter-container">
+			<?php tutor_load_template('course-filter.filters'); ?>
+		</div>
+		<div>
+		
+			<div id="tutor-course-filter-loop-container" class="<?php tutor_container_classes(); ?> tutor-course-filter-loop-container" data-column_per_row="<?php echo tutor_utils()->get_option( 'courses_col_per_row', 4 ); ?>">
+				
+			<?php tutor_load_template('archive-course-init'); ?>
+			</div><!-- .wrap -->
+		</div>
+	</div>
+<?php
+} else {
 	?>
-</div><!-- .wrap -->
+		<div class="<?php tutor_container_classes(); ?>">
+			<?php tutor_load_template('archive-course-init'); ?>
+		</div>
+	<?php
+}
+get_footer(); ?>
