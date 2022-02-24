@@ -101,11 +101,11 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
-= 1.0.4 - 23 February, 2022 =
+= 1.0.4 - 24 February, 2022 =
 
-* Fix - Archive course issue  
-* Fix - Course list addon issue
-* Compatibility - wordpress- 5.9
+* New: Introducing full compatibility with WordPress 5.9 
+* Fix: Courses were not showing up in the “Archive Courses” element
+* Fix: Course Lists were not showing up in the “Courses List” element
 
 = 1.0.3 - 16 June, 2021 =
 

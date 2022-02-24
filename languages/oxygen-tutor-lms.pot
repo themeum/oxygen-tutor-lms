@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Tutor LMS
+# Copyright (C) 2022 Tutor LMS
 # This file is distributed under the same license as the Tutor LMS package.
 msgid ""
 msgstr ""
@@ -71,4 +71,36 @@ msgstr ""
 
 #: templates/course/share.php:10
 msgid "Share:"
+msgstr ""
+
+#: templates/shortcode/instructor-filter.php:30, templates/shortcode/instructor-filter.php:60
+msgid "Clear All"
+msgstr ""
+
+#: templates/shortcode/instructor-filter.php:43, templates/shortcode/instructor-filter.php:50
+msgid "Search any instructor..."
+msgstr ""
+
+#: templates/shortcode/instructor-filter.php:68
+msgid "Apply Filter"
+msgstr ""
+
+#: templates/shortcode/tutor-instructor.php:27
+msgid "Courses"
+msgstr ""
+
+#: templates/shortcode/tutor-instructor.php:27
+msgid "Course"
+msgstr ""
+
+#: templates/shortcode/tutor-instructor.php:35
+msgid "No Instructor Found"
+msgstr ""
+
+#: templates/shortcode/tutor-instructor.php:47
+msgid "Previous"
+msgstr ""
+
+#: templates/shortcode/tutor-instructor.php:48
+msgid "Next"
 msgstr ""
