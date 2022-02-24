@@ -106,6 +106,7 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 * New: Introducing full compatibility with WordPress 5.9 
 * Fix: Courses were not showing up in the “Archive Courses” element
 * Fix: Course Lists were not showing up in the “Courses List” element
+* Fix: Forgot password link was not working properly
 
 = 1.0.3 - 16 June, 2021 =
 
