@@ -10,23 +10,4 @@
  * @package TutorLMS/Templates
  * @version 1.4.3
  */
-
-global $post;
-$currentPost = $post;
-$enable_spotlight_mode = tutor_utils()->get_option('enable_spotlight_mode');
-
-?>
-
-<?php do_action('tutor_assignment/single/before/wrap'); ?>
-    <div class="tutor-single-lesson-wrap <?php echo $enable_spotlight_mode ? "tutor-spotlight-mode" : ""; ?>">
-
-        <div class="tutor-lesson-sidebar">
-			<?php tutor_lessons_sidebar(); ?>
-        </div>
-
-        <div id="tutor-single-entry-content" class="tutor-lesson-content tutor-single-entry-content tutor-single-entry-content-<?php the_ID(); ?>">
-		    <?php tutor_assignment_content(); ?>
-        </div>
-        
-    </div>
-<?php do_action('tutor_assignment/single/after/wrap');
+tutor_load_template_from_custom_path(__DIR__.'/single-content-loader.php', array('context' => 'assignment'), false);

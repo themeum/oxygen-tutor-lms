@@ -23,7 +23,7 @@ global $wp_query;
             <?php }
         }
         ?>
-        <?php tutor_course_mark_complete_html(); ?>
+        
 
         <?php do_action('tutor_course/single/actions_btn_group/after'); ?>
     </div>
