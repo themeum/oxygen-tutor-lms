@@ -53,7 +53,8 @@ do_action( 'tutor/course/single/content/before/all', $course_id, $content_id );
     </div>
     <div id="tutor-single-entry-content" class="tutor-quiz-single-entry-wrap">
         <?php (isset($method_map[$context]) && is_callable($method_map[$context])) ? $method_map[$context]() : 0; ?>
-        <?php echo isset($html_content) ? $html_content  : '' ; ?>
+        <?php echo isset($html_content) ? $html_content  : '' ; 
+        ?>
     </div>
 </div>
 

@@ -24,6 +24,7 @@ $previous_id            = $contents->previous_id;
 $course                 = tutor_utils()->get_course_by_quiz( get_the_ID() );
 $enable_spotlight_mode  = tutor_utils()->get_option( 'enable_spotlight_mode' );
 ob_start();
+
 ?>
 <input type="hidden" name="tutor_quiz_id" id="tutor_quiz_id" value="<?php the_ID(); ?>">
 <?php tutor_load_template( 'single.common.header', array( 'course_id' => $course_id )); ?>
@@ -51,4 +52,6 @@ tutor_load_template_from_custom_path(
     ),
     false
 );
+
 ?>
+
