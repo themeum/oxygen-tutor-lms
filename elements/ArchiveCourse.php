@@ -65,7 +65,7 @@ class ArchiveCourse extends \OxygenTutorElements {
 				),
 				array(
 					"name" 		=> __('Hover Font Color'),
-					"selector" 	=> $wishlist_icon_selector.' i:hover',
+					"selector" 	=> $wishlist_icon_selector.':hover i',
 					"property" 	=> 'color',
 				),
 				array(
@@ -81,35 +81,67 @@ class ArchiveCourse extends \OxygenTutorElements {
 			)
 		);
 
-		$loop_course_container = $course_grid_selector.' .tutor-loop-course-container';
+		$loop_course_container = $course_grid_selector.' .tutor-card-body';
 
 		/* Stars */
-		$stars_section = $course_grid->addControlSection("stars", __("Stars"), "assets/icon.png", $this);
-		$star_selector = $loop_course_container." .tutor-loop-rating-wrap .tutor-star-rating-group";
+		$stars_section = $course_grid->addControlSection("stars", __("Course Ratings"), "assets/icon.png", $this);
+		$star_selector = $loop_course_container." .tutor-course-ratings .tutor-ratings-stars span";
         $stars_section->addStyleControls(
         	array(
         		array(
-					"name" 		=> __('Color'),
+					"name" 		=> __('Star Color'),
 					"selector" 	=> $star_selector,
 					"property" 	=> 'color',
 				),
 				array(
-					"name" 		=> __('Size'),
+					"name" 		=> __('Star Size'),
 					"selector" 	=> $star_selector,
 					"property" 	=> 'font-size',
 				)
         	)
 		);
+		$stars_section = $course_grid->typographySection(__("Average Rating"), $loop_course_container . ' .tutor-ratings-average', $this);
+		$stars_section = $course_grid->typographySection(__("Total Ratings"), $loop_course_container . ' .tutor-ratings-count', $this);
 		
-		$course_grid->typographySection(__("Course Title"), $loop_course_container.' .tutor-course-loop-title h2 a', $this);
-		$course_grid->typographySection(__("Meta Info"), $loop_course_container.' .tutor-course-loop-meta', $this);
-		$course_grid->typographySection(__("Author Label"), $loop_course_container.' .tutor-single-course-author-name span, '.$loop_course_container.' .tutor-course-lising-category span', $this);
-		$course_grid->typographySection(__("Author Value"), $loop_course_container.' .tutor-single-course-author-name a, '.$loop_course_container.' .tutor-course-lising-category a', $this);
+		$course_grid->typographySection(__("Course Title"), $loop_course_container.' .tutor-course-name a', $this);
+		$course_grid->typographySection(__("Meta Icon"), $loop_course_container.' .tutor-meta .tutor-meta-icon', $this);
+		$course_grid->typographySection(__("Meta Info"), $loop_course_container.' .tutor-meta .tutor-meta-value', $this);
+		$course_grid->typographySection(__("Author Label"), $loop_course_container.' .tutor-meta', $this);
+		$course_grid->typographySection(__("Author Value"), $loop_course_container.' .tutor-meta a, '.$loop_course_container.' .tutor-course-lising-category a', $this);
 		
-		$loop_course_container_footer = $course_grid_selector.' .tutor-loop-course-footer';
-		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .price, '.$loop_course_container_footer.' .price .woocommerce-Price-amount', $this);
-		$course_grid->typographySection(__("Cart Button"), $loop_course_container_footer.' .tutor-loop-cart-btn-wrap a', $this);
+		$loop_course_container_footer = $course_grid_selector.' .tutor-card-footer';
+		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .list-item-price span', $this);
 
+		$add_to_cart_btn = $course_grid->addControlSection("add_to_cart_button", __("Add to Cart"), "assets/icon.png", $this);
+		$add_to_cart_btn_selector1 = $enrollment_box_selector.' .tutor-btn-primary';
+        $add_to_cart_btn_selector2 = $enrollment_box_selector.' .tutor-btn-outline-primary';
+        $add_to_cart_btn_selector = $add_to_cart_btn_selector1.', '.$add_to_cart_btn_selector2;
+        $add_to_cart_btn->addPreset(
+            "padding",
+            "submit_padding",
+            __("Button Paddings"),
+            $add_to_cart_btn_selector
+        );
+        $add_to_cart_btn->addStyleControls(
+            array(
+                array(
+                    "name" => __('Background Color'),
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'background-color',
+                ),
+                array(
+                    "name" => __('Color'),
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'color',
+                ),
+                array(
+                    "name" =>__('Hover Background Color'),
+                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
+                    "property" => 'background-color',
+                )
+            )
+        );
+		
 		/* grid border and shadows */
 		$course_grid->borderSection(__("Border"), $course_grid_selector, $this);
         $course_grid->borderSection(__("Hover Border"), $course_grid_selector.":hover", $this);
@@ -122,27 +154,8 @@ class ArchiveCourse extends \OxygenTutorElements {
 		$grid_spacing->addPreset("margin", "grid_margin", __("Margin"), $course_grid_selector);
 		
 		/* Pagination */
-		$pagination_selector = $selector.' .tutor-pagination-wrap';
+		$pagination_selector = $selector.' .tutor-pagination';
         $pagination = $this->addControlSection("pagination", __("Pagination"), "assets/icon.png", $this);
-        $pagination_align = $pagination->addControl("buttons-list", "pagination_align", __("Items Align") );
-        
-		$pagination_align->setValue(array(
-			"left"		=> __("Left"),
-			"center" 	=> __("Center"), 
-			"right" 	=> __("Right")
-		));
-        
-		$pagination_align->setValueCSS(array(
-            "left" => "$pagination_selector {
-                text-align: left;
-            }",
-            "center" => "$pagination_selector {
-                text-align: center;
-            }",
-            "right" => "$pagination_selector {
-                text-align: right;
-            }"
-        ));
 
         $pagination->addStyleControls(
              array(
@@ -185,24 +198,16 @@ class ArchiveCourse extends \OxygenTutorElements {
             )
 		);
 		//border and box shadow
-		$pagination->borderSection(__("Border"), $pagination_selector.' a', $this);
-        $pagination->borderSection(__("Hover Border"), $pagination_selector." a:hover", $this);
-        $pagination->boxShadowSection(__("Box Shadow"), $pagination_selector.' a', $this);
-		$pagination->boxShadowSection(__("Hover Box Shadow"), $pagination_selector." a:hover", $this);
-
-		$pagination->borderSection(__("Current Border"), $pagination_selector.' span', $this);
-		$pagination->boxShadowSection(__("Current Box Shadow"), $pagination_selector." span", $this);
+		$pagination->borderSection(__("Border"), $pagination_selector, $this);
+        $pagination->borderSection(__("Hover Border"), $pagination_selector, $this);
+        $pagination->boxShadowSection(__("Box Shadow"), $pagination_selector, $this);
+		$pagination->boxShadowSection(__("Hover Box Shadow"), $pagination_selector, $this);
 		
 		//pagination spacing
 		$pagination_items_selector = $pagination_selector.' a, '.$pagination_selector.' span';
 		$pagination_spacing = $pagination->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
         $pagination_spacing->addPreset("padding", "pagination_item_padding", __("Padding"), $pagination_items_selector);
 		$pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_items_selector);
-		
-		//spacing
-		$filter_section_spacing = $this->addControlSection("filter_spacing", __("Spacing"), "assets/icon.png", $this);
-		$filter_section_spacing->addPreset("padding", "filter_padding", __("Filterbar Padding"), $filter_selector);
-		$filter_section_spacing->addPreset("margin", "filter_margin", __("Filterbar Margin"), $filter_selector);
 	}
 }
 
