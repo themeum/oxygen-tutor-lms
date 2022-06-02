@@ -59,42 +59,41 @@ class SingleLesson extends \OxygenTutorElements {
 	}
 
 	function controls() {
-		$selector = '.tutor-single-lesson-wrap';
+		$selector = '.tutor-course-single-content-wrapper';
 		/* Sidebar */
 		$sidebar = $this->addControlSection("sidebar", __("Sidebar"), "assets/icon.png", $this);
-		$tabs_selector = $selector." .tutor-tabs-btn-group";
-		$sidebar->typographySection(__('Tabs Typography'), $tabs_selector.' a span', $this);
-		$sidebar->typographySection(__('Actice Tabs Typography'), $tabs_selector.' a.active span', $this);
-		$tab_icon_section = $sidebar->addControlSection("tabs-icon", __("Tabs Icon"), "assets/icon.png", $this);
+		$sidebar_selector = $selector." .tutor-course-single-sidebar-wrapper";
+		$sidebar->borderSection(__("Border"), $sidebar_selector, $this);
+		$sidebar->addStyleControls(
+            array(
+                array(
+                    "name" => __('Background Color'),
+                    "selector" => $sidebar_selector,
+                    "property" => 'background-color',
+                )
+            )
+        );
+
+		$sidebar_title_section = $sidebar->addControlSection("sidebar-title", __("Sidebar Title Area"), "assets/icon.png", $this);
+		$sidebar_title_selector = $sidebar_selector." .tutor-course-single-sidebar-title";
+		$sidebar_title_section->typographySection(__('Sidebar Title Typography'), $sidebar_title_selector.' span', $this);
+		$sidebar_title_section->addPreset("padding", "grid_padding", __("Padding"), $sidebar_title_selector);
+		$sidebar_title_section->addPreset("margin", "grid_margin", __("Margin"), $sidebar_title_selector);
 		$tab_icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
-                	"selector" => $tabs_selector.' a i',
-					"property" => 'font-size',
+                	"name" => __('Background Color'),
+                    "selector" => $sidebar_title_selector,
+                    "property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Color'),
-                	"selector" => $tabs_selector.' a i',
-					"property" => 'color',
+                	"name" => __('Height'),
+                	"selector" => $sidebar_title_selector,
+					"property" => 'height',
 				)
 			)
 		);
-		$tab_active_icon_section = $sidebar->addControlSection("active-tabs-icon", __("Active Tabs Icon"), "assets/icon.png", $this);
-		$tab_active_icon_section->addStyleControls(
-			array(
-				array(
-                	"name" => __('Size'),
-                	"selector" => $tabs_selector.' a.active i',
-					"property" => 'font-size',
-                ),
-				array(
-                	"name" => __('Color'),
-                	"selector" => $tabs_selector.' a.active i',
-					"property" => 'color',
-				)
-			)
-		);
+		
 		$topic_selector = $selector.' .tutor-topics-title h3';
 		$sidebar->typographySection(__('Topic Typography'), $topic_selector, $this);
 		$topic_icon_section = $sidebar->addControlSection("topic-icon", __("Topic Icon"), "assets/icon.png", $this);
