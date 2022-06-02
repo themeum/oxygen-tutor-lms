@@ -36,62 +36,21 @@ class ArchiveCourse extends \OxygenTutorElements {
 	function controls() {
 		$selector = '.tutor-courses-wrap';
 		/* Filter section */
-		$filter_selector = $selector.' .tutor-course-filter-wrap';
-		$this->typographySection(__("Results Count"), $filter_selector.' .tutor-course-archive-results-wrap', $this);
+		$filter_selector = $selector.' .tutor-course-filter-container';
 
-		$sorting_select = $this->addControlSection("sorting_select", __("Sorting Select"), "assets/icon.png", $this);
-        $sorting_select_selector = $filter_selector.' .tutor-course-archive-filters-wrap .tutor-course-filter-form select';
-        $sorting_select->addPreset( "padding", "sorting_select_padding", __("Select Padding"), $sorting_select_selector);
-        $sorting_select->typographySection(__("Typography"), $sorting_select_selector, $this);
-        $sorting_select->borderSection(__("Border"), $sorting_select_selector, $this);
-        $sorting_select->borderSection(__("Focus Border"), $sorting_select_selector.":focus", $this);
-        $sorting_select->boxShadowSection(__("Box Shadow"), $sorting_select_selector, $this);
-        $sorting_select->boxShadowSection(__("Focus Box Shadow"), $sorting_select_selector.":focus", $this);
+		$sorting_select = $this->addControlSection("sorting_select", __("Course Filter"), "assets/icon.png", $this);
+        $sorting_select_selector = $filter_selector.' .tutor-course-filter .tutor-widget';
+        $sorting_select->typographySection(__("Filter Widget Title"), $sorting_select_selector . ' .tutor-widget-title ', $this);
+        $sorting_select->typographySection(__("Filter Items"), $sorting_select_selector . ' .tutor-list-item label ', $this);
 
 		/* Course grid */
-		$course_col_selector = $selector.' .tutor-course-col-3';
-		$course_grid_selector = $course_col_selector.' .tutor-course';
+		$course_col_selector = $selector.' .tutor-course-list';
+		$course_grid_selector = $course_col_selector.' .tutor-course-card';
 		$course_grid = $this->addControlSection("course_grid", __("Course Grid"), "assets/icon.png", $this);
-
-		/* level bagde */
-		$level_badge = $course_grid->addControlSection("level_badge", __("Level Badge"), "assets/icon.png", $this);
-		$level_badge_selector = $course_grid_selector." .tutor-course-loop-header-meta .tutor-course-loop-level";
-		$level_badge->addStyleControls(
-			array(
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'font-family',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'font-size',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'color',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'line-height',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'background-color',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'border-radius',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'text-transform',
-				)
-			)
-		);
 
 		/* wishlist icon */
 		$wishlist_icon = $course_grid->addControlSection("wishlist_icon", __("Wishlist Icon"), "assets/icon.png", $this);
-		$wishlist_icon_selector = $course_grid_selector." .tutor-course-loop-header-meta .tutor-course-wishlist";
+		$wishlist_icon_selector = $course_grid_selector." .tutor-course-bookmark .tutor-iconic-btn-secondary";
 		$wishlist_icon->addStyleControls(
 			array(
 				array(
