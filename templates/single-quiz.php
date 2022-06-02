@@ -11,7 +11,7 @@
  * @version 1.4.3
  */
 
-get_tutor_header();
+//get_tutor_header();
 
 global $previous_id;
 

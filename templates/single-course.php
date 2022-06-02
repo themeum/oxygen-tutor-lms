@@ -17,7 +17,7 @@ $course_nav_item = apply_filters( 'tutor_course/single/nav_items', tutor_utils()
 $student_must_login_to_view_course = tutor_utils()->get_option('student_must_login_to_view_course');
 $is_public = \TUTOR\Course_List::is_public($course_id);
 
-tutor_utils()->tutor_custom_header();
+//tutor_utils()->tutor_custom_header();
 
 if (!is_user_logged_in() && !$is_public && $student_must_login_to_view_course){
     tutor_load_template('login');
@@ -84,4 +84,4 @@ if (!is_user_logged_in() && !$is_public && $student_must_login_to_view_course){
 <?php do_action('tutor_course/single/after/wrap'); ?>
 
 <?php
-tutor_utils()->tutor_custom_footer();
+//tutor_utils()->tutor_custom_footer();

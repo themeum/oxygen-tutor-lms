@@ -11,7 +11,7 @@
  * @package TutorLMS/Templates
  * @version 1.5.8
  */
-tutor_utils()->tutor_custom_header();
+//tutor_utils()->tutor_custom_header();
 
 if ( isset( $_GET['course_filter'] ) ) {
 	$filter = (new \Tutor\Course_Filter(false))->load_listing( $_GET, true );
@@ -25,4 +25,4 @@ tutor_load_template('archive-course-init', array_merge($_GET, array(
 	'loop_content_only' => false
 )));
 
-tutor_utils()->tutor_custom_footer(); 
+//tutor_utils()->tutor_custom_footer(); 

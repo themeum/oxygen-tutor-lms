@@ -42,7 +42,7 @@ function tutor_course_single_sidebar( $echo = true, $context='desktop' ) {
 
 do_action( 'tutor/course/single/content/before/all', $course_id, $content_id );
 
-get_tutor_header();
+//get_tutor_header();
 
 ?>
 
@@ -93,4 +93,4 @@ get_tutor_header();
 </div>
 <?php do_action('tutor_'.$context.'/single/after/wrap');
 
-get_tutor_footer();
+//get_tutor_footer();
