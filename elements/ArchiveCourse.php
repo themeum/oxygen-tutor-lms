@@ -134,6 +134,11 @@ class ArchiveCourse extends \OxygenTutorElements {
                     "selector" => $add_to_cart_btn_selector,
                     "property" => 'color',
                 ),
+				array(
+                    "name" => __('Border Color'),
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'border-color',
+                ),
                 array(
                     "name" =>__('Hover Background Color'),
                     "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
@@ -168,32 +173,17 @@ class ArchiveCourse extends \OxygenTutorElements {
                     "selector" => $pagination_selector." a",
                     "property" => 'color',
                 ),
-                array(
-                    "name" => __("Links Background"),
-                    "selector" => $pagination_selector." a",
-                    "property" => 'background-color',
-                ),
                 //hover
                 array(
                     "name" => __("Hover Text Color"),
                     "selector" => $pagination_selector." a:hover",
                     "property" => 'color',
                 ),
-                array(
-                    "name" => __("Hover Background"),
-                    "selector" => $pagination_selector." a:hover",
-                    "property" => 'background-color',
-                ),
                 //Active
                 array(
                     "name" => __("Active Text Color"),
                     "selector" => $pagination_selector." span.current",
                     "property" => 'color',
-                ),
-                array(
-                    "name" => __("Active Background"),
-                    "selector" => $pagination_selector." span.current",
-                    "property" => 'background-color',
                 ),
             )
 		);
@@ -204,10 +194,9 @@ class ArchiveCourse extends \OxygenTutorElements {
 		$pagination->boxShadowSection(__("Hover Box Shadow"), $pagination_selector, $this);
 		
 		//pagination spacing
-		$pagination_items_selector = $pagination_selector.' a, '.$pagination_selector.' span';
 		$pagination_spacing = $pagination->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
-        $pagination_spacing->addPreset("padding", "pagination_item_padding", __("Padding"), $pagination_items_selector);
-		$pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_items_selector);
+        $pagination_spacing->addPreset("padding", "pagination_item_padding", __("Padding"), $pagination_selector);
+		$pagination_spacing->addPreset("margin", "pagination_item_margin", __("Margin"), $pagination_selector);
 	}
 }
 
