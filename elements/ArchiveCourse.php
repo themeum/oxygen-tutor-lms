@@ -55,17 +55,17 @@ class ArchiveCourse extends \OxygenTutorElements {
 			array(
 				array(
 					"name" 		=> __('Font Size'),
-					"selector" 	=> $wishlist_icon_selector.' a',
+					"selector" 	=> $wishlist_icon_selector.'i',
 					"property" 	=> 'font-size',
 				),
 				array(
 					"name" 		=> __('Font Color'),
-					"selector" 	=> $wishlist_icon_selector.' a',
+					"selector" 	=> $wishlist_icon_selector.' i',
 					"property" 	=> 'color',
 				),
 				array(
 					"name" 		=> __('Hover Font Color'),
-					"selector" 	=> $wishlist_icon_selector.' a:hover',
+					"selector" 	=> $wishlist_icon_selector.' i:hover',
 					"property" 	=> 'color',
 				),
 				array(
