@@ -76,10 +76,7 @@ class SingleLesson extends \OxygenTutorElements {
 
 		$sidebar_title_section = $sidebar->addControlSection("sidebar-title", __("Sidebar Title Area"), "assets/icon.png", $this);
 		$sidebar_title_selector = $sidebar_selector." .tutor-course-single-sidebar-title";
-		$sidebar_title_section->typographySection(__('Sidebar Title Typography'), $sidebar_title_selector.' span', $this);
-		$sidebar_title_section->addPreset("padding", "grid_padding", __("Padding"), $sidebar_title_selector);
-		$sidebar_title_section->addPreset("margin", "grid_margin", __("Margin"), $sidebar_title_selector);
-		$tab_icon_section->addStyleControls(
+		$sidebar_title_section->addStyleControls(
 			array(
 				array(
                 	"name" => __('Background Color'),
@@ -93,46 +90,38 @@ class SingleLesson extends \OxygenTutorElements {
 				)
 			)
 		);
-		
-		$topic_selector = $selector.' .tutor-topics-title h3';
-		$sidebar->typographySection(__('Topic Typography'), $topic_selector, $this);
+		$sidebar_title_section->addPreset("typography", "typography", __("Typography"), $sidebar_title_selector.' span', $this);
+		$sidebar_title_section->addPreset("padding", "grid_padding", __("Padding"), $sidebar_title_selector);
+		$sidebar_title_section->addPreset("margin", "grid_margin", __("Margin"), $sidebar_title_selector);
+
+
+		$topic_spacing = $sidebar->addControlSection("topic-spacing", __("Topic Spacing"), "assets/icon.png", $this);
+        $topic_spacing->addPreset("padding", "topic_item_padding", __("Padding"), '.tutor-course-topic');
+        $topic_spacing->addPreset("margin", "topic_item_margin", __("Margin"), '.tutor-course-topic');
+		$topic_title_selector = $selector.' .tutor-accordion-item-header .tutor-course-topic-title';
+		$topic_summary_selector = $selector.' .tutor-accordion-item-header .tutor-course-topic-summary';
+		$topic_icon_selector = $selector.' .tutor-accordion-item-header:after, .tutor-accordion-item-header.is-active:after';
+		$sidebar->typographySection(__('Topic Ttile Typography'), $topic_title_selector, $this);
+		$sidebar->typographySection(__('Topic Summary Typography'), $topic_summary_selector, $this);
 		$topic_icon_section = $sidebar->addControlSection("topic-icon", __("Topic Icon"), "assets/icon.png", $this);
 		$topic_icon_section->addStyleControls(
 			array(
 				array(
                 	"name" => __('Color'),
-                	"selector" => $topic_selector.' span',
+                	"selector" => $topic_icon_selector,
 					"property" => 'color',
-                ),
-				array(
-                	"name" => __('Background'),
-                	"selector" => $topic_selector.' span',
-					"property" => 'background-color',
-				)
+                )
 			)
 		);
-		$topic_toggle_icon_selector = $selector.' .tutor-single-lesson-topic-toggle i';
-		$topic_toggle_icon_section = $sidebar->addControlSection("topic-toggle-icon", __("Topic Toggle Icon"), "assets/icon.png", $this);
-		$topic_toggle_icon_section->addStyleControls(
+		$topic_background = $sidebar->addControlSection("topic-background", __("Topic Title Background"), "assets/icon.png", $this);
+		$topic_background->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
-                	"selector" => $topic_toggle_icon_selector,
-					"property" => 'font-size',
-                ),
-				array(
-                	"name" => __('Color'),
-                	"selector" => $topic_toggle_icon_selector,
-					"property" => 'color',
-				)
+                	"name" => __('Background Color'),
+                    "selector" => '.tutor-accordion-item-header',
+                    "property" => 'background-color',
+                )
 			)
-		);
-		$topic_spacing = $sidebar->addControlSection("topic-spacing", __("Topic Spacing"), "assets/icon.png", $this);
-        $topic_spacing->addPreset(
-            "padding",
-            "topic_item_padding",
-            __("Padding"),
-            $topic_selector
 		);
 		
 		$lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items a';
