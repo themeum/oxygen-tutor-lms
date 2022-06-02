@@ -18,7 +18,7 @@ class PublicProfile extends \OxygenTutorElements {
 		 */
 
 		if ( ! empty($wp_query->query['tutor_student_username'])){
-			$template = otlms_get_template( 'student-public-profile' );
+			$template = otlms_get_template( 'public-profile' );
 			include_once $template;
 		}else {
 			$builder_element = sanitize_text_field(tutils()->array_get('action', $_GET));
