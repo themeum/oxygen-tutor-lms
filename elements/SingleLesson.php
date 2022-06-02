@@ -124,135 +124,81 @@ class SingleLesson extends \OxygenTutorElements {
 			)
 		);
 		
-		$lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items a';
-		$active_lesson_selector = $selector.' .tutor-lessons-under-topic .tutor-single-lesson-items.active a';
-		$sidebar->typographySection(__('Lesson Typography'), $lesson_selector.' span', $this);
-		$sidebar->typographySection(__('Active Lesson Typography'), $active_lesson_selector.' span', $this);
+		$lesson_selector = $sidebar_selector.' .tutor-course-topic-item-title';
+		$active_lesson_selector = $sidebar_selector.' .tutor-course-topic-item.is-active a';
+		$sidebar->typographySection(__('Lesson Typography'), $lesson_selector, $this);
+		$sidebar->typographySection(__('Active Lesson Typography'), $active_lesson_selector, $this);
 		$lesson_icon_section = $sidebar->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$lesson_icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Left Icon Color'),
-                	"selector" => $lesson_selector.' i:first-child',
+                	"name" => __('Icon Color'),
+                	"selector" => $lesson_selector.' .tutor-course-topic-item-icon',
 					"property" => 'color',
 				),
 				array(
-                	"name" => __('Left Icon Active Color'),
-                	"selector" => $active_lesson_selector.' i:first-child',
+                	"name" => __('Icon Active & Hover Color'),
+                	"selector" => $active_lesson_selector.' .tutor-course-topic-item-icon',
 					"property" => 'color',
 				),
 				array(
-                	"name" => __('Incomplete Color'),
-                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete',
-					"property" => 'border-color',
-				),
-				array(
-                	"name" => __('Complete Color'),
-                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
-					"property" => 'color',
-				),
-				array(
-                	"name" => __('Complete Background Color'),
-                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
+                	"name" => __('Lesson Background Color'),
+                	"selector" => $lesson_selector,
 					"property" => 'background-color',
 				),
 				array(
-                	"name" => __('Complete Border Color'),
-                	"selector" => $lesson_selector.' .tutor-lesson-right-icons .tutor-lesson-complete.tutor-icon-mark',
-					"property" => 'border-color',
-				)
-			)
-		);
-		$active_lesson_icon_section = $sidebar->addControlSection("active-lesson-icon", __("Active Lesson Icon"), "assets/icon.png", $this);
-		$active_lesson_icon_section->addStyleControls(
-			array(
-				array(
-                	"name" => __('Size'),
-                	"selector" => $active_lesson_selector.' i:first-child',
-					"property" => 'font-size',
-                ),
-				array(
-                	"name" => __('Color'),
-                	"selector" => $active_lesson_selector.' i:first-child',
-					"property" => 'color',
+                	"name" => __('Active Lesson Background Color'),
+                	"selector" => $active_lesson_selector,
+					"property" => 'background-color',
 				)
 			)
 		);
 		$lesson_spacing = $sidebar->addControlSection("lesson-spacing", __("Lesson Spacing"), "assets/icon.png", $this);
-        $lesson_spacing->addPreset(
-            "padding",
-            "lesson_item_padding",
-            __("Padding"),
-            $lesson_selector
-		);
-		$sidebar_background = $sidebar->addControlSection("sidebar-background", __("Background"), "assets/icon.png", $this);
-		$sidebar_background->addStyleControls(
-			array(
-				array(
-					"name" => __('Tab Background'),
-					"selector" => $selector.' .tutor-tabs-btn-group a',
-					"property" => 'background-color',
-				),
-				array(
-					"name" => __('Active Tab Background'),
-					"selector" => $selector.' .tutor-tabs-btn-group a.active',
-					"property" => 'background-color',
-				),
-				array(
-					"name" => __('Lesson Background'),
-					"selector" => $selector.' .tutor-topics-in-single-lesson',
-					"property" => 'background-color',
-				),
-				array(
-					"name" => __('Active Lesson Background'),
-					"selector" => $selector.' .tutor-topics-in-single-lesson .tutor-single-lesson-items.active',
-					"property" => 'background-color',
-				),
-				array(
-					"name" => __('Q&A Background'),
-					"selector" => $selector.' .tutor-lesson-sidebar-tab-item',
-					"property" => 'background-color',
-				)
-			)
-		);
+        $lesson_spacing->addPreset("padding", "lesson_item_padding",  __("Padding"), $lesson_selector);
 
 		/* Topbar */
-		$topbar_selector = $selector.' .tutor-single-page-top-bar';
+		$topbar_selector = $selector.' #tutor-single-entry-content .tutor-course-topic-single-header';
 		$topbar = $this->addControlSection("topbar", __("Topbar"), "assets/icon.png", $this);
-		$topbar->typographySection(__('Home link'), $topbar_selector.' a', $this);
-		$topbar->typographySection(__('Title'), $topbar_selector.' .tutor-topbar-content-title-wrap', $this);
-		$topbar_color = $topbar->addControlSection("content-top-bar", __("Color"), "assets/icon.png", $this);
+		$topbar->typographySection(__('Title'), $topbar_selector.' .tutor-course-topic-single-header-title', $this);
+		$topbar->typographySection(__('Progress'), $topbar_selector.' span', $this);
+		$topbar_color = $topbar->addControlSection("content-top-bar", __("Size & Color"), "assets/icon.png", $this);
 		$topbar_color->addStyleControls(
 			array(
+				array(
+                	"name" => __('Height'),
+                	"selector" => $topbar_selector,
+					"property" => 'height',
+                ),
 				array(
                 	"name" => __('Background'),
                 	"selector" => $topbar_selector,
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Toggle Bar'),
-                	"selector" => $topbar_selector.' .tutor-lesson-sidebar-hide-bar',
+                	"name" => __('Toggle Icon Background'),
+                	"selector" => $topbar_selector.' .tutor-course-topics-sidebar-toggler',
 					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Toggle Icon Color'),
+                	"selector" => $topbar_selector.' .tutor-course-topics-sidebar-toggler span',
+					"property" => 'color',
+                ),
+				array(
+                	"name" => __('Close Icon Color'),
+                	"selector" => $topbar_selector.' .tutor-iconic-btn span',
+					"property" => 'color',
                 )
 			)
 		);
 		$topbar_spacing = $topbar->addControlSection("topbar-spacing", __("Spacing"), "assets/icon.png", $this);
-        $topbar_spacing->addPreset(
-            "padding",
-            "topbar_padding",
-            __("Padding"),
-            $topbar_selector
-		);
-        $topbar_spacing->addPreset(
-            "margin",
-            "topbar_margin",
-            __("Margin"),
-            $topbar_selector
-		);
+        $topbar_spacing->addPreset("padding", "topbar_padding", __("Padding"),$topbar_selector);
+        $topbar_spacing->addPreset("margin", "topbar_margin", __("Margin"),$topbar_selector);
 
 		/* Content */
 		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-		$content_area_selector = $selector.' .tutor-lesson-content-area';
+		$content_area_selector = $selector.' .tutor-quiz-single-entry-wrap .tutor-course-spotlight-wrapper';
+		$content_full_area_selector = $selector.' .tutor-quiz-single-entry-wrap';
 		$content_area_spacing = $content->addControlSection("content-area-spacing", __("Spacing"), "assets/icon.png", $this);
         $content_area_spacing->addPreset(
             "padding",
@@ -272,17 +218,76 @@ class SingleLesson extends \OxygenTutorElements {
 			array(
 				array(
                 	"name" => __('Background'),
-                	"selector" => $selector,
+                	"selector" => $content_full_area_selector,
 					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Color'),
+                	"selector" => $content_area_selector.' .tutor-color-black ,' .$content_area_selector.' .tutor-color-secondary',
+					"property" => 'color',
                 )
 			)
 		);
 
 		/* Pagination */
 		$pagination = $this->addControlSection("pagination", __("Pagination"), "assets/icon.png", $this);
-		$pagination_selector = $selector.' .tutor-next-previous-pagination-wrap';
+		$pagination_selector = $selector.' .tutor-course-topic-single-footer';
 		$pagination->typographySection(__('Typography'), $pagination_selector.' a', $this);
-		$pagination->typographySection(__('Hover Typography'), $pagination_selector.' a:hover', $this);
+		$pagination_color = $pagination->addControlSection("pagination-color", __("Color"), "assets/icon.png", $this);
+		$pagination_color->addStyleControls(
+			array(
+				array(
+                	"name" => __('Height'),
+                	"selector" => $pagination_selector,
+					"property" => 'height',
+                ),
+				array(
+                	"name" => __('Pagination Background'),
+                	"selector" => $pagination_selector,
+					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Previous Background'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-prev a',
+					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Previous Color'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-prev a span',
+					"property" => 'color',
+                ),
+				array(
+                	"name" => __('Previous Hover Background'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-prev a:hover',
+					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Previous Hover Color'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-prev a:hover span',
+					"property" => 'color',
+                ),
+				array(
+                	"name" => __('Next Background'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-next a',
+					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Next Color'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-next a span',
+					"property" => 'color',
+                ),
+				array(
+                	"name" => __('Next Hover Background'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-next a:hover',
+					"property" => 'background-color',
+                ),
+				array(
+                	"name" => __('Next Hover Color'),
+                	"selector" => $pagination_selector.' .tutor-single-course-content-next a:hover span',
+					"property" => 'color',
+                )
+			)
+		);
 	}
 }
 
