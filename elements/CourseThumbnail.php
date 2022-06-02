@@ -16,12 +16,12 @@ class CourseThumbnail extends \OxygenTutorElements {
     }
     
     function render($options, $defaults, $content) {
-        echo "<div class='tutor-course-thumbnail'>";
-            if(tutils()->has_video_in_single()){
-                tutor_course_video();
-            } else{
-                get_tutor_course_thumbnail();
-            }
+        echo "<div class='tutor-course-thumbnail tutor-course-details-page'>";
+        if(tutils()->has_video_in_single()){
+            tutor_course_video();
+        } else{
+            get_tutor_course_thumbnail();
+        }
         echo "</div>";
     }
 
