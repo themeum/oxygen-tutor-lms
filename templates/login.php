@@ -21,7 +21,7 @@ if(!tutor_utils()->get_option('enable_tutor_native_login', null, true, true)) {
     exit;
 }
     
-tutor_utils()->tutor_custom_header();
+//tutor_utils()->tutor_custom_header();
 $login_url = tutor_utils()->get_option('enable_tutor_native_login', null, true, true) ? '' : wp_login_url(tutor()->current_url);
 ?>
 
@@ -48,5 +48,5 @@ $login_url = tutor_utils()->get_option('enable_tutor_native_login', null, true, 
 <?php 
     do_action('tutor/template/login/after/wrap');
     //tutor_load_template_from_custom_path(tutor()->path . '/views/modal/login.php');
-    tutor_utils()->tutor_custom_footer();
+    //tutor_utils()->tutor_custom_footer();
 ?>

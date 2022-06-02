@@ -30,9 +30,9 @@ class PageDashboard extends \OxygenTutorElements {
 			$template = "template-part.{$dashboard_page}".".php";
 		} else {
 			if (is_user_logged_in()){
-				$template = 'dashboard.php';
+				$template = otlms_get_template('dashboard');
 			}else{
-				$template = 'login.php';
+				$template = otlms_get_template('login');
 			}
 		}
 		
@@ -43,7 +43,7 @@ class PageDashboard extends \OxygenTutorElements {
 		 * to fix added include_once
 		 * @since version 1.0.3
 		 */
-		include_once( tutor()->path.'/templates/'. $template );
+		include_once( $template );
 		
 		echo apply_filters( 'tutor_dashboard/index', ob_get_clean() );
 
