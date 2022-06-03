@@ -58,15 +58,15 @@ class PageDashboard extends \OxygenTutorElements {
 
 	function controls() {
 		$selector = '.tutor-dashboard';
-		$header_selector = $selector.' .tutor-dashboard-header';
+		$header_selector = $selector.' .tutor-frontend-dashboard-header';
 		$menu_selector = $selector.' .tutor-dashboard-permalinks';
-		$menu_item_selector = $menu_selector.' li a';
-		$menu_item_selector_hover = $menu_selector.' li a:hover';
-		$menu_item_selector_active = $menu_selector.' li.active a';
+		$menu_item_selector = $menu_selector.' .tutor-dashboard-menu-item a';
+		$menu_item_selector_hover = $menu_selector.' .tutor-dashboard-menu-item a:hover';
+		$menu_item_selector_active = $menu_selector.' .tutor-dashboard-menu-item.active a';
 
 		/* Menu item */
 		$header = $this->addControlSection("dashboard_header", __("Header"), "assets/icon.png", $this);
-		$img_selector = $header_selector.' .tutor-dashboard-header-avatar img';
+		$img_selector = $header_selector.' .tutor-avatar';
 		$header_img = $header->addControlSection("dashboard_header_img", __("Image"), "assets/icon.png", $this);
 		$header_img->addStyleControls(
 			array(
@@ -82,10 +82,10 @@ class PageDashboard extends \OxygenTutorElements {
 				)
 			)
 		);
-		$header->typographySection(__('Display Name'), $header_selector.' .tutor-dashboard-header-display-name h4', $this);
+		$header->typographySection(__('Display Name'), $header_selector.' .tutor-dashboard-header-username', $this);
 
 		$header_stars = $header->addControlSection("dashboard_header_stars", __("Rating Stars"), "assets/icon.png", $this);
-        $stars_selector = $header_selector." .tutor-star-rating-group";
+        $stars_selector = $header_selector." .tutor-ratings-stars span";
         $header_stars->addStyleControls(
             array(
                 array(
@@ -101,16 +101,12 @@ class PageDashboard extends \OxygenTutorElements {
             )
 		);
 
-		$header->typographySection(__('Rating Text'), $header_selector." .tutor-dashboard-header-ratings span", $this);
+		$header->typographySection(__('Rating Average'), $header_selector." .tutor-ratings-average", $this);
+		$header->typographySection(__('Rating Count'), $header_selector." .tutor-ratings-count", $this);
 
 		$new_course_btn = $this->addControlSection("new_course_btn", __("Header Button"), "assets/icon.png", $this);
-        $new_course_btn_selector = $header_selector.' .tutor-dashboard-header-button a';
-        $new_course_btn->addPreset(
-            "padding",
-            "submit_padding",
-            __("Button Paddings"),
-            $new_course_btn_selector
-        );
+        $new_course_btn_selector = $header_selector.' .tutor-btn-outline-primary';
+        $new_course_btn->addPreset( "padding", "submit_padding", __("Button Paddings"), $new_course_btn_selector);
         $new_course_btn->addStyleControls(
             array(
                 array(
@@ -122,6 +118,16 @@ class PageDashboard extends \OxygenTutorElements {
                     "name" => __('Hover Background Color'),
                     "selector" => $new_course_btn_selector.':hover',
                     "property" => 'background-color',
+				),
+				array(
+                    "name" => __('Color'),
+                    "selector" => $new_course_btn_selector,
+                    "property" => 'color',
+                ),
+				array(
+                    "name" => __('Hover Color'),
+                    "selector" => $new_course_btn_selector.':hover',
+                    "property" => 'color',
                 )
             )
         );
@@ -139,12 +145,12 @@ class PageDashboard extends \OxygenTutorElements {
 			array(
 				array(
 					"name"		=> __('Icon Color'),
-					"selector" 	=> $menu_item_selector.':before',
+					"selector" 	=> $menu_item_selector.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'color',
 				),
 				array(
 					"name"		=> __('Icon Size'),
-					"selector" 	=> $menu_item_selector.':before',
+					"selector" 	=> $menu_item_selector.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'font-size',
 				),
 				array(
@@ -176,12 +182,12 @@ class PageDashboard extends \OxygenTutorElements {
 			array(
 				array(
 					"name"		=> __('Icon Color'),
-					"selector" 	=> $menu_item_selector_hover.':before',
+					"selector" 	=> $menu_item_selector_hover.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'color',
 				),
 				array(
 					"name"		=> __('Icon Size'),
-					"selector" 	=> $menu_item_selector_hover.':before',
+					"selector" 	=> $menu_item_selector_hover.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'font-size',
 				),
 				array(
@@ -213,12 +219,12 @@ class PageDashboard extends \OxygenTutorElements {
 			array(
 				array(
 					"name"		=> __('Icon Color'),
-					"selector" 	=> $menu_item_selector_active.':before',
+					"selector" 	=> $menu_item_selector_active.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'color',
 				),
 				array(
 					"name"		=> __('Icon Size'),
-					"selector" 	=> $menu_item_selector_active.':before',
+					"selector" 	=> $menu_item_selector_active.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'font-size',
 				),
 				array(
@@ -248,23 +254,44 @@ class PageDashboard extends \OxygenTutorElements {
 		$menu_spacing->addPreset("padding", "menu_item_padding", __("Padding"), $menu_item_selector);
 		$menu_spacing->addPreset("margin", "menu_item_margin", __("Margin"), $menu_item_selector);
 
-		$this->typographySection(__("Title"), $selector.' .tutor-dashboard-content h3', $this);
+		$this->typographySection(__("Title"), $selector.' .tutor-dashboard-content .tutor-dashboard-title', $this);
 		$this->typographySection(__("Links"), $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner a', $this);
 		$this->typographySection(__("Links Hover"), $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner a:hover', $this);
 
 		/* Info card */
-		$info_card_selector =  $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner .tutor-dashboard-info-card';
+		$info_card_selector =  $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner .tutor-card';
 		$info_card = $this->addControlSection("info_card", __("Info Card"), "assets/icon.png", $this);
-		$info_card->typographySection(__("Label"), $info_card_selector.' p span:first-child', $this);
-		$info_card->typographySection(__("Value"), $info_card_selector.' p span.tutor-dashboard-info-val', $this);
+		$info_card->typographySection(__("Icon"), $info_card_selector.' .tutor-round-box i', $this);
+		$info_card->typographySection(__("Value"), $info_card_selector.' .tutor-fw-bold', $this);
+		$info_card->typographySection(__("Label"), $info_card_selector.' .tutor-color-secondary', $this);
 		$info_card_background = $info_card->addControlSection("info_card_color", __("Background"), "assets/icon.png", $this);
 		$info_card_background->addStyleControls(
 			array(
 				array(
 					"name"		=> __('Color'),
-					"selector" 	=> $info_card_selector.' p',
+					"selector" 	=> $info_card_selector,
 					"property" 	=> 'background-color',
 				),
+			)
+		);
+		$info_icon = $info_card->addControlSection("dashboard_header_img", __("Icon Settings"), "assets/icon.png", $this);
+		$info_icon->addStyleControls(
+			array(
+				array(
+                	"name" => __('Height'),
+                	"selector" => $info_card_selector.' .tutor-round-box',
+					"property" => 'height',
+				),
+				array(
+                	"name" => __('Width'),
+                	"selector" => $info_card_selector.' .tutor-round-box',
+					"property" => 'width',
+				),
+				array(
+                	"name" => __('Background Color'),
+                	"selector" => $info_card_selector.' .tutor-round-box',
+					"property" => 'background-color',
+				)
 			)
 		);
 		$info_card_spacing = $info_card->addControlSection("info_card_spacing", __("Spacing"), "assets/icon.png", $this);
