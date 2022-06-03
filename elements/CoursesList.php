@@ -124,61 +124,38 @@ class CoursesList extends \OxygenTutorElements {
 		);
 
 		/* Courses style */
-		$selector = '.tutor-courses-loop-wrap';
-		$course_grid = $this->addControlSection("course_grid", __("Courses Style"), "assets/icon.png", $this);
-		$course_col_selector = $selector.' .tutor-course-col-3';
-		$course_grid_selector = $course_col_selector.' .tutor-course';
+		$selector = '.tutor-courses-wrap';
+		/* Filter section */
+		$filter_selector = $selector.' .tutor-course-filter-container';
 
-		/* level bagde */
-		$level_badge = $course_grid->addControlSection("level_badge", __("Level Badge"), "assets/icon.png", $this);
-		$level_badge_selector = $course_grid_selector." .tutor-course-loop-header-meta .tutor-course-loop-level";
-		$level_badge->addStyleControls(
-			array(
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'background-color',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'font-size',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'font-family',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'line-height',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'border-radius',
-				),
-				array(
-					"selector" => $level_badge_selector,
-					"property" => 'text-transform',
-				)
-			)
-		);
+		$sorting_select = $this->addControlSection("sorting_select", __("Course Filter"), "assets/icon.png", $this);
+        $sorting_select_selector = $filter_selector.' .tutor-course-filter .tutor-widget';
+        $sorting_select->typographySection(__("Filter Widget Title"), $sorting_select_selector . ' .tutor-widget-title ', $this);
+        $sorting_select->typographySection(__("Filter Items"), $sorting_select_selector . ' .tutor-list-item label ', $this);
+
+		/* Course grid */
+		$course_col_selector = $selector.' .tutor-course-list';
+		$course_grid_selector = $course_col_selector.' .tutor-course-card';
+		$course_grid = $this->addControlSection("course_grid", __("Course Grid"), "assets/icon.png", $this);
 
 		/* wishlist icon */
 		$wishlist_icon = $course_grid->addControlSection("wishlist_icon", __("Wishlist Icon"), "assets/icon.png", $this);
-		$wishlist_icon_selector = $course_grid_selector." .tutor-course-loop-header-meta .tutor-course-wishlist";
+		$wishlist_icon_selector = $course_grid_selector." .tutor-course-bookmark .tutor-iconic-btn-secondary";
 		$wishlist_icon->addStyleControls(
 			array(
 				array(
 					"name" 		=> __('Font Size'),
-					"selector" 	=> $wishlist_icon_selector.' a',
+					"selector" 	=> $wishlist_icon_selector.'i',
 					"property" 	=> 'font-size',
 				),
 				array(
 					"name" 		=> __('Font Color'),
-					"selector" 	=> $wishlist_icon_selector.' a',
+					"selector" 	=> $wishlist_icon_selector.' i',
 					"property" 	=> 'color',
 				),
 				array(
 					"name" 		=> __('Hover Font Color'),
-					"selector" 	=> $wishlist_icon_selector.' a:hover',
+					"selector" 	=> $wishlist_icon_selector.':hover i',
 					"property" 	=> 'color',
 				),
 				array(
@@ -194,35 +171,72 @@ class CoursesList extends \OxygenTutorElements {
 			)
 		);
 
-		$loop_course_container = $course_grid_selector.' .tutor-loop-course-container';
+		$loop_course_container = $course_grid_selector.' .tutor-card-body';
 
 		/* Stars */
-		$stars_section = $course_grid->addControlSection("stars", __("Stars"), "assets/icon.png", $this);
-		$star_selector = $loop_course_container." .tutor-loop-rating-wrap .tutor-star-rating-group";
+		$stars_section = $course_grid->addControlSection("stars", __("Course Ratings"), "assets/icon.png", $this);
+		$star_selector = $loop_course_container." .tutor-course-ratings .tutor-ratings-stars span";
         $stars_section->addStyleControls(
         	array(
         		array(
-					"name" 		=> __('Color'),
+					"name" 		=> __('Star Color'),
 					"selector" 	=> $star_selector,
 					"property" 	=> 'color',
 				),
 				array(
-					"name" 		=> __('Size'),
+					"name" 		=> __('Star Size'),
 					"selector" 	=> $star_selector,
 					"property" 	=> 'font-size',
 				)
         	)
 		);
+		$stars_section = $course_grid->typographySection(__("Average Rating"), $loop_course_container . ' .tutor-ratings-average', $this);
+		$stars_section = $course_grid->typographySection(__("Total Ratings"), $loop_course_container . ' .tutor-ratings-count', $this);
 		
-		$course_grid->typographySection(__("Course Title"), $loop_course_container.' .tutor-course-loop-title h2 a', $this);
-		$course_grid->typographySection(__("Meta Info"), $loop_course_container.' .tutor-course-loop-meta', $this);
-		$course_grid->typographySection(__("Author Label"), $loop_course_container.' .tutor-single-course-author-name span, '.$loop_course_container.' .tutor-course-lising-category span', $this);
-		$course_grid->typographySection(__("Author Value"), $loop_course_container.' .tutor-single-course-author-name a, '.$loop_course_container.' .tutor-course-lising-category a', $this);
+		$course_grid->typographySection(__("Course Title"), $loop_course_container.' .tutor-course-name a', $this);
+		$course_grid->typographySection(__("Meta Icon"), $loop_course_container.' .tutor-meta .tutor-meta-icon', $this);
+		$course_grid->typographySection(__("Meta Info"), $loop_course_container.' .tutor-meta .tutor-meta-value', $this);
+		$course_grid->typographySection(__("Author Label"), $loop_course_container.' .tutor-meta', $this);
+		$course_grid->typographySection(__("Author Value"), $loop_course_container.' .tutor-meta a, '.$loop_course_container.' .tutor-course-lising-category a', $this);
 		
-		$loop_course_container_footer = $course_grid_selector.' .tutor-loop-course-footer';
-		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .price, '.$loop_course_container_footer.' .price .woocommerce-Price-amount', $this);
-		$course_grid->typographySection(__("Cart Button"), $loop_course_container_footer.' .tutor-loop-cart-btn-wrap a', $this);
+		$loop_course_container_footer = $course_grid_selector.' .tutor-card-footer';
+		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .list-item-price span', $this);
 
+		$add_to_cart_btn = $course_grid->addControlSection("add_to_cart_button", __("Add to Cart"), "assets/icon.png", $this);
+		$add_to_cart_btn_selector1 = $enrollment_box_selector.' .tutor-btn-primary';
+        $add_to_cart_btn_selector2 = $enrollment_box_selector.' .tutor-btn-outline-primary';
+        $add_to_cart_btn_selector = $add_to_cart_btn_selector1.', '.$add_to_cart_btn_selector2;
+        $add_to_cart_btn->addPreset(
+            "padding",
+            "submit_padding",
+            __("Button Paddings"),
+            $add_to_cart_btn_selector
+        );
+        $add_to_cart_btn->addStyleControls(
+            array(
+                array(
+                    "name" => __('Background Color'),
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'background-color',
+                ),
+                array(
+                    "name" => __('Color'),
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'color',
+                ),
+				array(
+                    "name" => __('Border Color'),
+                    "selector" => $add_to_cart_btn_selector,
+                    "property" => 'border-color',
+                ),
+                array(
+                    "name" =>__('Hover Background Color'),
+                    "selector" => $add_to_cart_btn_selector1.':hover, '.$add_to_cart_btn_selector2.':hover',
+                    "property" => 'background-color',
+                )
+            )
+        );
+		
 		/* grid border and shadows */
 		$course_grid->borderSection(__("Border"), $course_grid_selector, $this);
         $course_grid->borderSection(__("Hover Border"), $course_grid_selector.":hover", $this);
