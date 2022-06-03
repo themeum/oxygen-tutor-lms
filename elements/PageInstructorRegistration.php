@@ -18,8 +18,9 @@ class PageInstructorRegistration extends \OxygenTutorElements {
 		 * Start Tutor Template
 		 */
 
-		$shortcode = new Shortcode();
-		echo $shortcode->instructor_registration_form();
+		$template = otlms_get_template('instructor-registration');
+
+		include_once( $template );
 
 		/**
 		 * End Tutor Template
