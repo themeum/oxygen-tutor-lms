@@ -1,6 +1,6 @@
 {
   "name": "oxygen-tutor-lms",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Oxygen Builder Integration - Tutor LMS plugin let's you to design your courses, lesson page by Oxygen Builder. Author: Themeum",
   "main": "gulpfile.js",
   "dependencies": {
