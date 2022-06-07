@@ -5,7 +5,7 @@ Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
 Tested up to: 5.9
 Requires PHP: 7.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -100,6 +100,32 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 1. How to build
 
 == Changelog ==
+
+= 1.0.5 - 07 June, 2022 =
+
+* Update: Some new style controls were added for the Single Course page
+* Update: Some new style controls were added for the Course List page
+* Update: Some new style controls were added for the Lesson page
+* Update: Some new style controls were added for the Quiz page
+* Update: Some new style controls were added for the Assignment page
+* Fix: The design of Course List page was broken
+* Fix: The style controls of the Course List page were not working
+* Fix: Filter was not working in the Course List page
+* Fix: The style controls of the Course List page were not working
+* Fix: The design of Single Course page was broken
+* Fix: The style controls of Single Course page were not working
+* Fix: The Quiz page was not working
+* Fix: The style controls of the Quiz page were not working
+* Fix: The Assignment page was not working
+* Fix: The style controls of the Assignment page were not working
+* Fix: The design of Lesson page was broken
+* Fix: The style controls of the Lesson page were not working
+* Fix: Duplicate header and footer was being shown on all Tutor pages
+* Fix: The design of Dashboard page was broken
+* Fix: The Student Registration page was not working
+* Fix: The style controls of the Student Registration page were not working
+* Fix: The Instructor Registration page was not working
+* Fix: The style controls of the Instructor Registration page were not working
 
 = 1.0.4 - 24 February, 2022 =
 
