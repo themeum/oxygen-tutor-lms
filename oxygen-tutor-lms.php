@@ -53,3 +53,10 @@ add_action('plugins_loaded', 'oxygen_tutor_lms_init');
 function oxygen_tutor_lms_init(){
 	OxygenTutorLMS::instance();
 }
+
+
+add_action('wp_enqueue_scripts', 'tutor_oxygen_lms_assets');
+
+function tutor_oxygen_lms_assets() {
+    wp_enqueue_style( 'public-style', plugins_url('assets/css/public.css', __FILE__));   
+}
