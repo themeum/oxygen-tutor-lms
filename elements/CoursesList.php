@@ -203,8 +203,8 @@ class CoursesList extends \OxygenTutorElements {
 		$course_grid->typographySection(__("Course Price"), $loop_course_container_footer.' .list-item-price span', $this);
 
 		$add_to_cart_btn = $course_grid->addControlSection("add_to_cart_button", __("Add to Cart"), "assets/icon.png", $this);
-		$add_to_cart_btn_selector1 = $enrollment_box_selector.' .tutor-btn-primary';
-        $add_to_cart_btn_selector2 = $enrollment_box_selector.' .tutor-btn-outline-primary';
+		$add_to_cart_btn_selector1 = $loop_course_container_footer.' .tutor-btn-primary';
+        $add_to_cart_btn_selector2 = $loop_course_container_footer.' .tutor-btn-outline-primary';
         $add_to_cart_btn_selector = $add_to_cart_btn_selector1.', '.$add_to_cart_btn_selector2;
         $add_to_cart_btn->addPreset(
             "padding",

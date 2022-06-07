@@ -366,7 +366,7 @@ class SingleCourse extends \OxygenTutorElements {
         
         $course_enrollment_box->typographySection(__('Course Progress Title'), $enrollment_box_selector.' .tutor-course-progress-wrapper h3', $this);
         $course_enrollment_box->typographySection(__('Course Progress Text'), $enrollment_box_selector.' .list-item-progress span', $this);
-        $course_progress_bar_main_selector = $course_progress_bar_selector.' .tutor-progress-bar';
+        $course_progress_bar_main_selector = $enrollment_box_selector.' .tutor-progress-bar';
         $course_progress_bar_fill_selector = $course_progress_bar_main_selector.' .tutor-progress-value';
         $course_progress_bar = $course_enrollment_box->addControlSection("course_progress_bar_main", __("Course Progress Bar"), "assets/icon.png", $this);
         $course_progress_bar->addStyleControls(
