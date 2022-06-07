@@ -76,7 +76,7 @@ gulp.task("copy", function () {
 });
 
 gulp.task("make-zip", function () {
-	return gulp.src("./build/**/*.*").pipe(zip(`oxygen-tutor-lms-${require('./package.json').version}.zip`)).pipe(gulp.dest("./"));
+	return gulp.src("./build/**/*.*").pipe(zip(`oxygen-tutor-lms.zip`)).pipe(gulp.dest("./"));
 });
 
 /**
