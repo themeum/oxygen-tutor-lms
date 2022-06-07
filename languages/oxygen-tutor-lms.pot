@@ -13,36 +13,132 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/login.php:24
-msgid "Please Sign-In to view this section"
+#: templates/dashboard.php:52
+msgid "My Courses"
 msgstr ""
 
-#: templates/single-lesson-required-enroll.php:27
-msgid "Please enroll This course first"
+#: templates/dashboard.php:52
+msgid "Dashboard"
 msgstr ""
 
-#: templates/single-lesson-required-enroll.php:29
-msgid "View Course"
+#: templates/dashboard.php:58
+msgid "Q&A"
 msgstr ""
 
-#: templates/single-quiz.php:34
-msgid "Go to Course Home"
+#: templates/dashboard.php:58
+msgid "Quiz Attempts"
 msgstr ""
 
-#: templates/student-public-profile.php:42
-msgid "Howdy,"
+#: templates/dashboard.php:64
+msgid "Menu"
 msgstr ""
 
-#: templates/student-public-profile.php:52
-msgid "%d Ratings"
+#: templates/dashboard.php:126
+msgid "Become an instructor"
 msgstr ""
 
-#: templates/student-public-profile.php:72
-msgid "Follow me"
+#: templates/dashboard.php:144
+msgid "Your Application is pending as of"
 msgstr ""
 
-#: templates/student-public-profile.php:98
-msgid "Bio"
+#: templates/dashboard.php:136
+msgid "Create a New Course"
+msgstr ""
+
+#: templates/instructor-registration.php:52, templates/instructor-registration.php:55, templates/student-registration.php:51, templates/student-registration.php:54
+msgid "First Name"
+msgstr ""
+
+#: templates/instructor-registration.php:62, templates/instructor-registration.php:65, templates/student-registration.php:61, templates/student-registration.php:64
+msgid "Last Name"
+msgstr ""
+
+#: templates/instructor-registration.php:77, templates/instructor-registration.php:80, templates/student-registration.php:74, templates/student-registration.php:77
+msgid "User Name"
+msgstr ""
+
+#: templates/instructor-registration.php:87, templates/instructor-registration.php:90, templates/student-registration.php:84, templates/student-registration.php:87
+msgid "E-Mail"
+msgstr ""
+
+#: templates/instructor-registration.php:100, templates/instructor-registration.php:103, templates/student-registration.php:97, templates/student-registration.php:100, templates/global/login.php:48
+msgid "Password"
+msgstr ""
+
+#: templates/instructor-registration.php:110, templates/student-registration.php:107
+msgid "Password confirmation"
+msgstr ""
+
+#: templates/instructor-registration.php:113, templates/student-registration.php:110
+msgid "Password Confirmation"
+msgstr ""
+
+#: templates/instructor-registration.php:138, templates/student-registration.php:136
+msgid "By signing up, I agree with the website's"
+msgstr ""
+
+#: templates/instructor-registration.php:138, templates/instructor-registration.php:138, templates/student-registration.php:136, templates/student-registration.php:136
+msgid "Terms and Conditions"
+msgstr ""
+
+#: templates/instructor-registration.php:143
+msgid "Register as instructor"
+msgstr ""
+
+#: templates/instructor-registration.php:14, templates/student-registration.php:13
+msgid "Oooh! Access Denied"
+msgstr ""
+
+#: templates/instructor-registration.php:15, templates/student-registration.php:14
+msgid "You do not have access to this area of the application. Please refer to your system  administrator."
+msgstr ""
+
+#: templates/instructor-registration.php:17, templates/student-registration.php:16
+msgid "Go to Home"
+msgstr ""
+
+#: templates/login.php:34
+msgid "Hi, Welcome back!"
+msgstr ""
+
+#: templates/public-profile.php:128
+msgid "Courses Enrolled"
+msgstr ""
+
+#: templates/public-profile.php:128
+msgid "Course Enrolled"
+msgstr ""
+
+#: templates/public-profile.php:133
+msgid "Courses Completed"
+msgstr ""
+
+#: templates/public-profile.php:133
+msgid "Course Completed"
+msgstr ""
+
+#: templates/public-profile.php:109, templates/public-profile.php:170, templates/shortcode/tutor-instructor.php:27
+msgid "Courses"
+msgstr ""
+
+#: templates/public-profile.php:109, templates/shortcode/tutor-instructor.php:27
+msgid "Course"
+msgstr ""
+
+#: templates/public-profile.php:116
+msgid "Students"
+msgstr ""
+
+#: templates/public-profile.php:116
+msgid "Student"
+msgstr ""
+
+#: templates/public-profile.php:164
+msgid "Biography"
+msgstr ""
+
+#: templates/student-registration.php:141
+msgid "Register"
 msgstr ""
 
 #: templates/course/about.php:7
@@ -69,8 +165,36 @@ msgstr ""
 msgid "Course level:"
 msgstr ""
 
-#: templates/course/share.php:10
-msgid "Share:"
+#: templates/global/alert.php:27
+msgid "Please define alert class"
+msgstr ""
+
+#: templates/global/attachments.php:46
+msgid "No Attachment Found"
+msgstr ""
+
+#: templates/global/attachments.php:31
+msgid "Size"
+msgstr ""
+
+#: templates/global/login.php:47
+msgid "Username or Email Address"
+msgstr ""
+
+#: templates/global/login.php:49
+msgid "Remember Me"
+msgstr ""
+
+#: templates/global/login.php:50
+msgid "Log In"
+msgstr ""
+
+#: templates/global/login.php:51
+msgid "Create a new account"
+msgstr ""
+
+#: templates/global/login.php:61
+msgid "Forgot Password?"
 msgstr ""
 
 #: templates/shortcode/instructor-filter.php:30, templates/shortcode/instructor-filter.php:60
@@ -83,14 +207,6 @@ msgstr ""
 
 #: templates/shortcode/instructor-filter.php:68
 msgid "Apply Filter"
-msgstr ""
-
-#: templates/shortcode/tutor-instructor.php:27
-msgid "Courses"
-msgstr ""
-
-#: templates/shortcode/tutor-instructor.php:27
-msgid "Course"
 msgstr ""
 
 #: templates/shortcode/tutor-instructor.php:35
