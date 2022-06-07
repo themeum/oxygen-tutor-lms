@@ -101,7 +101,7 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
-= 1.0.5 - 07 June, 2022 =
+= 2.0.0 - 07 June, 2022 =
 
 * Update: Some new style controls were added for the Single Course page
 * Update: Some new style controls were added for the Course List page
