@@ -153,13 +153,6 @@ class SingleCourse extends \OxygenTutorElements {
 		$about_selector =  $selector." .tutor-course-details-content";
         $course_about->typographySection(__('Heading'), $about_selector.' h2 ', $this);
 		$course_about->typographySection(__('Paragraph'), $about_selector.' div ', $this);
-
-		/* Course description
-		$course_description = $this->addControlSection("description", __("What Will You Learn?"), "assets/icon.png", $this);
-		$description_selector =  $selector." .tutor-course-details-widget";
-        $course_description->typographySection(__('Heading'), $description_selector.' .tutor-course-details-widget-title', $this);
-		$course_description->typographySection(__('Text'), $description_selector.' .tutor-course-details-widget-list li', $this); */
-
 		
 		/* Course benefits */
 		$course_benefits = $this->addControlSection("benefits", __("What Will You Learn?"), "assets/icon.png", $this);
