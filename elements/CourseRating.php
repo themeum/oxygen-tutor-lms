@@ -24,7 +24,7 @@ class CourseRating extends \OxygenTutorElements {
     }
 
     function controls() {
-        $star_selector = ".tutor-single-course-rating .tutor-star-rating-group";
+        $star_selector = ".tutor-ratings .tutor-ratings-stars span";
         $this->addStyleControls(
 			array(
 				array(

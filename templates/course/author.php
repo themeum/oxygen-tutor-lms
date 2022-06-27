@@ -1,20 +1,27 @@
 <?php
 
-global $post;
-$disable_course_author = get_tutor_option('disable_course_author');
+the_post();
+global $post, $authordata;
 
-if ( !$disable_course_author){ ?>
-<div class="tutor-single-course-meta tutor-meta-top">
-    <ul>
-        <li class="tutor-single-course-author-meta">
-            <div class="tutor-single-course-avatar">
-                <a href="<?php echo $profile_url; ?>"> <?php echo tutils()->get_tutor_avatar($post->post_author); ?></a>
-            </div>
-            <div class="tutor-single-course-author-name">
-                <span><?php _e('by', 'tutor'); ?></span>
-                <a href="<?php echo tutils()->profile_url($post->post_author); ?>"><?php echo get_the_author_meta('display_name', $post->post_author); ?></a>
-            </div>
-        </li>
-    </ul>
+$profile_url        = is_object( $authordata ) ? tutor_utils()->profile_url( $authordata->ID, true ) : '';
+$show_author        = tutor_utils()->get_option( 'enable_course_author' );
+?>
+
+<div class="tutor-meta tutor-course-details-info"> 
+    <?php if ( $show_author ) : ?>
+    <div>
+        <a href="<?php echo $profile_url; ?>" class="tutor-d-flex">
+            <?php echo tutor_utils()->get_tutor_avatar( get_the_author_meta('ID') ); ?>
+        </a>
+    </div>
+    <?php endif; ?>
+    
+    <div>
+        <?php if ( $show_author ) : ?>
+            <span class="tutor-mr-16">
+                <?php esc_html_e('By', 'tutor') ?>
+                <a href="<?php echo $profile_url; ?>"><?php echo get_the_author_meta('display_name'); ?></a>
+            </span>
+        <?php endif; ?>
+    </div>
 </div>
-<?php } ?>

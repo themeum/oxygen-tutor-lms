@@ -24,7 +24,7 @@ class CourseTitle extends \OxygenTutorElements {
 	}
 
 	function class_names() {
-		return array('oxy-tutor-element', 'oxy-tutor-course-title');
+		return array('oxy-tutor-element', 'tutor-course-details-title');
 	}
 
 	function controls() {

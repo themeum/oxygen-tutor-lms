@@ -25,7 +25,7 @@ class CourseAuthor extends \OxygenTutorElements {
 
     function controls() {
         //section image
-        $img_selector = ".tutor-single-course-meta ul li .tutor-single-course-avatar span";
+        $img_selector = ".tutor-meta .tutor-avatar";
         $image_section = $this->addControlSection("image", __("Image"), "assets/icon.png", $this);
 		$image_section->addStyleControls(
 			array(
@@ -53,9 +53,9 @@ class CourseAuthor extends \OxygenTutorElements {
         );
 
         //section lable and name
-        $author_selector = ".tutor-single-course-author-meta .tutor-single-course-author-name";
-        $this->typographySection(__('Label'), $author_selector.' span');
-        $this->typographySection(__('Name'), $author_selector.' a');
+        $author_selector = ".tutor-meta";
+        $this->typographySection(__('Label'), $author_selector.' span.tutor-mr-16');
+        $this->typographySection(__('Name'), $author_selector.' span.tutor-mr-16 a');
     }
 
 }

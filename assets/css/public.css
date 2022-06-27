@@ -6,3 +6,7 @@
     background-color: #FFF;
     transition: background-color 300ms ease-in;
 }
+
+.tutor-course-details-page.prerequisites .tutor-accordion a{
+	pointer-events: none;
+}
