@@ -16,11 +16,7 @@ class CourseDescription extends \OxygenTutorElements {
 	}
 
 	function render($options, $defaults, $content) {
-		wp_reset_postdata();
-
-		global $post;
-
-		tutor_course_content();
+		include_once otlms_get_template('course/content');
 	}
 
 	function class_names() {

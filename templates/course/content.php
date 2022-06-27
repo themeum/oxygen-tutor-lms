@@ -12,6 +12,8 @@
  * @version 1.4.3
  */
 
+the_post();
+
 global $post;
 
 do_action('tutor_course/single/before/content');
