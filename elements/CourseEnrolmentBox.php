@@ -25,6 +25,8 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
 
     function controls() {
 
+        $selector = '.tutor-single-course-sidebar';
+
         /* Course enrollment box */
 		$enrollment_box_selector = $selector." .tutor-sidebar-card";
 		$course_enrollment_box = $this->addControlSection("enrollment_box", __("Enrollment Box"), "assets/icon.png", $this);
