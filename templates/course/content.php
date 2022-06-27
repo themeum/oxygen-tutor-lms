@@ -1,7 +1,6 @@
 <?php
-
 /**
- * Template for displaying course content
+ * Template for displaying single course
  *
  * @since v.1.0.0
  *
@@ -12,42 +11,60 @@
  * @version 1.4.3
  */
 
-the_post();
+// Prepare the nav items
+$course_id = get_the_ID();
+$course_nav_item = apply_filters( 'tutor_course/single/nav_items', tutor_utils()->course_nav_items(), $course_id );
+$student_must_login_to_view_course = tutor_utils()->get_option('student_must_login_to_view_course');
+$is_public = \TUTOR\Course_List::is_public($course_id);
 
-global $post;
+//tutor_utils()->tutor_custom_header();
 
-do_action('tutor_course/single/before/content');
-
-if (tutor_utils()->get_option('enable_course_about', true, true)) {
-    $string             = apply_filters( 'tutor_course_about_content', get_the_content() );
-    $content_summary 	= (bool) get_tutor_option( 'course_content_summary', true );
-    $post_size_in_words = sizeof( explode(" ", $string) );
-		$word_limit         = 100;
-		$has_show_more       = false;
-
-	if ( $content_summary && ( $post_size_in_words > $word_limit ) ) {
-		$has_show_more = true;
-	}
-?>
-<?php if ( !empty($string) ) : ?>
-	<div class="tutor-course-details-content<?php echo $has_show_more ? ' tutor-toggle-more-content tutor-toggle-more-collapsed' : '' ?>"<?php echo $has_show_more ? ' data-tutor-toggle-more-content data-toggle-height="200" style="height: 200px;"' : '' ?>>
-		<h2 class="tutor-fs-5 tutor-fw-bold tutor-color-black tutor-mb-12">
-			<?php echo apply_filters( 'tutor_course_about_title', __( 'About Course', 'tutor' ) ); ?>
-		</h2>
-		
-		<div class="tutor-fs-6 tutor-color-secondary">
-			<?php echo apply_filters( 'the_content', $string ); ?>
-		</div>
-	</div>
-
-	<?php if ( $has_show_more ) : ?>
-		<a href="#" class="tutor-btn-show-more tutor-btn tutor-btn-ghost tutor-mt-32" data-tutor-toggle-more=".tutor-toggle-more-content">
-			<span class="tutor-toggle-btn-icon tutor-icon tutor-icon-plus tutor-mr-8" area-hidden="true"></span>
-			<span class="tutor-toggle-btn-text"><?php esc_html_e( 'Show More', 'tutor' ); ?></span>
-		</a>
-	<?php endif; ?>
-<?php endif; ?>
-<?php
+if (!is_user_logged_in() && !$is_public && $student_must_login_to_view_course){
+    tutor_load_template('login');
+    tutor_utils()->tutor_custom_footer();
+    return;
 }
+?>
 
-do_action('tutor_course/single/after/content'); ?>
+<?php do_action('tutor_course/single/before/wrap'); ?>
+<div <?php tutor_post_class('tutor-full-width-course-top tutor-course-top-info tutor-page-wrap tutor-wrap-parent'); ?>>
+    <div class="tutor-course-details-page tutor-container">
+        <div class="tutor-row tutor-gx-xl-5">
+            <main class="tutor-col-xl-12">
+	            <?php do_action('tutor_course/single/before/inner-wrap'); ?>
+                <div class="tutor-course-details-tab tutor-mt-32">
+                    <div class="tutor-is-sticky">
+                        <?php tutor_load_template( 'single.course.enrolled.nav', array('course_nav_item' => $course_nav_item ) ); ?>
+                    </div>
+                    <div class="tutor-tab tutor-pt-24">
+                        <?php foreach( $course_nav_item as $key => $subpage ) : ?>
+                            <div id="tutor-course-details-tab-<?php echo $key; ?>" class="tutor-tab-item<?php echo $key == 'info' ? ' is-active' : ''; ?>">
+                                <?php
+                                    do_action( 'tutor_course/single/tab/'.$key.'/before' );
+                                    
+                                    $method = $subpage['method'];
+                                    if ( is_string($method) ) {
+                                        $method();
+                                    } else {
+                                        $_object = $method[0];
+                                        $_method = $method[1];
+                                        $_object->$_method(get_the_ID());
+                                    }
+
+                                    do_action( 'tutor_course/single/tab/'.$key.'/after' );
+                                ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+	            <?php do_action('tutor_course/single/after/inner-wrap'); ?>
+            </main>
+
+        </div>
+    </div>
+</div>
+
+<?php do_action('tutor_course/single/after/wrap'); ?>
+
+<?php
+//tutor_utils()->tutor_custom_footer();
