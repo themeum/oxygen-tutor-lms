@@ -24,9 +24,8 @@ class CourseDescription extends \OxygenTutorElements {
 	}
 
 	function controls() {
-		$typography_selector = ".tutor-course-content-wrap";
-        $this->typographySection(__('Heading'), $typography_selector.' .course-content-title h4');
-        $this->typographySection(__('Paragraph'), $typography_selector. ' .tutor-course-content-content');
+
+		$selector = '.tutor-course-details-page';
 	}
 
 }
