@@ -1,7 +1,8 @@
-<div class="tutor-price-preview-box">
-    <?php do_action('tutor_course/single/enroll_box/after_thumbnail'); ?>
+<div class="tutor-single-course-sidebar tutor-mt-40 tutor-mt-xl-0">
+    <?php 
 
-	<?php tutor_course_price(); ?>
-    <?php tutor_course_loop_add_to_cart(); ?>
-
-</div> <!-- tutor-price-preview-box -->
+        do_action('tutor_course/single/before/sidebar'); 
+        tutor_load_template('single.course.course-entry-box');
+        do_action('tutor_course/single/after/sidebar');
+    ?>
+</div>
