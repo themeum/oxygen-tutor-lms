@@ -16,12 +16,7 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        
-        if (is_user_logged_in() && tutils()->is_enrolled()) {
-            include_once otlms_get_template('course/enrolled-box');
-        } else {
-            include_once otlms_get_template('course/enrolment-box');
-        }
+        include_once otlms_get_template('course/enrolment-box');
     }
 
     function class_names() {
