@@ -16,9 +16,9 @@ class CourseCurriculum extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        echo '<div class="tutor-course-details">';
-            tutor_course_topics();
-        echo '<div>';
+        echo '<div class="tutor-course-topics">';
+        tutor_course_topics();
+        echo '</div>';
     }
 
     function class_names() {
@@ -26,8 +26,7 @@ class CourseCurriculum extends \OxygenTutorElements {
     }
 
     function controls() {
-
-        $selector = '.tutor-course-details';
+        $selector = '.tutor-course-topics';
 
         $course_curriculum = $this->addControlSection("curriculum", __("Curriculum"), "assets/icon.png", $this);
 		$curriculum_selector = $selector." .tutor-mt-40";
