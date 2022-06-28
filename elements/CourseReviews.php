@@ -20,7 +20,7 @@ class CourseReviews extends \OxygenTutorElements {
     }
 
     function controls() {
-        $review_selector = $selector." .tutor-course-reviews";
+        $review_selector = ".tutor-course-reviews";
         $this->typographySection(__("Review Title"), '.tutor-course-reviews h3', $this);
 
         /* Review average section */
