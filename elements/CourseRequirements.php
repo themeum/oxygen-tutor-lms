@@ -17,7 +17,7 @@ class CourseRequirements extends \OxygenTutorElements {
 
     function render($options, $defaults, $content) {
         echo '<div class="tutor-single-course-sidebar-more course-requirements tutor-mt-24">';
-            tutor_course_requirements_html();
+            include_once otlms_get_template('course/course-requirements');
         echo '</div>';
     }
 
@@ -28,6 +28,7 @@ class CourseRequirements extends \OxygenTutorElements {
 		$requirements_selector = $selector." .tutor-course-details-widget";
 		$requirements_item_selector = $requirements_selector." .tutor-course-details-widget-list";
         $course_requirements->typographySection('Title', $requirements_selector.' .tutor-course-details-widget-title', $this);
+		$course_requirements->typographySection(__('List Item'), $requirements_item_selector, $this);
         $requirements_content_icon = $course_requirements->addControlSection("requirements_content_icon", __("Icon"), "assets/icon.png", $this);
 		$requirements_content_icon->addStyleControls(
 			array(
@@ -43,7 +44,6 @@ class CourseRequirements extends \OxygenTutorElements {
 				)
 			)
         );
-		$course_requirements->typographySection(__('Typography'), $requirements_item_selector, $this);
         $course_requirements->borderSection(__("Borders"), $requirements_selector, $this);
 		$requirements_content_spacing = $course_requirements->addControlSection("requirements_content_spacing", __("Spacing"), "assets/icon.png", $this);
         $requirements_content_spacing->addPreset(
