@@ -24,9 +24,14 @@ class CourseAbout extends \OxygenTutorElements {
     }
 
     function controls() {
-        $typography_selector = ".tutor-course-summery";
-        $this->typographySection(__('Heading'), $typography_selector.' .tutor-segment-title');
-        $this->typographySection(__('Paragraph'), $typography_selector);
+
+        $selector = '.oxy-course-description';
+
+		/* Course about */
+		$course_about = $this->addControlSection("about", __("Course Description"), "assets/icon.png", $this);
+		$about_selector =  $selector." .tutor-course-details-content";
+        $course_about->typographySection(__('Heading'), $about_selector.' h2 ', $this);
+		$course_about->typographySection(__('Paragraph'), $about_selector.' div ', $this);
     }
 
 }
