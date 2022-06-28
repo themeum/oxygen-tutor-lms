@@ -20,74 +20,42 @@ class CourseInstructors extends \OxygenTutorElements {
     }
 
     function controls() {
-        $selector = ".tutor-course-instructors";
-        /* Title */
-        $this->typographySection(__("Title"), $selector.' .tutor-segment-title', $this);
-
-        /* Author */
-        $author_section = $this->addControlSection("author", __("Author"), "assets/icon.png", $this);
-        $img_selector = $selector." .instructor-avatar span";
-        $img_section = $author_section->addControlSection("author_image", __("Image"), "assets/icon.png", $this);
+        $selector = ".tutor-single-course-sidebar-more";
+        
+        $course_instructors = $this->addControlSection("instructors", __("Instructors"), "assets/icon.png", $this);
+		$instructors_selector = $selector." .tutor-course-details-instructors";
+        $course_instructors->borderSection(__("Borders"), $instructors_selector, $this);
+        $course_instructors->typographySection(__('Title'), $instructors_selector.' h3', $this);
+        $instructors_img_selector = $instructors_selector." .tutor-avatar";
+        $img_section = $course_instructors->addControlSection("instructors_image", __("Image"), "assets/icon.png", $this);
         $img_section->addStyleControls(
             array(
                 array(
                     "name" => __('Height'),
-                    "selector" => $img_selector,
+                    "selector" => $instructors_img_selector,
                     "property" => 'height',
                 ),
                 array(
                     "name" => __('Width'),
-                    "selector" => $img_selector,
+                    "selector" => $instructors_img_selector,
                     "property" => 'width',
                 ),
                 array(
                     "name" => __('Font Size'),
-                    "selector" => $img_selector,
+                    "selector" => $instructors_img_selector,
                     "property" => 'font-size',
                 ),
                 array(
                     "name" => __('Line Height'),
-                    "selector" => $img_selector,
+                    "selector" => $instructors_img_selector,
                     "property" => 'line-height',
                 )
             )
         );
-        $name_selector = $selector." .instructor-name a";
-        $author_section->typographySection(__("Name"), $name_selector, $this);
-
-        /* Section info */
-        $info_selector = $selector." .single-instructor-bottom";
-        $info_section = $this->addControlSection("bottom_info", __("Bottom Info"), "assets/icon.png", $this);
-
-        $rating_section = $info_section->addControlSection("rating", __("Rating"), "assets/icon.png", $this);
-        $star_selector = $info_selector." .tutor-star-rating-group";
-        $rating_section->addStyleControls(
-            array(
-                array(
-                    "name" => __('Stars Size'),
-                    "selector" => $star_selector,
-                    "property" => 'font-size',
-                ),
-                array(
-                    "name" => __('Stars Color'),
-                    "selector" => $star_selector,
-                    "property" => 'color',
-                )
-            )
-        );
-        $info_section->typographySection(
-            __("Label"), 
-            $info_selector.' .rating-digits,'.
-            $info_selector.' .courses,'.
-            $info_selector.' .students', 
-            $this
-        );
-        $info_section->typographySection(
-            __("Value"), 
-            $info_selector.' .rating-total-meta,'.
-            $info_selector.' .tutor-text-mute', 
-            $this
-        );
+        $instructors_name_selector = $instructors_selector." a";
+        $instructors_designation_selector = $instructors_selector." .tutor-instructor-designation";
+        $course_instructors->typographySection(__("Name"), $instructors_name_selector, $this);
+        $course_instructors->typographySection(__("Designation"), $instructors_designation_selector, $this);
     }
 }
 
