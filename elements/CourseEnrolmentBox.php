@@ -30,6 +30,7 @@ class CourseEnrolmentBox extends \OxygenTutorElements {
         /* Course enrollment box */
 		$enrollment_box_selector = $selector." .tutor-sidebar-card";
 		$course_enrollment_box = $this->addControlSection("enrollment_box", __("Enrollment Box"), "assets/icon.png", $this);
+        $course_enrollment_box->borderSection(__("Borders"), $enrollment_box_selector, $this);
         $course_enrollment_box->typographySection(__('Course Price'), $enrollment_box_selector.' .tutor-course-single-pricing span', $this);
         
         $course_enrollment_box->typographySection(__('Course Progress Title'), $enrollment_box_selector.' .tutor-course-progress-wrapper h3', $this);
