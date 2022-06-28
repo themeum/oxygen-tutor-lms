@@ -25,7 +25,7 @@ class CourseTargetAudience extends \OxygenTutorElements {
         $selector = ".tutor-single-course-sidebar-more.course-audience";
 
         $course_target_audience = $this->addControlSection("target_audience", __("Target Audience"), "assets/icon.png", $this);
-		$target_audience_selector = $selector." .tutor-single-course-sidebar-more .tutor-course-details-widget";
+		$target_audience_selector = $selector." .tutor-course-details-widget";
 		$target_audience_item_selector = $target_audience_selector." .tutor-course-details-widget-list";
         $course_target_audience->typographySection('Title', $target_audience_selector.' .tutor-course-details-widget-title', $this);
 		$course_target_audience->typographySection(__('List Item'), $target_audience_item_selector, $this);
