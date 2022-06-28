@@ -16,9 +16,7 @@ class CourseInstructors extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        echo "<div class='tutor-course-instructors'>";
-            tutor_course_instructors_html();
-        echo "</div>";
+        include_once otlms_get_template('course/instructor');
     }
 
     function controls() {
