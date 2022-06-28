@@ -16,7 +16,7 @@ class CourseMaterial extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        echo '<div class="tutor-single-course-sidebar-more tutor-mt-24">';
+        echo '<div class="tutor-single-course-sidebar-more course-material tutor-mt-24">';
             tutor_course_material_includes_html();
         echo '</div>';
     }
@@ -25,7 +25,7 @@ class CourseMaterial extends \OxygenTutorElements {
         $selector = ".tutor-single-course-sidebar-more";
 
         $course_materials = $this->addControlSection("materials", __("Materials"), "assets/icon.png", $this);
-		$materials_selector = $selector." .tutor-single-course-sidebar-more .tutor-course-details-widget";
+		$materials_selector = $selector." .course-material .tutor-course-details-widget";
 		$materials_item_selector = $materials_selector." .tutor-course-details-widget-list";
         $course_materials->typographySection(__('Title'), $materials_selector.' .tutor-course-details-widget-title', $this);
 		$course_materials->typographySection(__('List Item'), $materials_item_selector, $this);
@@ -44,6 +44,7 @@ class CourseMaterial extends \OxygenTutorElements {
 				)
 			)
         );
+        $course_materials->borderSection(__("Borders"), $materials_selector, $this);
 		$materials_content_spacing = $course_materials->addControlSection("materials_content_spacing", __("Spacing"), "assets/icon.png", $this);
         $materials_content_spacing->addPreset(
             "padding",
