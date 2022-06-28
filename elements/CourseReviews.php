@@ -16,12 +16,7 @@ class CourseReviews extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        echo "<div class='tutor-course-reviews'>";
-        tutor_course_target_reviews_html();
-        if (is_user_logged_in() && tutils()->is_enrolled()) {
-            tutor_course_target_review_form_html();
-        }
-        echo "</div>";
+        include_once otlms_get_template('course/review');
     }
 
     function controls() {
