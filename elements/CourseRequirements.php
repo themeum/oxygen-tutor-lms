@@ -16,11 +16,14 @@ class CourseRequirements extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_requirements_html();
+        echo '<div class="tutor-single-course-sidebar-more course-requirements tutor-mt-24">';
+            tutor_course_requirements_html();
+        echo '</div>';
     }
 
     function controls() {
-        $selector = ".tutor-course-requirements-wrap";
+        $selector = ".tutor-single-course-sidebar-more.course-requirements";
+        
         $items_selector = $selector." .tutor-course-requirements-items";
 
         $this->typographySection(__('Title'), $selector.' .course-requirements-title h4');
