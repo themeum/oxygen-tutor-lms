@@ -16,7 +16,9 @@ class CourseTargetAudience extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_target_audience_html();
+        echo '<div class="tutor-single-course-sidebar-more course-requirements tutor-mt-24">';
+            tutor_course_target_audience_html();
+        echo '</div>';
     }
 
     function controls() {
