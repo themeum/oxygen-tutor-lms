@@ -22,10 +22,10 @@ class CourseMaterial extends \OxygenTutorElements {
     }
 
     function controls() {
-        $selector = ".tutor-single-course-sidebar-more";
+        $selector = ".tutor-single-course-sidebar-more.course-material";
 
         $course_materials = $this->addControlSection("materials", __("Materials"), "assets/icon.png", $this);
-		$materials_selector = $selector." .course-material .tutor-course-details-widget";
+		$materials_selector = $selector." .tutor-course-details-widget";
 		$materials_item_selector = $materials_selector." .tutor-course-details-widget-list";
         $course_materials->typographySection(__('Title'), $materials_selector.' .tutor-course-details-widget-title', $this);
 		$course_materials->typographySection(__('List Item'), $materials_item_selector, $this);
