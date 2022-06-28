@@ -16,44 +16,46 @@ class CourseMaterial extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_material_includes_html();
+        echo '<div class="tutor-single-course-sidebar-more tutor-mt-24">';
+            tutor_course_material_includes_html();
+        echo '</div>';
     }
 
     function controls() {
-        $selector = ".tutor-course-material-includes-wrap";
-        $items_selector = $selector." .tutor-course-target-audience-items";
+        $selector = ".tutor-single-course-sidebar-more";
 
-        $this->typographySection(__('Title'), $selector.' h4.tutor-segment-title');
-        $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-        $content_icon = $content_section->addControlSection("icon", __("Icon"), "assets/icon.png", $this);
-        $content_icon->addStyleControls(
+        $course_materials = $this->addControlSection("materials", __("Materials"), "assets/icon.png", $this);
+		$materials_selector = $selector." .tutor-single-course-sidebar-more .tutor-course-details-widget";
+		$materials_item_selector = $materials_selector." .tutor-course-details-widget-list";
+        $course_materials->typographySection(__('Title'), $materials_selector.' .tutor-course-details-widget-title', $this);
+		$course_materials->typographySection(__('List Item'), $materials_item_selector, $this);
+        $materials_content_icon = $course_materials->addControlSection("materials_content_icon", __("Icon"), "assets/icon.png", $this);
+		$materials_content_icon->addStyleControls(
 			array(
 				array(
                 	"name" => __('Size'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $materials_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'font-size',
                 ),
 				array(
                 	"name" => __('Color'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $materials_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'color',
 				)
 			)
         );
-        $content_section->typographySection(__('Typography'), $items_selector, $this);
-        //spacing
-        $content_spacing = $content_section->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
-        $content_spacing->addPreset(
+		$materials_content_spacing = $course_materials->addControlSection("materials_content_spacing", __("Spacing"), "assets/icon.png", $this);
+        $materials_content_spacing->addPreset(
             "padding",
-            "item_padding",
-            __("Item Padding"),
-            $items_selector.' li'
-        );
-        $content_spacing->addStyleControls(
+            "materials_content_item_padding",
+            __("Items Padding"),
+            $materials_item_selector.' li'
+		);
+		$materials_content_spacing->addStyleControls(
 			array(
 				array(
                 	"name" => __('Line Height'),
-                	"selector" => $items_selector.' li',
+                	"selector" => $materials_item_selector.' li',
 					"property" => 'line-height',
                 )
 			)
