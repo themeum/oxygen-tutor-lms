@@ -42,12 +42,12 @@ do_action( 'tutor_course/single/enrolled/before/reviews' );
 	<h3 class="tutor-fs-5 tutor-fw-bold tutor-color-black tutor-mb-24">
 		<?php
 			$review_title = apply_filters( 'tutor_course_reviews_section_title', 'Student Ratings & Reviews' );
-			echo esc_html( $review_title, 'tutor' );
+			echo esc_html( $review_title, 'oxygen-tutor-lms' );
 		?>
 	</h3>
 
 	<?php if(! is_array( $reviews ) || ! count( $reviews )): ?>
-		<?php tutor_utils()->tutor_empty_state(__('No Review Yet', 'tutor')); ?>
+		<?php tutor_utils()->tutor_empty_state(__('No Review Yet', 'oxygen-tutor-lms')); ?>
 	<?php else: ?>
 		<div class="tutor-card tutor-review-card">
 			<div class="tutor-review-summary tutor-p-24 tutor-p-lg-40">
@@ -64,9 +64,9 @@ do_action( 'tutor_course/single/enrolled/before/reviews' );
 						</div>
 
 						<div class="tutor-fs-6 tutor-color-secondary tutor-mt-12 tutor-total-rating-count">
-							<?php esc_html_e( 'Total ', 'tutor' ); ?>
+							<?php esc_html_e( 'Total ', 'oxygen-tutor-lms' ); ?>
 							<?php echo $reviews_total; ?>
-							<?php echo esc_html( _n( ' Rating', ' Ratings', count( $reviews ), 'tutor' ) ); ?>
+							<?php echo esc_html( _n( ' Rating', ' Ratings', count( $reviews ), 'oxygen-tutor-lms' ) ); ?>
 						</div>
 					</div>
 
@@ -93,7 +93,7 @@ do_action( 'tutor_course/single/enrolled/before/reviews' );
 									</div>
 
 									<div class="tutor-col-4 tutor-col-lg-3">
-										<span class="tutor-fs-6 tutor-color-secondary tutor-individual-star-rating"><?php echo $value . ' ' . ( $value > 1 ? __( 'Ratings', 'tutor' ) : __( 'Rating', 'tutor' ) ); ?></span>
+										<span class="tutor-fs-6 tutor-color-secondary tutor-individual-star-rating"><?php echo $value . ' ' . ( $value > 1 ? __( 'Ratings', 'oxygen-tutor-lms' ) : __( 'Rating', 'oxygen-tutor-lms' ) ); ?></span>
 									</div>
 								</div>
 							<?php endforeach; ?>
@@ -117,7 +117,7 @@ do_action( 'tutor_course/single/enrolled/before/reviews' );
 					<i class="tutor-icon-star-line tutor-mr-8"></i>
 					<?php
 						$is_new = !$my_rating || empty($my_rating->rating) || empty($my_rating->comment_content);
-						$is_new ? _e('Write a review', 'tutor') : _e('Edit review', 'tutor');
+						$is_new ? _e('Write a review', 'oxygen-tutor-lms') : _e('Edit review', 'oxygen-tutor-lms');
 					?>
 				</button>
 			<?php endif; ?>
@@ -131,7 +131,7 @@ do_action( 'tutor_course/single/enrolled/before/reviews' );
 					'paged'       => $current_page,
 					'layout'	  => array(
 						'type' => 'load_more',
-						'load_more_text' => __('Load More', 'tutor')
+						'load_more_text' => __('Load More', 'oxygen-tutor-lms')
 					),
 					'ajax'		  => array(
 						'action' => 'tutor_single_course_reviews_load_more',
@@ -161,11 +161,11 @@ do_action( 'tutor_course/single/enrolled/before/reviews' );
 						</div>
 					</div>
 					<div class="tutor-form-group">
-						<textarea name="review" placeholder="<?php _e('write a review', 'tutor'); ?>"><?php echo stripslashes($my_rating ? $my_rating->comment_content : ''); ?></textarea>
+						<textarea name="review" placeholder="<?php _e('write a review', 'oxygen-tutor-lms'); ?>"><?php echo stripslashes($my_rating ? $my_rating->comment_content : ''); ?></textarea>
 					</div>
 					<div class="tutor-form-group">
 						<button type="submit" class="tutor_submit_review_btn tutor-btn tutor-btn-primary">
-							<?php _e('Submit Review', 'tutor'); ?>
+							<?php _e('Submit Review', 'oxygen-tutor-lms'); ?>
 						</button>
 					</div>
 				</div>
