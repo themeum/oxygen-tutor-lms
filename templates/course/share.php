@@ -15,7 +15,7 @@ $is_wish_listed     = tutor_utils()->is_wishlisted( $post->ID, get_current_user_
 <div class="tutor-col-auto">
 	<div class="tutor-course-details-actions tutor-mt-12 tutor-mt-sm-0">
 		<a href="#" class="tutor-btn tutor-btn-ghost tutor-course-wishlist-btn tutor-mr-16" data-course-id="<?php echo get_the_ID(); ?>">
-			<i class="<?php echo $is_wish_listed ? 'tutor-icon-bookmark-bold' : 'tutor-icon-bookmark-line' ?> tutor-mr-8"></i> <?php _e('Wishlist', 'tutor'); ?>
+			<i class="<?php echo $is_wish_listed ? 'tutor-icon-bookmark-bold' : 'tutor-icon-bookmark-line' ?> tutor-mr-8"></i> <?php _e('Wishlist', 'oxygen-tutor-lms'); ?>
 		</a>
 
 		<?php
