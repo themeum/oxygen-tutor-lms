@@ -27,7 +27,7 @@ foreach ( $categories as $category ) {
 			<div class="tutor-category-text">
 				<span>Category</span>
 				<span class="clear-instructor-filter">
-					<i class="tutor-icon-line-cross"></i> <span><?php _e( 'Clear All', 'tutor' ); ?></span>
+					<i class="tutor-icon-line-cross"></i> <span><?php _e( 'Clear All', 'oxygen-tutor-lms' ); ?></span>
 				</span>
 			</div>
 			<br/>
@@ -40,14 +40,14 @@ foreach ( $categories as $category ) {
 		<div class="filter-pc">
 			<div class="keyword-field">
 				<i class="tutor-icon-magnifying-glass-1"></i>
-				<input type="text" name="keyword" placeholder="<?php _e( 'Search any instructor...', 'tutor' ); ?>"/>
+				<input type="text" name="keyword" placeholder="<?php _e( 'Search any instructor...', 'oxygen-tutor-lms' ); ?>"/>
 			</div>
 		</div>
 		<div class="filter-mobile">
 			<div class="mobile-filter-container">
 				<div class="keyword-field mobile-screen">
 					<i class="tutor-icon-magnifying-glass-1"></i>
-					<input type="text" name="keyword" placeholder="<?php _e( 'Search any instructor...', 'tutor' ); ?>"/>
+					<input type="text" name="keyword" placeholder="<?php _e( 'Search any instructor...', 'oxygen-tutor-lms' ); ?>"/>
 				</div>
 				<i class="tutor-icon-filter-tool-black-shape"></i>
 			</div>
@@ -57,7 +57,7 @@ foreach ( $categories as $category ) {
 						<div class="expand-instructor-filter"></div>
 						<span>Category</span>
 						<span class="clear-instructor-filter">
-							<i class="tutor-icon-line-cross"></i> <span><?php _e( 'Clear All', 'tutor' ); ?></span>
+							<i class="tutor-icon-line-cross"></i> <span><?php _e( 'Clear All', 'oxygen-tutor-lms' ); ?></span>
 						</span>
 					</div>
 					<div>
@@ -65,7 +65,7 @@ foreach ( $categories as $category ) {
 					</div>
 					<div>
 						<button class="tutor-btn btn-sm">
-							<?php _e( 'Apply Filter', 'tutor' ); ?>
+							<?php _e( 'Apply Filter', 'oxygen-tutor-lms' ); ?>
 						</button>
 					</div>
 				</div>
