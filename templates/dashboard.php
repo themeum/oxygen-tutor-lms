@@ -49,19 +49,19 @@ $footer_url_2 = trailingslashit( tutor_utils()->tutor_dashboard_url( $is_instruc
 // Footer links
 $footer_links = array(
 	array(
-		'title'      => $is_instructor ? __( 'My Courses', 'tutor' ) : __( 'Dashboard', 'tutor' ),
+		'title'      => $is_instructor ? __( 'My Courses', 'oxygen-tutor-lms' ) : __( 'Dashboard', 'oxygen-tutor-lms' ),
 		'url'        => $footer_url_1,
 		'is_active'  => $footer_url_1 == $current_url,
 		'icon_class' => 'ttr tutor-icon-dashboard',
 	),
 	array(
-		'title'      => $is_instructor ? __( 'Q&A', 'tutor' ) : __( 'Quiz Attempts', 'tutor' ),
+		'title'      => $is_instructor ? __( 'Q&A', 'oxygen-tutor-lms' ) : __( 'Quiz Attempts', 'oxygen-tutor-lms' ),
 		'url'        => $footer_url_2,
 		'is_active'  => $footer_url_2 == $current_url,
 		'icon_class' => $is_instructor ? 'ttr  tutor-icon-question' : 'ttr tutor-icon-quiz-attempt',
 	),
 	array(
-		'title'      => __('Menu', 'tutor'),
+		'title'      => __('Menu', 'oxygen-tutor-lms'),
 		'url'        => '#',
 		'is_active'  => false,
 		'icon_class' => 'ttr tutor-icon-hamburger-o tutor-dashboard-menu-toggler',
@@ -123,7 +123,7 @@ do_action('tutor_dashboard/before/wrap');
 					if (tutor_utils()->get_option('enable_become_instructor_btn')) {
 					?>
 						<a id="tutor-become-instructor-button" class="tutor-btn tutor-btn-outline-primary" href="<?php echo esc_url(tutor_utils()->instructor_register_url()); ?>">
-							<i class="tutor-icon-user-bold"></i> &nbsp; <?php _e('Become an instructor', 'tutor'); ?>
+							<i class="tutor-icon-user-bold"></i> &nbsp; <?php _e('Become an instructor', 'oxygen-tutor-lms'); ?>
 						</a>
 					<?php
 					}
@@ -133,7 +133,7 @@ do_action('tutor_dashboard/before/wrap');
 						$course_type = tutor()->course_post_type;
 					?>
 						<a href="#" id="tutor-create-new-course" class="tutor-btn tutor-btn-outline-primary">
-							<i class="tutor-icon-plus-square tutor-my-n4 tutor-mr-8"></i> <?php esc_html_e('Create a New Course', 'tutor'); ?>
+							<i class="tutor-icon-plus-square tutor-my-n4 tutor-mr-8"></i> <?php esc_html_e('Create a New Course', 'oxygen-tutor-lms'); ?>
 						</a>
 					<?php
 					} elseif ($instructor_status == 'pending') {
@@ -141,7 +141,7 @@ do_action('tutor_dashboard/before/wrap');
 						$on = date('d F, Y', $on);
 						echo '<span style="' . $info_message_style . '">
                                     <i class="dashicons dashicons-info tutor-color-warning" style=" ' . $info_style . '"></i>',
-						__('Your Application is pending as of', 'tutor'), ' <b>', $on, '</b>',
+						__('Your Application is pending as of', 'oxygen-tutor-lms'), ' <b>', $on, '</b>',
 						'</span>';
 					} elseif ($rejected_on || $instructor_status !== 'blocked') {
 						echo $become_button;
