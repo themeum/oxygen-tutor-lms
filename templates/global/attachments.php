@@ -28,7 +28,7 @@ if ( is_array( $attachments ) && count( $attachments ) ) : ?>
                         <div class="tutor-row">
                             <div class="tutor-col tutor-overflow-hidden">
                                 <div class="tutor-fs-6 tutor-fw-medium tutor-color-black tutor-text-ellipsis tutor-mb-4"><?php echo esc_html( $attachment->name ); ?></div>
-                                <div class="tutor-fs-7 tutor-color-muted"><?php _e('Size', 'tutor'); ?>: <?php echo esc_html( $attachment->size ); ?></div>
+                                <div class="tutor-fs-7 tutor-color-muted"><?php _e('Size', 'oxygen-tutor-lms'); ?>: <?php echo esc_html( $attachment->size ); ?></div>
                             </div>
 
                             <div class="tutor-col-auto">
@@ -43,7 +43,7 @@ if ( is_array( $attachments ) && count( $attachments ) ) : ?>
         <?php endforeach; ?>
     </div>
 <?php else :
-    tutor_utils()->tutor_empty_state(__('No Attachment Found', 'tutor'));
+    tutor_utils()->tutor_empty_state(__('No Attachment Found', 'oxygen-tutor-lms'));
 endif;
 
 do_action( 'tutor_global/after/attachments' ); ?>
