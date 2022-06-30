@@ -21,7 +21,7 @@ class CourseCategories extends \OxygenTutorElements {
         <?php
         $course_categories  = get_tutor_course_categories();
          if( !empty( $course_categories ) && is_array( $course_categories ) && count( $course_categories ) ) : ?>
-            <?php esc_html_e('Categories:', 'tutor'); ?>
+            <?php esc_html_e('Categories:', 'oxygen-tutor-lms'); ?>
             <?php
                 $category_links = array();
                 foreach ( $course_categories as $course_category ) :
@@ -32,7 +32,7 @@ class CourseCategories extends \OxygenTutorElements {
                 echo implode(', ', $category_links);
             ?>
         <?php else : ?>
-            <?php _e('Uncategorized', 'tutor'); ?>
+            <?php _e('Uncategorized', 'oxygen-tutor-lms'); ?>
         <?php endif; ?>
         </div>
     <?php   
