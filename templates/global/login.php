@@ -44,11 +44,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		// Default 'redirect' value takes the user back to the request URI.
 		'redirect'                 => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
 		'form_id'                  => 'loginform',
-		'label_username'           => __( 'Username or Email Address', 'tutor' ),
-		'label_password'           => __( 'Password', 'tutor' ),
-		'label_remember'           => __( 'Remember Me', 'tutor' ),
-		'label_log_in'             => __( 'Log In', 'tutor' ),
-		'label_create_new_account' => __( 'Create a new account', 'tutor' ),
+		'label_username'           => __( 'Username or Email Address', 'oxygen-tutor-lms' ),
+		'label_password'           => __( 'Password', 'oxygen-tutor-lms' ),
+		'label_remember'           => __( 'Remember Me', 'oxygen-tutor-lms' ),
+		'label_log_in'             => __( 'Log In', 'oxygen-tutor-lms' ),
+		'label_create_new_account' => __( 'Create a new account', 'oxygen-tutor-lms' ),
 		'id_username'              => 'user_login',
 		'id_password'              => 'user_pass',
 		'id_remember'              => 'rememberme',
@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		// Set 'value_remember' to true to default the "Remember me" checkbox to checked.
 		'value_remember'           => false,
 		'wp_lostpassword_url'      => apply_filters( 'tutor_lostpassword_url', wp_lostpassword_url() ),
-		'wp_lostpassword_label'    => __( 'Forgot Password?', 'tutor' ),
+		'wp_lostpassword_label'    => __( 'Forgot Password?', 'oxygen-tutor-lms' ),
 	);
 
 	// action="' . esc_url( site_url( 'wp-login.php', 'login_post' ) ) . '"
