@@ -24,7 +24,7 @@ $button_id    = isset( $data['button_id'] ) ? $data['button_id'] : '';
 $close_icon   = isset( $data['close_icon'] ) ? $data['close_icon'] : '';
 
 if ( '' === $alert_class ) {
-	die( esc_html_e( 'Please define alert class', 'tutor' ) );
+	die( esc_html_e( 'Please define alert class', 'oxygen-tutor-lms' ) );
 }
 ?>
 <div class="<?php echo esc_attr( $alert_class ); ?>">
