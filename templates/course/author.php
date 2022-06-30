@@ -19,7 +19,7 @@ $show_author        = tutor_utils()->get_option( 'enable_course_author' );
     <div>
         <?php if ( $show_author ) : ?>
             <span class="tutor-mr-16">
-                <?php esc_html_e('By', 'tutor') ?>
+                <?php esc_html_e('By', 'oxygen-tutor-lms') ?>
                 <a href="<?php echo $profile_url; ?>"><?php echo get_the_author_meta('display_name'); ?></a>
             </span>
         <?php endif; ?>
