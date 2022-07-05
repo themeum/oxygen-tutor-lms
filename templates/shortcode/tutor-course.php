@@ -5,12 +5,21 @@
  * @package TutorLMS/Templates
  * @version 1.4.3
  */
-$the_query         = $GLOBALS['the_custom_query'];
-$column_per_row    = $GLOBALS['tutor_shortcode_arg']['column_per_row'];
-$course_per_page   = $GLOBALS['tutor_shortcode_arg']['course_per_page'];
-$course_filter     = $GLOBALS['tutor_shortcode_arg']['include_course_filter'] === null ? (bool) tutor_utils()->get_option( 'course_archive_filter', false ) : $GLOBALS['tutor_shortcode_arg']['include_course_filter'];
-$supported_filters = tutor_utils()->get_option( 'supported_course_filters', array() );
-$show_pagination   = $GLOBALS['tutor_shortcode_arg']['show_pagination'];
+
+$the_query         = $GLOBALS['the_custom_query'] ?? '';
+$column_per_row    = '';
+$course_per_page   = '';
+$course_filter     = '';
+$supported_filters = '';
+$show_pagination   = '';
+
+if ( isset( $GLOBALS['tutor_shortcode_arg'] ) ) {
+	$column_per_row    = $GLOBALS['tutor_shortcode_arg']['column_per_row'];
+	$course_per_page   = $GLOBALS['tutor_shortcode_arg']['course_per_page'];
+	$course_filter     = $GLOBALS['tutor_shortcode_arg']['include_course_filter'] === null ? (bool) tutor_utils()->get_option( 'course_archive_filter', false ) : $GLOBALS['tutor_shortcode_arg']['include_course_filter'];
+	$supported_filters = tutor_utils()->get_option( 'supported_course_filters', array() );
+	$show_pagination   = $GLOBALS['tutor_shortcode_arg']['show_pagination'];
+}
 
 if ( $course_filter && count( $supported_filters ) ) { ?>
 <div class="tutor-wrap tutor-wrap-parent tutor-courses-wrap tutor-container">
