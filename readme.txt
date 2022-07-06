@@ -5,7 +5,7 @@ Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
 Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -100,6 +100,11 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 1. How to build
 
 == Changelog ==
+
+= 2.0.1 - 05 July, 2022
+
+* New: 16 addon blocks (ungrouped) are introduced to make own design of the Single Course page
+* New: Some new Style Controls were introduced for the Single Course page
 
 = 2.0.0 - 07 June, 2022 =
 

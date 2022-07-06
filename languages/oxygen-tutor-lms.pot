@@ -13,6 +13,46 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: OxygenTutorLMS.php:109
+msgid "Tutor LMS"
+msgstr ""
+
+#: OxygenTutorLMS.php:114
+msgid "Single Template"
+msgstr ""
+
+#: OxygenTutorLMS.php:117
+msgid "Single Course"
+msgstr ""
+
+#: OxygenTutorLMS.php:120
+msgid "Archive & Course List"
+msgstr ""
+
+#: OxygenTutorLMS.php:123
+msgid "TutorLMS Pages"
+msgstr ""
+
+#: OxygenTutorLMS.php:203
+msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.1.5.2"
+msgstr ""
+
+#: OxygenTutorLMS.php:209
+msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated Oxygen Builder Plugin"
+msgstr ""
+
+#: elements/CourseCategories.php:35
+msgid "Uncategorized"
+msgstr ""
+
+#: elements/CourseCategories.php:24
+msgid "Categories:"
+msgstr ""
+
+#: elements/CoursesList.php:80
+msgid "Courses Query"
+msgstr ""
+
 #: templates/dashboard.php:52
 msgid "My Courses"
 msgstr ""
@@ -141,28 +181,70 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
-#: templates/course/about.php:7
+#: templates/course/about.php:33
 msgid "About Course"
 msgstr ""
 
-#: templates/course/author.php:14
-msgid "by"
+#: templates/course/about.php:44
+msgid "Show More"
 msgstr ""
 
-#: templates/course/enrolled-box.php:19
-msgid "Start Course"
+#: templates/course/author.php:22
+msgid "By"
 msgstr ""
 
-#: templates/course/enrolled-box.php:17
-msgid "Continue to lesson"
-msgstr ""
-
-#: templates/course/enrolled-box.php:38
-msgid "You have been enrolled on %s."
+#: templates/course/course-requirements.php:28
+msgid "Requirements"
 msgstr ""
 
 #: templates/course/level.php:10
 msgid "Course level:"
+msgstr ""
+
+#: templates/course/review.php:67
+msgid "Total "
+msgstr ""
+
+#: templates/course/review.php:69
+msgid " Rating"
+msgid_plural " Ratings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/course/review.php:96
+msgid "Ratings"
+msgstr ""
+
+#: templates/course/review.php:96
+msgid "Rating"
+msgstr ""
+
+#: templates/course/review.php:50
+msgid "No Review Yet"
+msgstr ""
+
+#: templates/course/review.php:120
+msgid "Write a review"
+msgstr ""
+
+#: templates/course/review.php:120
+msgid "Edit review"
+msgstr ""
+
+#: templates/course/review.php:134
+msgid "Load More"
+msgstr ""
+
+#: templates/course/review.php:164
+msgid "write a review"
+msgstr ""
+
+#: templates/course/review.php:168
+msgid "Submit Review"
+msgstr ""
+
+#: templates/course/share.php:18
+msgid "Wishlist"
 msgstr ""
 
 #: templates/global/alert.php:27

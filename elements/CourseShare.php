@@ -26,25 +26,12 @@ class CourseShare extends \OxygenTutorElements {
 
 
     function controls() {
-        $typography_selector = ".tutor-single-course-meta .tutor-social-share";
-        $layout_section = $this->addControlSection("layout", __("Layout"), "assets/icon.png", $this);
-        $items_align = $layout_section->addControl("buttons-list", "items_align", __("Items Align"));
-        $items_align->setValue(array(
-            "left"		=> __("Left"),
-            "right"    => __("Right") 
-        ));
-        $items_align->setValueCSS( array(
-            "left" => "$typography_selector {
-                float: left;
-            }",
-            "right" => "$typography_selector {
-                float: right;
-            }"
-        ));
+        $typography_selector = ".tutor-course-details-actions";
+        $layout_section = $this->addControlSection("layout", __("Social Share"), "assets/icon.png", $this);
 
-        $this->typographySection(__('Label'), $typography_selector.' span');
-        $this->typographySection(__('Original Icons'), $typography_selector.' .tutor-social-share-wrap button');
-        $this->typographySection(__('Hovered Icons'), $typography_selector.' .tutor-social-share-wrap button:hover');
+        $this->typographySection(__('Label'), $typography_selector.' a');
+        $this->typographySection(__('Original Icons'), $typography_selector.' a i, a span');
+        $this->typographySection(__('Hovered Icons'), $typography_selector.' .tutor-social-share-wrap a:hover');
     }
 
 }

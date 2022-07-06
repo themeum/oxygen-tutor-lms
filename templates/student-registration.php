@@ -10,10 +10,10 @@
     <?php 
         $args = array(
             'image_path'    => tutor()->url.'assets/images/construction.png',
-            'title'         => __('Oooh! Access Denied', 'tutor'),
-            'description'   => __('You do not have access to this area of the application. Please refer to your system  administrator.', 'tutor'),
+            'title'         => __('Oooh! Access Denied', 'oxygen-tutor-lms'),
+            'description'   => __('You do not have access to this area of the application. Please refer to your system  administrator.', 'oxygen-tutor-lms'),
             'button'        => array(
-                'text'      => __('Go to Home', 'tutor'),
+                'text'      => __('Go to Home', 'oxygen-tutor-lms'),
                 'url'       => get_home_url(),
                 'class'     => 'tutor-btn'
             )
@@ -48,43 +48,20 @@
                 <div class="tutor-col-6">
                     <div class="tutor-form-group">
                         <label>
-                            <?php _e('First Name', 'tutor'); ?>
+                            <?php _e('First Name', 'oxygen-tutor-lms'); ?>
                         </label>
 
-                        <input type="text" name="first_name" value="<?php esc_attr_e(tutor_utils()->input_old('first_name')) ; ?>" placeholder="<?php _e('First Name', 'tutor'); ?>" required autocomplete="given-name">
+                        <input type="text" name="first_name" value="<?php esc_attr_e(tutor_utils()->input_old('first_name')) ; ?>" placeholder="<?php _e('First Name', 'oxygen-tutor-lms'); ?>" required autocomplete="given-name">
                     </div>
                 </div>
 
                 <div class="tutor-col-6">
                     <div class="tutor-form-group">
                         <label>
-                            <?php _e('Last Name', 'tutor'); ?>
+                            <?php _e('Last Name', 'oxygen-tutor-lms'); ?>
                         </label>
 
-                        <input type="text" name="last_name" value="<?php esc_attr_e(tutor_utils()->input_old('last_name')); ?>" placeholder="<?php _e('Last Name', 'tutor'); ?>" required autocomplete="family-name">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="tutor-row">
-                <div class="tutor-col-6">
-                    <div class="tutor-form-group">
-                        <label>
-                            <?php _e('User Name', 'tutor'); ?>
-                        </label>
-
-                        <input type="text" name="user_login" class="tutor_user_name" value="<?php esc_attr_e(tutor_utils()->input_old('user_login')); ?>" placeholder="<?php _e('User Name', 'tutor'); ?>" required autocomplete="username">
-                    </div>
-                </div>
-
-                <div class="tutor-col-6">
-                    <div class="tutor-form-group">
-                        <label>
-                            <?php _e('E-Mail', 'tutor'); ?>
-                        </label>
-
-                        <input type="text" name="email" value="<?php esc_attr_e(tutor_utils()->input_old('email')); ?>" placeholder="<?php _e('E-Mail', 'tutor'); ?>" required autocomplete="email">
+                        <input type="text" name="last_name" value="<?php esc_attr_e(tutor_utils()->input_old('last_name')); ?>" placeholder="<?php _e('Last Name', 'oxygen-tutor-lms'); ?>" required autocomplete="family-name">
                     </div>
                 </div>
 
@@ -94,20 +71,43 @@
                 <div class="tutor-col-6">
                     <div class="tutor-form-group">
                         <label>
-                            <?php _e('Password', 'tutor'); ?>
+                            <?php _e('User Name', 'oxygen-tutor-lms'); ?>
                         </label>
 
-                        <input type="password" name="password" value="<?php esc_attr_e(tutor_utils()->input_old('password')); ?>" placeholder="<?php _e('Password', 'tutor'); ?>" required autocomplete="new-password">
+                        <input type="text" name="user_login" class="tutor_user_name" value="<?php esc_attr_e(tutor_utils()->input_old('user_login')); ?>" placeholder="<?php _e('User Name', 'oxygen-tutor-lms'); ?>" required autocomplete="username">
                     </div>
                 </div>
 
                 <div class="tutor-col-6">
                     <div class="tutor-form-group">
                         <label>
-                            <?php _e('Password confirmation', 'tutor'); ?>
+                            <?php _e('E-Mail', 'oxygen-tutor-lms'); ?>
                         </label>
 
-                        <input type="password" name="password_confirmation" value="<?php esc_attr_e(tutor_utils()->input_old('password_confirmation')); ?>" placeholder="<?php _e('Password Confirmation', 'tutor'); ?>" required autocomplete="new-password">
+                        <input type="text" name="email" value="<?php esc_attr_e(tutor_utils()->input_old('email')); ?>" placeholder="<?php _e('E-Mail', 'oxygen-tutor-lms'); ?>" required autocomplete="email">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tutor-row">
+                <div class="tutor-col-6">
+                    <div class="tutor-form-group">
+                        <label>
+                            <?php _e('Password', 'oxygen-tutor-lms'); ?>
+                        </label>
+
+                        <input type="password" name="password" value="<?php esc_attr_e(tutor_utils()->input_old('password')); ?>" placeholder="<?php _e('Password', 'oxygen-tutor-lms'); ?>" required autocomplete="new-password">
+                    </div>
+                </div>
+
+                <div class="tutor-col-6">
+                    <div class="tutor-form-group">
+                        <label>
+                            <?php _e('Password confirmation', 'oxygen-tutor-lms'); ?>
+                        </label>
+
+                        <input type="password" name="password_confirmation" value="<?php esc_attr_e(tutor_utils()->input_old('password_confirmation')); ?>" placeholder="<?php _e('Password Confirmation', 'oxygen-tutor-lms'); ?>" required autocomplete="new-password">
                     </div>
                 </div>
             </div>
@@ -133,12 +133,12 @@
             
             <?php if( null !== $tutor_toc_page_link ) : ?>
                 <div class="tutor-mb-24">
-                    <?php _e( 'By signing up, I agree with the website\'s', 'tutor' ) ?> <a target="_blank" href="<?php echo $tutor_toc_page_link?>" title="<?php _e('Terms and Conditions', 'tutor'); ?>"><?php _e('Terms and Conditions', 'tutor'); ?></a>
+                    <?php _e( 'By signing up, I agree with the website\'s', 'oxygen-tutor-lms' ) ?> <a target="_blank" href="<?php echo $tutor_toc_page_link?>" title="<?php _e('Terms and Conditions', 'oxygen-tutor-lms'); ?>"><?php _e('Terms and Conditions', 'oxygen-tutor-lms'); ?></a>
                 </div>
             <?php endif; ?>
 
             <div>
-                <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-btn tutor-btn-primary"><?php _e('Register', 'tutor'); ?></button>
+                <button type="submit" name="tutor_register_student_btn" value="register" class="tutor-btn tutor-btn-primary"><?php _e('Register', 'oxygen-tutor-lms'); ?></button>
             </div>
 
         </form>

@@ -4,7 +4,7 @@ namespace Oxygen\TutorElements;
 class CourseAbout extends \OxygenTutorElements {
 
 	function name() {
-        return 'About';
+        return 'Course Description';
     }
 
     function tutor_button_place() {
@@ -24,9 +24,14 @@ class CourseAbout extends \OxygenTutorElements {
     }
 
     function controls() {
-        $typography_selector = ".tutor-course-summery";
-        $this->typographySection(__('Heading'), $typography_selector.' .tutor-segment-title');
-        $this->typographySection(__('Paragraph'), $typography_selector);
+
+        $selector = '.tutor-course-about';
+
+		/* Course about */
+		$course_about = $this->addControlSection("about", __("Course Description"), "assets/icon.png", $this);
+		$about_selector =  ".tutor-course-details-content";
+        $course_about->typographySection(__('Heading'), $about_selector.' h1, h2, h3, h4, h5, h6 ', $this);
+		$course_about->typographySection(__('Paragraph'), $about_selector.' div ', $this);
     }
 
 }

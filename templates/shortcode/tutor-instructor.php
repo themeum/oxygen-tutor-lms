@@ -24,7 +24,7 @@
 					<h4 class="tutor-instructor-name"><?php echo esc_attr( $instructor->display_name ); ?></h4>
 					<div class="tutor-instructor-course-count">
 						<span><?php echo esc_attr( $course_count ); ?></span>
-						<span><?php 1 < $course_count ? _e( 'Courses', 'tutor' ) : _e( 'Course', 'tutor' ); ?></span>
+						<span><?php 1 < $course_count ? _e( 'Courses', 'oxygen-tutor-lms' ) : _e( 'Course', 'oxygen-tutor-lms' ); ?></span>
 					</div>
 				</a>
 			</div>
@@ -32,7 +32,7 @@
 	}
 
 	if ( ! count( $instructors ) ) {
-		echo '<div>', __( 'No Instructor Found', 'tutor' ), '</div>';
+		echo '<div>', __( 'No Instructor Found', 'oxygen-tutor-lms' ), '</div>';
 	}
 	?>
 </div>
@@ -44,8 +44,8 @@ if ( $previous_page || $next_page ) {
 	?>
 		<div class="tutor-pagination-wrap">
 			<?php
-				echo $previous_page ? '<a class="page-numbers" href="' . $prev_url . '" data-page_number="' . $previous_page . '">« ' . __( 'Previous', 'tutor' ) . '</a>' : '';
-				echo $next_page ? '&nbsp; <a class="next page-numbers" href="' . $next_url . '" data-page_number="' . $next_page . '">' . __( 'Next', 'tutor' ) . ' »</a>' : '';
+				echo $previous_page ? '<a class="page-numbers" href="' . $prev_url . '" data-page_number="' . $previous_page . '">« ' . __( 'Previous', 'oxygen-tutor-lms' ) . '</a>' : '';
+				echo $next_page ? '&nbsp; <a class="next page-numbers" href="' . $next_url . '" data-page_number="' . $next_page . '">' . __( 'Next', 'oxygen-tutor-lms' ) . ' »</a>' : '';
 			?>
 		</div>
 	<?php

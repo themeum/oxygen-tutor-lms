@@ -16,42 +16,46 @@ class CourseBenefits extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_benefits_html();
+		echo '<div class="tutor-course-benefits">';
+        	tutor_course_benefits_html();
+		echo '</div>';
     }
 
     function controls() {
-        $selector = ".tutor-course-benefits-wrap";
-		$items_selector = $selector." .tutor-course-benefits-items";
-        $this->typographySection(__('Title'), $selector.' .course-benefits-title h4', $this);
-        $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-        $content_icon = $content_section->addControlSection("content_icon", __("Icon"), "assets/icon.png", $this);
-		$content_icon->addStyleControls(
+        $selector = ".tutor-course-benefits";
+
+		$course_benefits = $this->addControlSection("benefits", __("What Will You Learn?"), "assets/icon.png", $this);
+		$benefits_selector = $selector." .tutor-course-details-widget";
+		$benefits_item_selector = $benefits_selector." .tutor-course-details-widget-list";
+        $course_benefits->typographySection(__('Title'), $benefits_selector.' .tutor-course-details-widget-title', $this);
+		$course_benefits->typographySection(__('Items Typography'), $benefits_item_selector.' li span', $this);
+        $benefits_content_icon = $course_benefits->addControlSection("benefits_content_icon", __("Icon"), "assets/icon.png", $this);
+		$benefits_content_icon->addStyleControls(
 			array(
 				array(
                 	"name" => __('Size'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $benefits_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'font-size',
                 ),
 				array(
                 	"name" => __('Color'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $benefits_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'color',
 				)
 			)
         );
-		$content_section->typographySection(__('Typography'), $items_selector, $this);
-		$content_spacing = $content_section->addControlSection("content_spacing", __("Spacing"), "assets/icon.png", $this);
-        $content_spacing->addPreset(
+		$benefits_content_spacing = $course_benefits->addControlSection("benefits_content_spacing", __("Spacing"), "assets/icon.png", $this);
+        $benefits_content_spacing->addPreset(
             "padding",
-            "content_item_padding",
+            "benefits_content_item_padding",
             __("Items Padding"),
-            $items_selector.' li'
+            $benefits_item_selector.' li'
 		);
-		$content_spacing->addStyleControls(
+		$benefits_content_spacing->addStyleControls(
 			array(
 				array(
                 	"name" => __('Line Height'),
-                	"selector" => $items_selector.' li',
+                	"selector" => $benefits_item_selector.' li',
 					"property" => 'line-height',
                 )
 			)

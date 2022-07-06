@@ -106,14 +106,14 @@ tutor_utils()->tutor_custom_header();
 						?>
 							<span>
 								<span><?php echo $course_count; ?></span> 
-								<?php $course_count > 1 ? _e( 'Courses', 'tutor' ) : _e( 'Course', 'tutor' ); ?>
+								<?php $course_count > 1 ? _e( 'Courses', 'oxygen-tutor-lms' ) : _e( 'Course', 'oxygen-tutor-lms' ); ?>
 							</span>
 							<span>
 								<span>•</span>
 							</span>
 							<span>
 								<span><?php echo $student_count; ?></span> 
-								<?php $student_count > 1 ? _e( 'Students', 'tutor' ) : _e( 'Student', 'tutor' ); ?>
+								<?php $student_count > 1 ? _e( 'Students', 'oxygen-tutor-lms' ) : _e( 'Student', 'oxygen-tutor-lms' ); ?>
 							</span>
 						<?php
 					} else {
@@ -125,12 +125,12 @@ tutor_utils()->tutor_custom_header();
 						?>
 							<span>
 								<span><?php echo $enrol_count; ?></span> 
-							<?php $enrol_count > 1 ? _e( 'Courses Enrolled', 'tutor' ) : _e( 'Course Enrolled', 'tutor' ); ?>
+							<?php $enrol_count > 1 ? _e( 'Courses Enrolled', 'oxygen-tutor-lms' ) : _e( 'Course Enrolled', 'oxygen-tutor-lms' ); ?>
 							</span>
 							<span><span>•</span></span>
 							<span>
 								<span><?php echo $complete_count; ?></span> 
-							<?php $complete_count > 1 ? _e( 'Courses Completed', 'tutor' ) : _e( 'Course Completed', 'tutor' ); ?>
+							<?php $complete_count > 1 ? _e( 'Courses Completed', 'oxygen-tutor-lms' ) : _e( 'Course Completed', 'oxygen-tutor-lms' ); ?>
 							</span>
 							<?php
 					}
@@ -161,13 +161,13 @@ tutor_utils()->tutor_custom_header();
 				<?php // tutor_load_template('profile.badge', ['profile_badges'=>(new )]); ?>
 			</div>
 			<div class="tutor-user-profile-content tutor-d-block tutor-mt-72">
-				<h3><?php _e( 'Biography', 'tutor' ); ?></h3>
+				<h3><?php _e( 'Biography', 'oxygen-tutor-lms' ); ?></h3>
 				<?php tutor_load_template( 'profile.bio' ); ?>
 				
 				<?php
 				if ( $is_instructor ) {
 					?>
-						<h3><?php _e( 'Courses', 'tutor' ); ?></h3>
+						<h3><?php _e( 'Courses', 'oxygen-tutor-lms' ); ?></h3>
 						<?php
 							add_filter(
 								'courses_col_per_row',

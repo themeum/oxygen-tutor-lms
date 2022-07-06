@@ -16,44 +16,47 @@ class CourseTargetAudience extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_target_audience_html();
+        echo '<div class="tutor-single-course-sidebar-more course-audience tutor-mt-24">';
+            tutor_course_target_audience_html();
+        echo '</div>';
     }
 
     function controls() {
-        $selector = ".tutor-course-target-audience-wrap";
-        $items_selector = $selector." .tutor-course-target-audience-items";
+        $selector = ".tutor-single-course-sidebar-more.course-audience";
 
-        $this->typographySection(__('Title'), $selector.' > h4.tutor-segment-title');
-        $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-        $content_icon = $content_section->addControlSection("icon", __("Icon"), "assets/icon.png", $this);
-        $content_icon->addStyleControls(
+        $course_target_audience = $this->addControlSection("target_audience", __("Target Audience"), "assets/icon.png", $this);
+		$target_audience_selector = $selector." .tutor-course-details-widget";
+		$target_audience_item_selector = $target_audience_selector." .tutor-course-details-widget-list";
+        $course_target_audience->typographySection('Title', $target_audience_selector.' .tutor-course-details-widget-title', $this);
+		$course_target_audience->typographySection(__('List Item'), $target_audience_item_selector, $this);
+        $target_audience_content_icon = $course_target_audience->addControlSection("target_audience_content_icon", __("Icon"), "assets/icon.png", $this);
+		$target_audience_content_icon->addStyleControls(
 			array(
 				array(
                 	"name" => __('Size'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $target_audience_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'font-size',
                 ),
 				array(
                 	"name" => __('Color'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $target_audience_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'color',
 				)
 			)
         );
-        $content_section->typographySection(__('Typography'), $items_selector, $this);
-        //spacing
-        $content_spacing = $content_section->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
-        $content_spacing->addPreset(
+        $course_target_audience->borderSection(__("Borders"), $target_audience_selector, $this);
+		$target_audience_content_spacing = $course_target_audience->addControlSection("target_audience_content_spacing", __("Spacing"), "assets/icon.png", $this);
+        $target_audience_content_spacing->addPreset(
             "padding",
-            "item_padding",
-            __("Item Padding"),
-            $items_selector.' li'
-        );
-        $content_spacing->addStyleControls(
+            "target_audience_content_item_padding",
+            __("Items Padding"),
+            $target_audience_item_selector.' li'
+		);
+		$target_audience_content_spacing->addStyleControls(
 			array(
 				array(
                 	"name" => __('Line Height'),
-                	"selector" => $items_selector.' li',
+                	"selector" => $target_audience_item_selector.' li',
 					"property" => 'line-height',
                 )
 			)

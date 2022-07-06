@@ -16,49 +16,51 @@ class CourseRequirements extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
-        tutor_course_requirements_html();
+        echo '<div class="tutor-single-course-sidebar-more course-requirements tutor-mt-24">';
+            include_once otlms_get_template('course/course-requirements');
+        echo '</div>';
     }
 
     function controls() {
-        $selector = ".tutor-course-requirements-wrap";
-        $items_selector = $selector." .tutor-course-requirements-items";
+        $selector = ".tutor-single-course-sidebar-more.course-requirements";
 
-        $this->typographySection(__('Title'), $selector.' .course-requirements-title h4');
-        $content_section = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
-        $content_icon = $content_section->addControlSection("icon", __("Icon"), "assets/icon.png", $this);
-        $content_icon->addStyleControls(
+        $course_requirements = $this->addControlSection("requirements", __("Requirements"), "assets/icon.png", $this);
+		$requirements_selector = $selector." .tutor-course-details-widget";
+		$requirements_item_selector = $requirements_selector." .tutor-course-details-widget-list";
+        $course_requirements->typographySection('Title', $requirements_selector.' .tutor-course-details-widget-title', $this);
+		$course_requirements->typographySection(__('List Item'), $requirements_item_selector, $this);
+        $requirements_content_icon = $course_requirements->addControlSection("requirements_content_icon", __("Icon"), "assets/icon.png", $this);
+		$requirements_content_icon->addStyleControls(
 			array(
 				array(
                 	"name" => __('Size'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $requirements_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'font-size',
                 ),
 				array(
                 	"name" => __('Color'),
-                	"selector" => $items_selector.' li:before',
+                	"selector" => $requirements_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'color',
 				)
 			)
         );
-        
-        $content_section->typographySection(__('Typography'), $items_selector, $this);
-        //spacing
-        $content_spacing = $content_section->addControlSection("spacing", __("Spacing"), "assets/icon.png", $this);
-        $content_spacing->addPreset(
+        $course_requirements->borderSection(__("Borders"), $requirements_selector, $this);
+		$requirements_content_spacing = $course_requirements->addControlSection("requirements_content_spacing", __("Spacing"), "assets/icon.png", $this);
+        $requirements_content_spacing->addPreset(
             "padding",
-            "item_padding",
-            __("Item Padding"),
-            $items_selector.' li'
-        );
-        $content_spacing->addStyleControls(
+            "requirements_content_item_padding",
+            __("Items Padding"),
+            $requirements_item_selector.' li'
+		);
+		$requirements_content_spacing->addStyleControls(
 			array(
 				array(
                 	"name" => __('Line Height'),
-                	"selector" => $items_selector.' li',
+                	"selector" => $requirements_item_selector.' li',
 					"property" => 'line-height',
                 )
 			)
-        );
+		);
     }
 
 }

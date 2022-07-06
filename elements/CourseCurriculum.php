@@ -16,7 +16,9 @@ class CourseCurriculum extends \OxygenTutorElements {
 	}
 
     function render($options, $defaults, $content) {
+        echo '<div class="tutor-course-topics">';
         tutor_course_topics();
+        echo '</div>';
     }
 
     function class_names() {
@@ -24,44 +26,32 @@ class CourseCurriculum extends \OxygenTutorElements {
     }
 
     function controls() {
-        //Topic header
-        $topic_header = ".tutor-course-topics-header";
-        $this->typographySection(__('Header Title'), $topic_header.' .tutor-segment-title');
-        $this->typographySection(__('Header Info'), $topic_header. ' .tutor-course-topics-header-right');
+        $selector = '.tutor-course-topics';
 
-        //Course Topics
-        $course_topic = ".tutor-course-topic";
-        $this->typographySection(__('Topic Title'), $course_topic.' .tutor-course-title h4');
-        $icon_selector = $course_topic. ' .tutor-course-lesson h5 i';
-        $icon_section = $this->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
+        $course_curriculum = $this->addControlSection("curriculum", __("Curriculum"), "assets/icon.png", $this);
+		$curriculum_selector = $selector." .tutor-mt-40";
+        $course_curriculum->typographySection(__('Header Title'), $curriculum_selector.' h3', $this);
+
+        $course_topic = $curriculum_selector." .tutor-accordion .tutor-accordion-item";
+        $course_curriculum->typographySection(__('Topic Title'), $course_topic.' .tutor-accordion-item-header, .tutor-accordion-item-header::after', $this);
+        $course_curriculum->typographySection(__('Active Topic Title'), $course_topic.' .tutor-accordion-item-header.is-active, .tutor-accordion-item-header.is-active::after', $this);
+
+        $course_curriculum->typographySection(__('Lesson, Quiz & Assignment Title'), $course_topic. ' .tutor-course-content-list-item-title, .tutor-course-content-list-item-title a', $this);
+        $icon_selector = $course_topic. ' .tutor-course-content-list-item .tutor-course-content-list-item-icon, .tutor-course-content-list-item .tutor-course-content-list-item-status';
+        $icon_section = $course_curriculum->addControlSection("lesson-icon", __("Lesson, Quiz & Assignment Icon"), "assets/icon.png", $this);
 		$icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Font Size'),
+                	"name" => __('Size'),
                 	"selector" => $icon_selector,
 					"property" => 'font-size',
                 ),
 				array(
-                	"name" => __('Font Color'),
+                	"name" => __('Color'),
                 	"selector" => $icon_selector,
 					"property" => 'color',
 				)
 			)
-        );
-        $this->typographySection(__('Lesson Title'), $course_topic. ' .tutor-course-lesson h5, .tutor-course-lesson h5 a');
-        //spacing
-        $space_section = $this->addControlSection("topic-spacing", __("Spacing"), "assets/icon.png", $this);
-        $space_section->addPreset(
-            "padding",
-            "topic_title_padding",
-            __("Topic Title Padding"),
-            '.tutor-course-title'
-        );
-        $space_section->addPreset(
-            "padding",
-            "lesson_title_padding",
-            __("Lesson Title Padding"),
-            '.tutor-course-lesson'
         );
     }
 

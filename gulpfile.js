@@ -29,7 +29,7 @@ gulp.task('makepot', function () {
 			errorHandler: onError
 		}))
 		.pipe(wpPot({
-			domain: 'tutor',
+			domain: 'oxygen-tutor-lms',
 			package: 'Tutor LMS'
 		}))
 		.pipe(gulp.dest('languages/oxygen-tutor-lms.pot'));
