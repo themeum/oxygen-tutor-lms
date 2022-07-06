@@ -106,7 +106,7 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 * New: 16 addon blocks (ungrouped) are introduced to make own design of the Single Course page
 * New: Some new Style Controls were introduced for the Single Course page
 
-= 1.0.5 - 07 June, 2022 =
+= 2.0.0 - 07 June, 2022 =
 
 * Update: Some new style controls were added for the Single Course page
 * Update: Some new style controls were added for the Course List page
