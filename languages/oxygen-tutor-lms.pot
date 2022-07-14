@@ -1,17 +1,1016 @@
 # Copyright (C) 2022 Tutor LMS
 # This file is distributed under the same license as the Tutor LMS package.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Tutor LMS\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: OxygenTutorLMS.php:109
+msgid "Tutor LMS"
+msgstr ""
+
+#: OxygenTutorLMS.php:114
+msgid "Single Template"
+msgstr ""
+
+#: OxygenTutorLMS.php:117
+msgid "Single Course"
+msgstr ""
+
+#: OxygenTutorLMS.php:120
+msgid "Archive & Course List"
+msgstr ""
+
+#: OxygenTutorLMS.php:123
+msgid "TutorLMS Pages"
+msgstr ""
+
+#: OxygenTutorLMS.php:203
+msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.1.5.2"
+msgstr ""
+
+#: OxygenTutorLMS.php:209
+msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated Oxygen Builder Plugin"
+msgstr ""
+
+#: elements/ArchiveCourse.php:41 elements/CoursesList.php:131
+msgid "Course Filter"
+msgstr ""
+
+#: elements/ArchiveCourse.php:43 elements/CoursesList.php:133
+msgid "Filter Widget Title"
+msgstr ""
+
+#: elements/ArchiveCourse.php:44 elements/CoursesList.php:134
+msgid "Filter Items"
+msgstr ""
+
+#: elements/ArchiveCourse.php:49 elements/CoursesList.php:139
+msgid "Course Grid"
+msgstr ""
+
+#: elements/ArchiveCourse.php:52 elements/CoursesList.php:142
+msgid "Wishlist Icon"
+msgstr ""
+
+#: elements/ArchiveCourse.php:57 elements/CourseAuthor.php:43
+#: elements/CourseDescription.php:201 elements/CourseInstructors.php:44
+#: elements/CourseReviews.php:122 elements/CoursesList.php:147
+#: elements/PageDashboard.php:162 elements/PageDashboard.php:199
+#: elements/PageDashboard.php:236 elements/SingleCourse.php:104
+#: elements/SingleCourse.php:322 elements/SingleCourse.php:480
+msgid "Font Size"
+msgstr ""
+
+#: elements/ArchiveCourse.php:62 elements/CoursesList.php:152
+#: elements/PageDashboard.php:157 elements/PageDashboard.php:194
+#: elements/PageDashboard.php:231
+msgid "Font Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:67 elements/CoursesList.php:157
+msgid "Hover Font Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:72 elements/ArchiveCourse.php:128
+#: elements/CourseEnrolmentBox.php:75 elements/CourseEnrolmentBox.php:109
+#: elements/CoursesList.php:162 elements/CoursesList.php:218
+#: elements/PageDashboard.php:113 elements/PageDashboard.php:172
+#: elements/PageDashboard.php:209 elements/PageDashboard.php:246
+#: elements/PageDashboard.php:291 elements/PageInstructorRegistration.php:44
+#: elements/PageInstructorRegistration.php:78
+#: elements/PageStudentRegistration.php:44
+#: elements/PageStudentRegistration.php:78 elements/SingleAssignment.php:45
+#: elements/SingleAssignment.php:57 elements/SingleAssignment.php:95
+#: elements/SingleCourse.php:399 elements/SingleCourse.php:433
+#: elements/SingleLesson.php:70 elements/SingleLesson.php:82
+#: elements/SingleLesson.php:120 elements/SingleQuiz.php:45
+#: elements/SingleQuiz.php:57 elements/SingleQuiz.php:95
+msgid "Background Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:77 elements/ArchiveCourse.php:143
+#: elements/CourseEnrolmentBox.php:85 elements/CourseEnrolmentBox.php:119
+#: elements/CoursesList.php:167 elements/CoursesList.php:233
+#: elements/PageDashboard.php:118 elements/PageInstructorRegistration.php:88
+#: elements/PageStudentRegistration.php:88 elements/SingleCourse.php:409
+#: elements/SingleCourse.php:443
+msgid "Hover Background Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:87 elements/CoursesList.php:177
+msgid "Course Ratings"
+msgstr ""
+
+#: elements/ArchiveCourse.php:92 elements/CoursesList.php:182
+msgid "Star Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:97 elements/CoursesList.php:187
+msgid "Star Size"
+msgstr ""
+
+#: elements/ArchiveCourse.php:103 elements/CoursesList.php:193
+msgid "Average Rating"
+msgstr ""
+
+#: elements/ArchiveCourse.php:104 elements/CoursesList.php:194
+msgid "Total Ratings"
+msgstr ""
+
+#: elements/ArchiveCourse.php:106 elements/CoursesList.php:196
+msgid "Course Title"
+msgstr ""
+
+#: elements/ArchiveCourse.php:107 elements/CoursesList.php:197
+msgid "Meta Icon"
+msgstr ""
+
+#: elements/ArchiveCourse.php:108 elements/CoursesList.php:198
+msgid "Meta Info"
+msgstr ""
+
+#: elements/ArchiveCourse.php:109 elements/CoursesList.php:199
+msgid "Author Label"
+msgstr ""
+
+#: elements/ArchiveCourse.php:110 elements/CoursesList.php:200
+msgid "Author Value"
+msgstr ""
+
+#: elements/ArchiveCourse.php:113 elements/CourseEnrolmentBox.php:34
+#: elements/CoursesList.php:203 elements/SingleCourse.php:358
+msgid "Course Price"
+msgstr ""
+
+#: elements/ArchiveCourse.php:115 elements/CoursesList.php:205
+msgid "Add to Cart"
+msgstr ""
+
+#: elements/ArchiveCourse.php:122 elements/CourseEnrolmentBox.php:69
+#: elements/CourseEnrolmentBox.php:103 elements/CoursesList.php:212
+#: elements/PageDashboard.php:109 elements/PageInstructorRegistration.php:99
+#: elements/PageStudentRegistration.php:99 elements/SingleCourse.php:393
+#: elements/SingleCourse.php:427
+msgid "Button Paddings"
+msgstr ""
+
+#: elements/ArchiveCourse.php:133 elements/CourseBenefits.php:41
+#: elements/CourseCurriculum.php:50 elements/CourseDescription.php:50
+#: elements/CourseDescription.php:94 elements/CourseDescription.php:114
+#: elements/CourseDescription.php:135 elements/CourseDescription.php:169
+#: elements/CourseDescription.php:220 elements/CourseEnrolmentBox.php:44
+#: elements/CourseEnrolmentBox.php:80 elements/CourseEnrolmentBox.php:114
+#: elements/CourseMaterial.php:41 elements/CourseRequirements.php:41
+#: elements/CourseReviews.php:35 elements/CourseReviews.php:56
+#: elements/CourseReviews.php:90 elements/CourseReviews.php:141
+#: elements/CourseTargetAudience.php:41 elements/CoursesList.php:223
+#: elements/PageDashboard.php:92 elements/PageDashboard.php:123
+#: elements/PageDashboard.php:271 elements/PageInstructorRegistration.php:83
+#: elements/PageStudentRegistration.php:83 elements/SingleAssignment.php:85
+#: elements/SingleAssignment.php:200 elements/SingleAssignment.php:211
+#: elements/SingleCourse.php:171 elements/SingleCourse.php:215
+#: elements/SingleCourse.php:235 elements/SingleCourse.php:256
+#: elements/SingleCourse.php:290 elements/SingleCourse.php:341
+#: elements/SingleCourse.php:368 elements/SingleCourse.php:404
+#: elements/SingleCourse.php:438 elements/SingleCourse.php:511
+#: elements/SingleCourse.php:548 elements/SingleCourse.php:586
+#: elements/SingleLesson.php:110 elements/SingleLesson.php:225
+#: elements/SingleLesson.php:236 elements/SingleQuiz.php:85
+#: elements/SingleQuiz.php:200
+msgid "Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:138 elements/CourseThumbnail.php:46
+#: elements/CourseThumbnail.php:92 elements/CoursesList.php:228
+#: elements/PageInstructorRegistration.php:59
+#: elements/PageStudentRegistration.php:59
+msgid "Border Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:151 elements/ArchiveCourse.php:191
+#: elements/CoursesList.php:241 elements/SingleAssignment.php:41
+#: elements/SingleLesson.php:66 elements/SingleQuiz.php:41
+msgid "Border"
+msgstr ""
+
+#: elements/ArchiveCourse.php:152 elements/ArchiveCourse.php:192
+#: elements/CoursesList.php:242
+msgid "Hover Border"
+msgstr ""
+
+#: elements/ArchiveCourse.php:153 elements/ArchiveCourse.php:193
+#: elements/CourseThumbnail.php:67 elements/CourseThumbnail.php:105
+#: elements/CoursesList.php:243
+msgid "Box Shadow"
+msgstr ""
+
+#: elements/ArchiveCourse.php:154 elements/ArchiveCourse.php:194
+#: elements/CoursesList.php:244
+msgid "Hover Box Shadow"
+msgstr ""
+
+#: elements/ArchiveCourse.php:157 elements/ArchiveCourse.php:197
+#: elements/CourseBenefits.php:47 elements/CourseDescription.php:57
+#: elements/CourseMaterial.php:48 elements/CourseRequirements.php:48
+#: elements/CourseTargetAudience.php:48 elements/CoursesList.php:247
+#: elements/PageDashboard.php:253 elements/PageDashboard.php:297
+#: elements/SingleAssignment.php:169 elements/SingleAssignment.php:177
+#: elements/SingleCourse.php:178 elements/SingleCourse.php:517
+#: elements/SingleCourse.php:555 elements/SingleCourse.php:593
+#: elements/SingleLesson.php:194 elements/SingleLesson.php:202
+#: elements/SingleQuiz.php:169 elements/SingleQuiz.php:177
+msgid "Spacing"
+msgstr ""
+
+#: elements/ArchiveCourse.php:158 elements/ArchiveCourse.php:198
+#: elements/CourseDescription.php:154 elements/CourseReviews.php:75
+#: elements/CoursesList.php:248 elements/PageDashboard.php:254
+#: elements/PageDashboard.php:298 elements/SingleAssignment.php:69
+#: elements/SingleAssignment.php:74 elements/SingleAssignment.php:132
+#: elements/SingleAssignment.php:170 elements/SingleAssignment.php:181
+#: elements/SingleCourse.php:275 elements/SingleLesson.php:94
+#: elements/SingleLesson.php:99 elements/SingleLesson.php:157
+#: elements/SingleLesson.php:195 elements/SingleLesson.php:206
+#: elements/SingleQuiz.php:69 elements/SingleQuiz.php:74
+#: elements/SingleQuiz.php:132 elements/SingleQuiz.php:170
+#: elements/SingleQuiz.php:181
+msgid "Padding"
+msgstr ""
+
+#: elements/ArchiveCourse.php:159 elements/ArchiveCourse.php:199
+#: elements/CourseDescription.php:160 elements/CourseReviews.php:81
+#: elements/CourseThumbnail.php:63 elements/CoursesList.php:249
+#: elements/PageDashboard.php:255 elements/PageDashboard.php:299
+#: elements/SingleAssignment.php:70 elements/SingleAssignment.php:75
+#: elements/SingleAssignment.php:171 elements/SingleAssignment.php:187
+#: elements/SingleCourse.php:281 elements/SingleLesson.php:95
+#: elements/SingleLesson.php:100 elements/SingleLesson.php:196
+#: elements/SingleLesson.php:212 elements/SingleQuiz.php:70
+#: elements/SingleQuiz.php:75 elements/SingleQuiz.php:171
+#: elements/SingleQuiz.php:187
+msgid "Margin"
+msgstr ""
+
+#: elements/ArchiveCourse.php:163 elements/SingleAssignment.php:208
+#: elements/SingleLesson.php:233
+msgid "Pagination"
+msgstr ""
+
+#: elements/ArchiveCourse.php:172
+msgid "Links Text Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:178
+msgid "Hover Text Color"
+msgstr ""
+
+#: elements/ArchiveCourse.php:184
+msgid "Active Text Color"
+msgstr ""
+
+#: elements/CourseAbout.php:31
+msgid "Course Description"
+msgstr ""
+
+#: elements/CourseAbout.php:33 elements/CourseDescription.php:33
+#: elements/SingleCourse.php:154
+msgid "Heading"
+msgstr ""
+
+#: elements/CourseAbout.php:34 elements/CourseDescription.php:34
+#: elements/SingleCourse.php:155
+msgid "Paragraph"
+msgstr ""
+
+#: elements/CourseAuthor.php:29 elements/CourseDescription.php:187
+#: elements/CourseInstructors.php:30 elements/CourseReviews.php:108
+#: elements/PageDashboard.php:70 elements/SingleCourse.php:89
+#: elements/SingleCourse.php:308 elements/SingleCourse.php:466
+msgid "Image"
+msgstr ""
+
+#: elements/CourseAuthor.php:33 elements/CourseDescription.php:145
+#: elements/CourseDescription.php:191 elements/CourseEnrolmentBox.php:54
+#: elements/CourseInstructors.php:34 elements/CourseReviews.php:66
+#: elements/CourseReviews.php:112 elements/PageDashboard.php:74
+#: elements/PageDashboard.php:281 elements/PageInstructorRegistration.php:49
+#: elements/PageStudentRegistration.php:49 elements/SingleAssignment.php:62
+#: elements/SingleAssignment.php:143 elements/SingleAssignment.php:215
+#: elements/SingleCourse.php:94 elements/SingleCourse.php:266
+#: elements/SingleCourse.php:312 elements/SingleCourse.php:378
+#: elements/SingleCourse.php:470 elements/SingleLesson.php:87
+#: elements/SingleLesson.php:168 elements/SingleLesson.php:240
+#: elements/SingleQuiz.php:62 elements/SingleQuiz.php:143
+msgid "Height"
+msgstr ""
+
+#: elements/CourseAuthor.php:38 elements/CourseDescription.php:196
+#: elements/CourseInstructors.php:39 elements/CourseReviews.php:117
+#: elements/PageDashboard.php:79 elements/PageDashboard.php:286
+#: elements/SingleCourse.php:99 elements/SingleCourse.php:317
+#: elements/SingleCourse.php:475
+msgid "Width"
+msgstr ""
+
+#: elements/CourseAuthor.php:48 elements/CourseBenefits.php:57
+#: elements/CourseDescription.php:67 elements/CourseDescription.php:206
+#: elements/CourseInstructors.php:49 elements/CourseMaterial.php:58
+#: elements/CourseRequirements.php:58 elements/CourseReviews.php:127
+#: elements/CourseTargetAudience.php:58
+#: elements/PageInstructorRegistration.php:54
+#: elements/PageStudentRegistration.php:54 elements/SingleCourse.php:109
+#: elements/SingleCourse.php:188 elements/SingleCourse.php:327
+#: elements/SingleCourse.php:485 elements/SingleCourse.php:527
+#: elements/SingleCourse.php:565 elements/SingleCourse.php:603
+msgid "Line Height"
+msgstr ""
+
+#: elements/CourseAuthor.php:57 elements/CourseShare.php:32
+#: elements/PageDashboard.php:266 elements/PageInstructorRegistration.php:37
+#: elements/PageStudentRegistration.php:37 elements/SingleCourse.php:115
+#: elements/SingleCourse.php:121 elements/SingleCourse.php:127
+msgid "Label"
+msgstr ""
+
+#: elements/CourseAuthor.php:58 elements/CourseDescription.php:212
+#: elements/CourseInstructors.php:57 elements/CourseReviews.php:133
+#: elements/SingleCourse.php:116 elements/SingleCourse.php:333
+#: elements/SingleCourse.php:493
+msgid "Name"
+msgstr ""
+
+#: elements/CourseBenefits.php:27 elements/CourseDescription.php:37
+#: elements/SingleCourse.php:158
+msgid "What Will You Learn?"
+msgstr ""
+
+#: elements/CourseBenefits.php:30 elements/CourseDescription.php:40
+#: elements/CourseInstructors.php:28 elements/CourseMaterial.php:30
+#: elements/PageDashboard.php:257 elements/SingleAssignment.php:137
+#: elements/SingleCourse.php:84 elements/SingleCourse.php:161
+#: elements/SingleCourse.php:464 elements/SingleCourse.php:500
+#: elements/SingleLesson.php:162 elements/SingleQuiz.php:137
+msgid "Title"
+msgstr ""
+
+#: elements/CourseBenefits.php:31 elements/CourseDescription.php:56
+#: elements/SingleCourse.php:177
+msgid "Items Typography"
+msgstr ""
+
+#: elements/CourseBenefits.php:32 elements/CourseDescription.php:41
+#: elements/CourseMaterial.php:32 elements/CourseRequirements.php:32
+#: elements/CourseTargetAudience.php:32 elements/PageDashboard.php:264
+#: elements/SingleCourse.php:162 elements/SingleCourse.php:502
+#: elements/SingleCourse.php:539 elements/SingleCourse.php:577
+msgid "Icon"
+msgstr ""
+
+#: elements/CourseBenefits.php:36 elements/CourseCurriculum.php:45
+#: elements/CourseDescription.php:45 elements/CourseDescription.php:89
+#: elements/CourseDescription.php:119 elements/CourseDescription.php:174
+#: elements/CourseDescription.php:225 elements/CourseMaterial.php:36
+#: elements/CourseRequirements.php:36 elements/CourseReviews.php:40
+#: elements/CourseReviews.php:95 elements/CourseReviews.php:146
+#: elements/CourseTargetAudience.php:36 elements/PageDashboard.php:97
+#: elements/SingleCourse.php:166 elements/SingleCourse.php:210
+#: elements/SingleCourse.php:240 elements/SingleCourse.php:295
+#: elements/SingleCourse.php:346 elements/SingleCourse.php:506
+#: elements/SingleCourse.php:543 elements/SingleCourse.php:581
+#: templates/global/attachments.php:31
+msgid "Size"
+msgstr ""
+
+#: elements/CourseBenefits.php:51 elements/CourseDescription.php:61
+#: elements/CourseMaterial.php:52 elements/CourseRequirements.php:52
+#: elements/CourseTargetAudience.php:52 elements/SingleCourse.php:182
+#: elements/SingleCourse.php:521 elements/SingleCourse.php:559
+#: elements/SingleCourse.php:597
+msgid "Items Padding"
+msgstr ""
+
+#: elements/CourseCategories.php:24
+msgid "Categories:"
+msgstr ""
+
+#: elements/CourseCategories.php:35
+msgid "Uncategorized"
+msgstr ""
+
+#: elements/CourseCategories.php:43
+msgid "Label Typography"
+msgstr ""
+
+#: elements/CourseCategories.php:44
+msgid "Category Typography"
+msgstr ""
+
+#: elements/CourseCurriculum.php:31 elements/CourseDescription.php:75
+#: elements/SingleCourse.php:196
+msgid "Curriculum"
+msgstr ""
+
+#: elements/CourseCurriculum.php:33 elements/CourseDescription.php:77
+#: elements/SingleCourse.php:198
+msgid "Header Title"
+msgstr ""
+
+#: elements/CourseCurriculum.php:36 elements/CourseDescription.php:80
+#: elements/SingleCourse.php:201
+msgid "Topic Title"
+msgstr ""
+
+#: elements/CourseCurriculum.php:37 elements/CourseDescription.php:81
+#: elements/SingleCourse.php:202
+msgid "Active Topic Title"
+msgstr ""
+
+#: elements/CourseCurriculum.php:39 elements/CourseDescription.php:83
+#: elements/SingleCourse.php:204
+msgid "Lesson, Quiz & Assignment Title"
+msgstr ""
+
+#: elements/CourseCurriculum.php:41 elements/CourseDescription.php:85
+#: elements/SingleCourse.php:206
+msgid "Lesson, Quiz & Assignment Icon"
+msgstr ""
+
+#: elements/CourseDescription.php:31 elements/SingleCourse.php:152
+#: templates/course/about.php:33
+msgid "About Course"
+msgstr ""
+
+#: elements/CourseDescription.php:103 elements/CourseReviews.php:24
+#: elements/SingleCourse.php:224
+msgid "Review Title"
+msgstr ""
+
+#: elements/CourseDescription.php:107 elements/CourseReviews.php:28
+#: elements/SingleCourse.php:228
+msgid "Review Avg"
+msgstr ""
+
+#: elements/CourseDescription.php:108 elements/CourseReviews.php:29
+#: elements/SingleCourse.php:229
+msgid "Rating Number"
+msgstr ""
+
+#: elements/CourseDescription.php:109 elements/CourseReviews.php:30
+#: elements/PageDashboard.php:87 elements/SingleCourse.php:230
+msgid "Rating Stars"
+msgstr ""
+
+#: elements/CourseDescription.php:125 elements/CourseReviews.php:46
+#: elements/SingleCourse.php:246
+msgid "Total Count"
+msgstr ""
+
+#: elements/CourseDescription.php:131 elements/CourseReviews.php:52
+#: elements/SingleCourse.php:252
+msgid "Right Rating Bar"
+msgstr ""
+
+#: elements/CourseDescription.php:140 elements/CourseEnrolmentBox.php:49
+#: elements/CourseReviews.php:61 elements/SingleCourse.php:261
+#: elements/SingleCourse.php:373
+msgid "Fill Color"
+msgstr ""
+
+#: elements/CourseDescription.php:165 elements/CourseReviews.php:86
+#: elements/SingleCourse.php:286
+msgid "Right Rating Stars"
+msgstr ""
+
+#: elements/CourseDescription.php:181 elements/CourseReviews.php:102
+#: elements/SingleCourse.php:302
+msgid "Right Rating Text"
+msgstr ""
+
+#: elements/CourseDescription.php:185 elements/CourseReviews.php:106
+#: elements/SingleCourse.php:306
+msgid "Review list"
+msgstr ""
+
+#: elements/CourseDescription.php:213 elements/CourseReviews.php:134
+#: elements/SingleCourse.php:334
+msgid "Time"
+msgstr ""
+
+#: elements/CourseDescription.php:215 elements/CourseReviews.php:136
+#: elements/SingleCourse.php:336
+msgid "Stars"
+msgstr ""
+
+#: elements/CourseDescription.php:231 elements/CourseReviews.php:152
+#: elements/SingleAssignment.php:174 elements/SingleCourse.php:352
+#: elements/SingleLesson.php:199 elements/SingleQuiz.php:174
+msgid "Content"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:32 elements/SingleCourse.php:357
+msgid "Enrollment Box"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:33 elements/CourseEnrolmentBox.php:92
+#: elements/CourseEnrolmentBox.php:126 elements/CourseInstructors.php:27
+#: elements/CourseMaterial.php:47 elements/CourseRequirements.php:47
+#: elements/CourseTargetAudience.php:47 elements/PageDashboard.php:135
+#: elements/PageInstructorRegistration.php:101
+#: elements/PageStudentRegistration.php:101 elements/SingleCourse.php:416
+#: elements/SingleCourse.php:450
+msgid "Borders"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:36 elements/SingleCourse.php:360
+msgid "Course Progress Title"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:37 elements/SingleCourse.php:361
+msgid "Course Progress Text"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:40 elements/SingleCourse.php:364
+msgid "Course Progress Bar"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:62 elements/SingleCourse.php:386
+msgid "Cart & Enroll Button"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:91 elements/CourseEnrolmentBox.php:125
+#: elements/PageDashboard.php:134 elements/PageInstructorRegistration.php:100
+#: elements/PageStudentRegistration.php:100 elements/SingleAssignment.php:68
+#: elements/SingleAssignment.php:210 elements/SingleCourse.php:415
+#: elements/SingleCourse.php:449 elements/SingleCourse.php:554
+#: elements/SingleCourse.php:592 elements/SingleLesson.php:93
+#: elements/SingleLesson.php:235 elements/SingleQuiz.php:68
+msgid "Typography"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:93 elements/CourseEnrolmentBox.php:127
+#: elements/PageDashboard.php:136 elements/PageInstructorRegistration.php:102
+#: elements/PageStudentRegistration.php:102 elements/SingleCourse.php:417
+#: elements/SingleCourse.php:451
+msgid "Hover Borders"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:94 elements/CourseEnrolmentBox.php:128
+#: elements/PageDashboard.php:137 elements/PageInstructorRegistration.php:103
+#: elements/PageStudentRegistration.php:103 elements/SingleCourse.php:418
+#: elements/SingleCourse.php:452
+msgid "Shadow"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:95 elements/CourseEnrolmentBox.php:129
+#: elements/PageDashboard.php:138 elements/PageInstructorRegistration.php:104
+#: elements/PageStudentRegistration.php:104 elements/SingleCourse.php:419
+#: elements/SingleCourse.php:453
+msgid "Hover Shadow"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:98 elements/SingleCourse.php:422
+msgid "Certificate & Retake Button"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:132 elements/SingleCourse.php:456
+msgid "Course Information"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:134 elements/SingleCourse.php:458
+msgid "Course Information Text"
+msgstr ""
+
+#: elements/CourseEnrolmentBox.php:135 elements/SingleCourse.php:459
+msgid "Course Information Icon"
+msgstr ""
+
+#: elements/CourseInstructors.php:25 elements/SingleCourse.php:462
+msgid "Instructors"
+msgstr ""
+
+#: elements/CourseInstructors.php:58 elements/SingleCourse.php:494
+msgid "Designation"
+msgstr ""
+
+#: elements/CourseMaterial.php:27 elements/SingleCourse.php:497
+msgid "Materials"
+msgstr ""
+
+#: elements/CourseMaterial.php:31 elements/CourseRequirements.php:31
+#: elements/CourseTargetAudience.php:31 elements/SingleCourse.php:501
+msgid "List Item"
+msgstr ""
+
+#: elements/CourseRating.php:31 elements/SingleCourse.php:76
+msgid "Stars Color"
+msgstr ""
+
+#: elements/CourseRating.php:36 elements/SingleCourse.php:71
+msgid "Stars Size"
+msgstr ""
+
+#: elements/CourseRequirements.php:27 elements/SingleCourse.php:535
+#: templates/course/course-requirements.php:28
+msgid "Requirements"
+msgstr ""
+
+#: elements/CourseShare.php:30
+msgid "Social Share"
+msgstr ""
+
+#: elements/CourseShare.php:33
+msgid "Original Icons"
+msgstr ""
+
+#: elements/CourseShare.php:34
+msgid "Hovered Icons"
+msgstr ""
+
+#: elements/CourseTargetAudience.php:27 elements/SingleCourse.php:573
+msgid "Target Audience"
+msgstr ""
+
+#: elements/CourseThumbnail.php:31
+msgid "Original Thumbnails"
+msgstr ""
+
+#: elements/CourseThumbnail.php:53 elements/CourseThumbnail.php:99
+#: elements/PageInstructorRegistration.php:64
+#: elements/PageStudentRegistration.php:64
+msgid "Border Width"
+msgstr ""
+
+#: elements/CourseThumbnail.php:71
+msgid "Original Thumbs Shadow"
+msgstr ""
+
+#: elements/CourseThumbnail.php:76
+msgid "Hovered Thumbnails"
+msgstr ""
+
+#: elements/CourseThumbnail.php:109
+msgid "Hover Thumbs Shadow"
+msgstr ""
+
+#: elements/CoursesList.php:80
+msgid "Courses Query"
+msgstr ""
+
+#: elements/CoursesList.php:84
+msgid "Include ID"
+msgstr ""
+
+#: elements/CoursesList.php:91
+msgid "Excludes IDS"
+msgstr ""
+
+#: elements/CoursesList.php:98
+msgid "Category IDS"
+msgstr ""
+
+#: elements/CoursesList.php:105
+msgid "Order By"
+msgstr ""
+
+#: elements/CoursesList.php:113
+msgid "Order"
+msgstr ""
+
+#: elements/CoursesList.php:121
+msgid "Limit"
+msgstr ""
+
+#: elements/PageDashboard.php:68
+msgid "Header"
+msgstr ""
+
+#: elements/PageDashboard.php:85
+msgid "Display Name"
+msgstr ""
+
+#: elements/PageDashboard.php:104
+msgid "Rating Average"
+msgstr ""
+
+#: elements/PageDashboard.php:105
+msgid "Rating Count"
+msgstr ""
+
+#: elements/PageDashboard.php:107
+msgid "Header Button"
+msgstr ""
+
+#: elements/PageDashboard.php:128 elements/PageInstructorRegistration.php:93
+#: elements/PageStudentRegistration.php:93
+msgid "Hover Color"
+msgstr ""
+
+#: elements/PageDashboard.php:142 templates/dashboard.php:64
+msgid "Menu"
+msgstr ""
+
+#: elements/PageDashboard.php:143
+msgid "Item"
+msgstr ""
+
+#: elements/PageDashboard.php:147 elements/PageDashboard.php:184
+#: elements/PageDashboard.php:221 elements/SingleAssignment.php:110
+#: elements/SingleLesson.php:135 elements/SingleQuiz.php:110
+msgid "Icon Color"
+msgstr ""
+
+#: elements/PageDashboard.php:152 elements/PageDashboard.php:189
+#: elements/PageDashboard.php:226
+msgid "Icon Size"
+msgstr ""
+
+#: elements/PageDashboard.php:167 elements/PageDashboard.php:204
+#: elements/PageDashboard.php:241
+msgid "Font Family"
+msgstr ""
+
+#: elements/PageDashboard.php:180
+msgid "Item Hover"
+msgstr ""
+
+#: elements/PageDashboard.php:217
+msgid "Item Active"
+msgstr ""
+
+#: elements/PageDashboard.php:258
+msgid "Links"
+msgstr ""
+
+#: elements/PageDashboard.php:259
+msgid "Links Hover"
+msgstr ""
+
+#: elements/PageDashboard.php:263
+msgid "Info Card"
+msgstr ""
+
+#: elements/PageDashboard.php:265 elements/SingleCourse.php:122
+#: elements/SingleCourse.php:128
+msgid "Value"
+msgstr ""
+
+#: elements/PageDashboard.php:267 elements/SingleAssignment.php:148
+#: elements/SingleAssignment.php:191 elements/SingleAssignment.php:195
+#: elements/SingleLesson.php:173 elements/SingleLesson.php:216
+#: elements/SingleLesson.php:220 elements/SingleQuiz.php:148
+#: elements/SingleQuiz.php:191 elements/SingleQuiz.php:195
+msgid "Background"
+msgstr ""
+
+#: elements/PageDashboard.php:277
+msgid "Icon Settings"
+msgstr ""
+
+#: elements/PageInstructorRegistration.php:36
+#: elements/PageStudentRegistration.php:36
+msgid "Registration Form"
+msgstr ""
+
+#: elements/PageInstructorRegistration.php:38
+#: elements/PageStudentRegistration.php:38
+msgid "Input Typography"
+msgstr ""
+
+#: elements/PageInstructorRegistration.php:39
+#: elements/PageStudentRegistration.php:39
+msgid "Input Field"
+msgstr ""
+
+#: elements/PageInstructorRegistration.php:73
+#: elements/PageStudentRegistration.php:73
+msgid "Register Button"
+msgstr ""
+
+#: elements/SingleAssignment.php:39 elements/SingleLesson.php:64
+#: elements/SingleQuiz.php:39
+msgid "Sidebar"
+msgstr ""
+
+#: elements/SingleAssignment.php:52 elements/SingleLesson.php:77
+#: elements/SingleQuiz.php:52
+msgid "Sidebar Title Area"
+msgstr ""
+
+#: elements/SingleAssignment.php:73 elements/SingleLesson.php:98
+#: elements/SingleQuiz.php:73
+msgid "Topic Spacing"
+msgstr ""
+
+#: elements/SingleAssignment.php:79 elements/SingleLesson.php:104
+#: elements/SingleQuiz.php:79
+msgid "Topic Ttile Typography"
+msgstr ""
+
+#: elements/SingleAssignment.php:80 elements/SingleLesson.php:105
+#: elements/SingleQuiz.php:80
+msgid "Topic Summary Typography"
+msgstr ""
+
+#: elements/SingleAssignment.php:81 elements/SingleLesson.php:106
+#: elements/SingleQuiz.php:81
+msgid "Topic Icon"
+msgstr ""
+
+#: elements/SingleAssignment.php:91 elements/SingleLesson.php:116
+#: elements/SingleQuiz.php:91
+msgid "Topic Title Background"
+msgstr ""
+
+#: elements/SingleAssignment.php:104 elements/SingleLesson.php:129
+#: elements/SingleQuiz.php:104
+msgid "Lesson Typography"
+msgstr ""
+
+#: elements/SingleAssignment.php:105 elements/SingleLesson.php:130
+#: elements/SingleQuiz.php:105
+msgid "Active Lesson Typography"
+msgstr ""
+
+#: elements/SingleAssignment.php:106 elements/SingleLesson.php:131
+#: elements/SingleQuiz.php:106
+msgid "Lesson Icon"
+msgstr ""
+
+#: elements/SingleAssignment.php:115 elements/SingleLesson.php:140
+#: elements/SingleQuiz.php:115
+msgid "Icon Active & Hover Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:120 elements/SingleLesson.php:145
+#: elements/SingleQuiz.php:120
+msgid "Lesson Background Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:125 elements/SingleLesson.php:150
+#: elements/SingleQuiz.php:125
+msgid "Active Lesson Background Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:131 elements/SingleLesson.php:156
+#: elements/SingleQuiz.php:131
+msgid "Lesson Spacing"
+msgstr ""
+
+#: elements/SingleAssignment.php:136 elements/SingleLesson.php:161
+#: elements/SingleQuiz.php:136
+msgid "Topbar"
+msgstr ""
+
+#: elements/SingleAssignment.php:138 elements/SingleLesson.php:163
+#: elements/SingleQuiz.php:138
+msgid "Progress"
+msgstr ""
+
+#: elements/SingleAssignment.php:139 elements/SingleLesson.php:164
+#: elements/SingleQuiz.php:139
+msgid "Size & Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:153 elements/SingleLesson.php:178
+#: elements/SingleQuiz.php:153
+msgid "Toggle Icon Background"
+msgstr ""
+
+#: elements/SingleAssignment.php:158 elements/SingleLesson.php:183
+#: elements/SingleQuiz.php:158
+msgid "Toggle Icon Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:163 elements/SingleLesson.php:188
+#: elements/SingleQuiz.php:163
+msgid "Close Icon Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:220 elements/SingleLesson.php:245
+msgid "Pagination Background"
+msgstr ""
+
+#: elements/SingleAssignment.php:225 elements/SingleLesson.php:250
+msgid "Previous Background"
+msgstr ""
+
+#: elements/SingleAssignment.php:230 elements/SingleLesson.php:255
+msgid "Previous Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:235 elements/SingleLesson.php:260
+msgid "Previous Hover Background"
+msgstr ""
+
+#: elements/SingleAssignment.php:240 elements/SingleLesson.php:265
+msgid "Previous Hover Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:245 elements/SingleLesson.php:270
+msgid "Next Background"
+msgstr ""
+
+#: elements/SingleAssignment.php:250 elements/SingleLesson.php:275
+msgid "Next Color"
+msgstr ""
+
+#: elements/SingleAssignment.php:255 elements/SingleLesson.php:280
+msgid "Next Hover Background"
+msgstr ""
+
+#: elements/SingleAssignment.php:260 elements/SingleLesson.php:285
+msgid "Next Hover Color"
+msgstr ""
+
+#: elements/SingleCourse.php:66 templates/course/review.php:96
+msgid "Rating"
+msgstr ""
+
+#: elements/SingleCourse.php:87
+msgid "Author"
+msgstr ""
+
+#: elements/SingleCourse.php:119
+msgid "Course Meta"
+msgstr ""
+
+#: elements/SingleCourse.php:125
+msgid "Level"
+msgstr ""
+
+#: elements/SingleCourse.php:131
+msgid "Share & Wishlist"
+msgstr ""
+
+#: templates/course/about.php:44
+msgid "Show More"
+msgstr ""
+
+#: templates/course/author.php:22
+msgid "By"
+msgstr ""
+
+#: templates/course/level.php:10
+msgid "Course level:"
+msgstr ""
+
+#: templates/course/review.php:50
+msgid "No Review Yet"
+msgstr ""
+
+#: templates/course/review.php:67
+msgid "Total "
+msgstr ""
+
+#: templates/course/review.php:69
+msgid " Rating"
+msgid_plural " Ratings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/course/review.php:96
+msgid "Ratings"
+msgstr ""
+
+#: templates/course/review.php:120
+msgid "Write a review"
+msgstr ""
+
+#: templates/course/review.php:120
+msgid "Edit review"
+msgstr ""
+
+#: templates/course/review.php:134
+msgid "Load More"
+msgstr ""
+
+#: templates/course/review.php:164
+msgid "write a review"
+msgstr ""
+
+#: templates/course/review.php:168
+msgid "Submit Review"
+msgstr ""
+
+#: templates/course/share.php:18
+msgid "Wishlist"
+msgstr ""
 
 #: templates/dashboard.php:52
 msgid "My Courses"
@@ -29,140 +1028,16 @@ msgstr ""
 msgid "Quiz Attempts"
 msgstr ""
 
-#: templates/dashboard.php:64
-msgid "Menu"
-msgstr ""
-
 #: templates/dashboard.php:126
 msgid "Become an instructor"
-msgstr ""
-
-#: templates/dashboard.php:144
-msgid "Your Application is pending as of"
 msgstr ""
 
 #: templates/dashboard.php:136
 msgid "Create a New Course"
 msgstr ""
 
-#: templates/instructor-registration.php:52, templates/instructor-registration.php:55, templates/student-registration.php:51, templates/student-registration.php:54
-msgid "First Name"
-msgstr ""
-
-#: templates/instructor-registration.php:62, templates/instructor-registration.php:65, templates/student-registration.php:61, templates/student-registration.php:64
-msgid "Last Name"
-msgstr ""
-
-#: templates/instructor-registration.php:77, templates/instructor-registration.php:80, templates/student-registration.php:74, templates/student-registration.php:77
-msgid "User Name"
-msgstr ""
-
-#: templates/instructor-registration.php:87, templates/instructor-registration.php:90, templates/student-registration.php:84, templates/student-registration.php:87
-msgid "E-Mail"
-msgstr ""
-
-#: templates/instructor-registration.php:100, templates/instructor-registration.php:103, templates/student-registration.php:97, templates/student-registration.php:100, templates/global/login.php:48
-msgid "Password"
-msgstr ""
-
-#: templates/instructor-registration.php:110, templates/student-registration.php:107
-msgid "Password confirmation"
-msgstr ""
-
-#: templates/instructor-registration.php:113, templates/student-registration.php:110
-msgid "Password Confirmation"
-msgstr ""
-
-#: templates/instructor-registration.php:138, templates/student-registration.php:136
-msgid "By signing up, I agree with the website's"
-msgstr ""
-
-#: templates/instructor-registration.php:138, templates/instructor-registration.php:138, templates/student-registration.php:136, templates/student-registration.php:136
-msgid "Terms and Conditions"
-msgstr ""
-
-#: templates/instructor-registration.php:143
-msgid "Register as instructor"
-msgstr ""
-
-#: templates/instructor-registration.php:14, templates/student-registration.php:13
-msgid "Oooh! Access Denied"
-msgstr ""
-
-#: templates/instructor-registration.php:15, templates/student-registration.php:14
-msgid "You do not have access to this area of the application. Please refer to your system  administrator."
-msgstr ""
-
-#: templates/instructor-registration.php:17, templates/student-registration.php:16
-msgid "Go to Home"
-msgstr ""
-
-#: templates/login.php:34
-msgid "Hi, Welcome back!"
-msgstr ""
-
-#: templates/public-profile.php:128
-msgid "Courses Enrolled"
-msgstr ""
-
-#: templates/public-profile.php:128
-msgid "Course Enrolled"
-msgstr ""
-
-#: templates/public-profile.php:133
-msgid "Courses Completed"
-msgstr ""
-
-#: templates/public-profile.php:133
-msgid "Course Completed"
-msgstr ""
-
-#: templates/public-profile.php:109, templates/public-profile.php:170, templates/shortcode/tutor-instructor.php:27
-msgid "Courses"
-msgstr ""
-
-#: templates/public-profile.php:109, templates/shortcode/tutor-instructor.php:27
-msgid "Course"
-msgstr ""
-
-#: templates/public-profile.php:116
-msgid "Students"
-msgstr ""
-
-#: templates/public-profile.php:116
-msgid "Student"
-msgstr ""
-
-#: templates/public-profile.php:164
-msgid "Biography"
-msgstr ""
-
-#: templates/student-registration.php:141
-msgid "Register"
-msgstr ""
-
-#: templates/course/about.php:7
-msgid "About Course"
-msgstr ""
-
-#: templates/course/author.php:14
-msgid "by"
-msgstr ""
-
-#: templates/course/enrolled-box.php:19
-msgid "Start Course"
-msgstr ""
-
-#: templates/course/enrolled-box.php:17
-msgid "Continue to lesson"
-msgstr ""
-
-#: templates/course/enrolled-box.php:38
-msgid "You have been enrolled on %s."
-msgstr ""
-
-#: templates/course/level.php:10
-msgid "Course level:"
+#: templates/dashboard.php:144
+msgid "Your Application is pending as of"
 msgstr ""
 
 #: templates/global/alert.php:27
@@ -173,12 +1048,14 @@ msgstr ""
 msgid "No Attachment Found"
 msgstr ""
 
-#: templates/global/attachments.php:31
-msgid "Size"
-msgstr ""
-
 #: templates/global/login.php:47
 msgid "Username or Email Address"
+msgstr ""
+
+#: templates/global/login.php:48 templates/instructor-registration.php:100
+#: templates/instructor-registration.php:103
+#: templates/student-registration.php:97 templates/student-registration.php:100
+msgid "Password"
 msgstr ""
 
 #: templates/global/login.php:49
@@ -197,11 +1074,117 @@ msgstr ""
 msgid "Forgot Password?"
 msgstr ""
 
-#: templates/shortcode/instructor-filter.php:30, templates/shortcode/instructor-filter.php:60
+#: templates/instructor-registration.php:14
+#: templates/student-registration.php:13
+msgid "Oooh! Access Denied"
+msgstr ""
+
+#: templates/instructor-registration.php:15
+#: templates/student-registration.php:14
+msgid "You do not have access to this area of the application. Please refer to your system  administrator."
+msgstr ""
+
+#: templates/instructor-registration.php:17
+#: templates/student-registration.php:16
+msgid "Go to Home"
+msgstr ""
+
+#: templates/instructor-registration.php:52
+#: templates/instructor-registration.php:55
+#: templates/student-registration.php:51 templates/student-registration.php:54
+msgid "First Name"
+msgstr ""
+
+#: templates/instructor-registration.php:62
+#: templates/instructor-registration.php:65
+#: templates/student-registration.php:61 templates/student-registration.php:64
+msgid "Last Name"
+msgstr ""
+
+#: templates/instructor-registration.php:77
+#: templates/instructor-registration.php:80
+#: templates/student-registration.php:74 templates/student-registration.php:77
+msgid "User Name"
+msgstr ""
+
+#: templates/instructor-registration.php:87
+#: templates/instructor-registration.php:90
+#: templates/student-registration.php:84 templates/student-registration.php:87
+msgid "E-Mail"
+msgstr ""
+
+#: templates/instructor-registration.php:110
+#: templates/student-registration.php:107
+msgid "Password confirmation"
+msgstr ""
+
+#: templates/instructor-registration.php:113
+#: templates/student-registration.php:110
+msgid "Password Confirmation"
+msgstr ""
+
+#: templates/instructor-registration.php:138
+#: templates/student-registration.php:136
+msgid "By signing up, I agree with the website's"
+msgstr ""
+
+#: templates/instructor-registration.php:138
+#: templates/student-registration.php:136
+msgid "Terms and Conditions"
+msgstr ""
+
+#: templates/instructor-registration.php:143
+msgid "Register as instructor"
+msgstr ""
+
+#: templates/login.php:34
+msgid "Hi, Welcome back!"
+msgstr ""
+
+#: templates/public-profile.php:109 templates/public-profile.php:170
+#: templates/shortcode/tutor-instructor.php:27
+msgid "Courses"
+msgstr ""
+
+#: templates/public-profile.php:109 templates/shortcode/tutor-instructor.php:27
+msgid "Course"
+msgstr ""
+
+#: templates/public-profile.php:116
+msgid "Students"
+msgstr ""
+
+#: templates/public-profile.php:116
+msgid "Student"
+msgstr ""
+
+#: templates/public-profile.php:128
+msgid "Courses Enrolled"
+msgstr ""
+
+#: templates/public-profile.php:128
+msgid "Course Enrolled"
+msgstr ""
+
+#: templates/public-profile.php:133
+msgid "Courses Completed"
+msgstr ""
+
+#: templates/public-profile.php:133
+msgid "Course Completed"
+msgstr ""
+
+#: templates/public-profile.php:164
+msgid "Biography"
+msgstr ""
+
+#: templates/shortcode/instructor-filter.php:30
+#: templates/shortcode/instructor-filter.php:60
 msgid "Clear All"
 msgstr ""
 
-#: templates/shortcode/instructor-filter.php:43, templates/shortcode/instructor-filter.php:50
+#: templates/shortcode/instructor-filter.php:43
+#: templates/shortcode/instructor-filter.php:50
 msgid "Search any instructor..."
 msgstr ""
 
@@ -219,4 +1202,8 @@ msgstr ""
 
 #: templates/shortcode/tutor-instructor.php:48
 msgid "Next"
+msgstr ""
+
+#: templates/student-registration.php:141
+msgid "Register"
 msgstr ""
