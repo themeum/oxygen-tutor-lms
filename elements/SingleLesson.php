@@ -30,15 +30,17 @@ class SingleLesson extends \OxygenTutorElements {
 			if (is_user_logged_in()){
 				$is_course_enrolled = tutor_utils()->is_course_enrolled_by_lesson();
 
-				
-				$template = otlms_get_template( 'single-lesson' );
-				
-				//Check Lesson edit access to support page builders
-				if(current_user_can(tutor()->instructor_role) && tutils()->has_lesson_edit_access()){
+				if ($is_course_enrolled) {
 					$template = otlms_get_template( 'single-lesson' );
-				}
+				}else{
+					//You need to enroll first
+					$template = otlms_get_template( 'single-lesson' );
 
-			}
+					//Check Lesson edit access to support page builders
+					if(current_user_can(tutor()->instructor_role) && tutils()->has_lesson_edit_access()){
+						$template = otlms_get_template( 'single-lesson' );
+					}
+				}
 			}else{
 				$template = otlms_get_template('login');
 			}
