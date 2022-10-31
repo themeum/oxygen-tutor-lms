@@ -116,7 +116,7 @@ do_action( 'tutor_dashboard/before/wrap' );
 					if ( tutor_utils()->get_option( 'enable_become_instructor_btn' ) ) {
 						?>
 						<a id="tutor-become-instructor-button" class="tutor-btn tutor-btn-outline-primary" href="<?php echo esc_url( tutor_utils()->instructor_register_url() ); ?>">
-							<i class="tutor-icon-user-bold"></i> &nbsp; <?php _e( 'Become an instructor', 'tutor' ); ?>
+							<i class="tutor-icon-user-bold"></i> &nbsp; <?php _e( 'Become an instructor', 'oxygen-tutor-lms' ); ?>
 						</a>
 						<?php
 					}
