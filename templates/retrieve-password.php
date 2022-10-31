@@ -25,7 +25,7 @@ if (tutor_utils()->array_get('reset_key', $_GET) && tutor_utils()->array_get('us
 		<div class="tutor-form-row">
 			<div class="tutor-form-col-12">
 				<div class="tutor-form-group">
-					<label><?php esc_html_e( 'Username or email', 'tutor' ); ?></label>
+					<label><?php esc_html_e( 'Username or email', 'oxygen-tutor-lms' ); ?></label>
 
 					<input type="text" name="user_login" id="user_login" autocomplete="username">
 				</div>
