@@ -91,7 +91,7 @@ do_action( 'tutor_dashboard/before/wrap' );
 						?>
 						<div class="tutor-dashboard-header-display-name tutor-color-black">
 							<div class="tutor-fs-5 tutor-dashboard-header-greetings">
-								<?php _e( 'Hello', 'tutor' ); ?>,
+								<?php _e( 'Hello', 'oxygen-tutor-lms' ); ?>,
 							</div>
 							<div class="tutor-fs-4 tutor-fw-medium tutor-dashboard-header-username">
 								<?php echo esc_html( $user->display_name ); ?>
