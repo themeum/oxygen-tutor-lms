@@ -179,7 +179,7 @@ final class OxygenTutorLMS{
 	public function admin_notice(){
 		if (defined('TUTOR_VERSION')){
 			//Version Check
-			if (version_compare(TUTOR_VERSION, '1.5.2', '<'  )){
+			if (version_compare(TUTOR_VERSION, '2.1.0', '<'  )){
 				add_action( 'admin_notices', array($this, 'notice_required_tutor') );
 			}
 		}else{
