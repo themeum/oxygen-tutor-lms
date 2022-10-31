@@ -39,7 +39,7 @@ if (tutor_utils()->array_get('reset_key', $_GET) && tutor_utils()->array_get('us
         <div class="tutor-form-row">
             <div class="tutor-form-col-12">
                 <div class="tutor-form-group">
-                    <button type="submit" class="tutor-btn" value="<?php esc_attr_e( 'Reset password', 'tutor' ); ?>"><?php
+                    <button type="submit" class="tutor-btn" value="<?php esc_attr_e( 'Reset password', 'oxygen-tutor-lms' ); ?>"><?php
 						esc_html_e( 'Reset password', 'tutor' ); ?></button>
                 </div>
             </div>
