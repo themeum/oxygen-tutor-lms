@@ -1,19 +1,19 @@
 {
-  "name": "oxygen-tutor-lms",
-  "version": "2.0.1",
-  "description": "Build E-Learning website by Oxygen Builder and Tutor LMS Integration plugin",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/themeum/oxygen-tutor-lms.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/themeum/oxygen-tutor-lms/issues"
-  },
-  "homepage": "https://github.com/themeum/oxygen-tutor-lms#readme"
+    "name": "oxygen-tutor-lms",
+    "version": "2.0.2",
+    "description": "Build E-Learning website by Oxygen Builder and Tutor LMS Integration plugin",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/themeum/oxygen-tutor-lms.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/themeum/oxygen-tutor-lms/issues"
+    },
+    "homepage": "https://github.com/themeum/oxygen-tutor-lms#readme"
 }
