@@ -42,7 +42,7 @@ $footer_url_2 = trailingslashit( tutor_utils()->tutor_dashboard_url( $is_instruc
 // Footer links
 $footer_links = array(
 	array(
-		'title'      => $is_instructor ? __( 'My Courses', 'tutor' ) : __( 'Dashboard', 'tutor' ),
+		'title'      => $is_instructor ? __( 'My Courses', 'oxygen-tutor-lms' ) : __( 'Dashboard', 'tutor' ),
 		'url'        => $footer_url_1,
 		'is_active'  => $footer_url_1 == $current_url,
 		'icon_class' => 'ttr tutor-icon-dashboard',
