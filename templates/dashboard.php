@@ -48,7 +48,7 @@ $footer_links = array(
 		'icon_class' => 'ttr tutor-icon-dashboard',
 	),
 	array(
-		'title'      => $is_instructor ? __( 'Q&A', 'tutor' ) : __( 'Quiz Attempts', 'tutor' ),
+		'title'      => $is_instructor ? __( 'Q&A', 'oxygen-tutor-lms' ) : __( 'Quiz Attempts', 'tutor' ),
 		'url'        => $footer_url_2,
 		'is_active'  => $footer_url_2 == $current_url,
 		'icon_class' => $is_instructor ? 'ttr  tutor-icon-question' : 'ttr tutor-icon-quiz-attempt',
