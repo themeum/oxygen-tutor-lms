@@ -137,7 +137,7 @@ do_action( 'tutor_dashboard/before/wrap' );
 							<?php else : ?>
 							<a href="<?php echo esc_url( admin_url( "post-new.php?post_type=$course_type" ) ); ?>" class="tutor-btn tutor-btn-outline-primary">
 								<i class="tutor-icon-plus-square tutor-my-n4 tutor-mr-8"></i>
-								<?php esc_html_e( 'Create a New Course', 'tutor' ); ?>
+								<?php esc_html_e( 'Create a New Course', 'oxygen-tutor-lms' ); ?>
 							</a>
 					<?php endif; ?>
 						<?php
@@ -146,7 +146,7 @@ do_action( 'tutor_dashboard/before/wrap' );
 						$on = date( 'd F, Y', $on );
 						echo '<span style="' . $info_message_style . '">
                                     <i class="dashicons dashicons-info tutor-color-warning" style=" ' . $info_style . '"></i>',
-						__( 'Your Application is pending as of', 'tutor' ), ' <b>', $on, '</b>',
+						__( 'Your Application is pending as of', 'oxygen-tutor-lms' ), ' <b>', $on, '</b>',
 						'</span>';
 					} elseif ( $rejected_on || $instructor_status !== 'blocked' ) {
 						echo $become_button;
