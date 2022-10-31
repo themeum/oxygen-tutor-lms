@@ -20,7 +20,7 @@ if (tutor_utils()->array_get('reset_key', $_GET) && tutor_utils()->array_get('us
 		<?php tutor_nonce_field(); ?>
 		<input type="hidden" name="tutor_action" value="tutor_retrieve_password">
 
-        <p><?php echo apply_filters( 'tutor_lost_password_message', esc_html__( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'tutor' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
+        <p><?php echo apply_filters( 'tutor_lost_password_message', esc_html__( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'oxygen-tutor-lms' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
 
 		<div class="tutor-form-row">
 			<div class="tutor-form-col-12">
