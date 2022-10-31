@@ -54,7 +54,7 @@ $footer_links = array(
 		'icon_class' => $is_instructor ? 'ttr  tutor-icon-question' : 'ttr tutor-icon-quiz-attempt',
 	),
 	array(
-		'title'      => __( 'Menu', 'tutor' ),
+		'title'      => __( 'Menu', 'oxygen-tutor-lms' ),
 		'url'        => '#',
 		'is_active'  => false,
 		'icon_class' => 'ttr tutor-icon-hamburger-o tutor-dashboard-menu-toggler',
