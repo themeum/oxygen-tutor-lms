@@ -3,9 +3,9 @@ Contributors: themeum
 Donate link: https://www.themeum.com
 Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
-Tested up to: 5.9
-Requires PHP: 7.0
-Stable tag: 1.0.5
+Tested up to: 6.1
+Requires PHP: 7.4
+Stable tag: 2.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 

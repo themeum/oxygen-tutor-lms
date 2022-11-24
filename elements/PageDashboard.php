@@ -25,9 +25,9 @@ class PageDashboard extends \OxygenTutorElements {
 		
 		$get_dashboard_config = tutils()->tutor_dashboard_permalinks();
 		$target_dashboard_page = tutils()->array_get($dashboard_page, $get_dashboard_config);
-		
+		$template = otlms_get_template('retrieve-password');
 		if (isset($target_dashboard_page['login_require']) && $target_dashboard_page['login_require'] === false){
-			$template = "template-part.{$dashboard_page}".".php";
+			$template = otlms_get_template('retrieve-password');
 		} else {
 			if (is_user_logged_in()){
 				$template = otlms_get_template('dashboard');

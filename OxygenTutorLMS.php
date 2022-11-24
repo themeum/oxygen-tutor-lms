@@ -179,7 +179,7 @@ final class OxygenTutorLMS{
 	public function admin_notice(){
 		if (defined('TUTOR_VERSION')){
 			//Version Check
-			if (version_compare(TUTOR_VERSION, '1.5.2', '<'  )){
+			if (version_compare(TUTOR_VERSION, '2.1.0', '<'  )){
 				add_action( 'admin_notices', array($this, 'notice_required_tutor') );
 			}
 		}else{
@@ -200,7 +200,7 @@ final class OxygenTutorLMS{
 	 */
 	public function notice_required_tutor(){
 		$class = 'notice notice-warning';
-		$message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.1.5.2', 'oxygen-tutor-lms' );
+		$message = __( 'In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.2.1.0', 'oxygen-tutor-lms' );
 		printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 	}
 
