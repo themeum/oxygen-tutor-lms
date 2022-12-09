@@ -101,7 +101,18 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
-= 2.0.1 - 05 July, 2022
+= 2.0.2 - 20 December, 2022 =
+
+* Update: The Front-site Dashboard Template is now compatible to latest Tutor LMS
+* Update: The Course Details page Template is now compatible to latest Tutor LMS
+* Update: The Course Archive Page Template is now compatible to latest Tutor LMS
+* Update: The Lesson Page Template is now compatible to latest Tutor LMS
+* Fix: The Course Preview mode was not working
+* Fix: Forgot Password was not working
+* Fix: In some cases the Start Learning option was returning Error Message
+* Fix: A PHP Warning was appearing on the Course Archive page
+
+= 2.0.1 - 05 July, 2022 =
 
 * New: 16 addon blocks (ungrouped) are introduced to make own design of the Single Course page
 * New: Some new Style Controls were introduced for the Single Course page
