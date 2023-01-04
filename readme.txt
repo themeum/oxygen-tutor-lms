@@ -3,7 +3,7 @@ Contributors: themeum
 Donate link: https://www.themeum.com
 Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
-Tested up to: 6.1
+Tested up to: 6.1.1
 Requires PHP: 7.4
 Stable tag: 2.0.2
 License: GPLv3
@@ -101,7 +101,7 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
-= 2.0.2 - 20 December, 2022 =
+= 2.0.2 - 04 January, 2022 =
 
 * Update: The Front-site Dashboard Template is now compatible to latest Tutor LMS
 * Update: The Course Details page Template is now compatible to latest Tutor LMS
