@@ -101,7 +101,7 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
-= 2.0.2 - 04 January, 2022 =
+= 2.0.2 - 04 January, 2023 =
 
 * Update: The Front-site Dashboard Template is now compatible to latest Tutor LMS
 * Update: The Course Details page Template is now compatible to latest Tutor LMS
