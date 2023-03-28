@@ -25,6 +25,8 @@ if ( ! class_exists('OxygenTutorLMS')){
 	include_once OTLMS_PATH.'OxygenTutorLMS.php';
 }
 
+
+
 /**
  * Turn off template override from TutorLMS
  */
