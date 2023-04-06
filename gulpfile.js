@@ -1,39 +1,7 @@
 var gulp = require("gulp"),
-	sass = require("gulp-sass"),
-	rename = require("gulp-rename"),
-	prefix = require("gulp-autoprefixer"),
-	plumber = require("gulp-plumber"),
-	notify = require("gulp-notify"),
-	wpPot = require('gulp-wp-pot'),
 	clean = require("gulp-clean"),
-	zip = require("gulp-zip"),
-	fs = require('fs'),
-	path = require('path');
+	zip = require("gulp-zip");
 
-var onError = function (err) {
-	notify.onError({
-		title: "Gulp",
-		subtitle: "Failure!",
-		message: "Error: <%= error.message %>",
-		sound: "Basso",
-	})(err);
-	this.emit("end");
-};
-
-
-
-gulp.task('makepot', function () {
-	return gulp
-		.src('**/*.php')
-		.pipe(plumber({
-			errorHandler: onError
-		}))
-		.pipe(wpPot({
-			domain: 'oxygen-tutor-lms',
-			package: 'Tutor LMS'
-		}))
-		.pipe(gulp.dest('languages/oxygen-tutor-lms.pot'));
-});
 
 /**
  * Build
@@ -85,7 +53,6 @@ gulp.task("make-zip", function () {
 exports.build = gulp.series(
 	"clean-zip",
 	"clean-build",
-	"makepot",
 	"copy",
 	"make-zip"
 );

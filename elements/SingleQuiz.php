@@ -42,7 +42,7 @@ class SingleQuiz extends \OxygenTutorElements {
 		$sidebar->addStyleControls(
             array(
                 array(
-                    "name" => __('Background Color'),
+                    "name" => __('Background Color','oxygen-tutor-lms'),
                     "selector" => $sidebar_selector,
                     "property" => 'background-color',
                 )
@@ -54,25 +54,25 @@ class SingleQuiz extends \OxygenTutorElements {
 		$sidebar_title_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Background Color'),
+                	"name" => __('Background Color','oxygen-tutor-lms'),
                     "selector" => $sidebar_title_selector,
                     "property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Height'),
+                	"name" => __('Height','oxygen-tutor-lms'),
                 	"selector" => $sidebar_title_selector,
 					"property" => 'height',
 				)
 			)
 		);
-		$sidebar_title_section->addPreset("typography", "typography", __("Typography"), $sidebar_title_selector.' span', $this);
-		$sidebar_title_section->addPreset("padding", "grid_padding", __("Padding"), $sidebar_title_selector);
-		$sidebar_title_section->addPreset("margin", "grid_margin", __("Margin"), $sidebar_title_selector);
+		$sidebar_title_section->addPreset("typography", "typography", __("Typography","oxygen-tutor-lms"), $sidebar_title_selector.' span', $this);
+		$sidebar_title_section->addPreset("padding", "grid_padding", __("Padding","oxygen-tutor-lms"), $sidebar_title_selector);
+		$sidebar_title_section->addPreset("margin", "grid_margin", __("Margin","oxygen-tutor-lms"), $sidebar_title_selector);
 
 
 		$topic_spacing = $sidebar->addControlSection("topic-spacing", __("Topic Spacing"), "assets/icon.png", $this);
-        $topic_spacing->addPreset("padding", "topic_item_padding", __("Padding"), '.tutor-course-topic');
-        $topic_spacing->addPreset("margin", "topic_item_margin", __("Margin"), '.tutor-course-topic');
+        $topic_spacing->addPreset("padding", "topic_item_padding", __("Padding","oxygen-tutor-lms"), '.tutor-course-topic');
+        $topic_spacing->addPreset("margin", "topic_item_margin", __("Margin","oxygen-tutor-lms"), '.tutor-course-topic');
 		$topic_title_selector = $selector.' .tutor-accordion-item-header .tutor-course-topic-title';
 		$topic_summary_selector = $selector.' .tutor-accordion-item-header .tutor-course-topic-summary';
 		$topic_icon_selector = $selector.' .tutor-accordion-item-header:after, .tutor-accordion-item-header.is-active:after';
@@ -82,7 +82,7 @@ class SingleQuiz extends \OxygenTutorElements {
 		$topic_icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Color'),
+                	"name" => __('Color','oxygen-tutor-lms'),
                 	"selector" => $topic_icon_selector,
 					"property" => 'color',
                 )
@@ -92,7 +92,7 @@ class SingleQuiz extends \OxygenTutorElements {
 		$topic_background->addStyleControls(
 			array(
 				array(
-                	"name" => __('Background Color'),
+                	"name" => __('Background Color','oxygen-tutor-lms'),
                     "selector" => '.tutor-accordion-item-header',
                     "property" => 'background-color',
                 )
@@ -101,74 +101,74 @@ class SingleQuiz extends \OxygenTutorElements {
 		
 		$lesson_selector = $sidebar_selector.' .tutor-course-topic-item-title';
 		$active_lesson_selector = $sidebar_selector.' .tutor-course-topic-item.is-active a';
-		$sidebar->typographySection(__('Lesson Typography'), $lesson_selector, $this);
-		$sidebar->typographySection(__('Active Lesson Typography'), $active_lesson_selector, $this);
+		$sidebar->typographySection(__('Lesson Typography','oxygen-tutor-lms'), $lesson_selector, $this);
+		$sidebar->typographySection(__('Active Lesson Typography','oxygen-tutor-lms'), $active_lesson_selector, $this);
 		$lesson_icon_section = $sidebar->addControlSection("lesson-icon", __("Lesson Icon"), "assets/icon.png", $this);
 		$lesson_icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Icon Color'),
+                	"name" => __('Icon Color','oxygen-tutor-lms'),
                 	"selector" => $lesson_selector.' .tutor-course-topic-item-icon',
 					"property" => 'color',
 				),
 				array(
-                	"name" => __('Icon Active & Hover Color'),
+                	"name" => __('Icon Active & Hover Color','oxygen-tutor-lms'),
                 	"selector" => $active_lesson_selector.' .tutor-course-topic-item-icon',
 					"property" => 'color',
 				),
 				array(
-                	"name" => __('Lesson Background Color'),
+                	"name" => __('Lesson Background Color','oxygen-tutor-lms'),
                 	"selector" => $lesson_selector,
 					"property" => 'background-color',
 				),
 				array(
-                	"name" => __('Active Lesson Background Color'),
+                	"name" => __('Active Lesson Background Color','oxygen-tutor-lms'),
                 	"selector" => $active_lesson_selector,
 					"property" => 'background-color',
 				)
 			)
 		);
 		$lesson_spacing = $sidebar->addControlSection("lesson-spacing", __("Lesson Spacing"), "assets/icon.png", $this);
-        $lesson_spacing->addPreset("padding", "lesson_item_padding",  __("Padding"), $lesson_selector);
+        $lesson_spacing->addPreset("padding", "lesson_item_padding",  __("Padding","oxygen-tutor-lms"), $lesson_selector);
 
 		/* Topbar */
 		$topbar_selector = $selector.' #tutor-single-entry-content .tutor-course-topic-single-header';
 		$topbar = $this->addControlSection("topbar", __("Topbar"), "assets/icon.png", $this);
-		$topbar->typographySection(__('Title'), $topbar_selector.' .tutor-course-topic-single-header-title', $this);
-		$topbar->typographySection(__('Progress'), $topbar_selector.' span', $this);
+		$topbar->typographySection(__('Title','oxygen-tutor-lms'), $topbar_selector.' .tutor-course-topic-single-header-title', $this);
+		$topbar->typographySection(__('Progress','oxygen-tutor-lms'), $topbar_selector.' span', $this);
 		$topbar_color = $topbar->addControlSection("content-top-bar", __("Size & Color"), "assets/icon.png", $this);
 		$topbar_color->addStyleControls(
 			array(
 				array(
-                	"name" => __('Height'),
+                	"name" => __('Height','oxygen-tutor-lms'),
                 	"selector" => $topbar_selector,
 					"property" => 'height',
                 ),
 				array(
-                	"name" => __('Background'),
+                	"name" => __('Background','oxygen-tutor-lms'),
                 	"selector" => $topbar_selector,
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Toggle Icon Background'),
+                	"name" => __('Toggle Icon Background','oxygen-tutor-lms'),
                 	"selector" => $topbar_selector.' .tutor-course-topics-sidebar-toggler',
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Toggle Icon Color'),
+                	"name" => __('Toggle Icon Color','oxygen-tutor-lms'),
                 	"selector" => $topbar_selector.' .tutor-course-topics-sidebar-toggler span',
 					"property" => 'color',
                 ),
 				array(
-                	"name" => __('Close Icon Color'),
+                	"name" => __('Close Icon Color','oxygen-tutor-lms'),
                 	"selector" => $topbar_selector.' .tutor-iconic-btn span',
 					"property" => 'color',
                 )
 			)
 		);
-		$topbar_spacing = $topbar->addControlSection("topbar-spacing", __("Spacing"), "assets/icon.png", $this);
-        $topbar_spacing->addPreset("padding", "topbar_padding", __("Padding"),$topbar_selector);
-        $topbar_spacing->addPreset("margin", "topbar_margin", __("Margin"),$topbar_selector);
+		$topbar_spacing = $topbar->addControlSection("topbar-spacing", __("Spacing","oxygen-tutor-lms"), "assets/icon.png", $this);
+        $topbar_spacing->addPreset("padding", "topbar_padding", __("Padding","oxygen-tutor-lms"),$topbar_selector);
+        $topbar_spacing->addPreset("margin", "topbar_margin", __("Margin","oxygen-tutor-lms"),$topbar_selector);
 
 		/* Content */
 		$content = $this->addControlSection("content", __("Content"), "assets/icon.png", $this);
@@ -178,13 +178,13 @@ class SingleQuiz extends \OxygenTutorElements {
         $content_area_spacing->addPreset(
             "padding",
             "content_area_padding",
-            __("Padding"),
+            __("Padding","oxygen-tutor-lms"),
             $content_area_selector
 		);
         $content_area_spacing->addPreset(
             "margin",
             "content_area_pmargin",
-            __("Margin"),
+            __("Margin","oxygen-tutor-lms"),
             $content_area_selector
 		);
 		
@@ -192,12 +192,12 @@ class SingleQuiz extends \OxygenTutorElements {
 		$content_background->addStyleControls(
 			array(
 				array(
-                	"name" => __('Background'),
+                	"name" => __('Background','oxygen-tutor-lms'),
                 	"selector" => $content_full_area_selector,
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Color'),
+                	"name" => __('Color','oxygen-tutor-lms'),
                 	"selector" => $content_area_selector.' .tutor-color-black ,' .$content_area_selector.' .tutor-color-secondary',
 					"property" => 'color',
                 )
