@@ -42,12 +42,12 @@ class CourseCurriculum extends \OxygenTutorElements {
 		$icon_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
+                	"name" => __('Size','oxygen-tutor-lms'),
                 	"selector" => $icon_selector,
 					"property" => 'font-size',
                 ),
 				array(
-                	"name" => __('Color'),
+                	"name" => __('Color','oxygen-tutor-lms'),
                 	"selector" => $icon_selector,
 					"property" => 'color',
 				)

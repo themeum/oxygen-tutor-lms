@@ -11,10 +11,10 @@ Tested up to: 6.1.1
 License: GPLv2 or later
 Text Domain: oxygen-tutor-lms
 */
-if ( ! defined( 'ABSPATH' ) ){
+
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 
 define('OTLMS_VERSION', '2.0.3');
 define('OTLMS_FILE', __FILE__);
@@ -52,13 +52,21 @@ add_action( 'init', function() {
  * ekhon plugin-e agun lagiye den
  */
 add_action('plugins_loaded', 'oxygen_tutor_lms_init');
-function oxygen_tutor_lms_init(){
-	OxygenTutorLMS::instance();
-}
+if(!function_exists('oxygen_tutor_lms_init')){
 
+	
+	function oxygen_tutor_lms_init(){
+	OxygenTutorLMS::instance();
+	}
+
+}
 
 add_action('wp_enqueue_scripts', 'tutor_oxygen_lms_assets');
 
-function tutor_oxygen_lms_assets() {
-    wp_enqueue_style( 'public-style', plugins_url('assets/css/public.css', __FILE__));   
+if(!function_exists('tutor_oxygen_lms_assets')){
+	
+
+	function tutor_oxygen_lms_assets() {
+		wp_enqueue_style( 'public-style', plugins_url('assets/css/public.css', __FILE__));   
+	}
 }

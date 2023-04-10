@@ -28,10 +28,10 @@ class CourseAbout extends \OxygenTutorElements {
         $selector = '.tutor-course-about';
 
 		/* Course about */
-		$course_about = $this->addControlSection("about", __("Course Description"), "assets/icon.png", $this);
+		$course_about = $this->addControlSection("about", __("Course Description","oxygen-tutor-lms"), "assets/icon.png", $this);
 		$about_selector =  ".tutor-course-details-content";
-        $course_about->typographySection(__('Heading'), $about_selector.' h1, h2, h3, h4, h5, h6 ', $this);
-		$course_about->typographySection(__('Paragraph'), $about_selector.' div ', $this);
+        $course_about->typographySection(__('Heading','oxygen-tutor-lms'), $about_selector.' h1, h2, h3, h4, h5, h6 ', $this);
+		$course_about->typographySection(__('Paragraph','oxygen-tutor-lms'), $about_selector.' div ', $this);
     }
 
 }

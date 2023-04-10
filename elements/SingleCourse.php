@@ -540,12 +540,12 @@ class SingleCourse extends \OxygenTutorElements {
 		$requirements_content_icon->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
+                	"name" => __('Size','oxygen-tutor-lms'),
                 	"selector" => $requirements_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'font-size',
                 ),
 				array(
-                	"name" => __('Color'),
+                	"name" => __('Color','oxygen-tutor-lms'),
                 	"selector" => $requirements_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'color',
 				)
@@ -556,13 +556,13 @@ class SingleCourse extends \OxygenTutorElements {
         $requirements_content_spacing->addPreset(
             "padding",
             "requirements_content_item_padding",
-            __("Items Padding"),
+            __("Items Padding","oxygen-tutor-lms"),
             $requirements_item_selector.' li'
 		);
 		$requirements_content_spacing->addStyleControls(
 			array(
 				array(
-                	"name" => __('Line Height'),
+                	"name" => __('Line Height','oxygen-tutor-lms'),
                 	"selector" => $requirements_item_selector.' li',
 					"property" => 'line-height',
                 )
@@ -578,29 +578,29 @@ class SingleCourse extends \OxygenTutorElements {
 		$target_audience_content_icon->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
+                	"name" => __('Size','oxygen-tutor-lms'),
                 	"selector" => $target_audience_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'font-size',
                 ),
 				array(
-                	"name" => __('Color'),
+                	"name" => __('Color','oxygen-tutor-lms'),
                 	"selector" => $target_audience_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'color',
 				)
 			)
         );
-		$course_target_audience->typographySection(__('Typography'), $target_audience_item_selector, $this);
+		$course_target_audience->typographySection(__('Typography','oxygen-tutor-lms'), $target_audience_item_selector, $this);
 		$target_audience_content_spacing = $course_target_audience->addControlSection("target_audience_content_spacing", __("Spacing"), "assets/icon.png", $this);
         $target_audience_content_spacing->addPreset(
             "padding",
             "target_audience_content_item_padding",
-            __("Items Padding"),
+            __("Items Padding","oxygen-tutor-lms"),
             $target_audience_item_selector.' li'
 		);
 		$target_audience_content_spacing->addStyleControls(
 			array(
 				array(
-                	"name" => __('Line Height'),
+                	"name" => __('Line Height','oxygen-tutor-lms'),
                 	"selector" => $target_audience_item_selector.' li',
 					"property" => 'line-height',
                 )
