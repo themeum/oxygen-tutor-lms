@@ -10,3 +10,6 @@
 .tutor-course-details-page.prerequisites .tutor-accordion a{
 	pointer-events: none;
 }
+li.tutor-course-content-list-item {
+    display: flex !important;
+}

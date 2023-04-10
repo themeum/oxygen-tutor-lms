@@ -12,3 +12,4 @@
  */
 
 tutor_load_template_from_custom_path(__DIR__.'/single-content-loader.php', array('context' => 'lesson'), false);
+echo 'jjj';

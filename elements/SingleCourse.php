@@ -371,7 +371,7 @@ class SingleCourse extends \OxygenTutorElements {
                 ),
                 array(
                     "name" => __('Fill Color'),
-                    "selector" => $course_progress_bar_main_selector,
+                    "selector" => $course_progress_bar_fill_selector,
                     "property" => 'background-color',
                 ),
                 array(
