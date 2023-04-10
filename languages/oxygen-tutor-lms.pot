@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-04-06T05:07:48+00:00\n"
+"POT-Creation-Date: 2023-04-09T15:54:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: oxygen-tutor-lms\n"
@@ -34,31 +34,50 @@ msgstr ""
 msgid "http://themeum.com"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:41
+#: build/elements/CoursesList.php:131
 #: elements/ArchiveCourse.php:41
 #: elements/CoursesList.php:131
 msgid "Course Filter"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:43
+#: build/elements/CoursesList.php:133
 #: elements/ArchiveCourse.php:43
 #: elements/CoursesList.php:133
 msgid "Filter Widget Title"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:44
+#: build/elements/CoursesList.php:134
 #: elements/ArchiveCourse.php:44
 #: elements/CoursesList.php:134
 msgid "Filter Items"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:49
+#: build/elements/CoursesList.php:139
 #: elements/ArchiveCourse.php:49
 #: elements/CoursesList.php:139
 msgid "Course Grid"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:52
+#: build/elements/CoursesList.php:142
 #: elements/ArchiveCourse.php:52
 #: elements/CoursesList.php:142
 msgid "Wishlist Icon"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:57
+#: build/elements/CourseAuthor.php:43
+#: build/elements/CourseDescription.php:201
+#: build/elements/CourseInstructors.php:44
+#: build/elements/CourseReviews.php:122
+#: build/elements/CoursesList.php:147
+#: build/elements/PageDashboard.php:162
+#: build/elements/PageDashboard.php:199
+#: build/elements/PageDashboard.php:236
 #: elements/ArchiveCourse.php:57
 #: elements/CourseAuthor.php:43
 #: elements/CourseDescription.php:201
@@ -71,6 +90,11 @@ msgstr ""
 msgid "Font Size"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:62
+#: build/elements/CoursesList.php:152
+#: build/elements/PageDashboard.php:157
+#: build/elements/PageDashboard.php:194
+#: build/elements/PageDashboard.php:231
 #: elements/ArchiveCourse.php:62
 #: elements/CoursesList.php:152
 #: elements/PageDashboard.php:157
@@ -79,11 +103,29 @@ msgstr ""
 msgid "Font Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:67
+#: build/elements/CoursesList.php:157
 #: elements/ArchiveCourse.php:67
 #: elements/CoursesList.php:157
 msgid "Hover Font Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:72
+#: build/elements/ArchiveCourse.php:128
+#: build/elements/CourseEnrolmentBox.php:75
+#: build/elements/CourseEnrolmentBox.php:109
+#: build/elements/CoursesList.php:162
+#: build/elements/CoursesList.php:218
+#: build/elements/PageDashboard.php:113
+#: build/elements/PageDashboard.php:172
+#: build/elements/PageDashboard.php:209
+#: build/elements/PageDashboard.php:246
+#: build/elements/PageDashboard.php:291
+#: build/elements/PageInstructorRegistration.php:44
+#: build/elements/PageInstructorRegistration.php:78
+#: build/elements/SingleQuiz.php:45
+#: build/elements/SingleQuiz.php:57
+#: build/elements/SingleQuiz.php:95
 #: elements/ArchiveCourse.php:72
 #: elements/ArchiveCourse.php:128
 #: elements/CourseEnrolmentBox.php:75
@@ -103,6 +145,14 @@ msgstr ""
 msgid "Background Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:77
+#: build/elements/ArchiveCourse.php:143
+#: build/elements/CourseEnrolmentBox.php:85
+#: build/elements/CourseEnrolmentBox.php:119
+#: build/elements/CoursesList.php:167
+#: build/elements/CoursesList.php:233
+#: build/elements/PageDashboard.php:118
+#: build/elements/PageInstructorRegistration.php:88
 #: elements/ArchiveCourse.php:77
 #: elements/ArchiveCourse.php:143
 #: elements/CourseEnrolmentBox.php:85
@@ -114,67 +164,98 @@ msgstr ""
 msgid "Hover Background Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:87
+#: build/elements/CoursesList.php:177
 #: elements/ArchiveCourse.php:87
 #: elements/CoursesList.php:177
 msgid "Course Ratings"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:92
+#: build/elements/CoursesList.php:182
 #: elements/ArchiveCourse.php:92
 #: elements/CoursesList.php:182
 msgid "Star Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:97
+#: build/elements/CoursesList.php:187
 #: elements/ArchiveCourse.php:97
 #: elements/CoursesList.php:187
 msgid "Star Size"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:103
+#: build/elements/CoursesList.php:193
 #: elements/ArchiveCourse.php:103
 #: elements/CoursesList.php:193
 msgid "Average Rating"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:104
+#: build/elements/CoursesList.php:194
 #: elements/ArchiveCourse.php:104
 #: elements/CoursesList.php:194
 msgid "Total Ratings"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:106
+#: build/elements/CoursesList.php:196
 #: elements/ArchiveCourse.php:106
 #: elements/CoursesList.php:196
 msgid "Course Title"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:107
+#: build/elements/CoursesList.php:197
 #: elements/ArchiveCourse.php:107
 #: elements/CoursesList.php:197
 msgid "Meta Icon"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:108
+#: build/elements/CoursesList.php:198
 #: elements/ArchiveCourse.php:108
 #: elements/CoursesList.php:198
 msgid "Meta Info"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:109
+#: build/elements/CoursesList.php:199
 #: elements/ArchiveCourse.php:109
 #: elements/CoursesList.php:199
 msgid "Author Label"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:110
+#: build/elements/CoursesList.php:200
 #: elements/ArchiveCourse.php:110
 #: elements/CoursesList.php:200
 msgid "Author Value"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:113
+#: build/elements/CourseEnrolmentBox.php:34
+#: build/elements/CoursesList.php:203
 #: elements/ArchiveCourse.php:113
 #: elements/CourseEnrolmentBox.php:34
 #: elements/CoursesList.php:203
 msgid "Course Price"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:115
+#: build/elements/CoursesList.php:205
 #: elements/ArchiveCourse.php:115
 #: elements/CoursesList.php:205
 msgid "Add to Cart"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:122
+#: build/elements/CourseEnrolmentBox.php:69
+#: build/elements/CourseEnrolmentBox.php:103
+#: build/elements/CoursesList.php:212
+#: build/elements/PageDashboard.php:109
+#: build/elements/PageInstructorRegistration.php:99
 #: elements/ArchiveCourse.php:122
 #: elements/CourseEnrolmentBox.php:69
 #: elements/CourseEnrolmentBox.php:103
@@ -184,6 +265,34 @@ msgstr ""
 msgid "Button Paddings"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:133
+#: build/elements/CourseBenefits.php:41
+#: build/elements/CourseCurriculum.php:50
+#: build/elements/CourseDescription.php:50
+#: build/elements/CourseDescription.php:94
+#: build/elements/CourseDescription.php:114
+#: build/elements/CourseDescription.php:135
+#: build/elements/CourseDescription.php:169
+#: build/elements/CourseDescription.php:220
+#: build/elements/CourseEnrolmentBox.php:44
+#: build/elements/CourseEnrolmentBox.php:80
+#: build/elements/CourseEnrolmentBox.php:114
+#: build/elements/CourseMaterial.php:41
+#: build/elements/CourseRequirements.php:41
+#: build/elements/CourseReviews.php:35
+#: build/elements/CourseReviews.php:56
+#: build/elements/CourseReviews.php:90
+#: build/elements/CourseReviews.php:141
+#: build/elements/CoursesList.php:223
+#: build/elements/CourseTargetAudience.php:41
+#: build/elements/PageDashboard.php:92
+#: build/elements/PageDashboard.php:123
+#: build/elements/PageDashboard.php:271
+#: build/elements/PageInstructorRegistration.php:83
+#: build/elements/SingleCourse.php:548
+#: build/elements/SingleCourse.php:586
+#: build/elements/SingleQuiz.php:85
+#: build/elements/SingleQuiz.php:200
 #: elements/ArchiveCourse.php:133
 #: elements/CourseBenefits.php:41
 #: elements/CourseCurriculum.php:50
@@ -215,6 +324,11 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:138
+#: build/elements/CoursesList.php:228
+#: build/elements/CourseThumbnail.php:46
+#: build/elements/CourseThumbnail.php:92
+#: build/elements/PageInstructorRegistration.php:59
 #: elements/ArchiveCourse.php:138
 #: elements/CoursesList.php:228
 #: elements/CourseThumbnail.php:46
@@ -223,18 +337,28 @@ msgstr ""
 msgid "Border Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:151
+#: build/elements/ArchiveCourse.php:191
+#: build/elements/CoursesList.php:241
 #: elements/ArchiveCourse.php:151
 #: elements/ArchiveCourse.php:191
 #: elements/CoursesList.php:241
 msgid "Border"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:152
+#: build/elements/ArchiveCourse.php:192
+#: build/elements/CoursesList.php:242
 #: elements/ArchiveCourse.php:152
 #: elements/ArchiveCourse.php:192
 #: elements/CoursesList.php:242
 msgid "Hover Border"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:153
+#: build/elements/ArchiveCourse.php:193
+#: build/elements/CoursesList.php:243
+#: build/elements/CourseThumbnail.php:105
 #: elements/ArchiveCourse.php:153
 #: elements/ArchiveCourse.php:193
 #: elements/CoursesList.php:243
@@ -242,12 +366,20 @@ msgstr ""
 msgid "Box Shadow"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:154
+#: build/elements/ArchiveCourse.php:194
+#: build/elements/CoursesList.php:244
 #: elements/ArchiveCourse.php:154
 #: elements/ArchiveCourse.php:194
 #: elements/CoursesList.php:244
 msgid "Hover Box Shadow"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:157
+#: build/elements/ArchiveCourse.php:197
+#: build/elements/CourseDescription.php:57
+#: build/elements/CourseMaterial.php:48
+#: build/elements/SingleQuiz.php:169
 #: elements/ArchiveCourse.php:157
 #: elements/ArchiveCourse.php:197
 #: elements/CourseDescription.php:57
@@ -256,6 +388,18 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:158
+#: build/elements/ArchiveCourse.php:198
+#: build/elements/CourseDescription.php:154
+#: build/elements/CourseReviews.php:75
+#: build/elements/CoursesList.php:248
+#: build/elements/PageDashboard.php:254
+#: build/elements/PageDashboard.php:298
+#: build/elements/SingleQuiz.php:69
+#: build/elements/SingleQuiz.php:74
+#: build/elements/SingleQuiz.php:132
+#: build/elements/SingleQuiz.php:170
+#: build/elements/SingleQuiz.php:181
 #: elements/ArchiveCourse.php:158
 #: elements/ArchiveCourse.php:198
 #: elements/CourseDescription.php:154
@@ -271,6 +415,18 @@ msgstr ""
 msgid "Padding"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:159
+#: build/elements/ArchiveCourse.php:199
+#: build/elements/CourseDescription.php:160
+#: build/elements/CourseReviews.php:81
+#: build/elements/CoursesList.php:249
+#: build/elements/CourseThumbnail.php:63
+#: build/elements/PageDashboard.php:255
+#: build/elements/PageDashboard.php:299
+#: build/elements/SingleQuiz.php:70
+#: build/elements/SingleQuiz.php:75
+#: build/elements/SingleQuiz.php:171
+#: build/elements/SingleQuiz.php:187
 #: elements/ArchiveCourse.php:159
 #: elements/ArchiveCourse.php:199
 #: elements/CourseDescription.php:160
@@ -286,36 +442,58 @@ msgstr ""
 msgid "Margin"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:163
 #: elements/ArchiveCourse.php:163
 msgid "Pagination"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:172
 #: elements/ArchiveCourse.php:172
 msgid "Links Text Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:178
 #: elements/ArchiveCourse.php:178
 msgid "Hover Text Color"
 msgstr ""
 
+#: build/elements/ArchiveCourse.php:184
 #: elements/ArchiveCourse.php:184
 msgid "Active Text Color"
 msgstr ""
 
+#: build/elements/CourseAbout.php:31
 #: elements/CourseAbout.php:31
 msgid "Course Description"
 msgstr ""
 
+#: build/elements/CourseAbout.php:33
+#: build/elements/CourseDescription.php:33
 #: elements/CourseAbout.php:33
 #: elements/CourseDescription.php:33
 msgid "Heading"
 msgstr ""
 
+#: build/elements/CourseAbout.php:34
+#: build/elements/CourseDescription.php:34
 #: elements/CourseAbout.php:34
 #: elements/CourseDescription.php:34
 msgid "Paragraph"
 msgstr ""
 
+#: build/elements/CourseAuthor.php:33
+#: build/elements/CourseDescription.php:145
+#: build/elements/CourseDescription.php:191
+#: build/elements/CourseEnrolmentBox.php:54
+#: build/elements/CourseInstructors.php:34
+#: build/elements/CourseReviews.php:66
+#: build/elements/CourseReviews.php:112
+#: build/elements/PageDashboard.php:74
+#: build/elements/PageDashboard.php:281
+#: build/elements/PageInstructorRegistration.php:49
+#: build/elements/SingleLesson.php:240
+#: build/elements/SingleQuiz.php:62
+#: build/elements/SingleQuiz.php:143
 #: elements/CourseAuthor.php:33
 #: elements/CourseDescription.php:145
 #: elements/CourseDescription.php:191
@@ -332,6 +510,12 @@ msgstr ""
 msgid "Height"
 msgstr ""
 
+#: build/elements/CourseAuthor.php:38
+#: build/elements/CourseDescription.php:196
+#: build/elements/CourseInstructors.php:39
+#: build/elements/CourseReviews.php:117
+#: build/elements/PageDashboard.php:79
+#: build/elements/PageDashboard.php:286
 #: elements/CourseAuthor.php:38
 #: elements/CourseDescription.php:196
 #: elements/CourseInstructors.php:39
@@ -341,6 +525,18 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
+#: build/elements/CourseAuthor.php:48
+#: build/elements/CourseBenefits.php:57
+#: build/elements/CourseDescription.php:67
+#: build/elements/CourseDescription.php:206
+#: build/elements/CourseInstructors.php:49
+#: build/elements/CourseMaterial.php:58
+#: build/elements/CourseRequirements.php:58
+#: build/elements/CourseReviews.php:127
+#: build/elements/CourseTargetAudience.php:58
+#: build/elements/PageInstructorRegistration.php:54
+#: build/elements/SingleCourse.php:565
+#: build/elements/SingleCourse.php:603
 #: elements/CourseAuthor.php:48
 #: elements/CourseBenefits.php:57
 #: elements/CourseDescription.php:67
@@ -356,6 +552,10 @@ msgstr ""
 msgid "Line Height"
 msgstr ""
 
+#: build/elements/CourseAuthor.php:57
+#: build/elements/CourseShare.php:32
+#: build/elements/PageDashboard.php:266
+#: build/elements/PageInstructorRegistration.php:37
 #: elements/CourseAuthor.php:57
 #: elements/CourseShare.php:32
 #: elements/PageDashboard.php:266
@@ -363,17 +563,28 @@ msgstr ""
 msgid "Label"
 msgstr ""
 
+#: build/elements/CourseAuthor.php:58
+#: build/elements/CourseInstructors.php:57
+#: build/elements/CourseReviews.php:133
 #: elements/CourseAuthor.php:58
 #: elements/CourseInstructors.php:57
 #: elements/CourseReviews.php:133
 msgid "Name"
 msgstr ""
 
+#: build/elements/CourseBenefits.php:27
+#: build/elements/CourseDescription.php:37
 #: elements/CourseBenefits.php:27
 #: elements/CourseDescription.php:37
 msgid "What Will You Learn?"
 msgstr ""
 
+#: build/elements/CourseBenefits.php:30
+#: build/elements/CourseDescription.php:40
+#: build/elements/CourseInstructors.php:28
+#: build/elements/CourseMaterial.php:30
+#: build/elements/PageDashboard.php:257
+#: build/elements/SingleQuiz.php:137
 #: elements/CourseBenefits.php:30
 #: elements/CourseDescription.php:40
 #: elements/CourseInstructors.php:28
@@ -383,11 +594,18 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: build/elements/CourseBenefits.php:31
+#: build/elements/CourseDescription.php:56
 #: elements/CourseBenefits.php:31
 #: elements/CourseDescription.php:56
 msgid "Items Typography"
 msgstr ""
 
+#: build/elements/CourseBenefits.php:32
+#: build/elements/CourseDescription.php:41
+#: build/elements/CourseMaterial.php:32
+#: build/elements/CourseTargetAudience.php:32
+#: build/elements/PageDashboard.php:264
 #: elements/CourseBenefits.php:32
 #: elements/CourseDescription.php:41
 #: elements/CourseMaterial.php:32
@@ -396,6 +614,23 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
+#: build/elements/CourseBenefits.php:36
+#: build/elements/CourseCurriculum.php:45
+#: build/elements/CourseDescription.php:45
+#: build/elements/CourseDescription.php:89
+#: build/elements/CourseDescription.php:119
+#: build/elements/CourseDescription.php:174
+#: build/elements/CourseDescription.php:225
+#: build/elements/CourseMaterial.php:36
+#: build/elements/CourseRequirements.php:36
+#: build/elements/CourseReviews.php:40
+#: build/elements/CourseReviews.php:95
+#: build/elements/CourseReviews.php:146
+#: build/elements/CourseTargetAudience.php:36
+#: build/elements/PageDashboard.php:97
+#: build/elements/SingleCourse.php:543
+#: build/elements/SingleCourse.php:581
+#: build/templates/global/attachments.php:31
 #: elements/CourseBenefits.php:36
 #: elements/CourseCurriculum.php:45
 #: elements/CourseDescription.php:45
@@ -416,6 +651,13 @@ msgstr ""
 msgid "Size"
 msgstr ""
 
+#: build/elements/CourseBenefits.php:51
+#: build/elements/CourseDescription.php:61
+#: build/elements/CourseMaterial.php:52
+#: build/elements/CourseRequirements.php:52
+#: build/elements/CourseTargetAudience.php:52
+#: build/elements/SingleCourse.php:559
+#: build/elements/SingleCourse.php:597
 #: elements/CourseBenefits.php:51
 #: elements/CourseDescription.php:61
 #: elements/CourseMaterial.php:52
@@ -426,104 +668,145 @@ msgstr ""
 msgid "Items Padding"
 msgstr ""
 
+#: build/elements/CourseCategories.php:24
 #: elements/CourseCategories.php:24
 msgid "Categories:"
 msgstr ""
 
+#: build/elements/CourseCategories.php:35
 #: elements/CourseCategories.php:35
 msgid "Uncategorized"
 msgstr ""
 
+#: build/elements/CourseCategories.php:43
 #: elements/CourseCategories.php:43
 msgid "Label Typography"
 msgstr ""
 
+#: build/elements/CourseCategories.php:44
 #: elements/CourseCategories.php:44
 msgid "Category Typography"
 msgstr ""
 
+#: build/elements/CourseDescription.php:31
+#: build/templates/course/about.php:33
 #: elements/CourseDescription.php:31
 #: templates/course/about.php:33
 msgid "About Course"
 msgstr ""
 
+#: build/elements/CourseDescription.php:75
 #: elements/CourseDescription.php:75
 msgid "Curriculum"
 msgstr ""
 
+#: build/elements/CourseDescription.php:77
 #: elements/CourseDescription.php:77
 msgid "Header Title"
 msgstr ""
 
+#: build/elements/CourseDescription.php:80
 #: elements/CourseDescription.php:80
 msgid "Topic Title"
 msgstr ""
 
+#: build/elements/CourseDescription.php:81
 #: elements/CourseDescription.php:81
 msgid "Active Topic Title"
 msgstr ""
 
+#: build/elements/CourseDescription.php:83
 #: elements/CourseDescription.php:83
 msgid "Lesson, Quiz & Assignment Title"
 msgstr ""
 
+#: build/elements/CourseDescription.php:85
 #: elements/CourseDescription.php:85
 msgid "Lesson, Quiz & Assignment Icon"
 msgstr ""
 
+#: build/elements/CourseDescription.php:103
 #: elements/CourseDescription.php:103
 msgid "Review Title"
 msgstr ""
 
+#: build/elements/CourseDescription.php:107
+#: build/elements/CourseReviews.php:28
 #: elements/CourseDescription.php:107
 #: elements/CourseReviews.php:28
 msgid "Review Avg"
 msgstr ""
 
+#: build/elements/CourseDescription.php:108
 #: elements/CourseDescription.php:108
 msgid "Rating Number"
 msgstr ""
 
+#: build/elements/CourseDescription.php:125
+#: build/elements/CourseReviews.php:46
 #: elements/CourseDescription.php:125
 #: elements/CourseReviews.php:46
 msgid "Total Count"
 msgstr ""
 
+#: build/elements/CourseDescription.php:131
 #: elements/CourseDescription.php:131
 msgid "Right Rating Bar"
 msgstr ""
 
+#: build/elements/CourseDescription.php:140
+#: build/elements/CourseEnrolmentBox.php:49
+#: build/elements/CourseReviews.php:61
 #: elements/CourseDescription.php:140
 #: elements/CourseEnrolmentBox.php:49
 #: elements/CourseReviews.php:61
 msgid "Fill Color"
 msgstr ""
 
+#: build/elements/CourseDescription.php:181
+#: build/elements/CourseReviews.php:102
 #: elements/CourseDescription.php:181
 #: elements/CourseReviews.php:102
 msgid "Right Rating Text"
 msgstr ""
 
+#: build/elements/CourseDescription.php:185
+#: build/elements/CourseReviews.php:106
 #: elements/CourseDescription.php:185
 #: elements/CourseReviews.php:106
 msgid "Review list"
 msgstr ""
 
+#: build/elements/CourseDescription.php:187
+#: build/elements/CourseInstructors.php:30
+#: build/elements/CourseReviews.php:108
 #: elements/CourseDescription.php:187
 #: elements/CourseInstructors.php:30
 #: elements/CourseReviews.php:108
 msgid "Image"
 msgstr ""
 
+#: build/elements/CourseDescription.php:231
+#: build/elements/CourseReviews.php:152
 #: elements/CourseDescription.php:231
 #: elements/CourseReviews.php:152
 msgid "Content"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:32
 #: elements/CourseEnrolmentBox.php:32
 msgid "Enrollment Box"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:33
+#: build/elements/CourseEnrolmentBox.php:92
+#: build/elements/CourseEnrolmentBox.php:126
+#: build/elements/CourseInstructors.php:27
+#: build/elements/CourseMaterial.php:47
+#: build/elements/CourseRequirements.php:47
+#: build/elements/CourseTargetAudience.php:47
+#: build/elements/PageDashboard.php:135
+#: build/elements/PageInstructorRegistration.php:101
 #: elements/CourseEnrolmentBox.php:33
 #: elements/CourseEnrolmentBox.php:92
 #: elements/CourseEnrolmentBox.php:126
@@ -536,22 +819,32 @@ msgstr ""
 msgid "Borders"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:36
 #: elements/CourseEnrolmentBox.php:36
 msgid "Course Progress Title"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:37
 #: elements/CourseEnrolmentBox.php:37
 msgid "Course Progress Text"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:40
 #: elements/CourseEnrolmentBox.php:40
 msgid "Course Progress Bar"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:62
 #: elements/CourseEnrolmentBox.php:62
 msgid "Cart & Enroll Button"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:91
+#: build/elements/CourseEnrolmentBox.php:125
+#: build/elements/PageDashboard.php:134
+#: build/elements/PageInstructorRegistration.php:100
+#: build/elements/SingleCourse.php:592
+#: build/elements/SingleQuiz.php:68
 #: elements/CourseEnrolmentBox.php:91
 #: elements/CourseEnrolmentBox.php:125
 #: elements/PageDashboard.php:134
@@ -561,6 +854,10 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:93
+#: build/elements/CourseEnrolmentBox.php:127
+#: build/elements/PageDashboard.php:136
+#: build/elements/PageInstructorRegistration.php:102
 #: elements/CourseEnrolmentBox.php:93
 #: elements/CourseEnrolmentBox.php:127
 #: elements/PageDashboard.php:136
@@ -568,6 +865,10 @@ msgstr ""
 msgid "Hover Borders"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:94
+#: build/elements/CourseEnrolmentBox.php:128
+#: build/elements/PageDashboard.php:137
+#: build/elements/PageInstructorRegistration.php:103
 #: elements/CourseEnrolmentBox.php:94
 #: elements/CourseEnrolmentBox.php:128
 #: elements/PageDashboard.php:137
@@ -575,6 +876,10 @@ msgstr ""
 msgid "Shadow"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:95
+#: build/elements/CourseEnrolmentBox.php:129
+#: build/elements/PageDashboard.php:138
+#: build/elements/PageInstructorRegistration.php:104
 #: elements/CourseEnrolmentBox.php:95
 #: elements/CourseEnrolmentBox.php:129
 #: elements/PageDashboard.php:138
@@ -582,156 +887,202 @@ msgstr ""
 msgid "Hover Shadow"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:98
 #: elements/CourseEnrolmentBox.php:98
 msgid "Certificate & Retake Button"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:132
 #: elements/CourseEnrolmentBox.php:132
 msgid "Course Information"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:134
 #: elements/CourseEnrolmentBox.php:134
 msgid "Course Information Text"
 msgstr ""
 
+#: build/elements/CourseEnrolmentBox.php:135
 #: elements/CourseEnrolmentBox.php:135
 msgid "Course Information Icon"
 msgstr ""
 
+#: build/elements/CourseInstructors.php:25
 #: elements/CourseInstructors.php:25
 msgid "Instructors"
 msgstr ""
 
+#: build/elements/CourseInstructors.php:58
 #: elements/CourseInstructors.php:58
 msgid "Designation"
 msgstr ""
 
+#: build/elements/CourseMaterial.php:27
 #: elements/CourseMaterial.php:27
 msgid "Materials"
 msgstr ""
 
+#: build/elements/CourseMaterial.php:31
+#: build/elements/CourseRequirements.php:31
+#: build/elements/CourseTargetAudience.php:31
 #: elements/CourseMaterial.php:31
 #: elements/CourseRequirements.php:31
 #: elements/CourseTargetAudience.php:31
 msgid "List Item"
 msgstr ""
 
+#: build/elements/CourseRating.php:31
 #: elements/CourseRating.php:31
 msgid "Stars Color"
 msgstr ""
 
+#: build/elements/CourseRating.php:36
 #: elements/CourseRating.php:36
 msgid "Stars Size"
 msgstr ""
 
+#: build/elements/CourseRequirements.php:27
+#: build/templates/course/course-requirements.php:28
 #: elements/CourseRequirements.php:27
 #: templates/course/course-requirements.php:28
 msgid "Requirements"
 msgstr ""
 
+#: build/elements/CourseReviews.php:86
 #: elements/CourseReviews.php:86
 msgid "Right Rating Stars"
 msgstr ""
 
+#: build/elements/CourseReviews.php:134
 #: elements/CourseReviews.php:134
 msgid "Time"
 msgstr ""
 
+#: build/elements/CourseReviews.php:136
 #: elements/CourseReviews.php:136
 msgid "Stars"
 msgstr ""
 
+#: build/elements/CourseShare.php:30
 #: elements/CourseShare.php:30
 msgid "Social Share"
 msgstr ""
 
+#: build/elements/CourseShare.php:33
 #: elements/CourseShare.php:33
 msgid "Original Icons"
 msgstr ""
 
+#: build/elements/CourseShare.php:34
 #: elements/CourseShare.php:34
 msgid "Hovered Icons"
 msgstr ""
 
+#: build/elements/CoursesList.php:80
 #: elements/CoursesList.php:80
 msgid "Courses Query"
 msgstr ""
 
+#: build/elements/CoursesList.php:84
 #: elements/CoursesList.php:84
 msgid "Include ID"
 msgstr ""
 
+#: build/elements/CoursesList.php:91
 #: elements/CoursesList.php:91
 msgid "Excludes IDS"
 msgstr ""
 
+#: build/elements/CoursesList.php:98
 #: elements/CoursesList.php:98
 msgid "Category IDS"
 msgstr ""
 
+#: build/elements/CoursesList.php:105
 #: elements/CoursesList.php:105
 msgid "Order By"
 msgstr ""
 
+#: build/elements/CoursesList.php:113
 #: elements/CoursesList.php:113
 msgid "Order"
 msgstr ""
 
+#: build/elements/CoursesList.php:121
 #: elements/CoursesList.php:121
 msgid "Limit"
 msgstr ""
 
+#: build/elements/CourseTargetAudience.php:27
 #: elements/CourseTargetAudience.php:27
 msgid "Target Audience"
 msgstr ""
 
+#: build/elements/CourseThumbnail.php:31
 #: elements/CourseThumbnail.php:31
 msgid "Original Thumbnails"
 msgstr ""
 
+#: build/elements/CourseThumbnail.php:53
+#: build/elements/CourseThumbnail.php:99
+#: build/elements/PageInstructorRegistration.php:64
 #: elements/CourseThumbnail.php:53
 #: elements/CourseThumbnail.php:99
 #: elements/PageInstructorRegistration.php:64
 msgid "Border Width"
 msgstr ""
 
+#: build/elements/CourseThumbnail.php:71
 #: elements/CourseThumbnail.php:71
 msgid "Original Thumbs Shadow"
 msgstr ""
 
+#: build/elements/CourseThumbnail.php:76
 #: elements/CourseThumbnail.php:76
 msgid "Hovered Thumbnails"
 msgstr ""
 
+#: build/elements/CourseThumbnail.php:109
 #: elements/CourseThumbnail.php:109
 msgid "Hover Thumbs Shadow"
 msgstr ""
 
+#: build/elements/PageDashboard.php:85
 #: elements/PageDashboard.php:85
 msgid "Display Name"
 msgstr ""
 
+#: build/elements/PageDashboard.php:87
 #: elements/PageDashboard.php:87
 msgid "Rating Stars"
 msgstr ""
 
+#: build/elements/PageDashboard.php:104
 #: elements/PageDashboard.php:104
 msgid "Rating Average"
 msgstr ""
 
+#: build/elements/PageDashboard.php:105
 #: elements/PageDashboard.php:105
 msgid "Rating Count"
 msgstr ""
 
+#: build/elements/PageDashboard.php:107
 #: elements/PageDashboard.php:107
 msgid "Header Button"
 msgstr ""
 
+#: build/elements/PageDashboard.php:128
+#: build/elements/PageInstructorRegistration.php:93
 #: elements/PageDashboard.php:128
 #: elements/PageInstructorRegistration.php:93
 msgid "Hover Color"
 msgstr ""
 
+#: build/elements/PageDashboard.php:147
+#: build/elements/PageDashboard.php:184
+#: build/elements/PageDashboard.php:221
+#: build/elements/SingleQuiz.php:110
 #: elements/PageDashboard.php:147
 #: elements/PageDashboard.php:184
 #: elements/PageDashboard.php:221
@@ -739,246 +1090,316 @@ msgstr ""
 msgid "Icon Color"
 msgstr ""
 
+#: build/elements/PageDashboard.php:152
+#: build/elements/PageDashboard.php:189
+#: build/elements/PageDashboard.php:226
 #: elements/PageDashboard.php:152
 #: elements/PageDashboard.php:189
 #: elements/PageDashboard.php:226
 msgid "Icon Size"
 msgstr ""
 
+#: build/elements/PageDashboard.php:167
+#: build/elements/PageDashboard.php:204
+#: build/elements/PageDashboard.php:241
 #: elements/PageDashboard.php:167
 #: elements/PageDashboard.php:204
 #: elements/PageDashboard.php:241
 msgid "Font Family"
 msgstr ""
 
+#: build/elements/PageDashboard.php:258
 #: elements/PageDashboard.php:258
 msgid "Links"
 msgstr ""
 
+#: build/elements/PageDashboard.php:259
 #: elements/PageDashboard.php:259
 msgid "Links Hover"
 msgstr ""
 
+#: build/elements/PageDashboard.php:265
 #: elements/PageDashboard.php:265
 msgid "Value"
 msgstr ""
 
+#: build/elements/PageInstructorRegistration.php:38
 #: elements/PageInstructorRegistration.php:38
 msgid "Input Typography"
 msgstr ""
 
+#: build/elements/SingleLesson.php:245
 #: elements/SingleLesson.php:245
 msgid "Pagination Background"
 msgstr ""
 
+#: build/elements/SingleLesson.php:250
 #: elements/SingleLesson.php:250
 msgid "Previous Background"
 msgstr ""
 
+#: build/elements/SingleLesson.php:255
 #: elements/SingleLesson.php:255
 msgid "Previous Color"
 msgstr ""
 
+#: build/elements/SingleLesson.php:260
 #: elements/SingleLesson.php:260
 msgid "Previous Hover Background"
 msgstr ""
 
+#: build/elements/SingleLesson.php:265
 #: elements/SingleLesson.php:265
 msgid "Previous Hover Color"
 msgstr ""
 
+#: build/elements/SingleLesson.php:270
 #: elements/SingleLesson.php:270
 msgid "Next Background"
 msgstr ""
 
+#: build/elements/SingleLesson.php:275
 #: elements/SingleLesson.php:275
 msgid "Next Color"
 msgstr ""
 
+#: build/elements/SingleLesson.php:280
 #: elements/SingleLesson.php:280
 msgid "Next Hover Background"
 msgstr ""
 
+#: build/elements/SingleLesson.php:285
 #: elements/SingleLesson.php:285
 msgid "Next Hover Color"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:104
 #: elements/SingleQuiz.php:104
 msgid "Lesson Typography"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:105
 #: elements/SingleQuiz.php:105
 msgid "Active Lesson Typography"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:115
 #: elements/SingleQuiz.php:115
 msgid "Icon Active & Hover Color"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:120
 #: elements/SingleQuiz.php:120
 msgid "Lesson Background Color"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:125
 #: elements/SingleQuiz.php:125
 msgid "Active Lesson Background Color"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:138
 #: elements/SingleQuiz.php:138
 msgid "Progress"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:148
+#: build/elements/SingleQuiz.php:195
 #: elements/SingleQuiz.php:148
 #: elements/SingleQuiz.php:195
 msgid "Background"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:153
 #: elements/SingleQuiz.php:153
 msgid "Toggle Icon Background"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:158
 #: elements/SingleQuiz.php:158
 msgid "Toggle Icon Color"
 msgstr ""
 
+#: build/elements/SingleQuiz.php:163
 #: elements/SingleQuiz.php:163
 msgid "Close Icon Color"
 msgstr ""
 
+#: build/OxygenTutorLMS.php:109
 #: OxygenTutorLMS.php:109
 msgid "Tutor LMS"
 msgstr ""
 
+#: build/OxygenTutorLMS.php:114
 #: OxygenTutorLMS.php:114
 msgid "Single Template"
 msgstr ""
 
+#: build/OxygenTutorLMS.php:117
 #: OxygenTutorLMS.php:117
 msgid "Single Course"
 msgstr ""
 
+#: build/OxygenTutorLMS.php:120
 #: OxygenTutorLMS.php:120
 msgid "Archive & Course List"
 msgstr ""
 
+#: build/OxygenTutorLMS.php:123
 #: OxygenTutorLMS.php:123
 msgid "TutorLMS Pages"
 msgstr ""
 
+#: build/OxygenTutorLMS.php:203
 #: OxygenTutorLMS.php:203
 msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.2.1.0"
 msgstr ""
 
+#: build/OxygenTutorLMS.php:209
 #: OxygenTutorLMS.php:209
 msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated Oxygen Builder Plugin"
 msgstr ""
 
+#: build/templates/course/about.php:44
 #: templates/course/about.php:44
 msgid "Show More"
 msgstr ""
 
+#: build/templates/course/author.php:22
 #: templates/course/author.php:22
 msgid "By"
 msgstr ""
 
+#: build/templates/course/level.php:10
 #: templates/course/level.php:10
 msgid "Course level:"
 msgstr ""
 
+#: build/templates/course/review.php:50
 #: templates/course/review.php:50
 msgid "No Review Yet"
 msgstr ""
 
+#: build/templates/course/review.php:67
 #: templates/course/review.php:67
 msgid "Total "
 msgstr ""
 
+#: build/templates/course/review.php:69
 #: templates/course/review.php:69
 msgid " Rating"
 msgid_plural " Ratings"
 msgstr[0] ""
 msgstr[1] ""
 
+#: build/templates/course/review.php:96
 #: templates/course/review.php:96
 msgid "Ratings"
 msgstr ""
 
+#: build/templates/course/review.php:96
 #: templates/course/review.php:96
 msgid "Rating"
 msgstr ""
 
+#: build/templates/course/review.php:120
 #: templates/course/review.php:120
 msgid "Write a review"
 msgstr ""
 
+#: build/templates/course/review.php:120
 #: templates/course/review.php:120
 msgid "Edit review"
 msgstr ""
 
+#: build/templates/course/review.php:134
 #: templates/course/review.php:134
 msgid "Load More"
 msgstr ""
 
+#: build/templates/course/review.php:164
 #: templates/course/review.php:164
 msgid "write a review"
 msgstr ""
 
+#: build/templates/course/review.php:168
 #: templates/course/review.php:168
 msgid "Submit Review"
 msgstr ""
 
+#: build/templates/course/share.php:18
 #: templates/course/share.php:18
 msgid "Wishlist"
 msgstr ""
 
+#: build/templates/dashboard.php:45
 #: templates/dashboard.php:45
 msgid "My Courses"
 msgstr ""
 
+#: build/templates/dashboard.php:45
 #: templates/dashboard.php:45
 msgid "Dashboard"
 msgstr ""
 
+#: build/templates/dashboard.php:51
 #: templates/dashboard.php:51
 msgid "Q&A"
 msgstr ""
 
+#: build/templates/dashboard.php:51
 #: templates/dashboard.php:51
 msgid "Quiz Attempts"
 msgstr ""
 
+#: build/templates/dashboard.php:57
 #: templates/dashboard.php:57
 msgid "Menu"
 msgstr ""
 
+#: build/templates/dashboard.php:94
 #: templates/dashboard.php:94
 msgid "Hello"
 msgstr ""
 
+#: build/templates/dashboard.php:119
 #: templates/dashboard.php:119
 msgid "Become an instructor"
 msgstr ""
 
+#: build/templates/dashboard.php:140
 #: templates/dashboard.php:140
 msgid "Create a New Course"
 msgstr ""
 
+#: build/templates/dashboard.php:149
 #: templates/dashboard.php:149
 msgid "Your Application is pending as of"
 msgstr ""
 
+#: build/templates/global/alert.php:27
 #: templates/global/alert.php:27
 msgid "Please define alert class"
 msgstr ""
 
+#: build/templates/global/attachments.php:46
 #: templates/global/attachments.php:46
 msgid "No Attachment Found"
 msgstr ""
 
+#: build/templates/global/login.php:47
+#: build/templates/login-form.php:22
 #: templates/global/login.php:47
 #: templates/login-form.php:22
 msgid "Username or Email Address"
 msgstr ""
 
+#: build/templates/global/login.php:48
+#: build/templates/instructor-registration.php:100
+#: build/templates/instructor-registration.php:103
+#: build/templates/login-form.php:26
+#: build/templates/student-registration.php:97
+#: build/templates/student-registration.php:100
 #: templates/global/login.php:48
 #: templates/instructor-registration.php:100
 #: templates/instructor-registration.php:103
@@ -988,37 +1409,51 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
+#: build/templates/global/login.php:49
 #: templates/global/login.php:49
 msgid "Remember Me"
 msgstr ""
 
+#: build/templates/global/login.php:50
 #: templates/global/login.php:50
 msgid "Log In"
 msgstr ""
 
+#: build/templates/global/login.php:51
 #: templates/global/login.php:51
 msgid "Create a new account"
 msgstr ""
 
+#: build/templates/global/login.php:61
 #: templates/global/login.php:61
 msgid "Forgot Password?"
 msgstr ""
 
+#: build/templates/instructor-registration.php:14
+#: build/templates/student-registration.php:13
 #: templates/instructor-registration.php:14
 #: templates/student-registration.php:13
 msgid "Oooh! Access Denied"
 msgstr ""
 
+#: build/templates/instructor-registration.php:15
+#: build/templates/student-registration.php:14
 #: templates/instructor-registration.php:15
 #: templates/student-registration.php:14
 msgid "You do not have access to this area of the application. Please refer to your system  administrator."
 msgstr ""
 
+#: build/templates/instructor-registration.php:17
+#: build/templates/student-registration.php:16
 #: templates/instructor-registration.php:17
 #: templates/student-registration.php:16
 msgid "Go to Home"
 msgstr ""
 
+#: build/templates/instructor-registration.php:52
+#: build/templates/instructor-registration.php:55
+#: build/templates/student-registration.php:51
+#: build/templates/student-registration.php:54
 #: templates/instructor-registration.php:52
 #: templates/instructor-registration.php:55
 #: templates/student-registration.php:51
@@ -1026,6 +1461,10 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
+#: build/templates/instructor-registration.php:62
+#: build/templates/instructor-registration.php:65
+#: build/templates/student-registration.php:61
+#: build/templates/student-registration.php:64
 #: templates/instructor-registration.php:62
 #: templates/instructor-registration.php:65
 #: templates/student-registration.php:61
@@ -1033,6 +1472,10 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
+#: build/templates/instructor-registration.php:77
+#: build/templates/instructor-registration.php:80
+#: build/templates/student-registration.php:74
+#: build/templates/student-registration.php:77
 #: templates/instructor-registration.php:77
 #: templates/instructor-registration.php:80
 #: templates/student-registration.php:74
@@ -1040,6 +1483,10 @@ msgstr ""
 msgid "User Name"
 msgstr ""
 
+#: build/templates/instructor-registration.php:87
+#: build/templates/instructor-registration.php:90
+#: build/templates/student-registration.php:84
+#: build/templates/student-registration.php:87
 #: templates/instructor-registration.php:87
 #: templates/instructor-registration.php:90
 #: templates/student-registration.php:84
@@ -1047,128 +1494,167 @@ msgstr ""
 msgid "E-Mail"
 msgstr ""
 
+#: build/templates/instructor-registration.php:110
+#: build/templates/student-registration.php:107
 #: templates/instructor-registration.php:110
 #: templates/student-registration.php:107
 msgid "Password confirmation"
 msgstr ""
 
+#: build/templates/instructor-registration.php:113
+#: build/templates/student-registration.php:110
 #: templates/instructor-registration.php:113
 #: templates/student-registration.php:110
 msgid "Password Confirmation"
 msgstr ""
 
+#: build/templates/instructor-registration.php:138
+#: build/templates/student-registration.php:136
 #: templates/instructor-registration.php:138
 #: templates/student-registration.php:136
 msgid "By signing up, I agree with the website's"
 msgstr ""
 
+#: build/templates/instructor-registration.php:138
+#: build/templates/student-registration.php:136
 #: templates/instructor-registration.php:138
 #: templates/student-registration.php:136
 msgid "Terms and Conditions"
 msgstr ""
 
+#: build/templates/instructor-registration.php:143
 #: templates/instructor-registration.php:143
 msgid "Register as instructor"
 msgstr ""
 
+#: build/templates/login-form.php:39
 #: templates/login-form.php:39
 msgid "Keep me signed in"
 msgstr ""
 
+#: build/templates/login-form.php:43
 #: templates/login-form.php:43
 msgid "Forgot?"
 msgstr ""
 
+#: build/templates/login-form.php:49
 #: templates/login-form.php:49
 msgid "Sign In"
 msgstr ""
 
+#: build/templates/login-form.php:61
 #: templates/login-form.php:61
 msgid "Don't have an account?"
 msgstr ""
 
+#: build/templates/login-form.php:63
 #: templates/login-form.php:63
 msgid "Register Now"
 msgstr ""
 
+#: build/templates/public-profile.php:109
+#: build/templates/public-profile.php:170
+#: build/templates/shortcode/tutor-instructor.php:27
 #: templates/public-profile.php:109
 #: templates/public-profile.php:170
 #: templates/shortcode/tutor-instructor.php:27
 msgid "Courses"
 msgstr ""
 
+#: build/templates/public-profile.php:109
+#: build/templates/shortcode/tutor-instructor.php:27
 #: templates/public-profile.php:109
 #: templates/shortcode/tutor-instructor.php:27
 msgid "Course"
 msgstr ""
 
+#: build/templates/public-profile.php:116
 #: templates/public-profile.php:116
 msgid "Students"
 msgstr ""
 
+#: build/templates/public-profile.php:116
 #: templates/public-profile.php:116
 msgid "Student"
 msgstr ""
 
+#: build/templates/public-profile.php:128
 #: templates/public-profile.php:128
 msgid "Courses Enrolled"
 msgstr ""
 
+#: build/templates/public-profile.php:128
 #: templates/public-profile.php:128
 msgid "Course Enrolled"
 msgstr ""
 
+#: build/templates/public-profile.php:133
 #: templates/public-profile.php:133
 msgid "Courses Completed"
 msgstr ""
 
+#: build/templates/public-profile.php:133
 #: templates/public-profile.php:133
 msgid "Course Completed"
 msgstr ""
 
+#: build/templates/public-profile.php:164
 #: templates/public-profile.php:164
 msgid "Biography"
 msgstr ""
 
+#: build/templates/retrieve-password.php:23
 #: templates/retrieve-password.php:23
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
 msgstr ""
 
+#: build/templates/retrieve-password.php:28
 #: templates/retrieve-password.php:28
 msgid "Username or email"
 msgstr ""
 
+#: build/templates/retrieve-password.php:42
+#: build/templates/retrieve-password.php:43
 #: templates/retrieve-password.php:42
 #: templates/retrieve-password.php:43
 msgid "Reset password"
 msgstr ""
 
+#: build/templates/shortcode/instructor-filter.php:30
+#: build/templates/shortcode/instructor-filter.php:60
 #: templates/shortcode/instructor-filter.php:30
 #: templates/shortcode/instructor-filter.php:60
 msgid "Clear All"
 msgstr ""
 
+#: build/templates/shortcode/instructor-filter.php:43
+#: build/templates/shortcode/instructor-filter.php:50
 #: templates/shortcode/instructor-filter.php:43
 #: templates/shortcode/instructor-filter.php:50
 msgid "Search any instructor..."
 msgstr ""
 
+#: build/templates/shortcode/instructor-filter.php:68
 #: templates/shortcode/instructor-filter.php:68
 msgid "Apply Filter"
 msgstr ""
 
+#: build/templates/shortcode/tutor-instructor.php:35
 #: templates/shortcode/tutor-instructor.php:35
 msgid "No Instructor Found"
 msgstr ""
 
+#: build/templates/shortcode/tutor-instructor.php:47
 #: templates/shortcode/tutor-instructor.php:47
 msgid "Previous"
 msgstr ""
 
+#: build/templates/shortcode/tutor-instructor.php:48
 #: templates/shortcode/tutor-instructor.php:48
 msgid "Next"
 msgstr ""
 
+#: build/templates/student-registration.php:141
 #: templates/student-registration.php:141
 msgid "Register"
 msgstr ""
