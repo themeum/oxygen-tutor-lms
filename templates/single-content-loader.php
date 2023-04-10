@@ -85,7 +85,7 @@ get_tutor_header();
 		<div class="tutor-row tutor-align-center">
 			<div class="tutor-spotlight-mobile-progress-left <?php echo ! $is_completed_lesson ? 'tutor-col-sm-8 tutor-col-6' : 'tutor-col-12'; ?>">
 				<div class="tutor-fs-7 tutor-color-muted">
-					<?php echo esc_html( $course_stats['completed_percent'] ) . '% '; ?><span><?php esc_html_e( 'Complete', 'tutor' ); ?></span>
+					<?php echo esc_html( $course_stats['completed_percent'] ) . '% '; ?><span><?php esc_html_e( 'Complete', 'oxygen-tutor-lms' ); ?></span>
 				</div>
 				<div class="list-item-progress tutor-my-16">
 					<div class="tutor-progress-bar tutor-mt-12" style="--tutor-progress-value:<?php echo esc_attr( $course_stats['completed_percent'] ); ?>%;">
