@@ -30,22 +30,22 @@ class CourseAuthor extends \OxygenTutorElements {
 		$image_section->addStyleControls(
 			array(
 				array(
-                	"name" => __('Height'),
+                	"name" => __('Height','oxygen-tutor-lms'),
                 	"selector" => $img_selector,
 					"property" => 'height',
 				),
 				array(
-                	"name" => __('Width'),
+                	"name" => __('Width','oxygen-tutor-lms'),
                 	"selector" => $img_selector,
 					"property" => 'width',
 				),
 				array(
-                	"name" => __('Font Size'),
+                	"name" => __('Font Size','oxygen-tutor-lms'),
                 	"selector" => $img_selector,
 					"property" => 'font-size',
 				),
 				array(
-                	"name" => __('Line Height'),
+                	"name" => __('Line Height','oxygen-tutor-lms'),
                 	"selector" => $img_selector,
 					"property" => 'line-height',
 				)
@@ -54,8 +54,8 @@ class CourseAuthor extends \OxygenTutorElements {
 
         //section lable and name
         $author_selector = ".tutor-meta";
-        $this->typographySection(__('Label'), $author_selector.' span.tutor-mr-16');
-        $this->typographySection(__('Name'), $author_selector.' span.tutor-mr-16 a');
+        $this->typographySection(__('Label','oxygen-tutor-lms'), $author_selector.' span.tutor-mr-16');
+        $this->typographySection(__('Name','oxygen-tutor-lms'), $author_selector.' span.tutor-mr-16 a');
     }
 
 }

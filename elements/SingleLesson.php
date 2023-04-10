@@ -237,52 +237,52 @@ class SingleLesson extends \OxygenTutorElements {
 		$pagination_color->addStyleControls(
 			array(
 				array(
-                	"name" => __('Height'),
+                	"name" => __('Height','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector,
 					"property" => 'height',
                 ),
 				array(
-                	"name" => __('Pagination Background'),
+                	"name" => __('Pagination Background','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector,
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Previous Background'),
+                	"name" => __('Previous Background','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-prev a',
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Previous Color'),
+                	"name" => __('Previous Color','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-prev a span',
 					"property" => 'color',
                 ),
 				array(
-                	"name" => __('Previous Hover Background'),
+                	"name" => __('Previous Hover Background','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-prev a:hover',
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Previous Hover Color'),
+                	"name" => __('Previous Hover Color','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-prev a:hover span',
 					"property" => 'color',
                 ),
 				array(
-                	"name" => __('Next Background'),
+                	"name" => __('Next Background','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-next a',
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Next Color'),
+                	"name" => __('Next Color','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-next a span',
 					"property" => 'color',
                 ),
 				array(
-                	"name" => __('Next Hover Background'),
+                	"name" => __('Next Hover Background','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-next a:hover',
 					"property" => 'background-color',
                 ),
 				array(
-                	"name" => __('Next Hover Color'),
+                	"name" => __('Next Hover Color','oxygen-tutor-lms'),
                 	"selector" => $pagination_selector.' .tutor-single-course-content-next a:hover span',
 					"property" => 'color',
                 )

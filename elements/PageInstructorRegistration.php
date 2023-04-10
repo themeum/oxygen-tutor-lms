@@ -34,34 +34,34 @@ class PageInstructorRegistration extends \OxygenTutorElements {
 	function controls() {
 		$selector = '.tutor-instructor-registration';
 		$student_registration = $this->addControlSection("student-registration", __("Registration Form"), "assets/icon.png", $this);
-		$student_registration->typographySection(__('Label'), $selector.' .tutor-form-group label', $this);
-		$student_registration->typographySection(__('Input Typography'), $selector.' .tutor-form-group input', $this);
+		$student_registration->typographySection(__('Label','oxygen-tutor-lms'), $selector.' .tutor-form-group label', $this);
+		$student_registration->typographySection(__('Input Typography','oxygen-tutor-lms'), $selector.' .tutor-form-group input', $this);
 		$input_settings = $student_registration->addControlSection("input-settins", __("Input Field"), "assets/icon.png", $this);
 		$input_selector = $selector." .tutor-form-group input";
 		$input_settings->addStyleControls(
 			array(
 				array(
-                	"name" => __('Background Color'),
+                	"name" => __('Background Color','oxygen-tutor-lms'),
                 	"selector" => $input_selector,
 					"property" => 'background-color',
 				),
 				array(
-                	"name" => __('Height'),
+                	"name" => __('Height','oxygen-tutor-lms'),
                 	"selector" => $input_selector,
 					"property" => 'height',
 				),
 				array(
-                	"name" => __('Line Height'),
+                	"name" => __('Line Height','oxygen-tutor-lms'),
                 	"selector" => $input_selector,
 					"property" => 'line-height',
 				),
 				array(
-                	"name" => __('Border Color'),
+                	"name" => __('Border Color','oxygen-tutor-lms'),
                 	"selector" => $input_selector,
 					"property" => 'border-color',
 				),
 				array(
-                	"name" => __('Border Width'),
+                	"name" => __('Border Width','oxygen-tutor-lms'),
                 	"selector" => $input_selector,
 					"property" => 'border-width',
 				)
@@ -75,33 +75,33 @@ class PageInstructorRegistration extends \OxygenTutorElements {
         $register_btn->addStyleControls(
             array(
                 array(
-                    "name" => __('Background Color'),
+                    "name" => __('Background Color','oxygen-tutor-lms'),
                     "selector" => $register_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => __('Color'),
+                    "name" => __('Color','oxygen-tutor-lms'),
                     "selector" => $register_btn_selector,
                     "property" => 'color',
                 ),
                 array(
-                    "name" => __('Hover Background Color'),
+                    "name" => __('Hover Background Color','oxygen-tutor-lms'),
                     "selector" => $register_btn_selector.":hover",
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => __('Hover Color'),
+                    "name" => __('Hover Color','oxygen-tutor-lms'),
                     "selector" => $register_btn_selector.":hover",
                     "property" => 'color',
                 )
             )
         );
-        $register_btn->addPreset("padding", "submit_padding",  __("Button Paddings"), $register_btn_selector);
-        $register_btn->typographySection(__("Typography"), $register_btn_selector, $this);
-        $register_btn->borderSection(__("Borders"), $register_btn_selector, $this);
-        $register_btn->borderSection(__("Hover Borders"), $register_btn_selector.":hover", $this);
-        $register_btn->boxShadowSection(__("Shadow"), $register_btn_selector, $this);
-        $register_btn->boxShadowSection(__("Hover Shadow"), $register_btn_selector.":hover", $this);
+        $register_btn->addPreset("padding", "submit_padding",  __("Button Paddings","oxygen-tutor-lms"), $register_btn_selector);
+        $register_btn->typographySection(__("Typography","oxygen-tutor-lms"), $register_btn_selector, $this);
+        $register_btn->borderSection(__("Borders","oxygen-tutor-lms"), $register_btn_selector, $this);
+        $register_btn->borderSection(__("Hover Borders","oxygen-tutor-lms"), $register_btn_selector.":hover", $this);
+        $register_btn->boxShadowSection(__("Shadow","oxygen-tutor-lms"), $register_btn_selector, $this);
+        $register_btn->boxShadowSection(__("Hover Shadow","oxygen-tutor-lms"), $register_btn_selector.":hover", $this);
 	}
 
 }

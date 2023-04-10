@@ -28,12 +28,12 @@ class CourseRating extends \OxygenTutorElements {
         $this->addStyleControls(
 			array(
 				array(
-					"name" 		=> __('Stars Color'),
+					"name" 		=> __('Stars Color','oxygen-tutor-lms'),
 					"selector" 	=> $star_selector,
 					"property" 	=> 'color',
 				),
 				array(
-					"name" 		=> __('Stars Size'),
+					"name" 		=> __('Stars Size','oxygen-tutor-lms'),
 					"selector" 	=> $star_selector,
 					"property" 	=> 'font-size',
 				)
