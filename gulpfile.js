@@ -40,11 +40,12 @@ gulp.task("copy", function () {
 			"!./package.json",
 			"!./package-lock.json",
 		])
-		.pipe(gulp.dest("build/"));
+		.pipe(gulp.dest("build/oxygen-tutor-lms"));
 });
 
 gulp.task("make-zip", function () {
-	return gulp.src("./build/**/*.*").pipe(zip(`oxygen-tutor-lms.zip`)).pipe(gulp.dest("./"));
+	const package = require('./package.json');
+	return gulp.src("./build/**/*.*").pipe(zip(`oxygen-tutor-lms-${package.version}.zip`)).pipe(gulp.dest("./"));
 });
 
 /**

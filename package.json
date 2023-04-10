@@ -1,6 +1,6 @@
 {
     "name": "oxygen-tutor-lms",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "description": "Build E-Learning website by Oxygen Builder and Tutor LMS Integration plugin",
     "main": "gulpfile.js",
     "engines": {
