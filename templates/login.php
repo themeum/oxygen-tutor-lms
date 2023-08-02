@@ -2,11 +2,10 @@
 /**
  * Display single login
  *
- * @author themeum
+ * @package Tutor\Templates
+ * @author Themeum <support@themeum.com>
  * @link https://themeum.com
- * @package TutorLMS/Templates
  * @since 1.0.0
- * @version 1.4.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,15 +13,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! tutor_utils()->get_option( 'enable_tutor_native_login', null, true, true ) ) {
-	// Refer to login oage
-	header( 'Location: ' . wp_login_url( $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ) );
+	// Redirect to wp native login page.
+	header( 'Location: ' . wp_login_url( tutor_utils()->get_current_url() ) );
 	exit;
 }
 
+tutor_utils()->tutor_custom_header();
 $login_url = tutor_utils()->get_option( 'enable_tutor_native_login', null, true, true ) ? '' : wp_login_url( tutor()->current_url );
 ?>
 
-<?php do_action( 'tutor/template/login/before/wrap' ); ?>
+<?php
+//phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+do_action( 'tutor/template/login/before/wrap' );
+?>
 <div <?php tutor_post_class( 'tutor-page-wrap' ); ?>>
 	<div class="tutor-template-segment tutor-login-wrap">
 
@@ -38,10 +41,12 @@ $login_url = tutor_utils()->get_option( 'enable_tutor_native_login', null, true,
 					false
 				);
 				?>
-			<?php do_action( 'tutor_after_login_form' ); ?>
 		</div>
+		<?php do_action( 'tutor_after_login_form_wrapper' ); ?>
 	</div>
 </div>
 <?php
+	//phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 	do_action( 'tutor/template/login/after/wrap' );
+	tutor_utils()->tutor_custom_footer();
 ?>
