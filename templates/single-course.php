@@ -2,15 +2,22 @@
 /**
  * Template for displaying single course
  *
- * @author Themeum
+ * @package Tutor\Templates
+ * @author Themeum <support@themeum.com>
  * @link https://themeum.com
- * @package TutorLMS/Templates
  * @since 1.0.0
- * @version 1.4.3
  */
 
-// Prepare the nav items
-$course_id       = get_the_ID();
+defined( 'ABSPATH' ) || exit;
+
+use Tutor\Models\EnrollmentModel;
+use TUTOR\Input;
+
+$course_id     = get_the_ID();
+$course_rating = tutor_utils()->get_course_rating( $course_id );
+$is_enrolled   = EnrollmentModel::is_enrolled( $course_id, get_current_user_id() );
+
+// Prepare the nav items.
 $course_nav_item = apply_filters( 'tutor_course/single/nav_items', tutor_utils()->course_nav_items(), $course_id );
 $is_public       = \TUTOR\Course_List::is_public( $course_id );
 $is_mobile       = wp_is_mobile();
@@ -28,6 +35,10 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 	tutor_utils()->tutor_custom_footer();
 	return;
 }
+$has_video = apply_filters( 'tutor_course_has_video', tutor_utils()->has_video_in_single(), $course_id );
+
+$is_enabled_wishlist = tutor_utils()->get_option( 'enable_wishlist', true );
+
 ?>
 
 <?php do_action( 'tutor_course/single/before/wrap' ); ?>
@@ -36,24 +47,42 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 		<?php ( isset( $is_enrolled ) && $is_enrolled ) ? tutor_course_enrolled_lead_info() : tutor_course_lead_info(); ?>
 		<div class="tutor-row tutor-gx-xl-5">
 			<main class="tutor-col-xl-8">
-				<?php tutor_utils()->has_video_in_single() ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
+				<?php $has_video ? tutor_course_video() : get_tutor_course_thumbnail(); ?>
 				<?php do_action( 'tutor_course/single/before/inner-wrap' ); ?>
-				
+
 				<?php if ( $is_mobile && 'top' === $enrollment_box_position ) : ?>
 					<div class="tutor-mt-32">
 						<?php tutor_load_template( 'single.course.course-entry-box' ); ?>
 					</div>
 				<?php endif; ?>
 
-				<div class="tutor-course-details-tab tutor-mt-32">
+				<div id="tutor-course-details-tab-wrapper" class="tutor-course-details-tab tutor-mt-32">
+					<?php
+					$active_tab = Input::get( 'page_tab', Input::get( 'tab', 'info' ) );
+					if ( 'qna' === $active_tab ) {
+						$active_tab = 'questions';
+					}
+					if ( ! is_array( $course_nav_item ) || ! array_key_exists( $active_tab, $course_nav_item ) ) {
+						$active_tab = 'info';
+					}
+					$default_active_key = apply_filters( 'tutor_default_topics_active_tab', $active_tab );
+					?>
 					<?php if ( is_array( $course_nav_item ) && count( $course_nav_item ) > 1 ) : ?>
 						<div class="tutor-is-sticky">
-							<?php tutor_load_template( 'single.course.enrolled.nav', array( 'course_nav_item' => $course_nav_item ) ); ?>
+							<?php
+							tutor_load_template(
+								'single.course.enrolled.nav',
+								array(
+									'course_nav_item'    => $course_nav_item,
+									'default_active_key' => $default_active_key,
+								)
+							);
+							?>
 						</div>
 					<?php endif; ?>
 					<div class="tutor-tab tutor-pt-24">
 						<?php foreach ( $course_nav_item as $key => $subpage ) : ?>
-							<div id="tutor-course-details-tab-<?php echo $key; ?>" class="tutor-tab-item<?php echo $key == 'info' ? ' is-active' : ''; ?>">
+							<div id="tutor-course-details-tab-<?php echo esc_attr( $key ); ?>" class="tutor-tab-item<?php echo $default_active_key == $key ? ' is-active' : ''; ?>">
 								<?php
 									do_action( 'tutor_course/single/tab/' . $key . '/before' );
 
@@ -76,9 +105,10 @@ if ( ! is_user_logged_in() && ! $is_public && $student_must_login_to_view_course
 			</main>
 
 			<aside class="tutor-col-xl-4">
-				<div class="tutor-single-course-sidebar tutor-mt-40 tutor-mt-xl-0">
+				<?php $sidebar_attr = apply_filters( 'tutor_course_details_sidebar_attr', '' ); ?>
+				<div class="tutor-single-course-sidebar tutor-mt-40 tutor-mt-xl-0" <?php echo esc_attr( $sidebar_attr ); ?> >
 					<?php do_action( 'tutor_course/single/before/sidebar' ); ?>
-					
+
 					<?php if ( ( $is_mobile && 'bottom' === $enrollment_box_position ) || ! $is_mobile ) : ?>
 						<?php tutor_load_template( 'single.course.course-entry-box' ); ?>
 					<?php endif ?>
