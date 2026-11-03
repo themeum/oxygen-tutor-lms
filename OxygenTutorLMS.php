@@ -61,7 +61,6 @@ final class OxygenTutorLMS {
 		// Supporting public profile as author archive page.
 		add_action( 'pre_get_posts', array( $this, 'public_profile_mark_archive' ), 1 );
 
-
 		add_action( 'template_redirect', array( $this, 'allow_tutor_template' ) );
 	}
 
