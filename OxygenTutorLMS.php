@@ -1,6 +1,6 @@
 <?php
 
-use TUTOR\Input;
+use Tutor\Core\Input;
 
 use function Clue\StreamFilter\remove;
 
@@ -61,7 +61,6 @@ final class OxygenTutorLMS {
 		// Supporting public profile as author archive page.
 		add_action( 'pre_get_posts', array( $this, 'public_profile_mark_archive' ), 1 );
 
-		add_filter( 'template_include', array( $this, 'load_single_course_template' ) );
 
 		add_action( 'template_redirect', array( $this, 'allow_tutor_template' ) );
 	}
@@ -84,34 +83,6 @@ final class OxygenTutorLMS {
 			new \TUTOR\Template();
 			add_filter( 'tutor_lms_should_template_override', '__return_false' );
 		}
-	}
-
-	/**
-	 * Load single course template.
-	 *
-	 * @param string $template the template.
-	 *
-	 * @return string
-	 */
-	public function load_single_course_template( $template ) {
-		global $wp_query;
-		$ct_builder = Input::get( 'ct_builder', false );
-		if ( $ct_builder ) {
-			return $template;
-		}
-		$course_post_type = tutor()->course_post_type;
-		$bundle_post_type = tutor()->bundle_post_type;
-		if ( in_array( get_query_var( 'post_type' ), array( $course_post_type, $bundle_post_type ), true ) && is_singular( array( $course_post_type, $bundle_post_type ) ) ) {
-			$template = otlms_get_template( 'single-course' );
-			remove_all_filters( 'template_include' );
-		}
-
-		if ( tutor()->course_post_type === get_query_var( 'post_type' ) && ! is_singular() ) {
-			$template = otlms_get_template( 'archive-course' );
-			remove_all_filters( 'template_include' );
-		}
-
-		return $template;
 	}
 
 	/**
