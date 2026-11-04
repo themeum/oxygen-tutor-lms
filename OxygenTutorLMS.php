@@ -67,6 +67,8 @@ final class OxygenTutorLMS {
 	/**
 	 * Load single course template.
 	 *
+	 * @since 2.0.4
+	 *
 	 * @param string $template the template.
 	 *
 	 * @return string
@@ -96,6 +98,8 @@ final class OxygenTutorLMS {
 
 	/**
 	 * Allow tutor template.
+	 *
+	 * @since 2.0.4
 	 *
 	 * @return void
 	 */
