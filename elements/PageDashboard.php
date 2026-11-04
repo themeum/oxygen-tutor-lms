@@ -71,71 +71,71 @@ class PageDashboard extends \OxygenTutorElements {
 		$header_img->addStyleControls(
 			array(
 				array(
-                	"name" => __('Height'),
+                	"name" => __('Height','oxygen-tutor-lms'),
                 	"selector" => $img_selector,
 					"property" => 'height',
 				),
 				array(
-                	"name" => __('Width'),
+                	"name" => __('Width','oxygen-tutor-lms'),
                 	"selector" => $img_selector,
 					"property" => 'width',
 				)
 			)
 		);
-		$header->typographySection(__('Display Name'), $header_selector.' .tutor-dashboard-header-username', $this);
+		$header->typographySection(__('Display Name','oxygen-tutor-lms'), $header_selector.' .tutor-dashboard-header-username', $this);
 
-		$header_stars = $header->addControlSection("dashboard_header_stars", __("Rating Stars"), "assets/icon.png", $this);
+		$header_stars = $header->addControlSection("dashboard_header_stars", __("Rating Stars","oxygen-tutor-lms"), "assets/icon.png", $this);
         $stars_selector = $header_selector." .tutor-ratings-stars span";
         $header_stars->addStyleControls(
             array(
                 array(
-                    "name" => __('Color'),
+                    "name" => __('Color','oxygen-tutor-lms'),
                     "selector" => $stars_selector,
                     "property" => 'color',
                 ),
                 array(
-                    "name" => __('Size'),
+                    "name" => __('Size','oxygen-tutor-lms'),
                     "selector" => $stars_selector,
                     "property" => 'font-size',
                 )
             )
 		);
 
-		$header->typographySection(__('Rating Average'), $header_selector." .tutor-ratings-average", $this);
-		$header->typographySection(__('Rating Count'), $header_selector." .tutor-ratings-count", $this);
+		$header->typographySection(__('Rating Average','oxygen-tutor-lms'), $header_selector." .tutor-ratings-average", $this);
+		$header->typographySection(__('Rating Count','oxygen-tutor-lms'), $header_selector." .tutor-ratings-count", $this);
 
-		$new_course_btn = $this->addControlSection("new_course_btn", __("Header Button"), "assets/icon.png", $this);
+		$new_course_btn = $this->addControlSection("new_course_btn", __("Header Button","oxygen-tutor-lms"), "assets/icon.png", $this);
         $new_course_btn_selector = $header_selector.' .tutor-btn-outline-primary';
-        $new_course_btn->addPreset( "padding", "submit_padding", __("Button Paddings"), $new_course_btn_selector);
+        $new_course_btn->addPreset( "padding", "submit_padding", __("Button Paddings","oxygen-tutor-lms"), $new_course_btn_selector);
         $new_course_btn->addStyleControls(
             array(
                 array(
-                    "name" => __('Background Color'),
+                    "name" => __('Background Color','oxygen-tutor-lms'),
                     "selector" => $new_course_btn_selector,
                     "property" => 'background-color',
                 ),
                 array(
-                    "name" => __('Hover Background Color'),
+                    "name" => __('Hover Background Color','oxygen-tutor-lms'),
                     "selector" => $new_course_btn_selector.':hover',
                     "property" => 'background-color',
 				),
 				array(
-                    "name" => __('Color'),
+                    "name" => __('Color','oxygen-tutor-lms'),
                     "selector" => $new_course_btn_selector,
                     "property" => 'color',
                 ),
 				array(
-                    "name" => __('Hover Color'),
+                    "name" => __('Hover Color','oxygen-tutor-lms'),
                     "selector" => $new_course_btn_selector.':hover',
                     "property" => 'color',
                 )
             )
         );
-        $new_course_btn->typographySection(__("Typography"), $new_course_btn_selector, $this);
-        $new_course_btn->borderSection(__("Borders"), $new_course_btn_selector, $this);
-        $new_course_btn->borderSection(__("Hover Borders"), $new_course_btn_selector.":hover", $this);
-        $new_course_btn->boxShadowSection(__("Shadow"), $new_course_btn_selector, $this);
-        $new_course_btn->boxShadowSection(__("Hover Shadow"), $new_course_btn_selector.":hover", $this);
+        $new_course_btn->typographySection(__("Typography","oxygen-tutor-lms"), $new_course_btn_selector, $this);
+        $new_course_btn->borderSection(__("Borders","oxygen-tutor-lms"), $new_course_btn_selector, $this);
+        $new_course_btn->borderSection(__("Hover Borders","oxygen-tutor-lms"), $new_course_btn_selector.":hover", $this);
+        $new_course_btn->boxShadowSection(__("Shadow","oxygen-tutor-lms"), $new_course_btn_selector, $this);
+        $new_course_btn->boxShadowSection(__("Hover Shadow","oxygen-tutor-lms"), $new_course_btn_selector.":hover", $this);
 
 
 		/* Menu item */
@@ -144,32 +144,32 @@ class PageDashboard extends \OxygenTutorElements {
 		$menu_item->addStyleControls(
 			array(
 				array(
-					"name"		=> __('Icon Color'),
+					"name"		=> __('Icon Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'color',
 				),
 				array(
-					"name"		=> __('Icon Size'),
+					"name"		=> __('Icon Size','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'font-size',
 				),
 				array(
-					"name"		=> __('Font Color'),
+					"name"		=> __('Font Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector,
 					"property" 	=> 'color',
 				),
 				array(
-					"name"		=> __('Font Size'),
+					"name"		=> __('Font Size','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector,
 					"property" 	=> 'font-size',
 				),
 				array(
-					"name"		=> __('Font Family'),
+					"name"		=> __('Font Family','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector,
 					"property" 	=> 'font-family',
 				),
 				array(
-					"name"		=> __('Background Color'),
+					"name"		=> __('Background Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector,
 					"property" 	=> 'background-color',
 				),
@@ -181,32 +181,32 @@ class PageDashboard extends \OxygenTutorElements {
 		$menu_item_hover->addStyleControls(
 			array(
 				array(
-					"name"		=> __('Icon Color'),
+					"name"		=> __('Icon Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_hover.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'color',
 				),
 				array(
-					"name"		=> __('Icon Size'),
+					"name"		=> __('Icon Size','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_hover.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'font-size',
 				),
 				array(
-					"name"		=> __('Font Color'),
+					"name"		=> __('Font Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_hover,
 					"property" 	=> 'color',
 				),
 				array(
-					"name"		=> __('Font Size'),
+					"name"		=> __('Font Size','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_hover,
 					"property" 	=> 'font-size',
 				),
 				array(
-					"name"		=> __('Font Family'),
+					"name"		=> __('Font Family','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_hover,
 					"property" 	=> 'font-family',
 				),
 				array(
-					"name"		=> __('Background Color'),
+					"name"		=> __('Background Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_hover,
 					"property" 	=> 'background-color',
 				),
@@ -218,32 +218,32 @@ class PageDashboard extends \OxygenTutorElements {
 		$menu_item_active->addStyleControls(
 			array(
 				array(
-					"name"		=> __('Icon Color'),
+					"name"		=> __('Icon Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_active.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'color',
 				),
 				array(
-					"name"		=> __('Icon Size'),
+					"name"		=> __('Icon Size','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_active.' .tutor-dashboard-menu-item-icon',
 					"property" 	=> 'font-size',
 				),
 				array(
-					"name"		=> __('Font Color'),
+					"name"		=> __('Font Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_active,
 					"property" 	=> 'color',
 				),
 				array(
-					"name"		=> __('Font Size'),
+					"name"		=> __('Font Size','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_active,
 					"property" 	=> 'font-size',
 				),
 				array(
-					"name"		=> __('Font Family'),
+					"name"		=> __('Font Family','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_active,
 					"property" 	=> 'font-family',
 				),
 				array(
-					"name"		=> __('Background Color'),
+					"name"		=> __('Background Color','oxygen-tutor-lms'),
 					"selector" 	=> $menu_item_selector_active,
 					"property" 	=> 'background-color',
 				),
@@ -251,24 +251,24 @@ class PageDashboard extends \OxygenTutorElements {
 		);
 		/* Menu spacing */
 		$menu_spacing = $menu->addControlSection("menu_item_spacing", __("Spacing"), "assets/icon.png", $this);
-		$menu_spacing->addPreset("padding", "menu_item_padding", __("Padding"), $menu_item_selector);
-		$menu_spacing->addPreset("margin", "menu_item_margin", __("Margin"), $menu_item_selector);
+		$menu_spacing->addPreset("padding", "menu_item_padding", __("Padding","oxygen-tutor-lms"), $menu_item_selector);
+		$menu_spacing->addPreset("margin", "menu_item_margin", __("Margin","oxygen-tutor-lms"), $menu_item_selector);
 
-		$this->typographySection(__("Title"), $selector.' .tutor-dashboard-content .tutor-dashboard-title', $this);
-		$this->typographySection(__("Links"), $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner a', $this);
-		$this->typographySection(__("Links Hover"), $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner a:hover', $this);
+		$this->typographySection(__("Title","oxygen-tutor-lms"), $selector.' .tutor-dashboard-content .tutor-dashboard-title', $this);
+		$this->typographySection(__("Links","oxygen-tutor-lms"), $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner a', $this);
+		$this->typographySection(__("Links Hover","oxygen-tutor-lms"), $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner a:hover', $this);
 
 		/* Info card */
 		$info_card_selector =  $selector.' .tutor-dashboard-content .tutor-dashboard-content-inner .tutor-card';
 		$info_card = $this->addControlSection("info_card", __("Info Card"), "assets/icon.png", $this);
-		$info_card->typographySection(__("Icon"), $info_card_selector.' .tutor-round-box i', $this);
-		$info_card->typographySection(__("Value"), $info_card_selector.' .tutor-fw-bold', $this);
-		$info_card->typographySection(__("Label"), $info_card_selector.' .tutor-color-secondary', $this);
+		$info_card->typographySection(__("Icon","oxygen-tutor-lms"), $info_card_selector.' .tutor-round-box i', $this);
+		$info_card->typographySection(__("Value","oxygen-tutor-lms"), $info_card_selector.' .tutor-fw-bold', $this);
+		$info_card->typographySection(__("Label","oxygen-tutor-lms"), $info_card_selector.' .tutor-color-secondary', $this);
 		$info_card_background = $info_card->addControlSection("info_card_color", __("Background"), "assets/icon.png", $this);
 		$info_card_background->addStyleControls(
 			array(
 				array(
-					"name"		=> __('Color'),
+					"name"		=> __('Color','oxygen-tutor-lms'),
 					"selector" 	=> $info_card_selector,
 					"property" 	=> 'background-color',
 				),
@@ -278,25 +278,25 @@ class PageDashboard extends \OxygenTutorElements {
 		$info_icon->addStyleControls(
 			array(
 				array(
-                	"name" => __('Height'),
+                	"name" => __('Height','oxygen-tutor-lms'),
                 	"selector" => $info_card_selector.' .tutor-round-box',
 					"property" => 'height',
 				),
 				array(
-                	"name" => __('Width'),
+                	"name" => __('Width','oxygen-tutor-lms'),
                 	"selector" => $info_card_selector.' .tutor-round-box',
 					"property" => 'width',
 				),
 				array(
-                	"name" => __('Background Color'),
+                	"name" => __('Background Color','oxygen-tutor-lms'),
                 	"selector" => $info_card_selector.' .tutor-round-box',
 					"property" => 'background-color',
 				)
 			)
 		);
 		$info_card_spacing = $info_card->addControlSection("info_card_spacing", __("Spacing"), "assets/icon.png", $this);
-		$info_card_spacing->addPreset("padding", "info_card_padding", __("Padding"), $info_card_selector);
-		$info_card_spacing->addPreset("margin", "info_card_margin", __("Margin"), $info_card_selector);
+		$info_card_spacing->addPreset("padding", "info_card_padding", __("Padding","oxygen-tutor-lms"), $info_card_selector);
+		$info_card_spacing->addPreset("margin", "info_card_margin", __("Margin","oxygen-tutor-lms"), $info_card_selector);
 	}
 }
 

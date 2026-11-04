@@ -3,9 +3,9 @@ Contributors: themeum
 Donate link: https://www.themeum.com
 Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
-Tested up to: 6.1.1
+Tested up to: 7.1.2
 Requires PHP: 7.4
-Stable tag: 2.0.2
+Stable tag: 2.0.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -49,7 +49,7 @@ To read about every aspect of this plugin, please refer to our [documentation on
 
 = Minimum Requirements =
 
-* PHP version 5.6.0 or greater (PHP 7.1 or greater is recommended)
+* PHP version 5.6.0 or greater (PHP 7.4 or greater is recommended)
 * MySQL version 5.0 or greater (MySQL 5.6 or greater is recommended)
 
 = Automatic installation =
@@ -100,6 +100,13 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 1. How to build
 
 == Changelog ==
+
+= 2.0.3 - 04 January, 2023 =
+
+* Fix: style contro issue 
+* Fix: Warning issue cours details page
+* Fix: Some css fixed
+* Fix: Translation issue 
 
 = 2.0.2 - 04 January, 2023 =
 

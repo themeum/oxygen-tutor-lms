@@ -28,7 +28,7 @@ class CourseThumbnail extends \OxygenTutorElements {
     function controls() {
         $selector = ".tutor-course-thumbnail";
         /* Original Thumbnail */
-		$original_thumb = $this->addControlSection("tutor_origianl_thumb", __("Original Thumbnails"), "assets/icon.png", $this);
+		$original_thumb = $this->addControlSection("tutor_origianl_thumb", __("Original Thumbnails","oxygen-tutor-lms"), "assets/icon.png", $this);
 		$original_thumb->addStyleControls(
             array(
                 array(
@@ -43,14 +43,14 @@ class CourseThumbnail extends \OxygenTutorElements {
         );
 		$original_thumb->addStyleControl(
         	array(
-				"name" => __("Border Color"),
+				"name" => __("Border Color","oxygen-tutor-lms"),
 				"selector" => $selector,
         		"property" => 'border-color',
         	)
 		);
 		$original_thumb_borderWidth = $original_thumb->addStyleControl(
         	array(
-				"name" => __("Border Width"),
+				"name" => __("Border Width","oxygen-tutor-lms"),
 				"selector" => $selector,
         		"property" => 'border-width',
         	)
@@ -60,7 +60,7 @@ class CourseThumbnail extends \OxygenTutorElements {
 		$original_thumb->addPreset(
             "margin",
             "tutor_original_thumb_margins",
-            __("Margin"),
+            __("Margin","oxygen-tutor-lms"),
             $selector
 		);
 
@@ -68,12 +68,12 @@ class CourseThumbnail extends \OxygenTutorElements {
 		$original_thumb_box_shadow->addPreset(
             "box-shadow",
             "tutor_original_thumb_shadow",
-            __("Original Thumbs Shadow"),
+            __("Original Thumbs Shadow","oxygen-tutor-lms"),
             $selector
         );
 
         /** Hovered Thumbnail */
-		$hover_thumb = $this->addControlSection("tutor_hover_thumb", __("Hovered Thumbnails"), "assets/icon.png", $this);
+		$hover_thumb = $this->addControlSection("tutor_hover_thumb", __("Hovered Thumbnails","oxygen-tutor-lms"), "assets/icon.png", $this);
 		$hover_thumb->addStyleControls(
             array(
                 array(
@@ -89,24 +89,24 @@ class CourseThumbnail extends \OxygenTutorElements {
         );
 		$hover_thumb->addStyleControl(
         	array(
-        		"name" => __("Border Color"),
+        		"name" => __("Border Color","oxygen-tutor-lms"),
         		"selector" => $selector.":hover",
         		"property" => 'border-color',
         	)
 		);
 		$hover_thumb_borderWidth = $hover_thumb->addStyleControl(
         	array(
-        		"name" => __("Border Width"),
+        		"name" => __("Border Width","oxygen-tutor-lms"),
         		"selector" => $selector.":hover",
         		"property" => 'border-width',
         	)
 		);
 		$hover_thumb_borderWidth->setUnits("px","px,em");
-		$hover_thumb_box_shadow = $hover_thumb->addControlSection("tutor_hover_thumb_box_shadow", __("Box Shadow"), "assets/icon.png", $this);
+		$hover_thumb_box_shadow = $hover_thumb->addControlSection("tutor_hover_thumb_box_shadow", __("Box Shadow","oxygen-tutor-lms"), "assets/icon.png", $this);
 		$hover_thumb_box_shadow->addPreset(
             "box-shadow",
             "tutor_hover_thumb_shadow",
-            __("Hover Thumbs Shadow"),
+            __("Hover Thumbs Shadow","oxygen-tutor-lms"),
             $selector.":hover"
         );
     }

@@ -40,8 +40,8 @@ class CourseCategories extends \OxygenTutorElements {
 
     function controls() {
         $typography_selector = ".tutor-course-details-info";
-        $this->typographySection(__('Label Typography'), $typography_selector);
-        $this->typographySection(__('Category Typography'), $typography_selector.' a');
+        $this->typographySection(__('Label Typography','oxygen-tutor-lms'), $typography_selector);
+        $this->typographySection(__('Category Typography','oxygen-tutor-lms'), $typography_selector.' a');
     }
 
 }

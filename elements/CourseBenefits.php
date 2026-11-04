@@ -24,21 +24,21 @@ class CourseBenefits extends \OxygenTutorElements {
     function controls() {
         $selector = ".tutor-course-benefits";
 
-		$course_benefits = $this->addControlSection("benefits", __("What Will You Learn?"), "assets/icon.png", $this);
+		$course_benefits = $this->addControlSection("benefits", __("What Will You Learn?","oxygen-tutor-lms"), "assets/icon.png", $this);
 		$benefits_selector = $selector." .tutor-course-details-widget";
 		$benefits_item_selector = $benefits_selector." .tutor-course-details-widget-list";
-        $course_benefits->typographySection(__('Title'), $benefits_selector.' .tutor-course-details-widget-title', $this);
-		$course_benefits->typographySection(__('Items Typography'), $benefits_item_selector.' li span', $this);
-        $benefits_content_icon = $course_benefits->addControlSection("benefits_content_icon", __("Icon"), "assets/icon.png", $this);
+        $course_benefits->typographySection(__('Title','oxygen-tutor-lms'), $benefits_selector.' .tutor-course-details-widget-title', $this);
+		$course_benefits->typographySection(__('Items Typography','oxygen-tutor-lms'), $benefits_item_selector.' li span', $this);
+        $benefits_content_icon = $course_benefits->addControlSection("benefits_content_icon", __("Icon","oxygen-tutor-lms"), "assets/icon.png", $this);
 		$benefits_content_icon->addStyleControls(
 			array(
 				array(
-                	"name" => __('Size'),
+                	"name" => __('Size','oxygen-tutor-lms'),
                 	"selector" => $benefits_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'font-size',
                 ),
 				array(
-                	"name" => __('Color'),
+                	"name" => __('Color','oxygen-tutor-lms'),
                 	"selector" => $benefits_item_selector.' li .tutor-icon-bullet-point',
 					"property" => 'color',
 				)
@@ -48,13 +48,13 @@ class CourseBenefits extends \OxygenTutorElements {
         $benefits_content_spacing->addPreset(
             "padding",
             "benefits_content_item_padding",
-            __("Items Padding"),
+            __("Items Padding","oxygen-tutor-lms"),
             $benefits_item_selector.' li'
 		);
 		$benefits_content_spacing->addStyleControls(
 			array(
 				array(
-                	"name" => __('Line Height'),
+                	"name" => __('Line Height','oxygen-tutor-lms'),
                 	"selector" => $benefits_item_selector.' li',
 					"property" => 'line-height',
                 )
