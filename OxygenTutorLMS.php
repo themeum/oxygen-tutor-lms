@@ -84,6 +84,8 @@ final class OxygenTutorLMS {
 
 		$student_register_page_id    = (int) tutor_utils()->get_option( 'student_register_page' );
 		$instructor_register_page_id = (int) tutor_utils()->get_option( 'instructor_register_page' );
+		$cart_page_id                = (int) tutor_utils()->get_option( 'tutor_cart_page_id' );
+		$checkout_page_id            = (int) tutor_utils()->get_option( 'tutor_checkout_page_id' );
 
 		if ( get_the_ID() === $student_register_page_id ) {
 			return do_shortcode( '[tutor_student_registration_form]' );
@@ -91,6 +93,18 @@ final class OxygenTutorLMS {
 
 		if ( get_the_ID() === $instructor_register_page_id ) {
 			return do_shortcode( '[tutor_instructor_registration_form]' );
+		}
+
+		if ( get_the_ID() === $cart_page_id ) {
+			return ( new \Tutor\Shortcode( false ) )->tutor_cart_page();
+		}
+
+		if ( get_the_ID() === $checkout_page_id ) {
+			if ( ! apply_filters( 'tutor_should_load_checkout_page', true ) ) {
+				return '';
+			}
+
+			return ( new \Tutor\Shortcode( false ) )->tutor_checkout_page();
 		}
 
 		return $content;
@@ -106,7 +120,6 @@ final class OxygenTutorLMS {
 	 * @return string
 	 */
 	public function load_single_course_template( $template ) {
-		global $wp_query;
 		$ct_builder               = Input::get( 'ct_builder', false );
 		$has_ct_builder_shortcode = get_post_meta( get_the_ID(), '_ct_builder_shortcodes', true );
 		$has_ct_builder_json      = get_post_meta( get_the_ID(), '_ct_builder_json', true );
@@ -137,7 +150,7 @@ final class OxygenTutorLMS {
 	 */
 	public function allow_tutor_template() {
 		$is_dashboard_page = tutor_utils()->is_dashboard_page();
-		$is_learning_area  = tutor_utils()->is_learning_area();
+		$is_learning_area  = tutor_utils()->is_learning_area() && ! tutor_utils()->is_legacy_learning_mode();
 		if ( $is_dashboard_page || $is_learning_area ) {
 			remove_filter( 'tutor_lms_should_template_override', '__return_false' );
 			new \TUTOR\Template();
