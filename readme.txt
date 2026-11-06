@@ -3,7 +3,7 @@ Contributors: themeum
 Donate link: https://www.themeum.com
 Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
-Tested up to: 7.1.2
+Tested up to: 7.1.4
 Requires PHP: 7.4
 Stable tag: 2.0.4
 License: GPLv3
@@ -101,9 +101,18 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
+= 2.0.4 - 04 November, 2026 =
+
+* New: Added Tutor LMS v4 compatibility with the Oxygen Classic Builder.
+* Updated: Updated the Single Course and Course Archive templates with the latest designs.
+* Updated: Updated the Course List template with the latest design.
+* Fix: Fixed the Learning Area and Dashboard loading issue when Oxygen Builder is enabled.
+* Fix: Fixed the Course List element editing issue in the Oxygen Visual Builder.
+* Fix: Fixed the Course List element pagination display issue.
+
 = 2.0.3 - 04 January, 2023 =
 
-* Fix: style contro issue 
+* Fix: style control issue 
 * Fix: Warning issue cours details page
 * Fix: Some css fixed
 * Fix: Translation issue 

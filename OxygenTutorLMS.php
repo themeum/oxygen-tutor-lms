@@ -2,8 +2,6 @@
 
 use Tutor\Core\Input;
 
-use function Clue\StreamFilter\remove;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -62,22 +60,98 @@ final class OxygenTutorLMS {
 		add_action( 'pre_get_posts', array( $this, 'public_profile_mark_archive' ), 1 );
 
 		add_action( 'template_redirect', array( $this, 'allow_tutor_template' ) );
+
+		add_filter( 'template_include', array( $this, 'load_single_course_template' ) );
+
+		add_filter( 'the_content', array( $this, 'load_default_tutor_pages' ) );
+	}
+
+	/**
+	 * Load default tutor pages content if not builder content.
+	 *
+	 * @param string $content the content.
+	 *
+	 * @return string
+	 */
+	public function load_default_tutor_pages( $content ) {
+
+		$ct_builder               = Input::get( 'ct_builder', false );
+		$has_ct_builder_shortcode = get_post_meta( get_the_ID(), '_ct_builder_shortcodes', true );
+		$has_ct_builder_json      = get_post_meta( get_the_ID(), '_ct_builder_json', true );
+		if ( $ct_builder || ! empty( $has_ct_builder_json ) || ! empty( $has_ct_builder_shortcode ) ) {
+			return $content;
+		}
+
+		$student_register_page_id    = (int) tutor_utils()->get_option( 'student_register_page' );
+		$instructor_register_page_id = (int) tutor_utils()->get_option( 'instructor_register_page' );
+		$cart_page_id                = (int) tutor_utils()->get_option( 'tutor_cart_page_id' );
+		$checkout_page_id            = (int) tutor_utils()->get_option( 'tutor_checkout_page_id' );
+
+		if ( get_the_ID() === $student_register_page_id ) {
+			return do_shortcode( '[tutor_student_registration_form]' );
+		}
+
+		if ( get_the_ID() === $instructor_register_page_id ) {
+			return do_shortcode( '[tutor_instructor_registration_form]' );
+		}
+
+		if ( get_the_ID() === $cart_page_id ) {
+			return ( new \Tutor\Shortcode( false ) )->tutor_cart_page();
+		}
+
+		if ( get_the_ID() === $checkout_page_id ) {
+			if ( ! apply_filters( 'tutor_should_load_checkout_page', true ) ) {
+				return '';
+			}
+
+			return ( new \Tutor\Shortcode( false ) )->tutor_checkout_page();
+		}
+
+		return $content;
+	}
+
+	/**
+	 * Load single course template.
+	 *
+	 * @since 2.0.4
+	 *
+	 * @param string $template the template.
+	 *
+	 * @return string
+	 */
+	public function load_single_course_template( $template ) {
+		$ct_builder               = Input::get( 'ct_builder', false );
+		$has_ct_builder_shortcode = get_post_meta( get_the_ID(), '_ct_builder_shortcodes', true );
+		$has_ct_builder_json      = get_post_meta( get_the_ID(), '_ct_builder_json', true );
+		if ( $ct_builder || ! empty( $has_ct_builder_json ) || ! empty( $has_ct_builder_shortcode ) ) {
+			return $template;
+		}
+		$course_post_type = tutor()->course_post_type;
+		$bundle_post_type = tutor()->bundle_post_type;
+		if ( in_array( get_query_var( 'post_type' ), array( $course_post_type, $bundle_post_type ), true ) && is_singular( array( $course_post_type, $bundle_post_type ) ) ) {
+			$template = otlms_get_template( 'single-course' );
+			remove_all_filters( 'template_include' );
+		}
+
+		if ( tutor()->course_post_type === get_query_var( 'post_type' ) && ! is_singular() ) {
+			$template = otlms_get_template( 'archive-course' );
+			remove_all_filters( 'template_include' );
+		}
+
+		return $template;
 	}
 
 	/**
 	 * Allow tutor template.
 	 *
+	 * @since 2.0.4
+	 *
 	 * @return void
 	 */
 	public function allow_tutor_template() {
 		$is_dashboard_page = tutor_utils()->is_dashboard_page();
-		$is_learning_area  = tutor_utils()->is_learning_area();
+		$is_learning_area  = tutor_utils()->is_learning_area() && ! tutor_utils()->is_legacy_learning_mode();
 		if ( $is_dashboard_page || $is_learning_area ) {
-			// The tutor_lms_should_template_override filter was already consumed
-			// during Template::__construct() at plugins_loaded time, so adding
-			// __return_true here has no effect. Instead, temporarily remove the
-			// __return_false filter and create a new Template instance which will
-			// register all the needed template_include hooks in its constructor.
 			remove_filter( 'tutor_lms_should_template_override', '__return_false' );
 			new \TUTOR\Template();
 			add_filter( 'tutor_lms_should_template_override', '__return_false' );
