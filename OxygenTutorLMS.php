@@ -62,6 +62,38 @@ final class OxygenTutorLMS {
 		add_action( 'template_redirect', array( $this, 'allow_tutor_template' ) );
 
 		add_filter( 'template_include', array( $this, 'load_single_course_template' ) );
+
+		add_filter( 'the_content', array( $this, 'load_default_tutor_pages' ) );
+	}
+
+	/**
+	 * Load default tutor pages content if not builder content.
+	 *
+	 * @param string $content the content.
+	 *
+	 * @return string
+	 */
+	public function load_default_tutor_pages( $content ) {
+
+		$ct_builder               = Input::get( 'ct_builder', false );
+		$has_ct_builder_shortcode = get_post_meta( get_the_ID(), '_ct_builder_shortcodes', true );
+		$has_ct_builder_json      = get_post_meta( get_the_ID(), '_ct_builder_json', true );
+		if ( $ct_builder || ! empty( $has_ct_builder_json ) || ! empty( $has_ct_builder_shortcode ) ) {
+			return $content;
+		}
+
+		$student_register_page_id    = (int) tutor_utils()->get_option( 'student_register_page' );
+		$instructor_register_page_id = (int) tutor_utils()->get_option( 'instructor_register_page' );
+
+		if ( get_the_ID() === $student_register_page_id ) {
+			return do_shortcode( '[tutor_student_registration_form]' );
+		}
+
+		if ( get_the_ID() === $instructor_register_page_id ) {
+			return do_shortcode( '[tutor_instructor_registration_form]' );
+		}
+
+		return $content;
 	}
 
 	/**
