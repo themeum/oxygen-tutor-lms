@@ -3,6 +3,7 @@
 *.zip
 .DS_Store
 languages/*
+!languages/.gitkeep
 *.po
 *.po~
 *.mo
