@@ -43,13 +43,15 @@ jobs:
         run: npm run build
 
       - name: Deploy to WordPress.org
+        id: deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
         with:
+          generate-zip: true
           dry-run: true
         env:
-          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          BUILD_DIR: build
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD || 'dry-run-pass' }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME || 'dry-run-user' }}
+          BUILD_DIR: build/oxygen-tutor-lms
           SLUG: oxygen-tutor-lms
           VERSION: ${{ github.ref_name }}
 
