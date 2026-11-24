@@ -2,16 +2,16 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Oxygen Tutor LMS 4.0.0\n"
+"Project-Id-Version: Oxygen Tutor LMS 2.0.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/oxygen-tutor-lms\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-24T05:38:49+00:00\n"
+"POT-Creation-Date: 2026-11-24T04:38:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: oxygen-tutor-lms\n"
 
 #. Plugin Name of the plugin
@@ -39,50 +39,31 @@ msgstr ""
 msgid "http://themeum.com"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:41
-#: build/oxygen-tutor-lms/elements/CoursesList.php:131
 #: elements/ArchiveCourse.php:41
 #: elements/CoursesList.php:131
 msgid "Course Filter"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:43
-#: build/oxygen-tutor-lms/elements/CoursesList.php:133
 #: elements/ArchiveCourse.php:43
 #: elements/CoursesList.php:133
 msgid "Filter Widget Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:44
-#: build/oxygen-tutor-lms/elements/CoursesList.php:134
 #: elements/ArchiveCourse.php:44
 #: elements/CoursesList.php:134
 msgid "Filter Items"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:49
-#: build/oxygen-tutor-lms/elements/CoursesList.php:139
 #: elements/ArchiveCourse.php:49
 #: elements/CoursesList.php:139
 msgid "Course Grid"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:52
-#: build/oxygen-tutor-lms/elements/CoursesList.php:142
 #: elements/ArchiveCourse.php:52
 #: elements/CoursesList.php:142
 msgid "Wishlist Icon"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:57
-#: build/oxygen-tutor-lms/elements/CourseAuthor.php:43
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:201
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:44
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:122
-#: build/oxygen-tutor-lms/elements/CoursesList.php:147
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:162
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:199
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:236
 #: elements/ArchiveCourse.php:57
 #: elements/CourseAuthor.php:43
 #: elements/CourseDescription.php:201
@@ -95,11 +76,6 @@ msgstr ""
 msgid "Font Size"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:62
-#: build/oxygen-tutor-lms/elements/CoursesList.php:152
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:157
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:194
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:231
 #: elements/ArchiveCourse.php:62
 #: elements/CoursesList.php:152
 #: elements/PageDashboard.php:157
@@ -108,31 +84,11 @@ msgstr ""
 msgid "Font Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:67
-#: build/oxygen-tutor-lms/elements/CoursesList.php:157
 #: elements/ArchiveCourse.php:67
 #: elements/CoursesList.php:157
 msgid "Hover Font Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:72
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:128
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:75
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:109
-#: build/oxygen-tutor-lms/elements/CoursesList.php:162
-#: build/oxygen-tutor-lms/elements/CoursesList.php:218
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:113
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:172
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:209
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:246
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:291
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:61
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:113
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:60
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:112
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:45
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:57
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:95
 #: elements/ArchiveCourse.php:72
 #: elements/ArchiveCourse.php:128
 #: elements/CourseEnrolmentBox.php:75
@@ -144,25 +100,14 @@ msgstr ""
 #: elements/PageDashboard.php:209
 #: elements/PageDashboard.php:246
 #: elements/PageDashboard.php:291
-#: elements/PageInstructorRegistration.php:61
-#: elements/PageInstructorRegistration.php:113
-#: elements/PageStudentRegistration.php:60
-#: elements/PageStudentRegistration.php:112
+#: elements/PageInstructorRegistration.php:44
+#: elements/PageInstructorRegistration.php:78
 #: elements/SingleQuiz.php:45
 #: elements/SingleQuiz.php:57
 #: elements/SingleQuiz.php:95
 msgid "Background Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:77
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:143
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:85
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:119
-#: build/oxygen-tutor-lms/elements/CoursesList.php:167
-#: build/oxygen-tutor-lms/elements/CoursesList.php:233
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:118
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:123
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:122
 #: elements/ArchiveCourse.php:77
 #: elements/ArchiveCourse.php:143
 #: elements/CourseEnrolmentBox.php:85
@@ -170,143 +115,80 @@ msgstr ""
 #: elements/CoursesList.php:167
 #: elements/CoursesList.php:233
 #: elements/PageDashboard.php:118
-#: elements/PageInstructorRegistration.php:123
-#: elements/PageStudentRegistration.php:122
+#: elements/PageInstructorRegistration.php:88
 msgid "Hover Background Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:87
-#: build/oxygen-tutor-lms/elements/CoursesList.php:177
 #: elements/ArchiveCourse.php:87
 #: elements/CoursesList.php:177
 msgid "Course Ratings"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:92
-#: build/oxygen-tutor-lms/elements/CoursesList.php:182
 #: elements/ArchiveCourse.php:92
 #: elements/CoursesList.php:182
 msgid "Star Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:97
-#: build/oxygen-tutor-lms/elements/CoursesList.php:187
 #: elements/ArchiveCourse.php:97
 #: elements/CoursesList.php:187
 msgid "Star Size"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:103
-#: build/oxygen-tutor-lms/elements/CoursesList.php:193
 #: elements/ArchiveCourse.php:103
 #: elements/CoursesList.php:193
 msgid "Average Rating"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:104
-#: build/oxygen-tutor-lms/elements/CoursesList.php:194
 #: elements/ArchiveCourse.php:104
 #: elements/CoursesList.php:194
 msgid "Total Ratings"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:106
-#: build/oxygen-tutor-lms/elements/CoursesList.php:196
 #: elements/ArchiveCourse.php:106
 #: elements/CoursesList.php:196
 msgid "Course Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:107
-#: build/oxygen-tutor-lms/elements/CoursesList.php:197
 #: elements/ArchiveCourse.php:107
 #: elements/CoursesList.php:197
 msgid "Meta Icon"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:108
-#: build/oxygen-tutor-lms/elements/CoursesList.php:198
 #: elements/ArchiveCourse.php:108
 #: elements/CoursesList.php:198
 msgid "Meta Info"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:109
-#: build/oxygen-tutor-lms/elements/CoursesList.php:199
 #: elements/ArchiveCourse.php:109
 #: elements/CoursesList.php:199
 msgid "Author Label"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:110
-#: build/oxygen-tutor-lms/elements/CoursesList.php:200
 #: elements/ArchiveCourse.php:110
 #: elements/CoursesList.php:200
 msgid "Author Value"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:113
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:34
-#: build/oxygen-tutor-lms/elements/CoursesList.php:203
 #: elements/ArchiveCourse.php:113
 #: elements/CourseEnrolmentBox.php:34
 #: elements/CoursesList.php:203
 msgid "Course Price"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:115
-#: build/oxygen-tutor-lms/elements/CoursesList.php:205
 #: elements/ArchiveCourse.php:115
 #: elements/CoursesList.php:205
 msgid "Add to Cart"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:122
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:69
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:103
-#: build/oxygen-tutor-lms/elements/CoursesList.php:212
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:109
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:134
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:133
 #: elements/ArchiveCourse.php:122
 #: elements/CourseEnrolmentBox.php:69
 #: elements/CourseEnrolmentBox.php:103
 #: elements/CoursesList.php:212
 #: elements/PageDashboard.php:109
-#: elements/PageInstructorRegistration.php:134
-#: elements/PageStudentRegistration.php:133
+#: elements/PageInstructorRegistration.php:99
 msgid "Button Paddings"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:133
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:41
-#: build/oxygen-tutor-lms/elements/CourseCurriculum.php:50
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:50
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:94
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:114
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:135
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:169
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:220
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:44
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:80
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:114
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:41
-#: build/oxygen-tutor-lms/elements/CourseRequirements.php:41
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:35
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:56
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:90
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:141
-#: build/oxygen-tutor-lms/elements/CoursesList.php:223
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:41
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:92
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:123
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:271
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:118
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:117
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:543
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:581
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:85
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:200
 #: elements/ArchiveCourse.php:133
 #: elements/CourseBenefits.php:41
 #: elements/CourseCurriculum.php:50
@@ -330,8 +212,7 @@ msgstr ""
 #: elements/PageDashboard.php:92
 #: elements/PageDashboard.php:123
 #: elements/PageDashboard.php:271
-#: elements/PageInstructorRegistration.php:118
-#: elements/PageStudentRegistration.php:117
+#: elements/PageInstructorRegistration.php:83
 #: elements/SingleCourse.php:543
 #: elements/SingleCourse.php:581
 #: elements/SingleQuiz.php:85
@@ -339,43 +220,26 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:138
-#: build/oxygen-tutor-lms/elements/CoursesList.php:228
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:46
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:92
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:76
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:75
 #: elements/ArchiveCourse.php:138
 #: elements/CoursesList.php:228
 #: elements/CourseThumbnail.php:46
 #: elements/CourseThumbnail.php:92
-#: elements/PageInstructorRegistration.php:76
-#: elements/PageStudentRegistration.php:75
+#: elements/PageInstructorRegistration.php:59
 msgid "Border Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:151
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:191
-#: build/oxygen-tutor-lms/elements/CoursesList.php:241
 #: elements/ArchiveCourse.php:151
 #: elements/ArchiveCourse.php:191
 #: elements/CoursesList.php:241
 msgid "Border"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:152
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:192
-#: build/oxygen-tutor-lms/elements/CoursesList.php:242
 #: elements/ArchiveCourse.php:152
 #: elements/ArchiveCourse.php:192
 #: elements/CoursesList.php:242
 msgid "Hover Border"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:153
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:193
-#: build/oxygen-tutor-lms/elements/CoursesList.php:243
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:105
 #: elements/ArchiveCourse.php:153
 #: elements/ArchiveCourse.php:193
 #: elements/CoursesList.php:243
@@ -383,20 +247,12 @@ msgstr ""
 msgid "Box Shadow"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:154
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:194
-#: build/oxygen-tutor-lms/elements/CoursesList.php:244
 #: elements/ArchiveCourse.php:154
 #: elements/ArchiveCourse.php:194
 #: elements/CoursesList.php:244
 msgid "Hover Box Shadow"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:157
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:197
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:57
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:48
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:169
 #: elements/ArchiveCourse.php:157
 #: elements/ArchiveCourse.php:197
 #: elements/CourseDescription.php:57
@@ -405,18 +261,6 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:158
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:198
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:154
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:75
-#: build/oxygen-tutor-lms/elements/CoursesList.php:248
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:254
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:298
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:69
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:74
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:132
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:170
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:181
 #: elements/ArchiveCourse.php:158
 #: elements/ArchiveCourse.php:198
 #: elements/CourseDescription.php:154
@@ -432,18 +276,6 @@ msgstr ""
 msgid "Padding"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:159
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:199
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:160
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:81
-#: build/oxygen-tutor-lms/elements/CoursesList.php:249
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:63
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:255
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:299
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:70
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:75
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:171
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:187
 #: elements/ArchiveCourse.php:159
 #: elements/ArchiveCourse.php:199
 #: elements/CourseDescription.php:160
@@ -459,59 +291,36 @@ msgstr ""
 msgid "Margin"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:163
 #: elements/ArchiveCourse.php:163
 msgid "Pagination"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:172
 #: elements/ArchiveCourse.php:172
 msgid "Links Text Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:178
 #: elements/ArchiveCourse.php:178
 msgid "Hover Text Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/ArchiveCourse.php:184
 #: elements/ArchiveCourse.php:184
 msgid "Active Text Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAbout.php:31
 #: elements/CourseAbout.php:31
 msgid "Course Description"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAbout.php:33
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:33
 #: elements/CourseAbout.php:33
 #: elements/CourseDescription.php:33
 msgid "Heading"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAbout.php:34
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:34
 #: elements/CourseAbout.php:34
 #: elements/CourseDescription.php:34
 msgid "Paragraph"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAuthor.php:33
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:145
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:191
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:54
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:34
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:66
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:112
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:74
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:281
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:66
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:65
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:240
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:62
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:143
 #: elements/CourseAuthor.php:33
 #: elements/CourseDescription.php:145
 #: elements/CourseDescription.php:191
@@ -521,20 +330,13 @@ msgstr ""
 #: elements/CourseReviews.php:112
 #: elements/PageDashboard.php:74
 #: elements/PageDashboard.php:281
-#: elements/PageInstructorRegistration.php:66
-#: elements/PageStudentRegistration.php:65
+#: elements/PageInstructorRegistration.php:49
 #: elements/SingleLesson.php:240
 #: elements/SingleQuiz.php:62
 #: elements/SingleQuiz.php:143
 msgid "Height"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAuthor.php:38
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:196
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:39
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:117
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:79
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:286
 #: elements/CourseAuthor.php:38
 #: elements/CourseDescription.php:196
 #: elements/CourseInstructors.php:39
@@ -544,19 +346,6 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAuthor.php:48
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:57
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:67
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:206
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:49
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:58
-#: build/oxygen-tutor-lms/elements/CourseRequirements.php:58
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:127
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:58
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:71
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:70
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:560
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:598
 #: elements/CourseAuthor.php:48
 #: elements/CourseBenefits.php:57
 #: elements/CourseDescription.php:67
@@ -566,44 +355,30 @@ msgstr ""
 #: elements/CourseRequirements.php:58
 #: elements/CourseReviews.php:127
 #: elements/CourseTargetAudience.php:58
-#: elements/PageInstructorRegistration.php:71
-#: elements/PageStudentRegistration.php:70
+#: elements/PageInstructorRegistration.php:54
 #: elements/SingleCourse.php:560
 #: elements/SingleCourse.php:598
 msgid "Line Height"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAuthor.php:57
-#: build/oxygen-tutor-lms/elements/CourseShare.php:32
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:266
 #: elements/CourseAuthor.php:57
 #: elements/CourseShare.php:32
 #: elements/PageDashboard.php:266
+#: elements/PageInstructorRegistration.php:37
 msgid "Label"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseAuthor.php:58
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:57
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:133
 #: elements/CourseAuthor.php:58
 #: elements/CourseInstructors.php:57
 #: elements/CourseReviews.php:133
 msgid "Name"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:27
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:37
 #: elements/CourseBenefits.php:27
 #: elements/CourseDescription.php:37
 msgid "What Will You Learn?"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:30
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:40
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:28
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:30
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:257
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:137
 #: elements/CourseBenefits.php:30
 #: elements/CourseDescription.php:40
 #: elements/CourseInstructors.php:28
@@ -613,18 +388,11 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:31
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:56
 #: elements/CourseBenefits.php:31
 #: elements/CourseDescription.php:56
 msgid "Items Typography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:32
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:41
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:32
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:32
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:264
 #: elements/CourseBenefits.php:32
 #: elements/CourseDescription.php:41
 #: elements/CourseMaterial.php:32
@@ -633,23 +401,6 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:36
-#: build/oxygen-tutor-lms/elements/CourseCurriculum.php:45
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:45
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:89
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:119
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:174
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:225
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:36
-#: build/oxygen-tutor-lms/elements/CourseRequirements.php:36
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:40
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:95
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:146
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:36
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:97
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:538
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:576
-#: build/oxygen-tutor-lms/templates/global/attachments.php:31
 #: elements/CourseBenefits.php:36
 #: elements/CourseCurriculum.php:45
 #: elements/CourseDescription.php:45
@@ -670,13 +421,6 @@ msgstr ""
 msgid "Size"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseBenefits.php:51
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:61
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:52
-#: build/oxygen-tutor-lms/elements/CourseRequirements.php:52
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:52
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:554
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:592
 #: elements/CourseBenefits.php:51
 #: elements/CourseDescription.php:61
 #: elements/CourseMaterial.php:52
@@ -687,146 +431,104 @@ msgstr ""
 msgid "Items Padding"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseCategories.php:24
 #: elements/CourseCategories.php:24
 msgid "Categories:"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseCategories.php:35
 #: elements/CourseCategories.php:35
 msgid "Uncategorized"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseCategories.php:43
 #: elements/CourseCategories.php:43
 msgid "Label Typography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseCategories.php:44
 #: elements/CourseCategories.php:44
 msgid "Category Typography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:31
-#: build/oxygen-tutor-lms/templates/course/about.php:33
 #: elements/CourseDescription.php:31
 #: templates/course/about.php:33
 msgid "About Course"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:75
 #: elements/CourseDescription.php:75
 msgid "Curriculum"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:77
 #: elements/CourseDescription.php:77
 msgid "Header Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:80
 #: elements/CourseDescription.php:80
 msgid "Topic Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:81
 #: elements/CourseDescription.php:81
 msgid "Active Topic Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:83
 #: elements/CourseDescription.php:83
 msgid "Lesson, Quiz & Assignment Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:85
 #: elements/CourseDescription.php:85
 msgid "Lesson, Quiz & Assignment Icon"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:103
 #: elements/CourseDescription.php:103
 msgid "Review Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:107
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:28
 #: elements/CourseDescription.php:107
 #: elements/CourseReviews.php:28
 msgid "Review Avg"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:108
 #: elements/CourseDescription.php:108
 msgid "Rating Number"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:125
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:46
 #: elements/CourseDescription.php:125
 #: elements/CourseReviews.php:46
 msgid "Total Count"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:131
 #: elements/CourseDescription.php:131
 msgid "Right Rating Bar"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:140
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:49
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:61
 #: elements/CourseDescription.php:140
 #: elements/CourseEnrolmentBox.php:49
 #: elements/CourseReviews.php:61
 msgid "Fill Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:181
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:102
 #: elements/CourseDescription.php:181
 #: elements/CourseReviews.php:102
 msgid "Right Rating Text"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:185
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:106
 #: elements/CourseDescription.php:185
 #: elements/CourseReviews.php:106
 msgid "Review list"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:187
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:30
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:108
 #: elements/CourseDescription.php:187
 #: elements/CourseInstructors.php:30
 #: elements/CourseReviews.php:108
 msgid "Image"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseDescription.php:231
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:152
 #: elements/CourseDescription.php:231
 #: elements/CourseReviews.php:152
 msgid "Content"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:32
 #: elements/CourseEnrolmentBox.php:32
 msgid "Enrollment Box"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:33
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:92
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:126
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:27
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:47
-#: build/oxygen-tutor-lms/elements/CourseRequirements.php:47
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:47
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:135
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:136
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:135
 #: elements/CourseEnrolmentBox.php:33
 #: elements/CourseEnrolmentBox.php:92
 #: elements/CourseEnrolmentBox.php:126
@@ -835,287 +537,206 @@ msgstr ""
 #: elements/CourseRequirements.php:47
 #: elements/CourseTargetAudience.php:47
 #: elements/PageDashboard.php:135
-#: elements/PageInstructorRegistration.php:136
-#: elements/PageStudentRegistration.php:135
+#: elements/PageInstructorRegistration.php:101
 msgid "Borders"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:36
 #: elements/CourseEnrolmentBox.php:36
 msgid "Course Progress Title"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:37
 #: elements/CourseEnrolmentBox.php:37
 msgid "Course Progress Text"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:40
 #: elements/CourseEnrolmentBox.php:40
 msgid "Course Progress Bar"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:62
 #: elements/CourseEnrolmentBox.php:62
 msgid "Cart & Enroll Button"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:91
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:125
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:134
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:135
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:134
-#: build/oxygen-tutor-lms/elements/SingleCourse.php:587
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:68
 #: elements/CourseEnrolmentBox.php:91
 #: elements/CourseEnrolmentBox.php:125
 #: elements/PageDashboard.php:134
-#: elements/PageInstructorRegistration.php:135
-#: elements/PageStudentRegistration.php:134
+#: elements/PageInstructorRegistration.php:100
 #: elements/SingleCourse.php:587
 #: elements/SingleQuiz.php:68
 msgid "Typography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:93
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:127
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:136
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:137
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:136
 #: elements/CourseEnrolmentBox.php:93
 #: elements/CourseEnrolmentBox.php:127
 #: elements/PageDashboard.php:136
-#: elements/PageInstructorRegistration.php:137
-#: elements/PageStudentRegistration.php:136
+#: elements/PageInstructorRegistration.php:102
 msgid "Hover Borders"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:94
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:128
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:137
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:138
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:137
 #: elements/CourseEnrolmentBox.php:94
 #: elements/CourseEnrolmentBox.php:128
 #: elements/PageDashboard.php:137
-#: elements/PageInstructorRegistration.php:138
-#: elements/PageStudentRegistration.php:137
+#: elements/PageInstructorRegistration.php:103
 msgid "Shadow"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:95
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:129
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:138
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:139
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:138
 #: elements/CourseEnrolmentBox.php:95
 #: elements/CourseEnrolmentBox.php:129
 #: elements/PageDashboard.php:138
-#: elements/PageInstructorRegistration.php:139
-#: elements/PageStudentRegistration.php:138
+#: elements/PageInstructorRegistration.php:104
 msgid "Hover Shadow"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:98
 #: elements/CourseEnrolmentBox.php:98
 msgid "Certificate & Retake Button"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:132
 #: elements/CourseEnrolmentBox.php:132
 msgid "Course Information"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:134
 #: elements/CourseEnrolmentBox.php:134
 msgid "Course Information Text"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseEnrolmentBox.php:135
 #: elements/CourseEnrolmentBox.php:135
 msgid "Course Information Icon"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:25
 #: elements/CourseInstructors.php:25
 msgid "Instructors"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseInstructors.php:58
 #: elements/CourseInstructors.php:58
 msgid "Designation"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:27
 #: elements/CourseMaterial.php:27
 msgid "Materials"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseMaterial.php:31
-#: build/oxygen-tutor-lms/elements/CourseRequirements.php:31
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:31
 #: elements/CourseMaterial.php:31
 #: elements/CourseRequirements.php:31
 #: elements/CourseTargetAudience.php:31
 msgid "List Item"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseRating.php:31
 #: elements/CourseRating.php:31
 msgid "Stars Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseRating.php:36
 #: elements/CourseRating.php:36
 msgid "Stars Size"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseRequirements.php:27
-#: build/oxygen-tutor-lms/templates/course/course-requirements.php:28
 #: elements/CourseRequirements.php:27
 #: templates/course/course-requirements.php:28
 msgid "Requirements"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:86
 #: elements/CourseReviews.php:86
 msgid "Right Rating Stars"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:134
 #: elements/CourseReviews.php:134
 msgid "Time"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseReviews.php:136
 #: elements/CourseReviews.php:136
 msgid "Stars"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseShare.php:30
 #: elements/CourseShare.php:30
 msgid "Social Share"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseShare.php:33
 #: elements/CourseShare.php:33
 msgid "Original Icons"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseShare.php:34
 #: elements/CourseShare.php:34
 msgid "Hovered Icons"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CoursesList.php:80
 #: elements/CoursesList.php:80
 msgid "Courses Query"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CoursesList.php:84
 #: elements/CoursesList.php:84
 msgid "Include ID"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CoursesList.php:91
 #: elements/CoursesList.php:91
 msgid "Excludes IDS"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CoursesList.php:98
 #: elements/CoursesList.php:98
 msgid "Category IDS"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CoursesList.php:105
 #: elements/CoursesList.php:105
 msgid "Order By"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CoursesList.php:113
 #: elements/CoursesList.php:113
 msgid "Order"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CoursesList.php:121
 #: elements/CoursesList.php:121
 msgid "Limit"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseTargetAudience.php:27
 #: elements/CourseTargetAudience.php:27
 msgid "Target Audience"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:31
 #: elements/CourseThumbnail.php:31
 msgid "Original Thumbnails"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:53
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:99
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:81
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:80
 #: elements/CourseThumbnail.php:53
 #: elements/CourseThumbnail.php:99
-#: elements/PageInstructorRegistration.php:81
-#: elements/PageStudentRegistration.php:80
+#: elements/PageInstructorRegistration.php:64
 msgid "Border Width"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:71
 #: elements/CourseThumbnail.php:71
 msgid "Original Thumbs Shadow"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:76
 #: elements/CourseThumbnail.php:76
 msgid "Hovered Thumbnails"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/CourseThumbnail.php:109
 #: elements/CourseThumbnail.php:109
 msgid "Hover Thumbs Shadow"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:85
 #: elements/PageDashboard.php:85
 msgid "Display Name"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:87
 #: elements/PageDashboard.php:87
 msgid "Rating Stars"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:104
 #: elements/PageDashboard.php:104
 msgid "Rating Average"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:105
 #: elements/PageDashboard.php:105
 msgid "Rating Count"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:107
 #: elements/PageDashboard.php:107
 msgid "Header Button"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:128
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:128
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:127
 #: elements/PageDashboard.php:128
-#: elements/PageInstructorRegistration.php:128
-#: elements/PageStudentRegistration.php:127
+#: elements/PageInstructorRegistration.php:93
 msgid "Hover Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:147
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:184
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:221
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:110
 #: elements/PageDashboard.php:147
 #: elements/PageDashboard.php:184
 #: elements/PageDashboard.php:221
@@ -1123,651 +744,440 @@ msgstr ""
 msgid "Icon Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:152
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:189
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:226
 #: elements/PageDashboard.php:152
 #: elements/PageDashboard.php:189
 #: elements/PageDashboard.php:226
 msgid "Icon Size"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:167
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:204
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:241
 #: elements/PageDashboard.php:167
 #: elements/PageDashboard.php:204
 #: elements/PageDashboard.php:241
 msgid "Font Family"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:258
 #: elements/PageDashboard.php:258
 msgid "Links"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:259
 #: elements/PageDashboard.php:259
 msgid "Links Hover"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageDashboard.php:265
 #: elements/PageDashboard.php:265
 msgid "Value"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:53
-#: elements/PageInstructorRegistration.php:53
-msgid "Registration Form"
-msgstr ""
-
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:54
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:53
-#: elements/PageInstructorRegistration.php:54
-#: elements/PageStudentRegistration.php:53
-msgid "Input Label"
-msgstr ""
-
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:55
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:54
-#: elements/PageInstructorRegistration.php:55
-#: elements/PageStudentRegistration.php:54
+#: elements/PageInstructorRegistration.php:38
 msgid "Input Typography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:56
-#: elements/PageInstructorRegistration.php:56
-msgid "Input Field"
-msgstr ""
-
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:92
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:91
-#: elements/PageInstructorRegistration.php:92
-#: elements/PageStudentRegistration.php:91
-msgid "Preview State"
-msgstr ""
-
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:99
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:98
-#: elements/PageInstructorRegistration.php:99
-#: elements/PageStudentRegistration.php:98
-msgid "Logged Out"
-msgstr ""
-
-#: build/oxygen-tutor-lms/elements/PageInstructorRegistration.php:100
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:99
-#: elements/PageInstructorRegistration.php:100
-#: elements/PageStudentRegistration.php:99
-msgid "Logged In"
-msgstr ""
-
-#: build/oxygen-tutor-lms/elements/PageStudentRegistration.php:107
-#: elements/PageStudentRegistration.php:107
-msgid "Register Button"
-msgstr ""
-
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:245
 #: elements/SingleLesson.php:245
 msgid "Pagination Background"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:250
 #: elements/SingleLesson.php:250
 msgid "Previous Background"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:255
 #: elements/SingleLesson.php:255
 msgid "Previous Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:260
 #: elements/SingleLesson.php:260
 msgid "Previous Hover Background"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:265
 #: elements/SingleLesson.php:265
 msgid "Previous Hover Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:270
 #: elements/SingleLesson.php:270
 msgid "Next Background"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:275
 #: elements/SingleLesson.php:275
 msgid "Next Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:280
 #: elements/SingleLesson.php:280
 msgid "Next Hover Background"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleLesson.php:285
 #: elements/SingleLesson.php:285
 msgid "Next Hover Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:104
 #: elements/SingleQuiz.php:104
 msgid "Lesson Typography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:105
 #: elements/SingleQuiz.php:105
 msgid "Active Lesson Typography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:115
 #: elements/SingleQuiz.php:115
 msgid "Icon Active & Hover Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:120
 #: elements/SingleQuiz.php:120
 msgid "Lesson Background Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:125
 #: elements/SingleQuiz.php:125
 msgid "Active Lesson Background Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:138
 #: elements/SingleQuiz.php:138
 msgid "Progress"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:148
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:195
 #: elements/SingleQuiz.php:148
 #: elements/SingleQuiz.php:195
 msgid "Background"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:153
 #: elements/SingleQuiz.php:153
 msgid "Toggle Icon Background"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:158
 #: elements/SingleQuiz.php:158
 msgid "Toggle Icon Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/elements/SingleQuiz.php:163
 #: elements/SingleQuiz.php:163
 msgid "Close Icon Color"
 msgstr ""
 
-#: build/oxygen-tutor-lms/OxygenTutorLMS.php:198
-#: OxygenTutorLMS.php:198
+#: OxygenTutorLMS.php:157
 msgid "Tutor LMS"
 msgstr ""
 
-#: build/oxygen-tutor-lms/OxygenTutorLMS.php:209
-#: OxygenTutorLMS.php:209
+#: OxygenTutorLMS.php:168
 msgid "Single Template"
 msgstr ""
 
-#: build/oxygen-tutor-lms/OxygenTutorLMS.php:212
-#: OxygenTutorLMS.php:212
+#: OxygenTutorLMS.php:171
 msgid "Single Course"
 msgstr ""
 
-#: build/oxygen-tutor-lms/OxygenTutorLMS.php:215
-#: OxygenTutorLMS.php:215
+#: OxygenTutorLMS.php:174
 msgid "Archive & Course List"
 msgstr ""
 
-#: build/oxygen-tutor-lms/OxygenTutorLMS.php:218
-#: OxygenTutorLMS.php:218
+#: OxygenTutorLMS.php:177
 msgid "TutorLMS Pages"
 msgstr ""
 
-#: build/oxygen-tutor-lms/OxygenTutorLMS.php:303
-#: OxygenTutorLMS.php:303
+#: OxygenTutorLMS.php:262
 msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated TutorLMS v.2.1.0"
 msgstr ""
 
-#: build/oxygen-tutor-lms/OxygenTutorLMS.php:316
-#: OxygenTutorLMS.php:316
+#: OxygenTutorLMS.php:275
 msgid "In order to use Tutor LMS Oxygen Integration, you must have install and activated Oxygen Builder Plugin"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/about.php:44
 #: templates/course/about.php:44
 msgid "Show More"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/author.php:22
 #: templates/course/author.php:22
 msgid "By"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/level.php:10
 #: templates/course/level.php:10
 msgid "Course level:"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:50
 #: templates/course/review.php:50
 msgid "No Review Yet"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:67
 #: templates/course/review.php:67
 msgid "Total "
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:69
 #: templates/course/review.php:69
 msgid " Rating"
 msgid_plural " Ratings"
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:96
 #: templates/course/review.php:96
 msgid "Ratings"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:96
 #: templates/course/review.php:96
 msgid "Rating"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:120
 #: templates/course/review.php:120
 msgid "Write a review"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:120
 #: templates/course/review.php:120
 msgid "Edit review"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:134
 #: templates/course/review.php:134
 msgid "Load More"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:164
 #: templates/course/review.php:164
 msgid "write a review"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/review.php:168
 #: templates/course/review.php:168
 msgid "Submit Review"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/course/share.php:18
 #: templates/course/share.php:18
 msgid "Wishlist"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:45
 #: templates/dashboard.php:45
 msgid "My Courses"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:45
 #: templates/dashboard.php:45
 msgid "Dashboard"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:51
 #: templates/dashboard.php:51
 msgid "Q&A"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:51
 #: templates/dashboard.php:51
 msgid "Quiz Attempts"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:57
 #: templates/dashboard.php:57
 msgid "Menu"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:94
 #: templates/dashboard.php:94
 msgid "Hello"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:119
 #: templates/dashboard.php:119
 msgid "Become an instructor"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:140
 #: templates/dashboard.php:140
 msgid "Create a New Course"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/dashboard.php:149
 #: templates/dashboard.php:149
 msgid "Your Application is pending as of"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/alert.php:27
 #: templates/global/alert.php:27
 msgid "Please define alert class"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/attachments.php:46
 #: templates/global/attachments.php:46
 msgid "No Attachment Found"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/login.php:47
-#: build/oxygen-tutor-lms/templates/login-form.php:22
 #: templates/global/login.php:47
 #: templates/login-form.php:22
 msgid "Username or Email Address"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/login.php:48
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:88
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:96
-#: build/oxygen-tutor-lms/templates/login-form.php:26
-#: build/oxygen-tutor-lms/templates/student-registration.php:89
-#: build/oxygen-tutor-lms/templates/student-registration.php:97
 #: templates/global/login.php:48
-#: templates/instructor-registration.php:88
-#: templates/instructor-registration.php:96
+#: templates/instructor-registration.php:100
+#: templates/instructor-registration.php:103
 #: templates/login-form.php:26
-#: templates/student-registration.php:89
 #: templates/student-registration.php:97
+#: templates/student-registration.php:100
 msgid "Password"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/login.php:49
 #: templates/global/login.php:49
 msgid "Remember Me"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/login.php:50
 #: templates/global/login.php:50
 msgid "Log In"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/login.php:51
 #: templates/global/login.php:51
 msgid "Create a new account"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/global/login.php:61
 #: templates/global/login.php:61
 msgid "Forgot Password?"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:22
-#: templates/instructor-registration.php:22
-msgid "Ooh! Access Denied"
+#: templates/instructor-registration.php:14
+#: templates/student-registration.php:13
+msgid "Oooh! Access Denied"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:23
-#: build/oxygen-tutor-lms/templates/student-registration.php:25
-#: templates/instructor-registration.php:23
-#: templates/student-registration.php:25
+#: templates/instructor-registration.php:15
+#: templates/student-registration.php:14
 msgid "You do not have access to this area of the application. Please refer to your system  administrator."
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:25
-#: build/oxygen-tutor-lms/templates/student-registration.php:27
-#: templates/instructor-registration.php:25
-#: templates/student-registration.php:27
+#: templates/instructor-registration.php:17
+#: templates/student-registration.php:16
 msgid "Go to Home"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:59
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:61
-#: build/oxygen-tutor-lms/templates/student-registration.php:60
-#: build/oxygen-tutor-lms/templates/student-registration.php:62
-#: templates/instructor-registration.php:59
-#: templates/instructor-registration.php:61
-#: templates/student-registration.php:60
-#: templates/student-registration.php:62
+#: templates/instructor-registration.php:52
+#: templates/instructor-registration.php:55
+#: templates/student-registration.php:51
+#: templates/student-registration.php:54
 msgid "First Name"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:66
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:68
-#: build/oxygen-tutor-lms/templates/student-registration.php:67
-#: build/oxygen-tutor-lms/templates/student-registration.php:69
-#: templates/instructor-registration.php:66
-#: templates/instructor-registration.php:68
-#: templates/student-registration.php:67
-#: templates/student-registration.php:69
+#: templates/instructor-registration.php:62
+#: templates/instructor-registration.php:65
+#: templates/student-registration.php:61
+#: templates/student-registration.php:64
 msgid "Last Name"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:73
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:75
-#: build/oxygen-tutor-lms/templates/student-registration.php:74
-#: build/oxygen-tutor-lms/templates/student-registration.php:76
-#: templates/instructor-registration.php:73
-#: templates/instructor-registration.php:75
+#: templates/instructor-registration.php:77
+#: templates/instructor-registration.php:80
 #: templates/student-registration.php:74
-#: templates/student-registration.php:76
+#: templates/student-registration.php:77
 msgid "User Name"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:80
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:82
-#: build/oxygen-tutor-lms/templates/student-registration.php:81
-#: build/oxygen-tutor-lms/templates/student-registration.php:83
-#: templates/instructor-registration.php:80
-#: templates/instructor-registration.php:82
-#: templates/student-registration.php:81
-#: templates/student-registration.php:83
+#: templates/instructor-registration.php:87
+#: templates/instructor-registration.php:90
+#: templates/student-registration.php:84
+#: templates/student-registration.php:87
 msgid "E-Mail"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:107
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:137
-#: build/oxygen-tutor-lms/templates/student-registration.php:108
-#: build/oxygen-tutor-lms/templates/student-registration.php:138
-#: templates/instructor-registration.php:107
-#: templates/instructor-registration.php:137
-#: templates/student-registration.php:108
-#: templates/student-registration.php:138
-msgid "Toggle password visibility"
-msgstr ""
-
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:118
-#: build/oxygen-tutor-lms/templates/student-registration.php:119
-#: templates/instructor-registration.php:118
-#: templates/student-registration.php:119
+#: templates/instructor-registration.php:110
+#: templates/student-registration.php:107
 msgid "Password confirmation"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:126
-#: build/oxygen-tutor-lms/templates/student-registration.php:127
-#: templates/instructor-registration.php:126
-#: templates/student-registration.php:127
+#: templates/instructor-registration.php:113
+#: templates/student-registration.php:110
 msgid "Password Confirmation"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:171
-#: build/oxygen-tutor-lms/templates/student-registration.php:172
-#: templates/instructor-registration.php:171
-#: templates/student-registration.php:172
-msgid "By signing up, you agree to the "
+#: templates/instructor-registration.php:138
+#: templates/student-registration.php:136
+msgid "By signing up, I agree with the website's"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:171
-#: build/oxygen-tutor-lms/templates/student-registration.php:172
-#: templates/instructor-registration.php:171
-#: templates/student-registration.php:172
+#: templates/instructor-registration.php:138
+#: templates/student-registration.php:136
 msgid "Terms and Conditions"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:178
-#: templates/instructor-registration.php:178
+#: templates/instructor-registration.php:143
 msgid "Register as instructor"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:181
-#: build/oxygen-tutor-lms/templates/student-registration.php:182
-#: templates/instructor-registration.php:181
-#: templates/student-registration.php:182
-msgid "Already have an account?"
-msgstr ""
-
-#: build/oxygen-tutor-lms/templates/instructor-registration.php:184
-#: build/oxygen-tutor-lms/templates/student-registration.php:185
-#: templates/instructor-registration.php:184
-#: templates/student-registration.php:185
-msgid "Login"
-msgstr ""
-
-#: build/oxygen-tutor-lms/templates/login-form.php:39
 #: templates/login-form.php:39
 msgid "Keep me signed in"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/login-form.php:43
 #: templates/login-form.php:43
 msgid "Forgot?"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/login-form.php:49
 #: templates/login-form.php:49
 msgid "Sign In"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/login-form.php:61
 #: templates/login-form.php:61
 msgid "Don't have an account?"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/login-form.php:63
 #: templates/login-form.php:63
 msgid "Register Now"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:109
-#: build/oxygen-tutor-lms/templates/public-profile.php:170
-#: build/oxygen-tutor-lms/templates/shortcode/tutor-course.php:132
-#: build/oxygen-tutor-lms/templates/shortcode/tutor-instructor.php:27
 #: templates/public-profile.php:109
 #: templates/public-profile.php:170
-#: templates/shortcode/tutor-course.php:132
 #: templates/shortcode/tutor-instructor.php:27
 msgid "Courses"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:109
-#: build/oxygen-tutor-lms/templates/shortcode/tutor-instructor.php:27
 #: templates/public-profile.php:109
 #: templates/shortcode/tutor-instructor.php:27
 msgid "Course"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:116
 #: templates/public-profile.php:116
 msgid "Students"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:116
 #: templates/public-profile.php:116
 msgid "Student"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:128
 #: templates/public-profile.php:128
 msgid "Courses Enrolled"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:128
 #: templates/public-profile.php:128
 msgid "Course Enrolled"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:133
 #: templates/public-profile.php:133
 msgid "Courses Completed"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:133
 #: templates/public-profile.php:133
 msgid "Course Completed"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/public-profile.php:164
 #: templates/public-profile.php:164
 msgid "Biography"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/retrieve-password.php:23
 #: templates/retrieve-password.php:23
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/retrieve-password.php:28
 #: templates/retrieve-password.php:28
 msgid "Username or email"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/retrieve-password.php:42
-#: build/oxygen-tutor-lms/templates/retrieve-password.php:43
 #: templates/retrieve-password.php:42
 #: templates/retrieve-password.php:43
 msgid "Reset password"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/shortcode/instructor-filter.php:30
-#: build/oxygen-tutor-lms/templates/shortcode/instructor-filter.php:60
 #: templates/shortcode/instructor-filter.php:30
 #: templates/shortcode/instructor-filter.php:60
 msgid "Clear All"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/shortcode/instructor-filter.php:43
-#: build/oxygen-tutor-lms/templates/shortcode/instructor-filter.php:50
 #: templates/shortcode/instructor-filter.php:43
 #: templates/shortcode/instructor-filter.php:50
 msgid "Search any instructor..."
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/shortcode/instructor-filter.php:68
 #: templates/shortcode/instructor-filter.php:68
 msgid "Apply Filter"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/shortcode/tutor-instructor.php:35
 #: templates/shortcode/tutor-instructor.php:35
 msgid "No Instructor Found"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/shortcode/tutor-instructor.php:47
 #: templates/shortcode/tutor-instructor.php:47
 msgid "Previous"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/shortcode/tutor-instructor.php:48
 #: templates/shortcode/tutor-instructor.php:48
 msgid "Next"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/single-content-loader.php:88
 #: templates/single-content-loader.php:88
 msgid "Complete"
 msgstr ""
 
-#: build/oxygen-tutor-lms/templates/student-registration.php:24
-#: templates/student-registration.php:24
-msgid "Oooh! Access Denied"
-msgstr ""
-
-#: build/oxygen-tutor-lms/templates/student-registration.php:179
-#: templates/student-registration.php:179
+#: templates/student-registration.php:141
 msgid "Register"
 msgstr ""
