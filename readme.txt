@@ -101,7 +101,7 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Changelog ==
 
-= 2.0.4 - 24 November, 2026 =
+= 4.0.0 - 24 November, 2026 =
 
 * New: Added Tutor LMS v4 compatibility with the Oxygen Classic Builder.
 * Update: Updated the Single Course and Course Archive templates with the latest designs.
