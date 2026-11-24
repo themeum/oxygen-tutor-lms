@@ -33,7 +33,7 @@ class CoursesList extends \OxygenTutorElements {
 			'category'      => '',
 			'orderby'       => 'ID',
 			'order'         => 'DESC',
-			'limit'         => '6',
+			'limit'         => tutor_utils()->get_option( 'courses_per_page', 12 ),
 		);
 
 		$a = array_merge($default_args, $a);
