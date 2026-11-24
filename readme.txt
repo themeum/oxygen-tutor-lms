@@ -5,7 +5,7 @@ Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
 Tested up to: 7.1.5
 Requires PHP: 7.4
-Stable tag: 2.0.4
+Stable tag: 4.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
