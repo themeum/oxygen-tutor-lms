@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OTLMS_VERSION', '2.0.4' );
+define( 'OTLMS_VERSION', '4.0.0' );
 define( 'OTLMS_FILE', __FILE__ );
 define( 'OTLMS_PATH', plugin_dir_path( OTLMS_FILE ) );
 define( 'OTLMS_URL', plugin_dir_url( OTLMS_FILE ) );
