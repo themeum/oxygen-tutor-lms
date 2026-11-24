@@ -47,6 +47,8 @@ jobs:
         with:
           dry-run: true
         env:
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           BUILD_DIR: build
           SLUG: oxygen-tutor-lms
           VERSION: ${{ github.ref_name }}
