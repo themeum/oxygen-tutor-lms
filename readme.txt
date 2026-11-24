@@ -3,22 +3,22 @@ Contributors: themeum
 Donate link: https://www.themeum.com
 Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
-Tested up to: 7.1.5
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 4.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Build E-Learning website by Oxygen Builder and Tutor LMS Integration plugin
+Build eLearning website by Oxygen Builder and Tutor LMS Integration plugin.
 
 == Description ==
 
 This plugin integrates Tutor LMS with the popular Oxygen Page Builder plugin. It adds all the functionalities needed to create a complete WordPress LMS website using Oxygen Builder.
 
 To use this plugin, you must first have all the plugins installed and activated. The required plugins are:
- *[Tutor LMS (Free/Pro)](https://wordpress.org/plugins/tutor/)
- *Integration Plugin
- *[Oxygen Builder](https://oxygenbuilder.com/)
+ * [Tutor LMS Plugin](https://wordpress.org/plugins/tutor/)
+ * [Oxygen Tutor LMS Plugin](https://wordpress.org/plugins/oxygen-tutor-lms/)
+ * [Oxygen Builder](https://oxygenbuilder.com/)
 
 = What Oxygen Builder Brings to Tutor LMS =
 
@@ -36,13 +36,11 @@ There are two ways of creating a course page, for example:
  * Add a single course template
  * Build your custom design using single course elements
 
-
-
 If you add the single course template, you'll be able to edit each of the elements. But you won't be able to change the layout of the course page itself. To do so, you'll need to create a custom course layout with all the necessary elements.
 
 If you're familiar with the Oxygen Builder plugin, creating a new custom layout with custom headers and footers should be a breeze. We've added all the necessary elements needed to create a full Tutor LMS website. We’ve broken down all of Tutor LMS into small elements that you can now use to create a customizable layout for all Tutor LMS pages like course page, quiz page, archive page, and so on.
 
-To read about every aspect of this plugin, please refer to our [documentation on the Oxygen Builder](https://www.themeum.com/docs/oxygen-builder-introduction/) integration plugin. You will find all the information on this plugin in our documentation website.
+To read about every aspect of this plugin, please refer to our [documentation on the Oxygen Builder](https://tutorlms.com/docs/third-party-integrations/oxygen-builder-integration/getting-started-with-oxygen-builder/) integration plugin. You will find all the information on this plugin in our documentation website.
 
 
 == Installation ==
@@ -66,38 +64,33 @@ The WordPress codex contains [instructions on how to do this here](https://codex
 
 == Frequently Asked Questions ==
 
+= Is this plugin free? =
+
+Yes, this plugin is free to use for all Tutor LMS users.
+
 = Can I use Oxygen Tutor LMS with my existing theme? =
 
-Oxygen Tutor LMS is a WordPress LMS plugin that works with any modern theme without any issues of site breakage.
+Oxygen Tutor LMS is a WordPress LMS plugin that works with any modern theme without any issues.
 
 = Where can I find Oxygen Tutor LMS user guides and documentation? =
 
-For a detailed guideline on how to build a Learning Management system using our WordPress LMS plugin, refer to our user documentation on the Themeum site.
+For a detailed guideline on how to build a Learning Management system using our WordPress LMS plugin, please check our [user documentation](https://tutorlms.com/docs/third-party-integrations/oxygen-builder-integration/getting-started-with-oxygen-builder/).
 
 = Where can I report a bug? =
 
-If you found any bugs or issues, please let us know by posting on the support section of this plugin on WordPress plugin directory or directly on our
-support forums: https://www.themeum.com/support/ 🙂
-
-= Is this plugin free? =
-
-This WordPress course plugin has two versions. One is free and another is paid. The paid version of the WordPress LMS plugin has more advanced features which are not accessible in this free version. Click here to get the paid version.
+If you found any bugs or issues, please let us know by posting on the support section of this plugin on WordPress plugin directory or directly on our [support page](https://tutorlms.com/support/).
 
 = Where can I get support? =
 
-You can get support by posting your issues on the support section of this plugin on WordPress plugins directory or directly place your question to Themeum Forums.
+You can get support by posting your issues on the support section of this plugin on the WordPress plugins directory or directly place your question on the the [Tutor LMS Community](https://www.facebook.com/groups/tutorlms). 
 
-= Is Oxygen Tutor LMS device friendly WordPress LMS plugin? =
-
-If you’re using a responsive theme, then Oxygen Tutor LMS will look great across all devices.
 
 = Can I use any plugins with Oxygen Tutor LMS? =
 
-Oxygen Tutor LMS enables you to use any third party plugins without facing any compatibility issues. You can integrate and use the WordPress LMS plugin easily in your existing site without any trouble.
+Oxygen Tutor LMS enables you to use any third-party plugins without facing any compatibility issues. You can integrate and use the Tutor LMS plugin easily in your existing site.
 
 == Screenshots ==
 
-1. How to build
 
 == Changelog ==
 
@@ -114,10 +107,10 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 = 2.0.3 - 04 January, 2023 =
 
-* Fix: style control issue 
-* Fix: Warning issue cours details page
-* Fix: Some css fixed
-* Fix: Translation issue 
+* Fix: Fixed the style control issue.
+* Fix: Warning issue course details page.
+* Fix: Fixed CSS issues.
+* Fix: Translation issues.
 
 = 2.0.2 - 04 January, 2023 =
 
@@ -191,4 +184,4 @@ Oxygen Tutor LMS enables you to use any third party plugins without facing any c
 
 == Upgrade Notice ==
 
-nothing here
+Update to the latest version.
