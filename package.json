@@ -10,7 +10,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "make-pot": "wp i18n make-pot . languages/oxygen-tutor-lms.pot",
-        "build": "npm run make-pot && gulp build"
+        "build": "rm -f *.zip && npm run make-pot && gulp build"
     },
     "repository": {
         "type": "git",
