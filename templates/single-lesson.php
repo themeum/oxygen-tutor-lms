@@ -7,8 +7,8 @@
  * @author Themeum
  * @url https://themeum.com
  *
- * @package TutorLMS/Templates
+ * @package OxygenTutorLMS/Templates
  * @version 1.4.3
  */
 
-tutor_load_template_from_custom_path(__DIR__.'/single-content-loader.php', array('context' => 'lesson'), false);
+tutor_load_template_from_custom_path( __DIR__ . '/single-content-loader.php', array( 'context' => 'lesson' ), false );
