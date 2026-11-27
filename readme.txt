@@ -5,7 +5,7 @@ Tags: lms, course, elearning, oxygen-builder, learning management system
 Requires at least: 5.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -93,6 +93,13 @@ Oxygen Tutor LMS enables you to use any third-party plugins without facing any c
 
 
 == Changelog ==
+
+= 4.0.1 - 30 November, 2026 =
+
+* Update: Updated the Oxygen Builder Dashboard and Login page templates with the latest designs.
+* Fix: Fixed Tutor LMS login fields displaying issue when the Dashboard page is edited with Oxygen Builder.
+* Fix: Fixed the Oxygen Builder Dashboard page component being overridden by the Tutor LMS Dashboard template.
+* Fix: Fixed the Tutor LMS Checkout and Cart page visibility issue when another monetization option is selected.
 
 = 4.0.0 - 24 November, 2026 =
 
